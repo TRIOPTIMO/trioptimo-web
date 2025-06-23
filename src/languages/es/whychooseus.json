@@ -1,0 +1,23 @@
+{
+  "title_part1": "¿Por qué",
+  "title_part2": "elegirnos",
+  "title_part3": "?",
+  "reasons": [
+    {
+      "title": "Enfoque basado en datos",
+      "description": "Usamos inteligencia de datos para tomar decisiones estratégicas que mejoran tu operación."
+    },
+    {
+      "title": "Soluciones a medida",
+      "description": "Adaptamos nuestras herramientas a las necesidades específicas de tu planta o industria."
+    },
+    {
+      "title": "Experiencia comprobada",
+      "description": "Contamos con casos de éxito en sectores productivos reales."
+    },
+    {
+      "title": "Soporte experto",
+      "description": "Acompañamiento técnico y consultivo en cada etapa del proyecto."
+    }
+  ]
+}

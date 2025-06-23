@@ -1,0 +1,59 @@
+{
+  "title1": "Sobre ",
+  "title2": "Nosotros",
+  "description": "Somos una consultora especializada en transformación digital e innovación industrial. Combinamos experiencia técnica con visión estratégica para ayudarte a implementar soluciones inteligentes, escalables y sostenibles en tu operación.",
+  "missionTitle1": "Nuestra ",
+  "missionTitle2": "Misión",
+  "missionText": "Empoderar a las pymes en su camino hacia el liderazgo. Somos el aliado estratégico que transforma procesos invisibles en resultados visibles, haciendo que cada empresa trabaje de forma más eficiente, rentable y humana. Porque cuando transformamos la pyme, transformamos también la vida de quienes la hacen posible.",
+  "visionTitle1": "Nuestra ",
+  "visionTitle2": "Visión",
+  "visionText": "Convertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.",
+  "teamTitle1": "Nuestro ",
+  "teamTitle2": "Equipo Directivo",
+  "valores": [
+    {
+      "title": "Compromiso con la pyme",
+      "description": "Porque son el verdadero motor económico, nos ponemos en su lugar en cada proyecto."
+    },
+    {
+      "title": "Soluciones que funcionan",
+      "description": "Nada de informes para la estantería. Proponemos soluciones aplicables y medibles."
+    },
+    {
+      "title": "Ingeniería con propósito humano",
+      "description": " Usamos la técnica para mejorar la vida dentro y fuera de la planta. No solo para cumplir normas, sino porque las empresas están formadas por personas. Escuchamos, empatizamos y construimos desde el respeto y la colaboración."
+    },
+    {
+      "title": "Cultura de mejora continua",
+      "description": "Primero mejoramos la empresa. Luego mejoramos cómo la mejoramos. Siempre aprendiendo, siempre iterando."
+    }
+  ],
+  "ceos": [
+    {
+      "name": "Jano Neuen Centeno",
+      "role": "Director de Operaciones y Estrategia.",
+      "bio": "Ingeniero Industrial con más de 8 años de experiencia en optimización de procesos y puesta en marcha de proyectos industriales. Su enfoque práctico y analítico ha ayudado a múltiples pymes a reducir costes sin comprometer la calidad.",
+      "commitment": "“Creo en transformar la ingeniería en soluciones reales que impacten el día a día de las empresas y sus equipos.”"
+    },
+    {
+      "name": "Ignacio Davanzo",
+      "role": "Responsable de Transformación Digital y Tecnología.",
+      "bio": "Ingeniero en Sistemas de Información y experto en transformación digital, con amplia trayectoria en implementación de tecnologías industriales 4.0 y digitalización de procesos. Se especializa en adaptar la tecnología a la realidad y recursos de cada empresa.",
+      "commitment": "“Mi misión es acercar la innovación tecnológica a las pymes, para que puedan competir y crecer sin perder su esencia.”"
+    },
+    {
+      "name": "Nahuel Deschutter",
+      "role": "Líder de Análisis de Datos e Inteligencia de Negocio.",
+      "bio": "Especialista en análisis de datos y Business Intelligence, con experiencia en Big Data aplicada a la optimización y toma de decisiones en empresas industriales. Aplica modelos prácticos para convertir datos complejos en información útil.",
+      "commitment": "“Creo que el dato es la mejor herramienta para tomar decisiones acertadas y sostenibles” "
+    }
+  ],
+  "meta": {
+    "title": "Sobre nosotros | Trioptimo",
+    "description": "Impulsamos la transformación digital en empresas industriales.",
+    "keywords": "industria 4.0, automatización, transformación digital"
+  },
+  "home": {
+    "heading": "Bienvenido a Trioptimo"
+  }
+}

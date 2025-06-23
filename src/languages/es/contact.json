@@ -1,0 +1,17 @@
+{
+  "title": "Contacto",
+  "description": "¿Quieres transformar tu empresa con soluciones prácticas y efectivas? Contacta con nosotros:",
+  "name": "Nombre",
+  "email": "Email",
+  "company": "Empresa (opcional)",
+  "message": "Mensaje",
+  "send": "Enviar mensaje",
+  "meta": {
+    "title": "Contacto | Trioptimo",
+    "description": "Impulsamos la transformación digital en empresas industriales.",
+    "keywords": "industria 4.0, automatización, transformación digital"
+  },
+  "home": {
+    "heading": "Bienvenido a Trioptimo"
+  }
+}

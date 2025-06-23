@@ -1,0 +1,20 @@
+[
+    {
+        "contacto": "Contact",
+        "enviar": "Send message",
+        "nombre": "Name",
+        "email": "Email",
+        "mensaje": "Message",
+        "empresa": "Company (optional)",
+        "descripcion": "Do you have a project or question? Fill out the form and we’ll get back to you shortly."
+    },
+    {
+        "home": "Inicio"
+    },
+    {
+        "services": "Servicios"
+    },
+    {
+        "faq": "FAQ"
+    }
+]

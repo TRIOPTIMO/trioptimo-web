@@ -1,0 +1,23 @@
+{
+  "title1": "Our",
+  "title2": "Services",
+  "items": [
+  {
+    "title": "Process Optimization",
+    "description": "We improve your current operations to maximize efficiency and reduce costs, making the most of what you already have."
+  },
+  {
+    "title": "Industrial Digital Transformation",
+    "description": "We implement technology tailored to your reality to advance in digitalization and automation, without risks or large investments."
+  },
+  {
+    "title": "Business Intelligence and Data Management",
+    "description": "We turn your company’s information into effective decisions that improve results and anticipate opportunities."
+  },
+  {
+    "title": "Practical Training for Teams",
+    "description": "We design customized courses and workshops so your team can internalize changes and sustain continuous improvement."
+  }
+],
+  "button": "Learn more"
+}

@@ -1,0 +1,31 @@
+{
+  "title1": "Our",
+  "title2": "Services",
+  "description": "At TriOptimo, we offer practical solutions to help your business become more efficient and competitive, without complications or unnecessary expenses:",
+  "items": [
+    {
+      "title": "Process Optimization",
+      "description": "We improve your current operations to maximize efficiency and reduce costs, making the most of what you already have."
+    },
+    {
+      "title": "Industrial Digital Transformation",
+      "description": "We implement technology tailored to your reality to advance in digitalization and automation, without risks or large investments."
+    },
+    {
+      "title": "Business Intelligence and Data Management",
+      "description": "We turn your company’s information into effective decisions that improve results and anticipate opportunities."
+    },
+    {
+      "title": "Practical Training for Teams",
+      "description": "We design customized courses and workshops so your team can internalize changes and sustain continuous improvement."
+    }
+  ],
+  "meta": {
+    "title": "Services | Trioptimo",
+    "description": "We drive digital transformation in industrial companies.",
+    "keywords": "industry 4.0, automation, digital transformation"
+  },
+  "home": {
+    "heading": "Welcome to Trioptimo"
+  }
+}

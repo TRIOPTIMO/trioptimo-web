@@ -1,0 +1,35 @@
+{
+  "title1": "Preguntas",
+  "title2": " Frecuentes",
+  "title3": "",
+  "searchPlaceholder": "Buscar pregunta...",
+  "notFound": "No se encontraron preguntas que coincidan.",
+  "ctaTitle": "¿No encontraste lo que buscabas?",
+  "ctaButton": "Contactanos",
+  "items": [
+    {
+      "question": "¿Qué es la Industria 4.0?",
+      "answer": "Es la transformación digital de los procesos industriales mediante tecnologías como IoT, IA, automatización y análisis de datos."
+    },
+    {
+      "question": "¿Qué servicios ofrecen como consultora?",
+      "answer": "Brindamos diagnóstico, desarrollo de soluciones a medida, implementación tecnológica y capacitación para digitalizar tu industria."
+    },
+    {
+      "question": "¿Trabajan con empresas pequeñas o solo grandes plantas?",
+      "answer": "Colaboramos con empresas de todos los tamaños. Nuestras soluciones son escalables y adaptables a cada realidad."
+    },
+    {
+      "question": "¿Puedo solicitar una demo o asesoría sin compromiso?",
+      "answer": "Sí. Podés agendar una reunión para entender tus necesidades y mostrarte cómo podríamos ayudarte."
+    }
+  ],
+  "meta": {
+    "title": "FAQ | Trioptimo",
+    "description": "Impulsamos la transformación digital en empresas industriales.",
+    "keywords": "industria 4.0, automatización, transformación digital"
+  },
+  "home": {
+    "heading": "Bienvenido a Trioptimo"
+  }
+}

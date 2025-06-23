@@ -1,0 +1,23 @@
+{
+  "title_part1": "Why",
+  "title_part2": "choose us",
+  "title_part3": "?",
+  "reasons": [
+    {
+      "title": "Data-driven approach",
+      "description": "We use data intelligence to make strategic decisions that improve your operations."
+    },
+    {
+      "title": "Tailored solutions",
+      "description": "We adapt our tools to the specific needs of your plant or industry."
+    },
+    {
+      "title": "Proven experience",
+      "description": "We have successful case studies in real production environments."
+    },
+    {
+      "title": "Expert support",
+      "description": "Technical and consultative support at every stage of the project."
+    }
+  ]
+}

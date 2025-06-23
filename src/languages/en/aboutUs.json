@@ -1,0 +1,59 @@
+{
+  "title1": "About ",
+  "title2": "Us",
+  "description": "We are a consulting firm specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement intelligent, scalable, and sustainable solutions in your operations.",
+  "missionTitle1": "Our ",
+  "missionTitle2": "Mission",
+  "missionText": "Empowering SMEs on their journey to leadership. We are the strategic partner that transforms invisible processes into visible results, making every company work more efficiently, profitably, and humanely. Because when we transform SMEs, we also transform the lives of those who make them possible.",
+  "visionTitle1": "Our ",
+  "visionTitle2": "Vision",
+  "visionText": "To become the number one ally for SMEs, applying process engineering, technology, and business intelligence to optimize operations, reduce costs, and solve real problems, always with a deeply human approach.",
+  "teamTitle1": "Our ",
+  "teamTitle2": "Leadership Team",
+  "valores": [
+    {
+      "title": "Commitment to SMEs",
+      "description": "Because they are the true economic engine, we put ourselves in their shoes for every project."
+    },
+    {
+      "title": "Solutions that Work",
+      "description": "No shelf reports. We propose actionable and measurable solutions."
+    },
+    {
+      "title": "Engineering with Human Purpose",
+      "description": "We use technical expertise to improve life inside and outside the plant. Not just to meet standards, but because companies are made of people. We listen, empathize, and build with respect and collaboration."
+    },
+    {
+      "title": "Culture of Continuous Improvement",
+      "description": "First we improve the company. Then we improve how we improve it. Always learning, always iterating."
+    }
+  ],
+  "ceos": [
+    {
+      "name": "Jano Neuen Centeno",
+      "role": "Operations and Strategy Director.",
+      "bio": "Industrial Engineer with over 8 years of experience in process optimization and industrial project implementation. His practical and analytical approach has helped numerous SMEs reduce costs without compromising quality.",
+      "commitment": "“I believe in turning engineering into real solutions that impact the daily lives of companies and their teams.”"
+    },
+    {
+      "name": "Ignacio Davanzo",
+      "role": "Head of Digital Transformation and Technology.",
+      "bio": "Information Systems Engineer and expert in digital transformation, with extensive experience in implementing Industry 4.0 technologies and process digitalization. He specializes in adapting technology to each company’s reality and resources.",
+      "commitment": "“My mission is to bring technological innovation closer to SMEs so they can compete and grow without losing their essence.”"
+    },
+    {
+      "name": "Nahuel Deschutter",
+      "role": "Head of Data Analysis and Business Intelligence.",
+      "bio": "Specialist in data analysis and Business Intelligence, with experience in Big Data applied to optimization and decision-making in industrial companies. He applies practical models to turn complex data into useful information.",
+      "commitment": "“I believe data is the best tool for making accurate and sustainable decisions.”"
+    }
+  ],
+  "meta": {
+    "title": "About Us | Trioptimo",
+    "description": "We drive digital transformation in industrial companies.",
+    "keywords": "industry 4.0, automation, digital transformation"
+  },
+  "home": {
+    "heading": "Welcome to Trioptimo"
+  }
+}
