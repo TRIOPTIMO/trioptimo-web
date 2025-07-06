@@ -1,15 +1,11 @@
 {
-  "title1": "About ",
-  "title2": "Us",
+  "title": "About Us",
   "description": "We are a consulting firm specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement intelligent, scalable, and sustainable solutions in your operations.",
-  "missionTitle1": "Our ",
-  "missionTitle2": "Mission",
+  "missionTitle": "Our Mission",
   "missionText": "Empowering SMEs on their journey to leadership. We are the strategic partner that transforms invisible processes into visible results, making every company work more efficiently, profitably, and humanely. Because when we transform SMEs, we also transform the lives of those who make them possible.",
-  "visionTitle1": "Our ",
-  "visionTitle2": "Vision",
+  "visionTitle": "Our Vision",
   "visionText": "To become the number one ally for SMEs, applying process engineering, technology, and business intelligence to optimize operations, reduce costs, and solve real problems, always with a deeply human approach.",
-  "teamTitle1": "Our ",
-  "teamTitle2": "Leadership Team",
+  "teamTitle": "Our Leadership Team",
   "valores": [
     {
       "title": "Commitment to SMEs",

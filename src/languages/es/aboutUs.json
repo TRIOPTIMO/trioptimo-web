@@ -1,15 +1,11 @@
 {
-  "title1": "Sobre ",
-  "title2": "Nosotros",
+  "title": "Sobre Nosotros",
   "description": "Somos una consultora especializada en transformación digital e innovación industrial. Combinamos experiencia técnica con visión estratégica para ayudarte a implementar soluciones inteligentes, escalables y sostenibles en tu operación.",
-  "missionTitle1": "Nuestra ",
-  "missionTitle2": "Misión",
+  "missionTitle": "Nuestra Misión",
   "missionText": "Empoderar a las pymes en su camino hacia el liderazgo. Somos el aliado estratégico que transforma procesos invisibles en resultados visibles, haciendo que cada empresa trabaje de forma más eficiente, rentable y humana. Porque cuando transformamos la pyme, transformamos también la vida de quienes la hacen posible.",
-  "visionTitle1": "Nuestra ",
-  "visionTitle2": "Visión",
+  "visionTitle": "Nuestra Visión",
   "visionText": "Convertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.",
-  "teamTitle1": "Nuestro ",
-  "teamTitle2": "Equipo Directivo",
+  "teamTitle": "Nuestro Equipo Directivo",
   "valores": [
     {
       "title": "Compromiso con la pyme",

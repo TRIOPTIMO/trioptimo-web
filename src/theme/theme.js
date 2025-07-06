@@ -6,7 +6,8 @@ const theme = createTheme({
     mode: 'dark',
     background: {
       default: '#0a0f1c',
-      paper: '#131a2b',
+      paper: '#f9fafb',
+      pages: "#f0f2f5",
     },
     primary: {
       main: '#00bfff',
@@ -17,7 +18,8 @@ const theme = createTheme({
     },
     text: {
       primary: '#ffffff',
-      secondary: '#c0c0c0',
+      secondary: '#000',
+      tertiary: '#c0c0c0',
     },
   },
   typography: {

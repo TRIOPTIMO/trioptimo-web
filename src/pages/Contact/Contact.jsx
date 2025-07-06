@@ -14,7 +14,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { useMetaTags } from "../services/useMetaTags";
+import { useMetaTags } from "../../services/useMetaTags";
 
 export default function Contacto() {
   const { t, i18n } = useTranslation('contact');
@@ -52,7 +52,7 @@ export default function Contacto() {
   });
 
   return (
-    <Box sx={{ backgroundColor: "transparent", py: 10 }}>
+    <Box sx={{ backgroundColor: "background.pages", py: 10 }}>
       <Container maxWidth="sm">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -61,10 +61,11 @@ export default function Contacto() {
         >
           <Typography
             variant="h4"
-            fontWeight={700}
             align="center"
-            gutterBottom
-            sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+            fontWeight={700}
+            mb={6}
+            mr={2}
+            color="text.secondary"
           >
             {t('title')}
           </Typography>
@@ -91,7 +92,6 @@ export default function Contacto() {
                   rows={field === 'message' ? 4 : 1}
                   required={field !== 'company'}
                   sx={{
-                    backgroundImage: `radial-gradient(ellipse at bottom, rgba(0,191,255,0.25), transparent 70%)`,
                     backgroundColor: 'background.paper',
                     border: '1px solid rgba(0,191,255, 0.5)',
                     borderRadius: '15px'

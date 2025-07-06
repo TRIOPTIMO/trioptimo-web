@@ -1,7 +1,5 @@
 {
-  "title1": "Preguntas",
-  "title2": " Frecuentes",
-  "title3": "",
+  "title": "Preguntas Frecuentes",
   "searchPlaceholder": "Buscar pregunta...",
   "notFound": "No se encontraron preguntas que coincidan.",
   "ctaTitle": "¿No encontraste lo que buscabas?",

@@ -51,7 +51,7 @@ export default function StatsSection() {
                     variant="body2"
                     sx={{
                       mt: 1,
-                      color: 'text.secondary',
+                      color: 'text.primary',
                       fontWeight: 500,
                     }}
                   >

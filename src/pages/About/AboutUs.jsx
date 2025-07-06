@@ -3,26 +3,15 @@ import {
     Container,
     Typography,
     Grid,
-    Avatar,
     Paper,
-    Stack
 } from '@mui/material';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import InsightsIcon from '@mui/icons-material/Insights';
-import GroupsIcon from '@mui/icons-material/Groups';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { useMetaTags } from "../services/useMetaTags";
+import { useMetaTags } from "../../services/useMetaTags";
 
 export default function About() {
     const { t, i18n } = useTranslation('aboutUs');
-    const icons = [
-        <PrecisionManufacturingIcon />,
-        <InsightsIcon />,
-        <GroupsIcon />,
-        <VerifiedUserIcon />
-    ];
+    
     const ceos = t('ceos', { returnObjects: true });
     
     useMetaTags({
@@ -33,7 +22,7 @@ export default function About() {
       });
 
     return (
-        <Box sx={{ py: 10, backgroundColor: 'transparent' }}>
+        <Box sx={{ py: 10, backgroundColor: 'background.pages' }}>
             <Container maxWidth="md">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -53,9 +42,9 @@ export default function About() {
                             mr={2}
                             color="text.secondary"
                         >
-                            {t('title1')}
+                            {t('title')}
                         </Typography>
-                        <Typography
+                        {/* <Typography
                             variant="h4"
                             align="center"
                             fontWeight={700}
@@ -63,7 +52,7 @@ export default function About() {
                             sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                         >
                             {t('title2')}
-                        </Typography>
+                        </Typography> */}
                     </Box>
 
                     <Typography
@@ -89,8 +78,6 @@ export default function About() {
                                     height: '100%',
                                     backgroundColor: 'background.paper',
                                     border: '1px solid rgba(0,191,255, 0.2)',
-                                    backgroundImage:
-                                        'radial-gradient(ellipse at bottom, rgba(0,191,255,0.2), transparent 80%)'
                                 }}
                             >
                                 <Box display={"flex"}
@@ -103,16 +90,16 @@ export default function About() {
                                         mr={2}
                                         color="text.secondary"
                                     >
-                                        {t('missionTitle1')}
+                                        {t('missionTitle')}
                                     </Typography>
-                                    <Typography
+                                    {/* <Typography
                                         variant="h6"
                                         align="center"
                                         fontWeight={700}
                                         sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                                     >
                                         {t('missionTitle2')}
-                                    </Typography>
+                                    </Typography> */}
                                 </Box>
                                 <Typography variant="body2" color="text.secondary">
                                     {t('missionText')}
@@ -127,8 +114,6 @@ export default function About() {
                                     height: '100%',
                                     backgroundColor: 'background.paper',
                                     border: '1px solid rgba(0,191,255, 0.2)',
-                                    backgroundImage:
-                                        'radial-gradient(ellipse at bottom, rgba(0,191,255,0.2), transparent 80%)'
                                 }}
                             >
                                 <Box display={"flex"}
@@ -141,16 +126,16 @@ export default function About() {
                                         mr={2}
                                         color="text.secondary"
                                     >
-                                        {t('visionTitle1')}
+                                        {t('visionTitle')}
                                     </Typography>
-                                    <Typography
+                                    {/* <Typography
                                         variant="h6"
                                         align="center"
                                         fontWeight={700}
                                         sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                                     >
                                         {t('visionTitle2')}
-                                    </Typography>
+                                    </Typography> */}
                                 </Box>
                                 <Typography variant="body2" color="text.secondary">
                                     {t('visionText')}
@@ -179,9 +164,9 @@ export default function About() {
                             mr={2}
                             color="text.secondary"
                         >
-                            {t('teamTitle1')}
+                            {t('teamTitle')}
                         </Typography>
-                        <Typography
+                        {/* <Typography
                             variant="h4"
                             align="center"
                             fontWeight={700}
@@ -189,7 +174,7 @@ export default function About() {
                             sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                         >
                             {t('teamTitle2')}
-                        </Typography>
+                        </Typography> */}
                     </Box>
                 </motion.div>
                 <Grid container spacing={3} justifyContent="center" wrap="nowrap" alignItems="stretch">

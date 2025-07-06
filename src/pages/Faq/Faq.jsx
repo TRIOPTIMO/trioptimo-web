@@ -1,4 +1,3 @@
-// src/pages/Faq.jsx
 import {
     Box,
     Container,
@@ -7,37 +6,17 @@ import {
     AccordionSummary,
     AccordionDetails,
     InputBase,
-    IconButton,
     Divider,
     Button,
     Stack,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SearchIcon from '@mui/icons-material/Search';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import EngineeringIcon from '@mui/icons-material/Engineering';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useMetaTags } from "../services/useMetaTags";
-
-const faqs = [
-    {
-        icon: <HelpOutlineIcon />,
-    },
-    {
-        icon: <EngineeringIcon />,
-    },
-    {
-        icon: <InfoOutlinedIcon />,
-    },
-    {
-        icon: <SupportAgentIcon />,
-    },
-];
+import { useMetaTags } from "../../services/useMetaTags";
 
 export default function Faq() {
     const { t, i18n } = useTranslation('faq');
@@ -56,7 +35,7 @@ export default function Faq() {
   });
 
     return (
-        <Box sx={{ backgroundColor: 'transparent', py: 10 }}>
+        <Box sx={{ backgroundColor: 'background.pages', py: 10 }}>
             <Container maxWidth="md">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -76,9 +55,9 @@ export default function Faq() {
                             mr={2}
                             color="text.secondary"
                         >
-                            {t('title1')}
+                            {t('title')}
                         </Typography>
-                        <Typography
+                        {/* <Typography
                             variant="h4"
                             align="center"
                             fontWeight={700}
@@ -87,8 +66,8 @@ export default function Faq() {
                             sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                         >
                             {t('title2')}
-                        </Typography>
-                        <Typography
+                        </Typography> */}
+                        {/* <Typography
                             variant="h4"
                             align="center"
                             fontWeight={700}
@@ -97,14 +76,13 @@ export default function Faq() {
                             color="text.secondary"
                         >
                             {t('title3')}
-                        </Typography>
+                        </Typography> */}
                     </Box>
                 </motion.div>
                 <Box
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        backgroundImage: `radial-gradient(ellipse at bottom, rgba(0,191,255,0.35), transparent 80%)`,
                         backgroundColor: 'background.paper',
                         px: 2,
                         py: 1,
@@ -119,7 +97,7 @@ export default function Faq() {
                         fullWidth
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        sx={{ ml: 2, color: 'text.primary' }}
+                        sx={{ ml: 2, color: 'text.secondary' }}
                     />
                 </Box>
 
@@ -134,9 +112,8 @@ export default function Faq() {
                         >
                             <Accordion
                                 sx={{
-                                    backgroundImage: `radial-gradient(ellipse at bottom, rgba(0,191,255,0.35), transparent 80%)`,
                                     backgroundColor: 'background.paper',
-                                    color: 'text.primary',
+                                    color: 'text.secondary',
                                     mb: 2,
                                     borderRadius: 2,
                                     border: '1px solid rgba(255,255,255,0.05)',
@@ -169,7 +146,7 @@ export default function Faq() {
 
                 {/* CTA final */}
                 <Box textAlign="center">
-                    <Typography variant="h6" fontWeight={600} mb={2}>
+                    <Typography variant="h6" color="text.secondary" fontWeight={600} mb={2}>
                         {t('ctaTitle')}
                     </Typography>
                     <Button

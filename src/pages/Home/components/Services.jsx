@@ -35,7 +35,7 @@ export default function Servicios() {
   const { t } = useTranslation('services');
 
   return (
-    <Box sx={{ py: 8, px: 2, backgroundColor: "transparent" }}>
+    <Box sx={{ py: 8, px: 2, backgroundColor: "background.pages" }}>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,9 +54,9 @@ export default function Servicios() {
             mr={2}
             color="text.secondary"
           >
-            {t('title1')}
+            {t('title')}
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h4"
             align="center"
             fontWeight={700}
@@ -64,7 +64,7 @@ export default function Servicios() {
             sx={{ background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
           >
             {t('title2')}
-          </Typography>
+          </Typography> */}
         </Box>
         {hoveredIndex !== null && (
           <Box
@@ -74,7 +74,6 @@ export default function Servicios() {
               left: 0,
               width: '100vw',
               height: '100vh',
-              backdropFilter: 'blur(12px)',
               zIndex: 10,
               pointerEvents: 'none',
             }}
@@ -102,7 +101,6 @@ export default function Servicios() {
             <Card
               elevation={hoveredIndex === index ? 12 : 6}
               sx={{
-                backgroundImage: `radial-gradient(ellipse at bottom, rgba(0,191,255,0.25), transparent 70%)`,
                 backgroundColor: 'background.paper',
                 border: '1px solid rgba(0,191,255)',
                 color: 'text.primary',
@@ -115,7 +113,7 @@ export default function Servicios() {
                 textAlign: 'center',
                 p: 3,
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                transform: hoveredIndex === index ? 'scale(1.35)' : 'scale(1)',
+                transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)',
                 zIndex: hoveredIndex === index ? 100 : 20,
               }}
             >
@@ -132,7 +130,7 @@ export default function Servicios() {
                 >
                   {servicio.icon}
                 </Avatar>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" color="text.secondary" gutterBottom>
                   {t(`items.${index}.title`)}
                 </Typography>
                 {/* <Typography variant="body2" color="text.secondary">

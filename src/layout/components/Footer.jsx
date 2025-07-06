@@ -9,10 +9,9 @@ export default function Footer() {
       component="footer"
       sx={{
         backgroundColor: '#050812',
-        color: 'text.secondary',
+        color: 'text.primary',
         py: 6,
         px: 2,
-        mt: 10,
       }}
     >
       <Container maxWidth="lg">
@@ -27,13 +26,13 @@ export default function Footer() {
           </Typography>
 
           <Stack direction="row" spacing={3}>
-            <Link href="#" underline="hover" color="text.secondary">
+            <Link href="#" underline="hover" color="text.primary">
               {t('privacy')}
             </Link>
-            <Link href="#" underline="hover" color="text.secondary">
+            <Link href="#" underline="hover" color="text.primary">
               {t('terms')}
             </Link>
-            <Link href="/contact" underline="hover" color="text.secondary">
+            <Link href="/contact" underline="hover" color="text.primary">
               {t('contact')}
             </Link>
           </Stack>
