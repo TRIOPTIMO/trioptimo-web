@@ -32,7 +32,7 @@ export default function Services() {
     {
       title: t('items.1.title'),
       description: t('items.1.description'),
-      image: <SensorsIcon />,
+      icon: <SensorsIcon />,
     },
     {
       title: t('items.2.title'),

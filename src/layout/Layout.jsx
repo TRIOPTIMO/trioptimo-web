@@ -27,13 +27,12 @@ export default function Layout({ children }) {
   return (
     <>
       <AppBar
-        position="relative"
+        position="sticky"
         elevation={0}
         sx={{
-          my: isMobile ? 0 : 1,
           mx: isMobile ? 0 : 'auto',
-          width: isMobile ? '100%' : '80%',
-          backgroundColor: 'transparent'
+          width: '100%',
+          backgroundColor: '#050812'
         }}
       >
         <Container maxWidth="lg">

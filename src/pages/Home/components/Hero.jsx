@@ -3,14 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import TypingTitle from "./TypingTitle";
 import GlobalBackground from './GlobalBackground';
-import VantaBackground from "./VantaBackground";
 
 export default function Hero() {
   const { t } = useTranslation("hero");
   return (
     <Box
       sx={{
-        minHeight: '60vh',
+        minHeight: '65vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -22,7 +21,7 @@ export default function Hero() {
     >
 
       <GlobalBackground />
-      {/* <VantaBackground /> */}
+      
       <Stack spacing={4} sx={{ mx: 'auto', color: 'text.secondary' }}>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -45,7 +44,7 @@ export default function Hero() {
           <Button
             variant="contained"
             size="large"
-            href="/contact"
+            href="#contact"
             sx={{
               px: 5,
               py: 1.5,
