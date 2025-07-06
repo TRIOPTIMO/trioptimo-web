@@ -1,10 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { useMetaTags } from "../../services/useMetaTags";
 
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/Hero";
 import Services from "../Services/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
-import Statitics from './components/Statitics';
 import AboutUs from "../About/AboutUs";
 import Contact from "../Contact/Contact";
 
@@ -21,7 +20,6 @@ export default function Home() {
   return (
     <>
       <Hero id="home"/>
-      <Statitics />
       <Services id="services"/>
       <AboutUs id="aboutu"/>
       <WhyChooseUs />
