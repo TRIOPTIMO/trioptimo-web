@@ -34,7 +34,7 @@ export default function PorQueElegirnos() {
   const { t } = useTranslation('whychooseus');
 
   return (
-    <Box sx={{ py: 8, px: 2, backgroundColor: "background.pages", position: 'relative', minHeight:"20vh" }}>
+    <Box sx={{ py: 8, px: 2, backgroundColor: "background.pages", position: 'relative', minHeight: "20vh" }}>
       <Box display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
@@ -50,20 +50,7 @@ export default function PorQueElegirnos() {
         >
           {t('title')}
         </Typography>
-        {/* <Typography
-          variant="h4"
-          align="center"
-          fontWeight={700}
-          mb={6}
-          sx={{background: (theme) => theme.palette.primary.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}
-        >
-          {t('title_part2')}
-        </Typography>
-        <Typography variant="h4" align="center" color="text.secondary" fontWeight={700} mb={6}>
-          {t('title_part3')}
-        </Typography> */}
       </Box>
-      {/* Blur overlay */}
       {hoveredIndex !== null && (
         <Box
           sx={{
@@ -101,8 +88,12 @@ export default function PorQueElegirnos() {
             <Card
               elevation={hoveredIndex === index ? 12 : 6}
               sx={{
-                backgroundColor: 'background.paper',
-                border: '1px solid rgba(0,191,255)',
+                background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
+                borderRadius: 3,
+                boxShadow: hoveredIndex === index
+                  ? '0 8px 24px rgba(0, 191, 255, 0.3)'
+                  : '0 4px 12px rgba(0, 191, 255, 0.15)',
+                border: '1px solid rgba(0,191,255,0.2)',
                 color: 'text.primary',
                 width: '100%',
                 maxWidth: 300,
@@ -113,26 +104,44 @@ export default function PorQueElegirnos() {
                 textAlign: 'center',
                 p: 3,
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)',
+                transform: hoveredIndex === index ? 'scale(1.05)' : 'scale(1)',
                 zIndex: hoveredIndex === index ? 100 : 20,
+                cursor: 'pointer',
               }}
             >
-              <Avatar
+              <Box
                 sx={{
-                  bgcolor: 'primary.main',
-                  width: 56,
-                  height: 56,
+                  width: 60,
+                  height: 60,
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #00bfff, #6a5acd)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   mb: 2,
-                  color: '#000',
+                  color: '#fff',
+                  fontSize: 30,
                 }}
               >
                 {razon.icon}
-              </Avatar>
-              <CardContent>
-                <Typography variant="h6" fontWeight={600} color="text.secondary" gutterBottom>
+              </Box>
+
+              <CardContent sx={{ p: 0 }}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: 'primary.main',
+                    fontWeight: 'bold',
+                    mb: 1,
+                  }}
+                >
                   {t(`reasons.${index}.title`)}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  sx={{ lineHeight: 1.6 }}
+                >
                   {t(`reasons.${index}.description`)}
                 </Typography>
               </CardContent>
@@ -140,6 +149,7 @@ export default function PorQueElegirnos() {
           </Grid>
         ))}
       </Grid>
+
     </Box>
   );
 }

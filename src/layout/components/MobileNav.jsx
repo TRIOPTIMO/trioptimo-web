@@ -63,7 +63,7 @@ export default function MobileNav() {
                   ModalProps={{
                     sx: {
                       background: 'background.paper', // o '#0a0f1c' o 'rgba(0,0,0,0.8)'
-                      color: 'text.primary',                // asegura que el texto sea visible
+                      color: 'text.secondary',       
                       backdropFilter: 'blur(5px)',        // opcional: efecto de glassmorphism
                       borderLeft: '1px solid rgba(255,255,255,0.1)', // opcional
                     },
@@ -77,7 +77,7 @@ export default function MobileNav() {
                             backgroundColor: 'rgba(0,191,255,0.1)', // azul suave al hover
                           },
                         }}>
-                          <ListItemText primary={label} sx={{ color: '#fff' }} />
+                          <ListItemText primary={label} sx={{ color: 'text.secondary' }} />
                         </ListItem>
                       ))}
                     </List>
