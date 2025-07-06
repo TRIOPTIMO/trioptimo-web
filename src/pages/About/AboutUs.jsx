@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { useMetaTags } from "../../services/useMetaTags";
 import Mision from "./components/Mision";
 import Vision from "./components/Vision";
-import Ceos from "./components/Ceos";
+// import Ceos from "./components/Ceos";
 import Title from "./components/Title";
 
 export default function About() {
@@ -36,7 +36,7 @@ export default function About() {
                     </Grid>
                 </motion.div>
 
-                <Ceos />
+                {/* <Ceos /> */}
             </Container>
         </Box>
     );
