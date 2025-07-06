@@ -3,27 +3,8 @@ import {
     Typography,
 } from '@mui/material';
 
-import BuildIcon from '@mui/icons-material/Build';
-import MemoryIcon from '@mui/icons-material/Memory';
-import InsightsIcon from '@mui/icons-material/Insights';
-import SensorsIcon from '@mui/icons-material/Sensors';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-
-const servicios = [
-    {
-        icono: <BuildIcon />,
-    },
-    {
-        icono: <SensorsIcon />,
-    },
-    {
-        icono: <InsightsIcon />,
-    },
-    {
-        icono: <MemoryIcon />,
-    },
-];
 
 export default function Title() {
     const { t } = useTranslation('servicespage');
