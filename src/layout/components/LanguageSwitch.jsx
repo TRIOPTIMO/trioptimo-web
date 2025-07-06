@@ -56,7 +56,7 @@ export default function LanguageSwitch() {
                     PaperProps={{
                       sx: {
                         backgroundColor: 'background.paper',
-                        color: 'text.primary',
+                        color: 'text.secondary',
                         mt: 1,
                       },
                     }}

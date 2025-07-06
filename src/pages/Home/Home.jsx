@@ -1,9 +1,12 @@
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Statitics from './components/Statitics';
 import { useTranslation } from 'react-i18next';
 import { useMetaTags } from "../../services/useMetaTags";
+
+import Hero from "./components/Hero";
+import Services from "../Services/Services";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Statitics from './components/Statitics';
+import AboutUs from "../About/AboutUs";
+import Contact from "../Contact/Contact";
 
 export default function Home() {
   const { t, i18n } = useTranslation('home');
@@ -17,10 +20,12 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
+      <Hero id="home"/>
       <Statitics />
-      <Services />
+      <Services id="services"/>
+      <AboutUs id="aboutu"/>
       <WhyChooseUs />
+      <Contact id="contact"/>
     </>
   );
 }

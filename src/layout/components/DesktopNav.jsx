@@ -6,51 +6,53 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
 import LanguageSwitch from './LanguageSwitch';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function DesktopNav() {
   const { t } = useTranslation('layout');
-
-
   const navItems = [
-    { label: t('home'), to: `/` },
-    { label: t('services'), to: `/services` },
-    { label: t('aboutUs'), to: `/aboutus` },
-    { label: t('contact'), to: `/contact` },
-    { label: t('faq'), to: `/faq` }
+    { label: t('home'), href: `#home` },
+    { label: t('services'), href: `#services` },
+    { label: t('aboutUs'), href: `#aboutus` },
+    { label: t('contact'), href: `#contact` },
   ];
 
-  const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <>
-            {!isMobile && (
-              <Stack direction="row" spacing={3}>
-                {navItems.map(({ label, to }) => (
-                  <Button
-                    key={to}
-                    component={Link}
-                    to={to}
-                    sx={{
-                      color: 'white',
-                      fontWeight: location.pathname === to ? 'bold' : 700,
-                      fontSize: '1.1rem',
-                      textTransform: 'none',
-                      '&:hover': {
-                        color: 'primary.main',
-                        backgroundColor: 'transparent',
-                      },
-                    }}
-                  >
-                    {label}
-                  </Button>
-                ))}
-                <LanguageSwitch/>
-              </Stack>
-            )}
+      {!isMobile && (
+        <Stack direction="row" spacing={3}>
+          {navItems.map(({ label, href }) => {
+            const id = href.replace('#', '');
+            return (
+              <Button
+                key={href}
+                component={ScrollLink}
+                to={id}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                sx={{
+                  color: 'white',
+                  fontWeight: 700,
+                  fontSize: '1.1rem',
+                  textTransform: 'none',
+                  '&:hover': {
+                    color: 'primary.main',
+                    backgroundColor: 'transparent',
+                  },
+                }}
+              >
+                {label}
+              </Button>
+            );
+          })}
+          <LanguageSwitch />
+        </Stack>
+      )}
     </>
   );
 }

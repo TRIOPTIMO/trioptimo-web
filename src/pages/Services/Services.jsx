@@ -19,7 +19,7 @@ export default function Services() {
   });
 
   return (
-    <Box sx={{ backgroundColor: 'background.pages', py: 10 }}>
+    <Box name="services" sx={{ backgroundColor: 'background.pages', py: 10 }}>
       <Container>
         <Title/>
         <ServicesComponent/>
