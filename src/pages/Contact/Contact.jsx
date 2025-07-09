@@ -27,7 +27,10 @@ export default function Contacto() {
   });
 
   return (
-    <Box name="contact" sx={{ background: 'linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%)', py: 10 }}>
+    <Box name="contact" sx={{ background: 'linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%)',
+      backgroundColor: 'background.pages', 
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover', py: 10 }}>
       <Container maxWidth="sm">
         <Title />
         <Form />

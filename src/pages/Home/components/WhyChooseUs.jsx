@@ -51,19 +51,6 @@ export default function PorQueElegirnos() {
           {t('title')}
         </Typography>
       </Box>
-      {hoveredIndex !== null && (
-        <Box
-          sx={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            zIndex: 10,
-            pointerEvents: 'none',
-          }}
-        />
-      )}
 
       <Grid
         container
@@ -82,18 +69,18 @@ export default function PorQueElegirnos() {
               display: 'flex',
               justifyContent: 'center',
             }}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
           >
             <Card
-              elevation={hoveredIndex === index ? 12 : 6}
+              // elevation={hoveredIndex === index ? 12 : 6}
               sx={{
-                background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
+                // background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
                 borderRadius: 3,
-                boxShadow: hoveredIndex === index
-                  ? '0 8px 24px rgba(0, 191, 255, 0.3)'
-                  : '0 4px 12px rgba(0, 191, 255, 0.15)',
-                border: '1px solid rgba(0,191,255,0.2)',
+                // boxShadow: hoveredIndex === index
+                //   ? '0 8px 24px rgba(0, 191, 255, 0.3)'
+                //   : '0 4px 12px rgba(0, 191, 255, 0.15)',
+                // border: '1px solid rgba(0,191,255,0.2)',
+                boxShadow: 0,
+                background: "transparent",
                 color: 'text.primary',
                 width: '100%',
                 maxWidth: 300,

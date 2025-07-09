@@ -1,10 +1,10 @@
 import { Stack, Box, Typography, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 
-export default function ServiceStack({ items = [] }) {
+export default function ServicesComponent({ items = [] }) {
   return (
     <Stack
-      spacing={4}
+      spacing={2}
       sx={{
         mt: 6,
       }}
@@ -22,18 +22,20 @@ export default function ServiceStack({ items = [] }) {
             sx={{
               p: 4,
               borderRadius: 3,
-              background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
-              boxShadow: '0 8px 24px rgba(0,191,255,0.2)',
-              border: '1px solid rgba(0,191,255,0.2)',
+              // background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
+              background: "transparent",
+              // boxShadow: '0 8px 24px rgba(0,191,255,0.2)',
+              boxShadow: 0,
+              // border: '1px solid rgba(0,191,255,0.2)',
               color: 'text.primary',
               display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
               alignItems: 'center',
               gap: 4,
-              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              // transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               '&:hover': {
-                transform: 'translateY(-5px)',
-                boxShadow: '0 12px 30px rgba(0,191,255,0.4)',
+                // transform: 'translateY(-5px)',
+                // boxShadow: '0 12px 30px rgba(0,191,255,0.4)',
               },
             }}
           >

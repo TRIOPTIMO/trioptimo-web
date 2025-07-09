@@ -23,7 +23,7 @@ export default function Services() {
     lang: i18n.language,
   });
 
-    const servicios = [
+  const servicios = [
     {
       title: t('items.0.title'),
       description: t('items.0.description'),
@@ -47,9 +47,14 @@ export default function Services() {
   ];
 
   return (
-    <Box name="services" sx={{ backgroundColor: 'background.pages', py: 10 }}>
+    <Box name="services" sx={{
+      // backgroundImage: `url("/images/services.jpg")`,
+      backgroundColor: 'background.pages', 
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover', py: 10
+    }}>
       <Container>
-        <Title/>
+        <Title />
         <ServicesComponent items={servicios} />
       </Container>
     </Box>

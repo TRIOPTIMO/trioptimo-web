@@ -6,46 +6,55 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-export default function Vision() {
+export default function Mision() {
     const { t } = useTranslation('aboutUs');
 
     return (
-        <>
-            <Grid item xs={12} md={6}>
-                <Paper
-                    elevation={4}
-                    sx={{
-                        p: 4,
-                        height: '100%',
-                        background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
-                        borderRadius: 3,
-                        boxShadow: '0 8px 24px rgba(0,191,255,0.2)',
-                        border: '1px solid rgba(0,191,255,0.2)',
-                        transition: 'transform 0.3s ease',
-                        '&:hover': {
-                            transform: 'translateY(-5px)',
-                            boxShadow: '0 12px 30px rgba(0,191,255,0.4)',
-                        },
-                    }}
-                >
-                    <Box display={"flex"}
-                        flexDirection={"row"}
+        <Grid item xs={12} md={6}>
+            <Paper
+                elevation={4}
+                sx={{
+                    p: 4,
+                    height: '100%',
+                    background: "transparent",
+                    borderRadius: 3,
+                    boxShadow: 0,
+                    display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+                    alignItems: 'center',
+                    gap: 3,
+                }}
+            >
+
+                <Box>
+                    <Typography
+                        variant="h6"
+                        align="left"
+                        fontWeight={700}
+                        color="text.secondary"
+                        mb={1}
                     >
-                        <Typography
-                            variant="h6"
-                            align="center"
-                            fontWeight={700}
-                            mr={2}
-                            color="text.secondary"
-                        >
-                            {t('visionTitle')}
-                        </Typography>
-                    </Box>
+                        {t('visionTitle')}
+                    </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {t('visionText')}
                     </Typography>
-                </Paper>
-            </Grid>
-        </>
+                </Box>
+
+                <Box
+                    component="img"
+                    src="/images/vision.webp" // ✅ CAMBIAR por tu ruta real
+                    alt={t('missionTitle')}
+                    sx={{
+                        width: { xs: '100%', md: 250 },
+                        height: { xs: 200, md: 250 },
+                        objectFit: 'cover',
+                        borderRadius: 2,
+                        boxShadow: 0
+                    }}
+                />
+            </Paper>
+        </Grid>
     );
 }
+
