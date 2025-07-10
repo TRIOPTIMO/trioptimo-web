@@ -34,6 +34,7 @@ export default function MyButton() {
         backgroundColor: '#FFA500',
         height: '48px',
         cursor: 'pointer',
+        my: {xs: 3},
       }}
     >
       <Button
@@ -47,9 +48,8 @@ export default function MyButton() {
         to="contact"
         sx={{
           px: 5,
-          py: 1.5,
           fontWeight: 'bold',
-          fontSize: '1.5rem',
+          fontSize: {xs: '0.8rem', md: '1.5rem' },
           borderRadius: '999px',
           bgcolor: 'transparent',
           color: 'white',
