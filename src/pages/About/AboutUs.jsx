@@ -22,9 +22,9 @@ export default function About() {
     });
 
     return (
-        <Box name="aboutus" sx={{ py: 10, background: 'linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%)' }}>
+        <Box name="aboutus" sx={{ py: 10, backgroundColor: 'colors.white', }}>
             <Container>
-                <Title />
+                {/* <Title /> */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}

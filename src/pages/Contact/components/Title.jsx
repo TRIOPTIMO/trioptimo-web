@@ -21,7 +21,7 @@ export default function Title() {
                     mb={6}
                     mr={2}
                     fontSize= {55}
-                    color="text.secondary"
+                    color="colors.darkBlue"
                 >
                     {t('title')}
                 </Typography>
@@ -29,7 +29,7 @@ export default function Title() {
                 <Typography
                     variant="body1"
                     align="center"
-                    color="text.secondary"
+                    color="colors.darkBlue"
                     fontSize= {20}
                     mb={6}
                 >

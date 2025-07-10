@@ -29,12 +29,12 @@ const razones = [
   },
 ];
 
-export default function PorQueElegirnos() {
+export default function WhychooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const { t } = useTranslation('whychooseus');
 
   return (
-    <Box sx={{ py: 8, px: 2, backgroundColor: "background.pages", position: 'relative', minHeight: "20vh" }}>
+    <Box sx={{ py: 8, px: 2, backgroundColor: 'colors.white', position: 'relative', minHeight: "20vh" }}>
       <Box display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
@@ -46,7 +46,7 @@ export default function PorQueElegirnos() {
           fontWeight={700}
           mb={6}
           mr={2}
-          color="text.secondary"
+          color="colors.darkBlue"
           fontSize={55}
         >
           {t('title')}
@@ -72,19 +72,13 @@ export default function PorQueElegirnos() {
             }}
           >
             <Card
-              // elevation={hoveredIndex === index ? 12 : 6}
               sx={{
-                // background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
                 borderRadius: 3,
-                // boxShadow: hoveredIndex === index
-                //   ? '0 8px 24px rgba(0, 191, 255, 0.3)'
-                //   : '0 4px 12px rgba(0, 191, 255, 0.15)',
-                // border: '1px solid rgba(0,191,255,0.2)',
                 boxShadow: 0,
                 background: "transparent",
-                color: 'text.primary',
+                color:"colors.darkBlue",
                 width: '100%',
-                maxWidth: 300,
+                maxWidth: 400,
                 minHeight: 280,
                 display: 'flex',
                 flexDirection: 'column',
@@ -102,7 +96,7 @@ export default function PorQueElegirnos() {
                   width: 60,
                   height: 60,
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #00bfff, #6a5acd)',
+                  backgroundColor: 'colors.orange',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -119,7 +113,7 @@ export default function PorQueElegirnos() {
                   variant="h6"
                   fontSize={25}
                   sx={{
-                    color: 'primary.main',
+                    color: 'colors.orange',
                     fontWeight: 'bold',
                     mb: 1,
                   }}
@@ -128,7 +122,7 @@ export default function PorQueElegirnos() {
                 </Typography>
                 <Typography
                   variant="body1"
-                  color="text.secondary"
+                  color="colors.darkBlue"
                   fontSize={20}
                   sx={{ lineHeight: 1.6 }}
                 >

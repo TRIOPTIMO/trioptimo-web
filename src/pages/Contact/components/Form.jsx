@@ -55,7 +55,7 @@ export default function Form() {
           <Stack
             spacing={3}
             sx={{
-              width: { xs: "100%", sm: "80%", md: "50%" },
+              width: { xs: "100%", sm: "80%", md: "60%" },
               margin: "0 auto",
             }}
           >
@@ -70,17 +70,11 @@ export default function Form() {
                 rows={field === 'message' ? 4 : 1}
                 required={field !== 'company'}
                 sx={{
-                  background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
+                  backgroundColor: 'colors.white',
                   borderRadius: 1,
-                  boxShadow: '0 4px 12px rgba(0,191,255,0.2)',
-                  '& fieldset': {
-                    borderColor: 'rgba(0,191,255,0.5)',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: '#00bfff',
-                  },
+                  boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
                   '& .MuiInputBase-input': {
-                    color: 'text.primary',
+                    color:"colors.darkBlue"
                   },
                 }}
                 fullWidth
@@ -92,16 +86,16 @@ export default function Form() {
                 type="submit"
                 variant="contained"
                 sx={{
-                  background: 'linear-gradient(90deg, #00bfff, #6a5acd)',
+                  backgroundColor: ' #FCA311',
                   color: '#fff',
                   fontWeight: 'bold',
-                  boxShadow: '0 8px 24px rgba(0,191,255,0.3)',
+                  boxShadow: '0 8px 24px rgba(20, 33, 61, 0.2)',
                   borderRadius: 3,
                   px: 4,
                   py: 1.5,
                   '&:hover': {
-                    background: 'linear-gradient(90deg, #6a5acd, #00bfff)',
-                    boxShadow: '0 12px 30px rgba(0,191,255,0.5)',
+                    backgroundColor: 'rgb(206, 134, 17)',
+                    boxShadow: '0 12px 30px rgba(20, 33, 61, 0.2)',
                   },
                 }}
               >

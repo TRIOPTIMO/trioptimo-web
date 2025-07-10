@@ -19,11 +19,11 @@ export default function Home() {
 
   return (
     <>
-      <Hero id="home"/>
-      <Services id="services"/>
-      <AboutUs id="aboutu"/>
+      <Hero id="home" />
+      <Services id="services" />
+      <AboutUs id="aboutu" />
       <WhyChooseUs />
-      <Contact id="contact"/>
+      <Contact id="contact" />
     </>
   );
 }

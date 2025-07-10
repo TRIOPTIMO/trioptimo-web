@@ -33,13 +33,13 @@ export default function Hero() {
             <TypingTitle />
             <Typography
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: 6, color: 'text.primary' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: 6, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: 6, color: 'text.tertiary' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: 6, color: 'colors.grey' }}
             >
               {t("description2")}
             </Typography>
@@ -55,10 +55,10 @@ export default function Hero() {
                 fontWeight: 'bold',
                 fontSize: '1.5rem',
                 borderRadius: '999px',
-                bgcolor: '#ff9100',
-                color: '#000',
+                bgcolor: 'colors.orange',
+                color: 'colors.white',
                 '&:hover': {
-                  bgcolor: 'secondary.main',
+                  bgcolor: 'rgb(218, 141, 18)',
                 },
               }}
             >

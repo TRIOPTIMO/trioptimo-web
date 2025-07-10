@@ -16,8 +16,6 @@ import homeEs from './languages/es/home.json';
 import homeEn from './languages/en/home.json';
 import whychooseusEs from './languages/es/whychooseus.json';
 import whychooseusEn from './languages/en/whychooseus.json';
-import servicespageEs from './languages/es/servicespage.json';
-import servicespageEn from './languages/en/servicespage.json';
 import footerEs from './languages/es/footer.json';
 import footerEn from './languages/en/footer.json';
 import aboutUsEs from './languages/es/aboutUs.json';
@@ -39,7 +37,6 @@ i18n
                 faq: faqEs,
                 home: homeEs,
                 whychooseus: whychooseusEs,
-                servicespage: servicespageEs,
                 footer: footerEs,
                 aboutUs: aboutUsEs,
                 statistics: statisticsEs,
@@ -52,7 +49,6 @@ i18n
                 faq: faqEn,
                 home: homeEn,
                 whychooseus: whychooseusEn,
-                servicespage: servicespageEn,
                 footer: footerEn,
                 aboutUs: aboutUsEn,
                 statistics: statisticsEn,

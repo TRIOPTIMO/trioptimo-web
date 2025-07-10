@@ -44,13 +44,10 @@ const TypingTitle = () => {
       <Typography
         variant="h1"
         fontWeight={500}
+        color="text.primary"
         sx={{
           fontSize: { xs: "4rem", md: "12.5rem" },
           mt: 0,
-          whiteSpace: "nowrap",
-          background: (theme) => theme.palette.primary.gradient,
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
         }}
       >
         {/* {typedText} */}

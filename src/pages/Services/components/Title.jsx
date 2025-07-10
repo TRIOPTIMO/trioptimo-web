@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 export default function Title() {
-    const { t } = useTranslation('servicespage');
+    const { t } = useTranslation('services');
 
     return (
         <>
@@ -28,7 +28,7 @@ export default function Title() {
                         fontSize= {55}
                         mb={6}
                         mr={2}
-                        color="text.secondary"
+                        color="colors.darkBlue"
                     >
                         {t('title')}
                     </Typography>
@@ -41,7 +41,7 @@ export default function Title() {
                     fontSize= {25}
                     mb={6}
                     mr={2}
-                    color="text.secondary"
+                    color="colors.darkBlue"
                 >
                     {t('description')}
                 </Typography>

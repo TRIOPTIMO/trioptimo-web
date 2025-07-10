@@ -1,22 +1,12 @@
 {
-  "title": "Nuestros Servicios",
-  "items": [
-    {
-      "title": "Optimización de procesos",
-      "description": "Mejoramos tus operaciones actuales para maximizar la eficiencia y reducir costes, aprovechando al máximo lo que ya tienes."
-    },
-    {
-      "title": "Transformación digital industrial",
-      "description": "Implantamos tecnología adaptada a tu realidad para avanzar en la digitalización y automatización, sin riesgos ni grandes inversiones."
-    },
-    {
-      "title": "Inteligencia de negocio y gestión de datos",
-      "description": "Convertimos la información de tu empresa en decisiones efectivas que mejoran resultados y anticipan oportunidades."
-    },
-    {
-      "title": "Formación práctica para equipos",
-      "description": "Diseñamos cursos y talleres personalizados para que tu equipo interiorice los cambios y mantenga la mejora continua."
-    }
-  ],
-  "button": "Ver más"
+  "title": "¿Qué ofrecemos?",
+  "description": "Impulsamos tu industria optimizando procesos, digitalizando sin riesgos y transformando datos en decisiones inteligentes, mientras formamos a tu equipo para sostener el cambio.",
+  "meta": {
+    "title": "Servicios | Trioptimo",
+    "description": "Impulsamos la transformación digital en empresas industriales.",
+    "keywords": "industria 4.0, automatización, transformación digital"
+  },
+  "home": {
+    "heading": "Bienvenido a Trioptimo"
+  }
 }

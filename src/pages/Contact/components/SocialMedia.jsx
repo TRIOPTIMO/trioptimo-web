@@ -35,11 +35,11 @@ export default function SocialMedia() {
                             sx={{
                                 width: 50,
                                 height: 50,
-                                background: 'linear-gradient(135deg, #00bfff, #6a5acd)',
+                                backgroundColor: 'colors.darkBlue',
                                 color: '#fff',
                                 '&:hover': {
-                                    background: 'linear-gradient(135deg, #6a5acd, #00bfff)',
-                                    boxShadow: '0 4px 12px rgba(0,191,255,0.4)',
+                                    backgroundColor: ' #FCA311',
+                                    boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
                                 },
                             }}
                         >
