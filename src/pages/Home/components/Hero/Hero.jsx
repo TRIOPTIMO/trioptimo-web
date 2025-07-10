@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import TypingTitle from "./components/TypingTitle";
 import GlobalBackground from './components/GlobalBackground';
 import Statitics from './components/Statitics';
-import { Link as ScrollLink } from 'react-scroll';
-import gsap from 'gsap';
+import CallToAction from './components/CallToAction';
 import { useEffect, useRef } from 'react';
 
 export default function Hero() {
@@ -48,7 +47,7 @@ export default function Hero() {
     <>
       <Box
         sx={{
-          minHeight: '100vh',
+          minHeight: {md: '100vh', sm: '90vh'},
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -61,7 +60,7 @@ export default function Hero() {
 
         <GlobalBackground />
 
-        <Stack spacing={4} sx={{ mx: 'auto', color: 'text.secondary' }}>
+        <Stack spacing={4} sx={{ mx: 'auto', color: 'colors.white' }}>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,32 +80,8 @@ export default function Hero() {
             >
               {t("description2")}
             </Typography>
-            <Button
-              variant="contained"
-              size="large"
-              component={ScrollLink}
-              smooth={true}
-              duration={500}
-              offset={-80} // opcional, si tenés header fijo
-              spy={true}
-              to="contact"
-              sx={{
-                px: 5,
-                py: 1.5,
-                mt: 5,
-                mb: 12,
-                fontWeight: 'bold',
-                fontSize: '1.5rem',
-                borderRadius: '999px',
-                bgcolor: 'colors.orange',
-                color: 'colors.white',
-                '&:hover': {
-                  bgcolor: 'rgb(218, 141, 18)',
-                },
-              }}
-            >
-              {t("cta")}
-            </Button>
+            
+            <CallToAction/>
           </motion.div>
         </Stack>
 

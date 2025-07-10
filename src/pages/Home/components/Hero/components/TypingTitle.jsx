@@ -1,22 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { Typography, Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const TypingTitle = () => {
   const { t } = useTranslation("hero");
-  // const fullText = t("title2"); // El texto con efecto
-  // const [typedText, setTypedText] = useState("");
-
-  // useEffect(() => {
-  //   if (!fullText) return;
-  //   let index = 0;
-  //   const interval = setInterval(() => {
-  //     setTypedText((prev) => prev + fullText.charAt(index));
-  //     index++;
-  //     if (index >= fullText.length) clearInterval(interval);
-  //   }, 120); // velocidad del typing
-  //   return () => clearInterval(interval);
-  // }, [fullText]);
 
   return (
     <Box
@@ -26,7 +12,6 @@ const TypingTitle = () => {
         alignItems: "baseline",
         flexWrap: "wrap",
         gap: 1,
-        mt: 10
       }}
     >
       <Typography
@@ -50,7 +35,6 @@ const TypingTitle = () => {
           mt: 0,
         }}
       >
-        {/* {typedText} */}
          {t("title2")}
       </Typography>
     </Box>
