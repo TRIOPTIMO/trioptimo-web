@@ -15,14 +15,16 @@ export default function SocialMedia() {
             <Stack direction="row" spacing={2} justifyContent="center" mt={6}>
                 {[{
                     icon: <LinkedInIcon />,
-                    href: 'https://www.linkedin.com/company/tuempresa'
+                    href: 'https://www.linkedin.com/company/trioptimo'
                 }, {
                     icon: <InstagramIcon />,
-                    href: 'https://www.instagram.com/tuempresa'
-                }, {
-                    icon: <TwitterIcon />,
-                    href: 'https://twitter.com/tuempresa'
-                }, {
+                    href: 'https://www.instagram.com/trioptimo'
+                 },
+                // {
+                //     icon: <TwitterIcon />,
+                //     href: 'https://twitter.com/tuempresa'
+                // },
+                 {
                     icon: <EmailIcon />,
                     href: 'mailto:info@trioptimo.com'
                 }].map((social, i) => (
@@ -38,7 +40,7 @@ export default function SocialMedia() {
                                 backgroundColor: 'colors.darkBlue',
                                 color: '#fff',
                                 '&:hover': {
-                                    backgroundColor: ' #FCA311',
+                                    backgroundColor: 'colors.orange',
                                     boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
                                 },
                             }}
