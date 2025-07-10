@@ -11,14 +11,15 @@ import {
 import { Link } from 'react-router-dom';
 import DesktopNav from './components/DesktopNav';
 import MobileNav from './components/MobileNav';
+import Logo from "../layout/components/Logo";
 
 export default function Layout({ children }) {
   const { t } = useTranslation('layout');
-const theme = useTheme();
+  const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <>
-     <Toolbar
+      <Toolbar
         disableGutters
         sx={{
           m: 0,
@@ -27,6 +28,8 @@ const theme = useTheme();
         }}
       >
         {/* Logo */}
+
+        <Logo />
         <Typography
           variant="h6"
           component={Link}
