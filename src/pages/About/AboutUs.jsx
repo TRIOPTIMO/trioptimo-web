@@ -23,7 +23,7 @@ export default function About() {
 
     return (
         <Box name="aboutus" sx={{ py: 10, background: 'linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%)' }}>
-            <Container maxWidth="md">
+            <Container>
                 <Title />
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

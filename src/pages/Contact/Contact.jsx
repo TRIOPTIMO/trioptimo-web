@@ -31,7 +31,7 @@ export default function Contacto() {
       backgroundColor: 'background.pages', 
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover', py: 10 }}>
-      <Container maxWidth="sm">
+      <Container  maxWidth="md">
         <Title />
         <Form />
         <SocialMedia />

@@ -11,7 +11,7 @@ export default function Hero() {
     <>
       <Box
         sx={{
-          minHeight: '65vh',
+          minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -33,13 +33,13 @@ export default function Hero() {
             <TypingTitle />
             <Typography
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: 6, color: 'text.primary' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: 6, color: 'text.primary' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1rem" }, my: 6, color: 'text.tertiary' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: 6, color: 'text.tertiary' }}
             >
               {t("description2")}
             </Typography>
@@ -50,11 +50,12 @@ export default function Hero() {
               sx={{
                 px: 5,
                 py: 1.5,
-                mt: 3,
+                mt: 5,
+                mb: 12,
                 fontWeight: 'bold',
-                fontSize: '1rem',
+                fontSize: '1.5rem',
                 borderRadius: '999px',
-                bgcolor: 'primary.main',
+                bgcolor: '#ff9100',
                 color: '#000',
                 '&:hover': {
                   bgcolor: 'secondary.main',
@@ -67,7 +68,7 @@ export default function Hero() {
         </Stack>
 
       </Box>
-      <Statitics />
+      {/* <Statitics /> */}
     </>
   );
 }

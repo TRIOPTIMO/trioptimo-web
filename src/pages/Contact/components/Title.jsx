@@ -20,6 +20,7 @@ export default function Title() {
                     fontWeight={700}
                     mb={6}
                     mr={2}
+                    fontSize= {55}
                     color="text.secondary"
                 >
                     {t('title')}
@@ -29,6 +30,7 @@ export default function Title() {
                     variant="body1"
                     align="center"
                     color="text.secondary"
+                    fontSize= {20}
                     mb={6}
                 >
                     {t('description')}

@@ -25,6 +25,7 @@ export default function Title() {
                         variant="h4"
                         align="center"
                         fontWeight={700}
+                        fontSize= {55}
                         mb={6}
                         mr={2}
                         color="text.secondary"
@@ -37,6 +38,7 @@ export default function Title() {
                     variant="subtitle"
                     align="center"
                     fontWeight={700}
+                    fontSize= {25}
                     mb={6}
                     mr={2}
                     color="text.secondary"

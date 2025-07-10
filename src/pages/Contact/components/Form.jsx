@@ -2,6 +2,7 @@ import {
     TextField,
     Button,
     Stack,
+    Container
 } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
@@ -35,70 +36,81 @@ export default function Form() {
         }
     };
 
-    return (
-        <>
+     return (
+    <Container
+      maxWidth="md"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        style={{ width: "100%" }}
+      >
+        <form onSubmit={handleSubmit}>
+          <Stack
+            spacing={3}
+            sx={{
+              width: { xs: "100%", sm: "80%", md: "50%" },
+              margin: "0 auto",
+            }}
+          >
+            {['name', 'email', 'company', 'message'].map((field) => (
+              <TextField
+                key={field}
+                name={field}
+                label={t(field)}
+                type={field === 'email' ? 'email' : 'text'}
+                variant="outlined"
+                multiline={field === 'message'}
+                rows={field === 'message' ? 4 : 1}
+                required={field !== 'company'}
+                sx={{
+                  background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
+                  borderRadius: 1,
+                  boxShadow: '0 4px 12px rgba(0,191,255,0.2)',
+                  '& fieldset': {
+                    borderColor: 'rgba(0,191,255,0.5)',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#00bfff',
+                  },
+                  '& .MuiInputBase-input': {
+                    color: 'text.primary',
+                  },
+                }}
+                fullWidth
+              />
+            ))}
 
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-            >
-
-                <form onSubmit={handleSubmit}>
-                    <Stack spacing={3}>
-                        {['name', 'email', 'company', 'message'].map((field) => (
-                            <TextField
-                                key={field}
-                                name={field}
-                                label={t(field)}
-                                type={field === 'email' ? 'email' : 'text'}
-                                variant="outlined"
-                                multiline={field === 'message'}
-                                rows={field === 'message' ? 4 : 1}
-                                required={field !== 'company'}
-                                sx={{
-                                    background: 'linear-gradient(135deg, #ffffff, #f0f4ff)',
-                                    borderRadius: 1,
-                                    boxShadow: '0 4px 12px rgba(0,191,255,0.2)',
-                                    '& fieldset': {
-                                        borderColor: 'rgba(0,191,255,0.5)',
-                                    },
-                                    '&:hover fieldset': {
-                                        borderColor: '#00bfff',
-                                    },
-                                    '& .MuiInputBase-input': {
-                                        color: 'text.primary',
-                                    },
-                                }}
-                                fullWidth
-                            />
-                        ))}
-
-                        <motion.div whileHover={{ scale: 1.05 }}>
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                sx={{
-                                    background: 'linear-gradient(90deg, #00bfff, #6a5acd)',
-                                    color: '#fff',
-                                    fontWeight: 'bold',
-                                    boxShadow: '0 8px 24px rgba(0,191,255,0.3)',
-                                    borderRadius: 3,
-                                    px: 4,
-                                    py: 1.5,
-                                    '&:hover': {
-                                        background: 'linear-gradient(90deg, #6a5acd, #00bfff)',
-                                        boxShadow: '0 12px 30px rgba(0,191,255,0.5)',
-                                    },
-                                }}
-                            >
-                                {t('send')}
-                            </Button>
-                        </motion.div>
-
-                    </Stack>
-                </form>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  background: 'linear-gradient(90deg, #00bfff, #6a5acd)',
+                  color: '#fff',
+                  fontWeight: 'bold',
+                  boxShadow: '0 8px 24px rgba(0,191,255,0.3)',
+                  borderRadius: 3,
+                  px: 4,
+                  py: 1.5,
+                  '&:hover': {
+                    background: 'linear-gradient(90deg, #6a5acd, #00bfff)',
+                    boxShadow: '0 12px 30px rgba(0,191,255,0.5)',
+                  },
+                }}
+              >
+                {t('send')}
+              </Button>
             </motion.div>
-        </>
-    );
+          </Stack>
+        </form>
+      </motion.div>
+    </Container>
+  );
 }

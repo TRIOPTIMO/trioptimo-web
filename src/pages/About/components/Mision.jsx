@@ -16,6 +16,7 @@ export default function Mision() {
         sx={{
           p: 4,
           height: '100%',
+          width: "100%",
           background: "transparent",
           borderRadius: 3,
           boxShadow: 0,
@@ -47,10 +48,11 @@ export default function Mision() {
             fontWeight={700}
             color="text.secondary"
             mb={1}
+            fontSize= {35}
           >
             {t('missionTitle')}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" fontSize= {20} color="text.secondary">
             {t('missionText')}
           </Typography>
         </Box>

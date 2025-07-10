@@ -25,7 +25,8 @@ const TypingTitle = () => {
         justifyContent: "center",
         alignItems: "baseline",
         flexWrap: "wrap",
-        gap: 1
+        gap: 1,
+        mt: 10
       }}
     >
       <Typography

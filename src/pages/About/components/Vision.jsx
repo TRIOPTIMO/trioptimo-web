@@ -33,10 +33,11 @@ export default function Mision() {
                         fontWeight={700}
                         color="text.secondary"
                         mb={1}
+                        fontSize= {35}
                     >
                         {t('visionTitle')}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2"  fontSize= {20} color="text.secondary">
                         {t('visionText')}
                     </Typography>
                 </Box>

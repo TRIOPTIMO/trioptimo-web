@@ -47,6 +47,7 @@ export default function PorQueElegirnos() {
           mb={6}
           mr={2}
           color="text.secondary"
+          fontSize={55}
         >
           {t('title')}
         </Typography>
@@ -116,6 +117,7 @@ export default function PorQueElegirnos() {
               <CardContent sx={{ p: 0 }}>
                 <Typography
                   variant="h6"
+                  fontSize={25}
                   sx={{
                     color: 'primary.main',
                     fontWeight: 'bold',
@@ -127,6 +129,7 @@ export default function PorQueElegirnos() {
                 <Typography
                   variant="body1"
                   color="text.secondary"
+                  fontSize={20}
                   sx={{ lineHeight: 1.6 }}
                 >
                   {t(`reasons.${index}.description`)}
