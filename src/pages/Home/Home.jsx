@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Hero id="home" />
       <Services id="services" />
-      <AboutUs id="aboutu" />
+      <AboutUs id="aboutus" />
       <WhyChooseUs />
       <Contact id="contact" />
     </>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import TypingTitle from "./components/TypingTitle";
 import GlobalBackground from './components/GlobalBackground';
 import Statitics from './components/Statitics';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function Hero() {
   const { t } = useTranslation("hero");
@@ -46,7 +47,12 @@ export default function Hero() {
             <Button
               variant="contained"
               size="large"
-              href="#contact"
+              component={ScrollLink}
+              smooth={true}
+              duration={500}
+              offset={-80} // opcional, si tenés header fijo
+              spy={true}
+              to="contact"
               sx={{
                 px: 5,
                 py: 1.5,

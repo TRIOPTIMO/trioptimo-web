@@ -1,5 +1,7 @@
-import { Stack, Box, Typography } from '@mui/material';
+import { Stack, Box, Typography, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { Link as ScrollLink } from 'react-scroll';
+
 
 export default function ServicesComponent() {
   const { t } = useTranslation('services');
@@ -19,7 +21,7 @@ export default function ServicesComponent() {
         p: { xs: 2, md: 4 },
         alignItems: "center",
         justifyContent: "space-between",
-        mx: "auto", // centrar horizontalmente
+        mx: "auto",
       }}
     >
       {/* Texto */}
@@ -52,6 +54,32 @@ export default function ServicesComponent() {
         >
           {t('description')}
         </Typography>
+
+        <Button
+          component={ScrollLink}
+          smooth={true}
+          duration={500}
+          offset={-80} // opcional, si tenés header fijo
+          spy={true}
+          to="contact"
+          variant="contained"
+          sx={{
+            mt: { xs: 3, md: 5 },
+            // background: 'linear-gradient(90deg, #00bfff, #6a5acd)',
+            backgroundColor: "transparent",
+            color: 'colors.orange',
+            fontWeight: 'bold',
+            borderRadius: 3,
+            px: 4,
+            py: 1.5,
+            boxShadow: 0,
+            '&:hover': {
+              boxShadow: 0,
+            },
+          }}
+        >
+          {t('ctaButton')}
+        </Button>
       </Box>
 
       {/* Imagen */}
