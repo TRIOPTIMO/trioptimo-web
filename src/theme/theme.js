@@ -1,9 +1,14 @@
-// src/theme/theme.js
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
     mode: 'dark',
+    colors: {
+      black: '#000000',
+      darkBlue: '#14213D',
+      orange: '#FCA311',
+      white: '#FFFFFF'
+    },
     background: {
       default: '#0a0f1c',
       paper: '#f9fafb',
@@ -23,40 +28,33 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Syne, sans-serif',
     h1: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400, // Audiowide solo tiene 1 peso
+      fontFamily: 'Nunito, sans-serif',
     },
     h2: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'Nunito, sans-serif',
     },
     h3: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'Nunito, sans-serif',
     },
     h4: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'Nunito, sans-serif',
     },
     h5: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'Nunito, sans-serif',
     },
     h6: {
-      fontFamily: 'Audiowide, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'Nunito, sans-serif',
     },
     body1: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Syne, sans-serif',
     },
     body2: {
-      fontFamily: 'Inter, sans-serif',
+      fontFamily: 'Syne, sans-serif',
     },
     button: {
-      fontFamily: 'Inter, sans-serif',
-      fontWeight: 600,
+      fontFamily: 'Nunito, sans-serif',
     },
   },
   shape: {
