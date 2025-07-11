@@ -6,6 +6,8 @@ import Services from "../Services/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
 import AboutUs from "../About/AboutUs";
 import Contact from "../Contact/Contact";
+import Faq from "../Faq/Faq";
+
 export default function Home() {
   const { t, i18n } = useTranslation('home');
 
@@ -22,6 +24,7 @@ export default function Home() {
       <Services id="services" />
       <AboutUs id="aboutus" />
       <WhyChooseUs />
+      <Faq/>
       <Contact id="contact" />
     </>
   );

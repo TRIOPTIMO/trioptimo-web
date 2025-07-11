@@ -1,4 +1,3 @@
-// src/components/PorQueElegirnos.jsx
 import React, { useState } from 'react';
 import {
   Box,
@@ -6,13 +5,13 @@ import {
   Grid,
   Card,
   CardContent,
-  Avatar,
 } from "@mui/material";
 import InsightsIcon from '@mui/icons-material/Insights';
 import BuildIcon from '@mui/icons-material/Build';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 const razones = [
   {
@@ -30,7 +29,6 @@ const razones = [
 ];
 
 export default function WhychooseUs() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
   const { t } = useTranslation('whychooseus');
 
   return (
@@ -71,69 +69,85 @@ export default function WhychooseUs() {
               justifyContent: 'center',
             }}
           >
-            <Card
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{
+                // scale: 1.08,
+                // boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
+                // transition: { duration: 0.3 },
+              }}
               sx={{
-                borderRadius: 3,
-                boxShadow: 0,
-                background: "transparent",
-                color:"colors.darkBlue",
                 width: '100%',
                 maxWidth: 400,
-                minHeight: 280,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center',
-                p: 3,
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                transform: hoveredIndex === index ? 'scale(1.05)' : 'scale(1)',
-                zIndex: hoveredIndex === index ? 100 : 20,
-                cursor: 'pointer',
               }}
             >
-              <Box
+              <Card
                 sx={{
-                  width: 60,
-                  height: 60,
-                  borderRadius: '50%',
-                  backgroundColor: 'colors.orange',
+                  borderRadius: 3,
+                  boxShadow: 0,
+                  background: "transparent",
+                  color: "colors.darkBlue",
+                  width: '100%',
+                  minHeight: 280,
                   display: 'flex',
+                  flexDirection: 'column',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 2,
-                  color: '#fff',
-                  fontSize: 30,
+                  textAlign: 'center',
+                  p: 3,
+                  cursor: 'pointer',
                 }}
               >
-                {razon.icon}
-              </Box>
-
-              <CardContent sx={{ p: 0 }}>
-                <Typography
-                  variant="h6"
-                  fontSize={25}
+                <Box
                   sx={{
-                    color: 'colors.orange',
-                    fontWeight: 'bold',
-                    mb: 1,
+                    width: 60,
+                    height: 60,
+                    borderRadius: '50%',
+                    backgroundColor: 'colors.orange',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    mb: 2,
+                    color: '#fff',
+                    fontSize: 30,
                   }}
                 >
-                  {t(`reasons.${index}.title`)}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  color="colors.darkBlue"
-                  fontSize={20}
-                  sx={{ lineHeight: 1.6 }}
-                >
-                  {t(`reasons.${index}.description`)}
-                </Typography>
-              </CardContent>
-            </Card>
+                  {razon.icon}
+                </Box>
+
+                <CardContent sx={{ p: 0 }}>
+                  <Typography
+                    variant="h6"
+                    fontSize={25}
+                    sx={{
+                      color: 'colors.orange',
+                      fontWeight: 'bold',
+                      mb: 1,
+                    }}
+                  >
+                    {t(`reasons.${index}.title`)}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="colors.darkBlue"
+                    fontSize={20}
+                    sx={{ lineHeight: 1.6 }}
+                  >
+                    {t(`reasons.${index}.description`)}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
           </Grid>
         ))}
       </Grid>
-
     </Box>
   );
 }

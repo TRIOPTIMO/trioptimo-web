@@ -20,7 +20,7 @@ const TypingTitle = () => {
         color="text.primary"
         sx={{
           fontSize: { xs: "4rem", md: "12.5rem" },
-          mb: 0,
+          mb: {md: 0, xs: 10},
         }}
       >
         {t("title1")}

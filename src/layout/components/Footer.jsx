@@ -1,4 +1,5 @@
-import { Box, Container, Typography, Stack, Link, Divider } from '@mui/material';
+import { Box, Container, Typography, Link, Divider } from '@mui/material';
+import Masonry from '@mui/lab/Masonry';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
@@ -15,34 +16,59 @@ export default function Footer() {
       }}
     >
       <Container maxWidth="lg">
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          justifyContent="space-between"
-          alignItems={{ xs: 'flex-start', sm: 'center' }}
-          spacing={4}
+        <Masonry
+          columns={{ xs: 1, sm: 2, md: 3 }}
+          spacing={2}
         >
-          <Typography variant="body2" sx={{ fontWeight: 500 }}>
-             {t('copyright', { year: new Date().getFullYear() })}
-          </Typography>
+          {/* Bloque 1 */}
+          {/* <Box>
+            
+          </Box> */}
 
-          <Stack direction="row" spacing={3}>
+          {/* Bloque 2 */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+            }}
+          >
+            <Typography variant="h5" sx={{ fontWeight: 500 }}>
+              {t('title1')}
+            </Typography>
             <Link href="#" underline="hover" color="text.primary">
               {t('privacy')}
             </Link>
             <Link href="#" underline="hover" color="text.primary">
               {t('terms')}
             </Link>
-            <Link href="/contact" underline="hover" color="text.primary">
-              {t('contact')}
+          </Box>
+
+          {/* Bloque 3 (opcional mensaje extra) */}
+         <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+            }}
+          >
+            <Typography variant="h5" sx={{ fontWeight: 500 }}>
+              {t('title2')}
+            </Typography>
+            <Link href="#" underline="hover" color="text.primary">
+              {t('telContact')}
             </Link>
-          </Stack>
-        </Stack>
+            <Link href="#" underline="hover" color="text.primary">
+              {t('mailContact')}
+            </Link>
+          </Box>
+        </Masonry>
 
         <Divider sx={{ my: 3, borderColor: 'rgba(255,255,255,0.1)' }} />
 
-        {/* <Typography variant="body2" align="center" sx={{ opacity: 0.5 }}>
-          Desarrollado con ♥ por tu equipo de tecnología
-        </Typography> */}
+        <Typography variant="body2" sx={{ fontWeight: 500 }}>
+              {t('copyright', { year: new Date().getFullYear() })}
+            </Typography>
       </Container>
     </Box>
   );

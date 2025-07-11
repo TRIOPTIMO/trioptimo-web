@@ -28,7 +28,7 @@ export default function Title() {
                         fontWeight={700}
                         mb={6}
                         mr={2}
-                        color="text.secondary"
+                        color="colors.darkBlue"
                     >
                         {t('title')}
                     </Typography>

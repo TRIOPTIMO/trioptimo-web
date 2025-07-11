@@ -1,6 +1,7 @@
 import { Stack, Box, Typography, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export default function ServicesComponent() {
   const { t } = useTranslation('services');
@@ -23,8 +24,13 @@ export default function ServicesComponent() {
         mx: "auto",
       }}
     >
-      {/* Texto */}
+      {/* Texto con motion */}
       <Box
+        component={motion.div}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
         sx={{
           flex: 1,
           width: {
@@ -111,8 +117,13 @@ export default function ServicesComponent() {
         </Button>
       </Box>
 
-      {/* Imagen */}
+      {/* Imagen con motion */}
       <Box
+        component={motion.div}
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
         sx={{
           position: { md: "absolute", xs: "static" },
           right: { md: "-30%", lg: "-25%", xl: "-20%" },
@@ -133,19 +144,19 @@ export default function ServicesComponent() {
             xl: 500,
           },
           borderRadius: 2,
-          background: 'linear-gradient(135deg, rgba(159, 226, 248, 1), rgba(179, 175, 207, 1))',
+          // background: 'linear-gradient(135deg, rgba(159, 226, 248, 1), rgba(179, 175, 207, 1))',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          boxShadow: '0 8px 24px rgba(0, 191, 255, 0.3)',
+          // boxShadow: '0 8px 24px rgba(0, 191, 255, 0.3)',
           mx: { xs: "auto", md: 0 },
           mt: { xs: 4, md: 0 },
         }}
       >
         <Box
           component="img"
-          src="./images/services.webp"
+          src="./images/services.png"
           alt="Service"
           sx={{
             width: '100%',

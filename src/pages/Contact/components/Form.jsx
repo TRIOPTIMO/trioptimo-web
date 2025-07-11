@@ -1,42 +1,59 @@
 import {
-    TextField,
-    Button,
-    Stack,
-    Container
+  TextField,
+  Button,
+  Stack,
+  Box,
+  Container
 } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+import React, { useRef } from 'react';
 
 export default function Form() {
-    const { t } = useTranslation('contact');
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  const wrapperRef = useRef(null);
+  const shineRef = useRef(null);
 
-        const formData = new FormData(e.target);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            company: formData.get('company'),
-            message: formData.get('message'),
-        };
+  const handleEnter = () => {
+    gsap.fromTo(
+      shineRef.current,
+      { x: '-100%' },
+      {
+        x: '150%',
+        duration: 1,
+        ease: 'power2.out',
+      }
+    );
+  };
+  const { t } = useTranslation('contact');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-
-        try {
-            const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
-
-            alert("¡Mensaje enviado exitosamente!");
-            e.target.reset();
-        } catch (err) {
-            alert("Error al enviar el mensaje.");
-        }
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      message: formData.get('message'),
     };
 
-     return (
+
+    try {
+      const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      alert("¡Mensaje enviado exitosamente!");
+      e.target.reset();
+    } catch (err) {
+      alert("Error al enviar el mensaje.");
+    }
+  };
+
+  return (
     <Container
       maxWidth="md"
       sx={{
@@ -74,7 +91,7 @@ export default function Form() {
                   borderRadius: 1,
                   boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
                   '& .MuiInputBase-input': {
-                    color:"colors.darkBlue"
+                    color: "colors.darkBlue"
                   },
                 }}
                 fullWidth
@@ -82,25 +99,66 @@ export default function Form() {
             ))}
 
             <motion.div whileHover={{ scale: 1.05 }}>
-              <Button
-                type="submit"
-                variant="contained"
+              <Box
+                ref={wrapperRef}
+                textAlign="center"
+                component="span"
+                onMouseEnter={handleEnter}
                 sx={{
-                  backgroundColor: ' #FCA311',
-                  color: '#fff',
-                  fontWeight: 'bold',
-                  boxShadow: '0 8px 24px rgba(20, 33, 61, 0.2)',
-                  borderRadius: 3,
-                  px: 4,
-                  py: 1.5,
-                  '&:hover': {
-                    backgroundColor: 'rgb(206, 134, 17)',
-                    boxShadow: '0 12px 30px rgba(20, 33, 61, 0.2)',
-                  },
+                  display: 'inline-flex',
+                  position: 'relative',
+                  borderRadius: '999px',
+                  overflow: 'hidden',
+                  backgroundColor: '#FFA500',
+                  height: '48px',
+                  cursor: 'pointer',
+                  my: { xs: 3 },
                 }}
               >
-                {t('send')}
-              </Button>
+
+                <Button
+                  variant="text"
+                  size="large"
+                  type="submit"
+                  sx={{
+                    px: 5,
+                    fontWeight: 'bold',
+                    fontSize: { xs: '0.8rem', md: '1.5rem' },
+                    borderRadius: '999px',
+                    bgcolor: 'transparent',
+                    color: 'white',
+                    boxShadow: 'none',
+                    height: '48px',
+                    minHeight: 'unset',
+                    lineHeight: 'normal',
+                    '&:hover': {
+                      bgcolor: 'transparent',
+                    },
+                  }}
+                >
+                  {t("send")}
+                </Button>
+
+                <Box
+                  ref={shineRef}
+                  sx={{
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '50%',
+                    height: '100%',
+                    background: `linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+          )`,
+                    transform: 'skewX(-20deg)',
+                    pointerEvents: 'none',
+                  }}
+                />
+              </Box>
             </motion.div>
           </Stack>
         </form>
@@ -108,3 +166,4 @@ export default function Form() {
     </Container>
   );
 }
+

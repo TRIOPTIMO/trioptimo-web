@@ -47,7 +47,7 @@ export default function Hero() {
     <>
       <Box
         sx={{
-          minHeight: {md: '100vh', sm: '90vh'},
+          minHeight: {md: '100vh', sm: '90vh', xs: '100vh'},
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -70,13 +70,13 @@ export default function Hero() {
             <Typography
              ref={desc1Ref}
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: {md: 6, xs: 2}, color: 'colors.white' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: {md: 6, xs: 4}, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: {md: 6, xs: 2}, color: 'colors.grey' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: {md: 6, xs: 4}, color: 'colors.grey' }}
             >
               {t("description2")}
             </Typography>

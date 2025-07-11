@@ -22,7 +22,7 @@ export default function Faq() {
     });
 
     return (
-        <Box sx={{ background: 'linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%)', py: 10 }}>
+        <Box sx={{ backgroundColor: 'colors.white', py: 10 }}>
             <Container maxWidth="md">
                 <Title />
                 <FAQs />

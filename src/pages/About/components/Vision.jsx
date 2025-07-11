@@ -5,6 +5,7 @@ import {
     Paper,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export default function Mision() {
     const { t } = useTranslation('aboutUs');
@@ -25,37 +26,47 @@ export default function Mision() {
                     gap: 3,
                 }}
             >
-
-                <Box>
+                {/* Texto con motion */}
+                <Box
+                    component={motion.div}
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                >
                     <Typography
                         variant="h6"
                         align="left"
                         fontWeight={700}
                         color="colors.darkBlue"
                         mb={1}
-                        fontSize= {35}
+                        fontSize={35}
                     >
                         {t('visionTitle')}
                     </Typography>
-                    <Typography variant="body2"  fontSize= {20} color="colors.darkBlue">
+                    <Typography variant="body2" fontSize={20} color="colors.darkBlue">
                         {t('visionText')}
                     </Typography>
                 </Box>
 
+                {/* Imagen con motion */}
                 <Box
-                    component="img"
+                    component={motion.img}
                     src="/images/vision.webp" // ✅ CAMBIAR por tu ruta real
                     alt={t('missionTitle')}
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
                     sx={{
                         width: { xs: '100%', md: 250 },
                         height: { xs: 200, md: 250 },
                         objectFit: 'cover',
                         borderRadius: 2,
-                        boxShadow: 0
+                        boxShadow: 0,
                     }}
                 />
             </Paper>
         </Grid>
     );
 }
-
