@@ -49,6 +49,8 @@ export default function Form() {
 
     const name = formData.get('name');
     const email = formData.get('email');
+    const lastName = formData.get('email');
+    const phone = formData.get('email');
 
     if (!name || name.length < 2) {
       alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
@@ -60,10 +62,10 @@ export default function Form() {
       return;
     }
 
-    if (phone && !/^\d{7,}$/.test(phone)) {
-      alert("El teléfono debe tener al menos 7 dígitos numéricos.");
-      return;
-    }
+    // if (phone && !/^\d{7,}$/.test(phone)) {
+    //   alert("El teléfono debe tener al menos 7 dígitos numéricos.");
+    //   return;
+    // }
 
     if (!email || !email.includes("@")) {
       alert("Ingrese un email válido.");
