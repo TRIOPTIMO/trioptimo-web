@@ -49,8 +49,8 @@ export default function Form() {
 
     const name = formData.get('name');
     const email = formData.get('email');
-    const lastName = formData.get('email');
-    const phone = formData.get('email');
+    const lastName = formData.get('lastName');
+    const phone = formData.get('phone');
 
     if (!name || name.length < 2) {
       alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
