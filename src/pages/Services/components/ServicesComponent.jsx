@@ -92,6 +92,7 @@ export default function ServicesComponent() {
           spy={true}
           to="contact"
           variant="contained"
+          aria-label="Go to contact"
           sx={{
             mt: { xs: 3, sm: 4, md: 5 },
             backgroundColor: "transparent",

@@ -47,6 +47,7 @@ export default function MyButton() {
                     <Button
                         variant="text"
                         size="large"
+                        aria-label="Go to contact"
                         component={ScrollLink}
                         smooth={true}
                         duration={500}

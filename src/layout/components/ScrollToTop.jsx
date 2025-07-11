@@ -19,6 +19,7 @@ export default function ScrollTopButton() {
     <Zoom in={trigger}>
       <Fab
         onClick={handleClick}
+        aria-label="Scroll to top"
         size="medium"
         sx={{
           position: 'fixed',

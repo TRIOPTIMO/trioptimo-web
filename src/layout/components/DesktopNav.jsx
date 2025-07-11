@@ -29,6 +29,7 @@ export default function DesktopNav() {
             const id = href.replace('#', '');
             return (
               <Button
+                aria-label="Menu"
                 key={href}
                 component={ScrollLink}
                 to={id}

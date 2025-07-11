@@ -207,6 +207,7 @@ export default function Form() {
             >
 
               <Button
+                aria-label="Send mail"
                 variant="text"
                 size="large"
                 type="submit"

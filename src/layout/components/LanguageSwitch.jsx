@@ -36,6 +36,7 @@ export default function LanguageSwitch() {
     <>
       <Box sx={{ ml: 2 }}>
                   <Button
+                  aria-label="Language Button"
                     onClick={handleMenuClick}
                     sx={{
                       color: 'white',

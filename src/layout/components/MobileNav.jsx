@@ -39,6 +39,7 @@ export default function MobileNav() {
       {isMobile && (
         <>
           <IconButton
+          aria-label="Menu"
             color="inherit"
             edge="end"
             onClick={toggleDrawer(true)}
@@ -64,6 +65,7 @@ export default function MobileNav() {
                 {navItems.map(({ label, to }) => (
                   <ListItem
                     button
+                    aria-label={label}
                     key={to}
                     component={ScrollLink}
                     to={to}

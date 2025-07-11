@@ -15,9 +15,11 @@ export default function SocialMedia() {
             <Stack direction="row" spacing={2} justifyContent="center" mt={6}>
                 {[{
                     icon: <LinkedInIcon />,
+                    label: "LinkedIn",
                     href: 'https://www.linkedin.com/company/trioptimo'
                 }, {
                     icon: <InstagramIcon />,
+                    label: "Instagram",
                     href: 'https://www.instagram.com/trioptimo'
                  },
                 // {
@@ -32,6 +34,7 @@ export default function SocialMedia() {
                         <IconButton
                             component="a"
                             href={social.href}
+                            aria-label={social.label}
                             target="_blank"
                             rel="noopener"
                             sx={{

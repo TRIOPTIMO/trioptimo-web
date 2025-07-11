@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Stack } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import TypingTitle from "./components/TypingTitle";
