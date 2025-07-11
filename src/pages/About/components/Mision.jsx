@@ -6,9 +6,19 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import React, { useLayoutEffect, useRef } from 'react';
 
 export default function Mision() {
   const { t } = useTranslation('aboutUs');
+  const imgRef = useRef();
+
+  useLayoutEffect(() => {
+    if (imgRef.current) {
+      const rect = imgRef.current.getBoundingClientRect();
+      console.log("Imagen Mision - width:", rect.width);
+      console.log("Imagen Mision - height:", rect.height);
+    }
+  }, []);
 
   return (
     <Grid item xs={12} md={6}>
@@ -30,7 +40,8 @@ export default function Mision() {
         {/* Imagen con motion */}
         <Box
           component={motion.img}
-          src="/images/mision.webp" // ✅ CAMBIAR por tu ruta real
+          ref={imgRef}
+          src="/images/mision.webp"
           alt={t('missionTitle')}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

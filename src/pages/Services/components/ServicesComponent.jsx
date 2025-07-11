@@ -2,9 +2,19 @@ import { Stack, Box, Typography, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
+import React, { useLayoutEffect, useRef } from 'react';
 
 export default function ServicesComponent() {
   const { t } = useTranslation('services');
+  const imgRef = useRef();
+
+  useLayoutEffect(() => {
+    if (imgRef.current) {
+      const rect = imgRef.current.getBoundingClientRect();
+      console.log("Image width:", rect.width);
+      console.log("Image height:", rect.height);
+    }
+  }, []);
 
   return (
     <Stack
@@ -145,18 +155,17 @@ export default function ServicesComponent() {
             xl: 500,
           },
           borderRadius: 2,
-          // background: 'linear-gradient(135deg, rgba(159, 226, 248, 1), rgba(179, 175, 207, 1))',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          // boxShadow: '0 8px 24px rgba(0, 191, 255, 0.3)',
           mx: { xs: "auto", md: 0 },
           mt: { xs: 4, md: 0 },
         }}
       >
         <Box
           component="img"
+          ref={imgRef}
           src="./images/services.webp"
           alt="Service"
           sx={{
