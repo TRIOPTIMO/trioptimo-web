@@ -47,30 +47,30 @@ export default function Form() {
 
     e.preventDefault();
 
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const lastName = formData.get('lastName');
-    const phone = formData.get('phone');
+    // const name = formData.get('name');
+    // const email = formData.get('email');
+    // const lastName = formData.get('lastName');
+    // const phone = formData.get('phone');
 
-    if (!name || name.length < 2) {
-      alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
-      return;
-    }
+    // if (!name || name.length < 2) {
+    //   alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
+    //   return;
+    // }
 
-    if (!lastName || lastName.length < 2) {
-      alert("El apellido es obligatorio y debe tener al menos 2 caracteres.");
-      return;
-    }
+    // if (!lastName || lastName.length < 2) {
+    //   alert("El apellido es obligatorio y debe tener al menos 2 caracteres.");
+    //   return;
+    // }
 
     // if (phone && !/^\d{7,}$/.test(phone)) {
     //   alert("El teléfono debe tener al menos 7 dígitos numéricos.");
     //   return;
     // }
 
-    if (!email || !email.includes("@")) {
-      alert("Ingrese un email válido.");
-      return;
-    }
+    // if (!email || !email.includes("@")) {
+    //   alert("Ingrese un email válido.");
+    //   return;
+    // }
 
     try {
       const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
