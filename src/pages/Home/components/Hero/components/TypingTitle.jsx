@@ -1,42 +1,31 @@
-import { Typography, Box } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { Box } from '@mui/material';
 
-const TypingTitle = () => {
-  const { t } = useTranslation("hero");
-
+const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "baseline",
+        alignItems: "center",
         flexWrap: "wrap",
         gap: 1,
       }}
     >
-      <Typography
-        variant="h1"
-        fontWeight={500}
-        color="text.primary"
+      <Box
+        component="img"
+        src={logoSrc || "/images/trioptimo.png"}
+        alt={logoAlt}
         sx={{
-          fontSize: { xs: "4rem", md: "8rem", lg: "12.5rem" },
-          mb: {md: 0, xs: 10},
+          width: {
+            xs: "350px",
+            sm: "400px",
+            md: "600px",
+            lg: "900px",
+          },
+          height: "auto",
+          mb: { md: 0, xs: 10 },
         }}
-      >
-        {t("title1")}
-      </Typography>
-
-      <Typography
-        variant="h1"
-        fontWeight={500}
-        color="text.primary"
-        sx={{
-          fontSize: { xs: "4rem", md: "8rem", lg: "12.5rem" },
-          mt: 0,
-        }}
-      >
-         {t("title2")}
-      </Typography>
+      />
     </Box>
   );
 };

@@ -26,7 +26,7 @@ export default function CircularSegmentsIcon() {
   }, [circumference]);
 
   return (
-    <Box sx={{ width: 18, height: 18 }}>
+    <Box sx={{ width: 24, height: 24 }}>
       <svg viewBox="0 0 100 100" width="100%" height="100%">
         <circle
           ref={circleRef}

@@ -22,59 +22,85 @@ export default function Layout({ children }) {
   return (
     <>
       <AppBar
-        position="fixed"
+  position="fixed"
+  sx={{
+    backgroundColor: 'rgba(20, 33, 61, 0.7)',
+    backdropFilter: 'blur(10px)',
+    boxShadow: 'none',
+    width: "100%",
+  }}
+>
+  <Toolbar
+    disableGutters
+    sx={{
+      m: 0,
+      px: { xs: 2, sm: 3, md: 4 },
+      py: 1,
+      width: "100%",
+      boxSizing: "border-box",
+      minHeight: { xs: 56, sm: 64, md: 72 }, // agregado
+      display: "flex",
+      alignItems: "center",
+    }}
+  >
+    {/* <Logo /> */}
+
+    <Box
+      component={ScrollLink}
+      to="hero"
+      smooth={true}
+      duration={500}
+      offset={-80}
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        textDecoration: "none",
+        whiteSpace: "nowrap",
+        height: "100%",
+        ml: 1,
+        '&:hover img': {
+          opacity: 0.8,
+        },
+      }}
+    >
+      <Box
+        component="img"
+        src="/images/trioptimo.png"
+        alt="logo"
         sx={{
-          backgroundColor: 'rgba(20, 33, 61, 0.7)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: 'none',
-          width: "100%",
+          width: {
+            xs: "120px",
+            sm: "150px",
+            md: "180px",
+          },
+          height: "auto",
+          maxHeight: {
+            xs: 40,
+            sm: 50,
+            md: 50,
+          },
+          mb: 0, // 👈 ELIMINAMOS EL MARGIN EN MOBILE
         }}
-      >
-        <Toolbar
-          disableGutters
-          sx={{
-            m: 0,
-            px: { xs: 2, sm: 3, md: 4 },
-            py: 1,
-            width: "100%",
-            boxSizing: "border-box",
-          }}
-        >
-          <Logo />
+      />
+    </Box>
 
-          <Typography
-            variant="h6"
-            component={ScrollLink}
-            to="hero"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            sx={{
-              color: 'colors.white',
-              textDecoration: 'none',
-              fontWeight: 700,
-              fontSize: '1.25rem',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap', // previene que el texto se corte y cree overflow
-            }}
-          >
-            {t('title')}
-          </Typography>
+    <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ flexGrow: 1 }} />
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexShrink: 0,
+      }}
+    >
+      {!isMobile && <DesktopNav />}
+      {isMobile && <MobileNav />}
+    </Box>
+  </Toolbar>
+</AppBar>
 
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              flexShrink: 0,
-            }}
-          >
-            {!isMobile && <DesktopNav />}
-            {isMobile && <MobileNav />}
-          </Box>
-        </Toolbar>
-      </AppBar>
 
       <Box
         component="main"

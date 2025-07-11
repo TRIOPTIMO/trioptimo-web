@@ -73,7 +73,7 @@ export default function Hero() {
             <Typography
               ref={desc1Ref}
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1rem", md: "2rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "2rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>

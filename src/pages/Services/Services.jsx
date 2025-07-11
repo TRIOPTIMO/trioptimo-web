@@ -20,7 +20,7 @@ export default function Services() {
 
   return (
     <Box name="services" sx={{
-      // backgroundImage: `url("/images/services.jpg")`,
+      // backgroundImage: `url("/images/bg-orange.png")`,
       backgroundColor: 'colors.white', 
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover', py: 10

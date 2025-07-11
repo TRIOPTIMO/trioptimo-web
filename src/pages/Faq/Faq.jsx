@@ -22,13 +22,50 @@ export default function Faq() {
     });
 
     return (
-        <Box name="faq" sx={{ backgroundColor: 'colors.white', py: 10 }}>
-            <Container maxWidth="md">
-                <Title />
-                <FAQs />
-                <Divider sx={{ my: 6 }} />
-                <CTA />
+        <Box
+            name="faq"
+            sx={{
+                position: 'relative',
+                py: 10,
+                overflow: 'hidden',
+                // white base background
+                backgroundColor: 'colors.white',
+            }}
+        >
+            {/* Orange semi-transparent overlay */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: 'rgba(252, 163, 17, 0.05)', // tu naranja con opacidad
+                    zIndex: 1,
+                }}
+            />
+
+            {/* Content */}
+            <Container
+                maxWidth="md"
+                sx={{
+                    position: 'relative',
+                    zIndex: 2,
+                }}
+            >
+                <Box
+                    sx={{
+                        borderRadius: 2,
+                        p: { xs: 3, md: 6 },
+                    }}
+                >
+                    <Title />
+                    <FAQs />
+                    <Divider sx={{ my: 6 }} />
+                    <CTA />
+                </Box>
             </Container>
         </Box>
+
     );
 }
