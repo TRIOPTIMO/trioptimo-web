@@ -26,18 +26,49 @@ export default function Form() {
       }
     );
   };
+
   const { t } = useTranslation('contact');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
     const data = {
       name: formData.get('name'),
-      email: formData.get('email'),
+      lastName: formData.get('lastName'),
       company: formData.get('company'),
+      country: formData.get('country'),
+      city: formData.get('city'),
+      jobTitle: formData.get('jobTitle'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
       message: formData.get('message'),
     };
 
+    e.preventDefault();
+
+    const name = formData.get('name');
+    const email = formData.get('email');
+
+    if (!name || name.length < 2) {
+      alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
+      return;
+    }
+
+    if (!lastName || lastName.length < 2) {
+      alert("El apellido es obligatorio y debe tener al menos 2 caracteres.");
+      return;
+    }
+
+    if (phone && !/^\d{7,}$/.test(phone)) {
+      alert("El teléfono debe tener al menos 7 dígitos numéricos.");
+      return;
+    }
+
+    if (!email || !email.includes("@")) {
+      alert("Ingrese un email válido.");
+      return;
+    }
 
     try {
       const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
@@ -69,101 +100,160 @@ export default function Form() {
         style={{ width: "100%" }}
       >
         <form onSubmit={handleSubmit}>
-          <Stack
-            spacing={3}
-            sx={{
-              width: { xs: "100%", sm: "80%", md: "60%" },
-              margin: "0 auto",
-            }}
-          >
-            {['name', 'email', 'company', 'message'].map((field) => (
+          <Stack direction="column" spacing={2}>
+            <Stack direction="row" spacing={2}>
               <TextField
-                key={field}
-                name={field}
-                label={t(field)}
-                type={field === 'email' ? 'email' : 'text'}
+                name="name"
+                label={t('name')}
                 variant="outlined"
-                multiline={field === 'message'}
-                rows={field === 'message' ? 4 : 1}
-                required={field !== 'company'}
-                sx={{
-                  backgroundColor: 'colors.white',
-                  borderRadius: 1,
-                  boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
-                  '& .MuiInputBase-input': {
-                    color: "colors.darkBlue"
-                  },
+                required
+                sx={fieldStyles}
+                fullWidth
+              />
+              <TextField
+                name="lastName"
+                label={t('lastName')}
+                variant="outlined"
+                required
+                sx={fieldStyles}
+                fullWidth
+              />
+            </Stack>
+
+            {/* Resto de campos */}
+            <TextField
+              name="company"
+              label={t('company')}
+              variant="outlined"
+              sx={fieldStyles}
+              fullWidth
+            />
+            <Stack direction="row" spacing={2}>
+              <TextField
+                name="country"
+                label={t('country')}
+                variant="outlined"
+                required
+                sx={fieldStyles}
+                fullWidth
+              />
+              <TextField
+                name="city"
+                label={t('city')}
+                variant="outlined"
+                required
+                sx={fieldStyles}
+                fullWidth
+              />
+            </Stack>
+            <TextField
+              name="jobTitle"
+              label={t('jobTitle')}
+              variant="outlined"
+              sx={fieldStyles}
+              fullWidth
+            />
+            <Stack direction="row" spacing={2}>
+              <TextField
+                name="phone"
+                label={t('phone')}
+                type="tel"
+                variant="outlined"
+                sx={fieldStyles}
+                inputProps={{
+                  pattern: "[0-9]{7,}",
                 }}
                 fullWidth
               />
-            ))}
+              <TextField
+                name="email"
+                label={t('email')}
+                type="email"
+                variant="outlined"
+                required
+                sx={fieldStyles}
+                fullWidth
+              />
+            </Stack>
+            <TextField
+              name="message"
+              label={t('message')}
+              multiline
+              rows={4}
+              variant="outlined"
+              required
+              sx={fieldStyles}
+              fullWidth
+            />
+          </Stack>
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Box
+              ref={wrapperRef}
+              textAlign="center"
+              component="span"
+              onMouseEnter={handleEnter}
+              sx={{
+                display: 'inline-flex',
+                position: 'relative',
+                borderRadius: '999px',
+                overflow: 'hidden',
+                backgroundColor: '#FFA500',
+                height: '48px',
+                cursor: 'pointer',
+                my: { xs: 3 },
+              }}
+            >
 
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Box
-                ref={wrapperRef}
-                textAlign="center"
-                component="span"
-                onMouseEnter={handleEnter}
+              <Button
+                variant="text"
+                size="large"
+                type="submit"
                 sx={{
-                  display: 'inline-flex',
-                  position: 'relative',
+                  px: 5,
+                  fontWeight: 'bold',
+                  fontSize: { xs: '0.8rem', md: '1.5rem' },
                   borderRadius: '999px',
-                  overflow: 'hidden',
-                  backgroundColor: '#FFA500',
+                  bgcolor: 'transparent',
+                  color: 'white',
+                  boxShadow: 'none',
                   height: '48px',
-                  cursor: 'pointer',
-                  my: { xs: 3 },
+                  minHeight: 'unset',
+                  lineHeight: 'normal',
+                  '&:hover': {
+                    bgcolor: 'transparent',
+                  },
                 }}
               >
+                {t("send")}
+              </Button>
 
-                <Button
-                  variant="text"
-                  size="large"
-                  type="submit"
-                  sx={{
-                    px: 5,
-                    fontWeight: 'bold',
-                    fontSize: { xs: '0.8rem', md: '1.5rem' },
-                    borderRadius: '999px',
-                    bgcolor: 'transparent',
-                    color: 'white',
-                    boxShadow: 'none',
-                    height: '48px',
-                    minHeight: 'unset',
-                    lineHeight: 'normal',
-                    '&:hover': {
-                      bgcolor: 'transparent',
-                    },
-                  }}
-                >
-                  {t("send")}
-                </Button>
-
-                <Box
-                  ref={shineRef}
-                  sx={{
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '50%',
-                    height: '100%',
-                    background: `linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 100%
-          )`,
-                    transform: 'skewX(-20deg)',
-                    pointerEvents: 'none',
-                  }}
-                />
-              </Box>
-            </motion.div>
-          </Stack>
+              <Box
+                ref={shineRef}
+                sx={{
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '50%',
+                  height: '100%',
+                  background: 'linear-gradient( 120deg, rgba(255, 255, 255, 0) 0%,  rgba(255, 255, 255, 0.4) 50%,  rgba(255, 255, 255, 0) 100% )',
+                  transform: 'skewX(-20deg)',
+                  pointerEvents: 'none',
+                }}
+              />
+            </Box>
+          </motion.div>
         </form>
       </motion.div>
     </Container>
   );
 }
 
+const fieldStyles = {
+  backgroundColor: 'colors.white',
+  borderRadius: 1,
+  boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
+  '& .MuiInputBase-input': {
+    color: "colors.darkBlue"
+  },
+};
