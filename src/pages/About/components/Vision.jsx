@@ -52,7 +52,7 @@ export default function Mision() {
                 {/* Imagen con motion */}
                 <Box
                     component={motion.img}
-                    src="/images/vision.webp" // ✅ CAMBIAR por tu ruta real
+                    src="/images/vision.png" // ✅ CAMBIAR por tu ruta real
                     alt={t('missionTitle')}
                     initial={{ x: 100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
