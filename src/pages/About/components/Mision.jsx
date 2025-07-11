@@ -38,7 +38,7 @@ export default function Mision() {
           viewport={{ once: true, amount: 0.3 }}
           sx={{
             width: { xs: '100%', md: 250 },
-            height: { xs: 200, md: 250 },
+            height: { xs: 250, md: 250 },
             objectFit: 'cover',
             borderRadius: 2,
             boxShadow: 0,
