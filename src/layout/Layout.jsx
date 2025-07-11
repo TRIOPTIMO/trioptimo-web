@@ -6,7 +6,6 @@ import {
   Box,
   Toolbar,
   Typography,
-  Container,
 } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -28,14 +27,17 @@ export default function Layout({ children }) {
           backgroundColor: 'rgba(20, 33, 61, 0.7)',
           backdropFilter: 'blur(10px)',
           boxShadow: 'none',
+          width: "100%",
         }}
       >
         <Toolbar
           disableGutters
           sx={{
             m: 0,
-            px: 4,
+            px: { xs: 2, sm: 3, md: 4 },
             py: 1,
+            width: "100%",
+            boxSizing: "border-box",
           }}
         >
           <Logo />
@@ -52,7 +54,8 @@ export default function Layout({ children }) {
               textDecoration: 'none',
               fontWeight: 700,
               fontSize: '1.25rem',
-              cursor: 'pointer', // importante para mostrar que es clickeable
+              cursor: 'pointer',
+              whiteSpace: 'nowrap', // previene que el texto se corte y cree overflow
             }}
           >
             {t('title')}
@@ -64,6 +67,7 @@ export default function Layout({ children }) {
             sx={{
               display: "flex",
               alignItems: "center",
+              flexShrink: 0,
             }}
           >
             {!isMobile && <DesktopNav />}
@@ -76,12 +80,13 @@ export default function Layout({ children }) {
         component="main"
         sx={{
           mt: { xs: 8, sm: 10 },
+          overflowX: "hidden", // ¡extra protección!
         }}
       >
         {children}
       </Box>
 
-        <ScrollToTop/>
+      <ScrollToTop />
       <Footer />
     </>
   );

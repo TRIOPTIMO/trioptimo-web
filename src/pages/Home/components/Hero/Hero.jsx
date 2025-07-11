@@ -49,7 +49,7 @@ export default function Hero() {
         name="hero"
         sx={{
           minHeight: { md: '90vh', sm: '90vh', xs: '100vh', lg: '100vh' },
-          width: '50%',
+          width: {sm: '30%', md: '50%'},
           mx: 'auto',
           display: 'flex',
           alignItems: 'center',
