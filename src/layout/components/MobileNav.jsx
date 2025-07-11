@@ -18,10 +18,9 @@ export default function MobileNav() {
   const { i18n, t } = useTranslation('layout');
 
   const navItems = [
-    { label: t('home'), to: 'home' },
     { label: t('services'), to: 'services' },
     { label: t('aboutUs'), to: 'aboutus' },
-    { label: t('faq'), href: `faq` },
+    { label: t('faq'), href: 'faq' },
     { label: t('contact'), to: 'contact' },
   ];
 

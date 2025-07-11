@@ -12,7 +12,6 @@ import { Link as ScrollLink } from 'react-scroll';
 export default function DesktopNav() {
   const { t } = useTranslation('layout');
   const navItems = [
-    { label: t('home'), href: `#home` },
     { label: t('services'), href: `#services` },
     { label: t('aboutUs'), href: `#aboutus` },
     { label: t('faq'), href: `#faq` },
