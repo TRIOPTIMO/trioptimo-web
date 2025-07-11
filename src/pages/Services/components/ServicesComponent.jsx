@@ -156,7 +156,7 @@ export default function ServicesComponent() {
       >
         <Box
           component="img"
-          src="./images/services.png"
+          src="./images/services.webp"
           alt="Service"
           sx={{
             width: '100%',

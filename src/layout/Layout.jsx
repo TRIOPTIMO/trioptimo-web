@@ -67,7 +67,7 @@ export default function Layout({ children }) {
     >
       <Box
         component="img"
-        src="/images/trioptimo.png"
+        src="/images/trioptimo.webp"
         alt="logo"
         sx={{
           width: {

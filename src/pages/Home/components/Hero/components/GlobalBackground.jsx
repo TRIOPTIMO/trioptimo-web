@@ -12,7 +12,7 @@ export default function GlobalBackground() {
         left: 0,
         overflow: 'hidden',
         background: 'linear-gradient(135deg, #000000, #14213D)',
-        backgroundImage: 'url("/images/bg.png")',
+        backgroundImage: 'url("/images/bg.webp")',
         opacity: 0.4,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
