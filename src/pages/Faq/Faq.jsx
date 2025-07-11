@@ -22,7 +22,7 @@ export default function Faq() {
     });
 
     return (
-        <Box sx={{ backgroundColor: 'colors.white', py: 10 }}>
+        <Box name="faq" sx={{ backgroundColor: 'colors.white', py: 10 }}>
             <Container maxWidth="md">
                 <Title />
                 <FAQs />

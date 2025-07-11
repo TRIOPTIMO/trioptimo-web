@@ -12,7 +12,7 @@ export default function Hero() {
 
   const desc1Ref = useRef(null);
 
-   const scrambleText = (element, finalText, duration = 2) => {
+  const scrambleText = (element, finalText, duration = 2) => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const iterations = 20;
     let frame = 0;
@@ -46,15 +46,18 @@ export default function Hero() {
   return (
     <>
       <Box
+        name="hero"
         sx={{
-          minHeight: {md: '100vh', sm: '90vh', xs: '100vh'},
+          minHeight: { md: '90vh', sm: '90vh', xs: '100vh', lg: '100vh' },
+          width: '50%',
+          mx: 'auto',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
           px: 2,
           backgroundColor: "transparent",
-          color: 'text.primary',
+          color: 'colors.white',
         }}
       >
 
@@ -68,20 +71,20 @@ export default function Hero() {
           >
             <TypingTitle />
             <Typography
-             ref={desc1Ref}
+              ref={desc1Ref}
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1200px" }, fontSize: { xs: "1rem", md: "3rem" }, my: {md: 6, xs: 4}, color: 'colors.white' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1rem", md: "2rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "1000px" }, fontSize: { xs: "1rem", md: "1.5rem" }, my: {md: 6, xs: 4}, color: 'colors.grey' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1.2rem", lg: "1.5rem" }, my: { md: 6, xs: 4 }, color: 'colors.grey' }}
             >
               {t("description2")}
             </Typography>
-            
-            <CallToAction/>
+
+            <CallToAction />
           </motion.div>
         </Stack>
 

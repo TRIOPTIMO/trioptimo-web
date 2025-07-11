@@ -8,57 +8,80 @@ import {
   Typography,
   Container,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+
 import DesktopNav from './components/DesktopNav';
 import MobileNav from './components/MobileNav';
 import Logo from "../layout/components/Logo";
+import ScrollToTop from "../layout/components/ScrollToTop";
 
 export default function Layout({ children }) {
   const { t } = useTranslation('layout');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <>
-      <Toolbar
-        disableGutters
+      <AppBar
+        position="fixed"
         sx={{
-          m: 0,
-          px: 4,
-          py: 1,
+          backgroundColor: 'rgba(20, 33, 61, 0.7)',
+          backdropFilter: 'blur(10px)',
+          boxShadow: 'none',
         }}
       >
-        {/* Logo */}
-
-        <Logo />
-        <Typography
-          variant="h6"
-          component={Link}
-          to="/"
+        <Toolbar
+          disableGutters
           sx={{
-            color: 'white',
-            textDecoration: 'none',
-            fontWeight: 700,
-            fontSize: '1.25rem',
+            m: 0,
+            px: 4,
+            py: 1,
           }}
         >
-          {t('title')}
-        </Typography>
+          <Logo />
 
-        <Box sx={{ flexGrow: 1 }} />
+          <Typography
+            variant="h6"
+            component={ScrollLink}
+            to="hero"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            sx={{
+              color: 'colors.white',
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontSize: '1.25rem',
+              cursor: 'pointer', // importante para mostrar que es clickeable
+            }}
+          >
+            {t('title')}
+          </Typography>
 
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          {!isMobile && <DesktopNav />}
-          {isMobile && <MobileNav />}
-        </Box>
-      </Toolbar>
+          <Box sx={{ flexGrow: 1 }} />
 
-      <Box component="main">{children}</Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {!isMobile && <DesktopNav />}
+            {isMobile && <MobileNav />}
+          </Box>
+        </Toolbar>
+      </AppBar>
 
+      <Box
+        component="main"
+        sx={{
+          mt: { xs: 8, sm: 10 },
+        }}
+      >
+        {children}
+      </Box>
+
+        <ScrollToTop/>
       <Footer />
     </>
   );

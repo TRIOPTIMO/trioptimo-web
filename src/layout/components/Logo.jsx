@@ -34,7 +34,7 @@ export default function CircularSegmentsIcon() {
           cy="50"
           r={radius}
           fill="none"
-          stroke="white"
+          stroke="#FCA311"
           strokeWidth="12"
           strokeDasharray={`${segmentLength} ${gapLength}`}
           strokeLinecap="butt"

@@ -24,7 +24,7 @@ export default function Home() {
       <Services id="services" />
       <AboutUs id="aboutus" />
       <WhyChooseUs />
-      <Faq/>
+      <Faq id="faq"/>
       <Contact id="contact" />
     </>
   );

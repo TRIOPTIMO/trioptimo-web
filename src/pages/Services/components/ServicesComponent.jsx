@@ -9,10 +9,10 @@ export default function ServicesComponent() {
   return (
     <Stack
       direction={{ xs: 'column', md: 'row' }}
-      spacing={{ xs: 4, sm: 5, md: 6, lg: 8 }}
+      spacing={{ xs: 4, sm: 5, md: 3, lg: 8 }}
       sx={{
         mt: { xs: 6, sm: 8, md: 10 },
-        width: { xs: "100%", sm: "90%", md: "80%", lg: "75%", xl: "100%" },
+        width: { xs: "100%", sm: "90%", md: "90%", lg: "75%", xl: "100%" },
         minHeight: { xs: "auto", md: "50vh" },
         backgroundColor: "rgba(252, 163, 17, 0.1)",
         borderRadius: 3,
@@ -126,20 +126,20 @@ export default function ServicesComponent() {
         viewport={{ once: true, amount: 0.3 }}
         sx={{
           position: { md: "absolute", xs: "static" },
-          right: { md: "-30%", lg: "-25%", xl: "-20%" },
+          right: { md: "-5%", lg: "-25%", xl: "-20%" },
           top: { md: "50%", xs: "auto" },
           transform: { md: "translateY(-50%)", xs: "none" },
           width: {
             xs: "100%",
-            sm: 300,
-            md: 500,
+            sm: 200,
+            md: 300,
             lg: 550,
             xl: 600,
           },
           height: {
             xs: 200,
-            sm: 300,
-            md: 400,
+            sm: 200,
+            md: 300,
             lg: 450,
             xl: 500,
           },

@@ -34,7 +34,7 @@ export default function MyButton() {
         backgroundColor: '#FFA500',
         height: '48px',
         cursor: 'pointer',
-        my: {xs: 3},
+        my: {xs: 3, md: 2, lg: 3},
       }}
     >
       <Button

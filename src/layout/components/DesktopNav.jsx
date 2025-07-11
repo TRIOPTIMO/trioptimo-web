@@ -15,6 +15,7 @@ export default function DesktopNav() {
     { label: t('home'), href: `#home` },
     { label: t('services'), href: `#services` },
     { label: t('aboutUs'), href: `#aboutus` },
+    { label: t('faq'), href: `#faq` },
     { label: t('contact'), href: `#contact` },
   ];
 

@@ -28,6 +28,7 @@ export default function Title() {
                         fontWeight={700}
                         mb={6}
                         mr={2}
+                        fontSize= {55}
                         color="colors.darkBlue"
                     >
                         {t('title')}

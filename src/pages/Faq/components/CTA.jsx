@@ -24,7 +24,7 @@ export default function MyButton() {
     return (
         <>
             <Box textAlign={"center"}>
-                <Typography variant="h6" color="colors.darkBlue" fontWeight={600} mb={2}>
+                <Typography variant="h6" color="colors.darkBlue" fontWeight={600} mb={2} fontSize= {25}>
                     {t('ctaTitle')}
                 </Typography>
                 <Box

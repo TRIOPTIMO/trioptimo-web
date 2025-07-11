@@ -19,7 +19,7 @@ const TypingTitle = () => {
         fontWeight={500}
         color="text.primary"
         sx={{
-          fontSize: { xs: "4rem", md: "12.5rem" },
+          fontSize: { xs: "4rem", md: "8rem", lg: "12.5rem" },
           mb: {md: 0, xs: 10},
         }}
       >
@@ -31,7 +31,7 @@ const TypingTitle = () => {
         fontWeight={500}
         color="text.primary"
         sx={{
-          fontSize: { xs: "4rem", md: "12.5rem" },
+          fontSize: { xs: "4rem", md: "8rem", lg: "12.5rem" },
           mt: 0,
         }}
       >
