@@ -32,9 +32,9 @@ export default function MyButton() {
         borderRadius: '999px',
         overflow: 'hidden',
         backgroundColor: '#FFA500',
-        height: '48px',
+        height: {lg: '50px', md: "40px", sm: "30px" },
         cursor: 'pointer',
-        my: {xs: 3, md: 2, lg: 3},
+        my: {xs: 3, sm: 1, md: 1, lg: 3},
       }}
     >
       <Button
@@ -55,7 +55,7 @@ export default function MyButton() {
           bgcolor: 'transparent',
           color: 'white',
           boxShadow: 'none',
-          height: '48px',
+          height: {lg: '48px' },
           minHeight: 'unset',
           lineHeight: 'normal',
           '&:hover': {

@@ -73,13 +73,13 @@ export default function Hero() {
             <Typography
               ref={desc1Ref}
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" }, my: {xs: 4, sm: 2, md: 6}, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" }, my: { md: 6, xs: 4 }, color: 'colors.grey' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" }, my: {xs: 4, sm: 2, md: 6}, color: 'colors.grey' }}
             >
               {t("description2")}
             </Typography>
