@@ -35,23 +35,13 @@ const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
           width: {
             xs: "350px",
             sm: "400px",
-            md: "600px",
+            md: "500px",
             lg: "900px",
           },
           height: "auto",
           mb: { md: 0, xs: 10 },
         }}
       />
-{/* 
-      <Box
-        sx={{
-          width: logoSize.width / 2,
-          height: 50,
-          backgroundColor: 'orange',
-        }}
-      >
-        ¡Box proporcional al logo!
-      </Box> */}
     </Box>
   );
 };

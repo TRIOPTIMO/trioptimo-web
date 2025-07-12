@@ -40,7 +40,11 @@ export default function Faq() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(252, 163, 17, 0.05)', // tu naranja con opacidad
+                    // backgroundColor: 'rgba(252, 163, 17, 0.1)', // tu naranja con opacidad
+                    backgroundImage: 'url("/images/bg-orange.png")',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
                     zIndex: 1,
                 }}
             />

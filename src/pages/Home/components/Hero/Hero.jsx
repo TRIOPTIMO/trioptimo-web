@@ -48,7 +48,7 @@ export default function Hero() {
       <Box
         name="hero"
         sx={{
-          minHeight: { md: '90vh', sm: '90vh', xs: '100vh', lg: '100vh' },
+          minHeight: { md: '90vh', sm: '80vh', xs: '100vh', lg: '100vh' },
           width: {sm: '30%', md: '50%'},
           mx: 'auto',
           display: 'flex',
@@ -73,13 +73,13 @@ export default function Hero() {
             <Typography
               ref={desc1Ref}
               variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "2rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" }, my: { md: 6, xs: 4 }, color: 'colors.white' }}
             >
               {t("description1")}
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1.2rem", lg: "1.5rem" }, my: { md: 6, xs: 4 }, color: 'colors.grey' }}
+              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" }, my: { md: 6, xs: 4 }, color: 'colors.grey' }}
             >
               {t("description2")}
             </Typography>
