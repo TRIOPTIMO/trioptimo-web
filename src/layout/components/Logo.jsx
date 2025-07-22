@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Box } from '@mui/material';
 import { gsap } from 'gsap';
+import { motion } from 'framer-motion';
 
 export default function CircularSegmentsIcon() {
   const circleRef = useRef(null);
@@ -26,22 +27,22 @@ export default function CircularSegmentsIcon() {
   }, [circumference]);
 
   return (
-    <Box sx={{ width: 24, height: 24 }}>
-      <svg viewBox="0 0 100 100" width="100%" height="100%">
-        <circle
-          ref={circleRef}
-          cx="50"
-          cy="50"
-          r={radius}
-          fill="none"
-          stroke="#FCA311"
-          strokeWidth="12"
-          strokeDasharray={`${segmentLength} ${gapLength}`}
-          strokeLinecap="butt"
-          transform="rotate(-195 50 50)" // Rota para que quede con un corte arriba
-          strokeDashoffset={circumference}
-        />
-      </svg>
-    </Box>
+     <Box
+      component={motion.img}
+      src="/images/icon.png"
+      alt="logo"
+      initial={{ rotate: 0 }}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 2, ease: "easeOut" }}
+      sx={{
+        height: "auto",
+        maxHeight: {
+          xs: 30,
+          sm: 40,
+          md: 40,
+        },
+        mb: 0,
+      }}
+    />
   );
 }

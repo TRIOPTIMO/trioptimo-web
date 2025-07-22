@@ -65,27 +65,22 @@ export default function Layout({ children }) {
         },
       }}
     >
-      <Box
+      {/* <Box
         component="img"
-        src="/images/trioptimo.webp"
+        src="/images/icon.png"
         alt="logo"
         sx={{
-          width: {
-            xs: "120px",
-            sm: "150px",
-            md: "180px",
-          },
           height: "auto",
           maxHeight: {
-            xs: 40,
-            sm: 50,
-            md: 50,
+            xs: 30,
+            sm: 40,
+            md: 40,
           },
-          mb: 0, // 👈 ELIMINAMOS EL MARGIN EN MOBILE
+          mb: 0,
         }}
-      />
-    </Box>
-
+      />*/}
+    <Logo/>
+    </Box> 
     <Box sx={{ flexGrow: 1 }} />
 
     <Box

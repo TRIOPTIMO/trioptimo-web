@@ -49,7 +49,7 @@ export default function Hero() {
         name="hero"
         sx={{
           minHeight: { md: '90vh', sm: '80vh', xs: '100vh', lg: '100vh' },
-          width: {sm: '30%', md: '50%'},
+          width: { sm: '30%', md: '100%' },
           mx: 'auto',
           display: 'flex',
           alignItems: 'center',
@@ -63,30 +63,69 @@ export default function Hero() {
 
         <GlobalBackground />
 
-        <Stack spacing={4} sx={{ mx: 'auto', color: 'colors.white' }}>
+        <Stack
+          id="infoHero"
+          direction={{ xs: "column", md: "row" }}
+          spacing={4}
+          sx={{
+            mx: 'auto',
+            color: 'colors.white',
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            width: "100%",
+          }}
+        >
+          {/* Columna izquierda: TypingTitle */}
+          <TypingTitle />
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            style={{ flex: 1, minWidth: 280 }}
           >
-            <TypingTitle />
-            <Typography
-              ref={desc1Ref}
-              variant="subtitle1"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1200px" }, fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" }, my: {xs: 4, sm: 2, md: 6}, color: 'colors.white' }}
+            {/* Columna derecha: textos + CTA */}
+            <Box
+              sx={{
+                flex: 1.5,
+                minWidth: 300,
+                px: { xs: 0, md: 4 },
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "center",
+              }}
             >
-              {t("description1")}
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ mx: 'auto', width: { xs: "380px", md: "900px", lg: "1000px" }, fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" }, my: {xs: 4, sm: 2, md: 6}, color: 'colors.grey' }}
-            >
-              {t("description2")}
-            </Typography>
+              <Typography
+                ref={desc1Ref}
+                variant="subtitle1"
+                sx={{
+                  width: "100%",
+                  fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" },
+                  my: { xs: 4, sm: 2, md: 6 },
+                  color: 'colors.white'
+                }}
+              >
+                {t("description1")}
+              </Typography>
 
-            <CallToAction />
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  width: "100%",
+                  fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" },
+                  my: { xs: 4, sm: 2, md: 6 },
+                  color: 'colors.grey'
+                }}
+              >
+                {t("description2")}
+              </Typography>
+
+              <CallToAction />
+            </Box>
           </motion.div>
         </Stack>
+
 
       </Box>
       {/* <Statitics /> */}

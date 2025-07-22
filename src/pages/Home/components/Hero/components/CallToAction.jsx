@@ -35,6 +35,7 @@ export default function MyButton() {
         height: {lg: '50px', md: "40px", sm: "30px" },
         cursor: 'pointer',
         my: {xs: 3, sm: 1, md: 1, lg: 3},
+        mx: "auto"
       }}
     >
       <Button
