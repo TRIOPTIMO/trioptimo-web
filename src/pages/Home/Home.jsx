@@ -22,9 +22,9 @@ export default function Home() {
     <>
       <Hero id="home" />
       <Services id="services" />
-      <AboutUs id="aboutus" />
       <WhyChooseUs />
       <Faq id="faq"/>
+      <AboutUs id="aboutus" />
       <Contact id="contact" />
     </>
   );

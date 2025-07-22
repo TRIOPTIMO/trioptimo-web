@@ -6,11 +6,11 @@ const theme = createTheme({
     colors: {
       black: '#000000',
       darkBlue: '#14213D',
-      primary: '#00dd93',
-      secondary: '#931ed8',
-      tertiary: '#001aff',
+      primary: '#00dd93', // rgb(0, 221, 147)
+      secondary: '#931ed8', // rgb(147, 30, 216)
+      tertiary: '#001aff', //rgb(0, 26, 255)
       white: '#FFFFFF',
-      grey: '#E5E5E5'
+      grey: '#E5E5E5' //rgb(229, 229, 229)
     },
     background: {
       default: '#0a0f1c',
@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     primary: {
       main: '#00bfff',
-      gradient: 'linear-gradient(to right, #00bfff 0%, #5c42ff 50%, #8a2be2 100%)',
+      gradient: 'linear-gradient(to right, #00dd93 0%, #001aff 50%, #931ed8 100%)',
     },
     secondary: {
       main: '#009acd',

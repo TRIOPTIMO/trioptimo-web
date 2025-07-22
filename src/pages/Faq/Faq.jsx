@@ -1,9 +1,9 @@
 import {
     Box,
-    Container,
+    Stack,
     Divider,
 } from '@mui/material';
-
+import { useMediaQuery, useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useMetaTags } from "../../services/useMetaTags";
 
@@ -13,6 +13,8 @@ import Title from "./components/Title";
 
 export default function Faq() {
     const { t, i18n } = useTranslation('faq');
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     useMetaTags({
         title: t("meta.title"),
@@ -40,7 +42,7 @@ export default function Faq() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    //backgroundColor: 'rgba(252, 163, 17, 0.1)', // tu naranja con opacidad
+                    //backgroundColor: 'rgba(252, 163, 17, 0.1)', 
                     backgroundImage: 'url("/images/bg.png")',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
@@ -50,25 +52,31 @@ export default function Faq() {
             />
 
             {/* Content */}
-            <Container
-                maxWidth="md"
+            <Stack
+                direction={{ xs: 'column', sm: 'column', md: 'row' }}
+                spacing={10}
+                alignItems="stretch"
+                justifyContent="center"
+                useFlexGap
+                flexWrap="nowrap"
                 sx={{
                     position: 'relative',
                     zIndex: 2,
+                    mx: "auto"
                 }}
             >
-                <Box
-                    sx={{
-                        borderRadius: 2,
-                        p: { xs: 3, md: 6 },
-                    }}
-                >
+                {isMobile && (
                     <Title />
-                    <FAQs />
-                    <Divider sx={{ my: 6 }} />
+                )}
+                <FAQs />
+
+                <Box sx={{ my: "auto" }}>
+                    {!isMobile && (
+                    <Title />
+                )}
                     <CTA />
                 </Box>
-            </Container>
+            </Stack>
         </Box>
 
     );

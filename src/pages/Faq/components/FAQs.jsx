@@ -37,6 +37,7 @@ export default function FAQs() {
               sx={{
                 color: 'colors.darkBlue',
                 mb: 3,
+                mx: 2,
                 borderRadius: 3,
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 '&::before': { display: 'none' },

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useMetaTags } from "../../services/useMetaTags";
 
 import Title from "./components/Title";
-import ServicesComponent from "./components/ServicesComponent";
+import ServicesCards from "./components/ServicesCards";
 
 export default function Services() {
   const { t, i18n } = useTranslation('services');
@@ -20,15 +20,14 @@ export default function Services() {
 
   return (
     <Box name="services" sx={{
-      // backgroundImage: `url("/images/bg-orange.png")`,
       backgroundColor: 'colors.white', 
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover', py: 10
+      backgroundSize: 'cover', 
+      py: 10,
+      mx: 0
     }}>
-      <Container>
-        {/* <Title /> */}
-        <ServicesComponent />
-      </Container>
+        <Title />
+        <ServicesCards />
     </Box>
   );
 }

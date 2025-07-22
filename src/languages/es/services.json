@@ -2,6 +2,28 @@
   "title": "¿Qué ofrecemos?",
   "description": "Impulsamos tu organización optimizando procesos, digitalizando sin riesgos y transformando datos en decisiones inteligentes, mientras formamos a tu equipo para sostener el cambio.",
   "ctaButton": "Contacta con nosotros →",
+  "services": [
+    {
+      "title": "Optimización de procesos",
+      "description": "Mejoramos tus operaciones actuales para maximizar la eficiencia y reducir costes, aprovechando al máximo lo que ya tienes.",
+      "button": "Ver más"
+    },
+    {
+      "title": "Transformación digital industrial",
+      "description": "Implantamos tecnología adaptada a tu realidad para avanzar en la digitalización y automatización, sin riesgos ni grandes inversiones.",
+      "button": "Explorar"
+    },
+    {
+      "title": "Inteligencia de negocio y gestión de datos",
+      "description": "Convertimos la información de tu empresa en decisiones efectivas que mejoran resultados y anticipan oportunidades.",
+      "button": "Conocer más"
+    },
+    {
+      "title": "Formación práctica para equipos",
+      "description": "Diseñamos cursos y talleres personalizados para que tu equipo interiorice los cambios y mantenga la mejora continua.",
+      "button": "Descubrir"
+    }
+  ],
   "meta": {
     "title": "Servicios | Trioptimo",
     "description": "Impulsamos la transformación digital en empresas industriales.",

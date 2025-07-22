@@ -38,9 +38,10 @@ export default function Title() {
                     variant="subtitle"
                     align="center"
                     fontWeight={700}
-                    fontSize= {25}
+                    fontSize= {20}
                     mb={6}
                     mr={2}
+                    mx={5}
                     color="colors.darkBlue"
                 >
                     {t('description')}

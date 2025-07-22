@@ -1,6 +1,6 @@
 import {
   Box,
-  Container,
+  Stack,
 } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
@@ -22,14 +22,46 @@ export default function Contacto() {
   });
 
   return (
-    <Box name="contact" sx={{ backgroundColor: 'colors.white',
+    <Box name="contact" sx={{
+      backgroundColor: 'colors.white',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover', py: 10 }}>
-      <Container  maxWidth="md">
-        <Title />
-        <Form />
-        <SocialMedia />
-      </Container>
+      backgroundSize: 'cover', py: 10
+    }}>
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={4}
+        sx={{ width: '100%', px: 2 }}
+      >
+        {/* Columna izquierda */}
+        <Stack spacing={4} sx={{ width: { xs: '100%', md: '50%' } }}>
+          <Box sx={{ my: "auto", mx: "auto" }}>
+            <Title />
+            <Box
+              component={motion.img}
+              src="/images/contact.png"
+              alt={t('title')}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              sx={{
+                width: { xs: '100%', md: 400 },
+                height: { xs: 250, md: 400 },
+                objectFit: 'cover',
+                borderRadius: 2,
+                boxShadow: 0,
+                mx: "auto"
+              }}
+            />
+          </Box>
+        </Stack>
+
+        {/* Columna derecha */}
+        <Stack spacing={4} sx={{ width: { xs: '100%', md: '50%' } }}>
+          <Form />
+          <SocialMedia />
+        </Stack>
+      </Stack>
     </Box>
   );
 }
