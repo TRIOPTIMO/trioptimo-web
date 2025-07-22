@@ -6,7 +6,9 @@ const theme = createTheme({
     colors: {
       black: '#000000',
       darkBlue: '#14213D',
-      orange: '#FCA311',
+      primary: '#00dd93',
+      secondary: '#931ed8',
+      tertiary: '#001aff',
       white: '#FFFFFF',
       grey: '#E5E5E5'
     },

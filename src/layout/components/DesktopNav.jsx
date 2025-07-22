@@ -42,7 +42,7 @@ export default function DesktopNav() {
                   fontSize: '1.1rem',
                   textTransform: 'none',
                   '&:hover': {
-                    color: 'colors.orange',
+                    color: 'colors.primary',
                     backgroundColor: 'transparent',
                   },
                 }}

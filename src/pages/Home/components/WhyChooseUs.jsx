@@ -32,7 +32,7 @@ export default function WhychooseUs() {
   const { t } = useTranslation('whychooseus');
 
   return (
-    <Box sx={{ py: 8, px: 2, backgroundColor: 'colors.white', position: 'relative', minHeight: "20vh" }}>
+    <Box sx={{ py: 8, px: 2, backgroundColor: 'colors.grey', position: 'relative', minHeight: "20vh" }}>
       <Box display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
@@ -110,7 +110,7 @@ export default function WhychooseUs() {
                     width: 60,
                     height: 60,
                     borderRadius: '50%',
-                    backgroundColor: 'colors.orange',
+                    backgroundColor: 'colors.primary',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -127,7 +127,7 @@ export default function WhychooseUs() {
                     variant="h6"
                     fontSize={25}
                     sx={{
-                      color: 'colors.orange',
+                      color: 'colors.primary',
                       fontWeight: 'bold',
                       mb: 1,
                     }}

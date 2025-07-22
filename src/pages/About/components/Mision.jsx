@@ -41,7 +41,7 @@ export default function Mision() {
         <Box
           component={motion.img}
           ref={imgRef}
-          src="/images/mision.webp"
+          src="/images/mision.png"
           alt={t('missionTitle')}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

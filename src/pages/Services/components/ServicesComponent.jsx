@@ -24,7 +24,7 @@ export default function ServicesComponent() {
         mt: { xs: 6, sm: 8, md: 10 },
         width: { xs: "100%", sm: "90%", md: "90%", lg: "75%", xl: "100%" },
         minHeight: { xs: "auto", md: "50vh" },
-        backgroundColor: "rgba(252, 163, 17, 0.1)",
+        backgroundColor: "rgba(147, 30, 216, 0.1)",
         borderRadius: 3,
         position: "relative",
         overflow: "visible",
@@ -106,7 +106,7 @@ export default function ServicesComponent() {
           sx={{
             mt: { xs: 3, sm: 4, md: 5 },
             backgroundColor: "transparent",
-            color: 'colors.orange',
+            color: 'colors.primary',
             fontWeight: 'bold',
             borderRadius: 3,
             px: { xs: 4, sm: 5, md: 6 },
@@ -137,15 +137,15 @@ export default function ServicesComponent() {
         viewport={{ once: true, amount: 0.3 }}
         sx={{
           position: { md: "absolute", xs: "static" },
-          right: { md: "-5%", lg: "-25%", xl: "-20%" },
-          top: { md: "50%", xs: "auto" },
+          right: { md: "-5%", lg: "-25%", xl: "-10%" },
+          top: { md: "20%", xs: "auto" },
           transform: { md: "translateY(-50%)", xs: "none" },
           width: {
             xs: "100%",
             sm: 200,
             md: 300,
-            lg: 550,
-            xl: 600,
+            lg: 450,
+            xl: 500,
           },
           height: {
             xs: 200,
@@ -166,7 +166,7 @@ export default function ServicesComponent() {
         <Box
           component="img"
           ref={imgRef}
-          src="./images/services.webp"
+          src="./images/services.png"
           alt="Service"
           sx={{
             width: '100%',

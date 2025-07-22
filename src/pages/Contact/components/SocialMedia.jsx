@@ -43,7 +43,7 @@ export default function SocialMedia() {
                                 backgroundColor: 'colors.darkBlue',
                                 color: '#fff',
                                 '&:hover': {
-                                    backgroundColor: 'colors.orange',
+                                    backgroundColor: 'colors.primary',
                                     boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
                                 },
                             }}

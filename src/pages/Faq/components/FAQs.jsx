@@ -46,7 +46,7 @@ export default function FAQs() {
                 sx={{ my: 2 }}
                 expandIcon={
                   <ExpandMoreIcon
-                    sx={{ color: 'colors.orange' }}
+                    sx={{ color: 'colors.primary' }}
                   />
                 }
               >

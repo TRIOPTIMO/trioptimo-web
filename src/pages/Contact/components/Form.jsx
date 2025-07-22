@@ -199,7 +199,7 @@ export default function Form() {
                 position: 'relative',
                 borderRadius: '999px',
                 overflow: 'hidden',
-                backgroundColor: '#FFA500',
+                backgroundColor: 'colors.primary',
                 height: '48px',
                 cursor: 'pointer',
                 my: { xs: 3 },
