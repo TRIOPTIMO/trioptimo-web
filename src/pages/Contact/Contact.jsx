@@ -45,8 +45,8 @@ export default function Contacto() {
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
               sx={{
-                width: { xs: '100%', md: 400 },
-                height: { xs: 250, md: 400 },
+                width: { xs: '100%', md: 500 },
+                height: { xs: 250, md: 500 },
                 objectFit: 'cover',
                 borderRadius: 2,
                 boxShadow: 0,

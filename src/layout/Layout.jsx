@@ -11,7 +11,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import DesktopNav from './components/DesktopNav';
 import MobileNav from './components/MobileNav';
-import Logo from "../layout/components/Logo";
+import Logo from "./common/Logo";
 import ScrollToTop from "../layout/components/ScrollToTop";
 
 export default function Layout({ children }) {
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
       <AppBar
   position="fixed"
   sx={{
-    backgroundColor: 'rgba(20, 33, 61, 0.7)',
+    backgroundColor: 'colors.secondary', //'rgba(20, 33, 61, 0.7)',
     backdropFilter: 'blur(10px)',
     boxShadow: 'none',
     width: "100%",

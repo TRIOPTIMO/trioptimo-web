@@ -3,7 +3,7 @@ import { useMetaTags } from "../../services/useMetaTags";
 
 import Hero from "./components/Hero/Hero";
 import Services from "../Services/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
+import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import AboutUs from "../About/AboutUs";
 import Contact from "../Contact/Contact";
 import Faq from "../Faq/Faq";

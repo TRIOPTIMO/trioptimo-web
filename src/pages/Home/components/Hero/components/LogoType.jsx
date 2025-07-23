@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef } from 'react';
 import { Box, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
+const LogoType = ({ logoSrc, logoAlt = "Logo" }) => {
   const logoRef = useRef();
   const [logoSize, setLogoSize] = useState({ width: 0, height: 0 });
 
@@ -33,7 +33,7 @@ const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <Box
@@ -73,7 +73,7 @@ const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <Box
@@ -97,4 +97,4 @@ const TypingTitle = ({ logoSrc, logoAlt = "Logo" }) => {
   );
 };
 
-export default TypingTitle;
+export default LogoType;

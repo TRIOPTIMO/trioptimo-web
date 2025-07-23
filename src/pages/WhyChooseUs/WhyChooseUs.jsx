@@ -47,11 +47,16 @@ export default function WhychooseUs() {
             height: '100%',
             backgroundImage: 'url("/images/iconSecondary.png")',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: { xs: 'center top', md: '-30% center' },
+            backgroundPosition: { xs: 'center -50%', md: '-30% center' },
             backgroundSize: { xs: '60%', md: '700px' },
-            opacity: 0.1, // 👈 Aquí controlás la opacidad
             zIndex: 0,
-          },
+
+            // Nuevo: máscara de opacidad gradual
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+            maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+            maskSize: '100% 100%',
+            maskRepeat: 'no-repeat',
+          }
         }}
       >
         <Box display="flex" justifyContent="center" alignItems="center" sx={{ mx: "auto" }}>
@@ -69,7 +74,7 @@ export default function WhychooseUs() {
         </Box>
         <Stack spacing={6} alignItems="center" sx={{ zIndex: 20 }}>
           {/* Primera fila: dos íconos */}
-          <Stack direction="row" spacing={6} justifyContent="center">
+          <Stack direction="row" sx={{ zIndex: 20 }} spacing={6} justifyContent="center">
             {razones.slice(0, 2).map(({ icon }, index) => (
               <MotionBox
                 key={index}

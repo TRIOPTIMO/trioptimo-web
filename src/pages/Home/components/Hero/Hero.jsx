@@ -1,55 +1,22 @@
 import { Box, Typography, Stack } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import TypingTitle from "./components/TypingTitle";
+
+import LogoType from "./components/LogoType";
+import Slogans from "./components/Slogans";
 import GlobalBackground from './components/GlobalBackground';
-import Statitics from './components/Statitics';
 import CallToAction from './components/CallToAction';
-import { useEffect, useRef } from 'react';
 
 export default function Hero() {
   const { t } = useTranslation("hero");
-
-  const desc1Ref = useRef(null);
-
-  const scrambleText = (element, finalText, duration = 2) => {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    const iterations = 20;
-    let frame = 0;
-
-    const scrambleInterval = setInterval(() => {
-      const scrambled = finalText
-        .split("")
-        .map((char, i) => {
-          if (char === " ") return " ";
-          if (i < (frame / iterations) * finalText.length) {
-            return char;
-          }
-          return chars[Math.floor(Math.random() * chars.length)];
-        })
-        .join("");
-
-      element.textContent = scrambled;
-
-      frame++;
-      if (frame > iterations) {
-        clearInterval(scrambleInterval);
-        element.textContent = finalText;
-      }
-    }, (duration * 1000) / iterations);
-  };
-
-  useEffect(() => {
-    scrambleText(desc1Ref.current, t("description1"), 2);
-  }, [t]);
 
   return (
     <>
       <Box
         name="hero"
         sx={{
-          minHeight: { md: '90vh', sm: '80vh', xs: '100vh', lg: '100vh' },
-          width: { sm: '30%', md: '100%' },
+          minHeight: { xs: '100vh', sm: '90vh', md: '90vh', lg: '100vh' },
+          width: '100%',
           mx: 'auto',
           display: 'flex',
           alignItems: 'center',
@@ -58,77 +25,75 @@ export default function Hero() {
           px: 2,
           backgroundColor: "transparent",
           color: 'colors.white',
+          position: 'relative',
         }}
       >
-
         <GlobalBackground />
 
         <Stack
           id="infoHero"
-          direction={{ xs: "column", md: "row" }}
+          direction={{ xs: "column", md: "row", lg: "row" }}
           spacing={4}
           sx={{
             mx: 'auto',
-            color: 'colors.white',
+            width: '100%',
+            // maxWidth: "1200px",
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
-            width: "100%",
+            zIndex: 2
           }}
         >
-          {/* Columna izquierda: TypingTitle */}
-          <TypingTitle />
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            style={{ flex: 1, minWidth: 280 }}
-          >
-            {/* Columna derecha: textos + CTA */}
-            <Box
-              sx={{
-                flex: 1.5,
-                minWidth: 300,
-                px: { xs: 0, md: 4 },
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "center",
-              }}
-            >
-              <Typography
-                ref={desc1Ref}
-                variant="subtitle1"
-                sx={{
-                  width: "100%",
-                  fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" },
-                  my: { xs: 4, sm: 2, md: 6 },
-                  color: 'colors.white'
-                }}
-              >
-                {t("description1")}
-              </Typography>
+          {/* Columna izquierda */}
+          <Box
+            sx={{
+              flex: 1,
+              minWidth: { xs: '100%', md: '40%', lg: '40%' },
+              mb: { xs: 4, md: 0 }
+            }} >
+            <LogoType />
+          </Box>
 
+          {/* Columna derecha */}
+
+          <Box
+            sx={{
+              flex: 1.5,
+              px: { xs: 0, md: 4 },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", md: "center" },
+              justifyContent: "center",
+              textAlign: "center"
+            }}
+          >
+            <Slogans />
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2 }}
+              style={{ flex: 1, minWidth: 280 }}
+            >
+              {/* Descripción */}
               <Typography
                 variant="subtitle2"
+                align="center"
                 sx={{
-                  width: "100%",
-                  fontSize: { xs: "1rem", md: "1rem", lg: "1.5rem" },
-                  my: { xs: 4, sm: 2, md: 6 },
-                  color: 'colors.grey'
+                  fontSize: { xs: "1rem", sm: "1.1rem", lg: "1.5rem" },
+                  my: { xs: 3, sm: 4 },
+                  mx: "auto",
+                  color: 'colors.grey',
+                  maxWidth: { xs: "100%", md: "90%", lg: "80%" }
                 }}
               >
                 {t("description2")}
               </Typography>
+            </motion.div>
 
-              <CallToAction />
-            </Box>
-          </motion.div>
+            <CallToAction />
+          </Box>
         </Stack>
-
-
       </Box>
-      {/* <Statitics /> */}
     </>
   );
 }
