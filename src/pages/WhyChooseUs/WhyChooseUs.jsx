@@ -33,7 +33,7 @@ export default function WhychooseUs() {
         sx={{
           py: 8,
           px: 2,
-          backgroundColor: 'rgba(229, 229, 229, .3)',
+          backgroundColor: 'colors.white',
           position: 'relative',
           minHeight: '20vh',
           mx: 'auto',

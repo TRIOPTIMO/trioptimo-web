@@ -65,17 +65,18 @@ export default function Faq() {
                     mx: "auto"
                 }}
             >
-                {isMobile && (
-                    <Title />
-                )}
-                <FAQs />
-
                 <Box sx={{ my: "auto" }}>
                     {!isMobile && (
                     <Title />
                 )}
                     <CTA />
                 </Box>
+                {isMobile && (
+                    <Title />
+                )}
+                <FAQs />
+
+                
             </Stack>
         </Box>
 

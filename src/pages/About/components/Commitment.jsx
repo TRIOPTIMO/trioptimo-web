@@ -7,6 +7,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import React, { useLayoutEffect, useRef } from 'react';
+import CallToAction from "./CallToAction";
 
 export default function Mision() {
   const { t } = useTranslation('aboutUs');
@@ -27,10 +28,11 @@ export default function Mision() {
         sx={{
           p: 4,
           height: '100%',
-          width: "100%",
+          width: "50%",
           background: "transparent",
           borderRadius: 3,
           boxShadow: 0,
+          mx:"auto",
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
@@ -77,6 +79,8 @@ export default function Mision() {
           <Typography  align="center" variant="body2" fontSize={20} color="colors.darkBlue">
             {t('commitmentDescription')}
           </Typography>
+
+          <CallToAction/>
         </Box>
       </Paper>
     </Grid>

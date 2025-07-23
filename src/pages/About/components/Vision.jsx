@@ -46,7 +46,7 @@ export default function Mision() {
         >
           <Typography
             variant="h6"
-            align="left"
+            align="right"
             fontWeight={700}
             color="colors.darkBlue"
             mb={1}
@@ -54,13 +54,13 @@ export default function Mision() {
           >
             {t('visionTitle')}
           </Typography>
-          <Typography variant="body2" fontSize={20} color="colors.darkBlue">
+          <Typography variant="body2" align="right" fontSize={20} color="colors.darkBlue">
             {t('visionText')}
           </Typography>
         </Box>
 
         {/* Imagen con motion */}
-        <Box
+        {/* <Box
           component={motion.img}
           ref={imgRef}
           src="/images/vision.png"
@@ -76,7 +76,7 @@ export default function Mision() {
             borderRadius: 2,
             boxShadow: 0,
           }}
-        />
+        /> */}
       </Paper>
     </Grid>
   );

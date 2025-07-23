@@ -27,7 +27,7 @@ export default function Title() {
                         align="center"
                         fontWeight={700}
                         mb={6}
-                        mr={2}
+                        mr={6}
                         fontSize= {55}
                         color="colors.darkBlue"
                     >

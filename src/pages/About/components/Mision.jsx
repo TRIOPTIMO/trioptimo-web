@@ -38,7 +38,7 @@ export default function Mision() {
         }}
       >
         {/* Imagen con motion */}
-        <Box
+        {/* <Box
           component={motion.img}
           ref={imgRef}
           src="/images/mision.png"
@@ -54,7 +54,7 @@ export default function Mision() {
             borderRadius: 2,
             boxShadow: 0,
           }}
-        />
+        /> */}
 
         {/* Texto con motion */}
         <Box

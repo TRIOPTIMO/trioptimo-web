@@ -1,27 +1,64 @@
 {
   "title": "¿Qué ofrecemos?",
-  "description": "Impulsamos tu organización optimizando procesos, digitalizando sin riesgos y transformando datos en decisiones inteligentes, mientras formamos a tu equipo para sostener el cambio.",
+  "description": "Soluciones integrales diseñadas a medida.",
   "ctaButton": "Contacta con nosotros →",
   "services": [
     {
       "title": "Optimización de procesos",
-      "description": "Mejoramos tus operaciones actuales para maximizar la eficiencia y reducir costes, aprovechando al máximo lo que ya tienes.",
+      "description": "En TriOptimo identificamos y eliminamos ineficiencias en tus flujos de trabajo, tanto en el ámbito operativo como administrativo. A través de un análisis exhaustivo y la implementación de metodologías, te ayudamos a:",
+      "beneficts": [
+        {
+          "description": "Reducir costes"
+        },
+        {
+          "description": "Aumentar la productividad"
+        },
+        {
+          "description": "Mejorar la calidad"
+        },
+        {
+          "description": "Optimizar la asignación de recursos"
+        }
+      ],
       "button": "Ver más"
     },
     {
-      "title": "Transformación digital industrial",
-      "description": "Implantamos tecnología adaptada a tu realidad para avanzar en la digitalización y automatización, sin riesgos ni grandes inversiones.",
+      "title": "Transformación digital",
+      "description": "La Industria 4.0 no es solo una tendencia, es una necesidad. En Trioptimo, te guiamos en la digitalización de tus procesos industriales, integrando tecnologías avanzadas para crear operaciones más inteligentes y conectadas. Nuestros servicios incluyen:",
+      "beneficts": [
+        {
+          "description": "Implementación de IoT (Internet de las Cosas)"
+        },
+        {
+          "description": "Automatización inteligente"
+        },
+        {
+          "description": "Sistemas de gestión avanzados"
+        },
+        {
+          "description": "Toma de decisiones en tiempo real"
+        }
+      ],
       "button": "Explorar"
     },
     {
       "title": "Inteligencia de negocio y gestión de datos",
-      "description": "Convertimos la información de tu empresa en decisiones efectivas que mejoran resultados y anticipan oportunidades.",
+      "description": "Tus datos son tu activo más valioso. En Trioptimo, transformamos grandes volúmenes de información en decisiones estratégicas y accionables.",
+      "beneficts": [
+        {
+          "description": "Análisis de datos avanzado"
+        },
+        {
+          "description": "Diseño e implementación de dashboards interactivos"
+        },
+        {
+          "description": "Modelado predictivo"
+        },
+        {
+          "description": "Gobernanza y calidad de datos"
+        }
+      ],
       "button": "Conocer más"
-    },
-    {
-      "title": "Formación práctica para equipos",
-      "description": "Diseñamos cursos y talleres personalizados para que tu equipo interiorice los cambios y mantenga la mejora continua.",
-      "button": "Descubrir"
     }
   ],
   "meta": {

@@ -2,30 +2,13 @@
   "title": "Sobre Nosotros",
   "description": "Somos una consultora especializada en transformación digital e innovación industrial. Combinamos experiencia técnica con visión estratégica para ayudarte a implementar soluciones inteligentes, escalables y sostenibles en tu operación.",
   "missionTitle": "Nuestra Misión",
-  "missionText": "Empoderar a las pymes en su camino hacia el liderazgo. Somos el aliado estratégico que transforma procesos invisibles en resultados visibles, haciendo que cada empresa trabaje de forma más eficiente, rentable y humana. Porque cuando transformamos la pyme, transformamos también la vida de quienes la hacen posible.",
+  "missionText": "En Trioptimo, nuestra misión es empoderar a las pymes para que alcancen el liderazgo en sus respectivos mercados. Actuamos como un aliado estratégico, transformando procesos invisibles en resultados visibles. Nos esforzamos por hacer que cada empresa sea más eficiente, más rentable y, fundamentalmente, más humana. Creemos firmemente que al transformar las pymes, también transformamos las vidas de quienes las hacen posibles.",
   "visionTitle": "Nuestra Visión",
-  "visionText": "Convertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.",
+  "visionText": "Aspiramos a convertirnos en el aliado número uno para las pymes, aplicando la ingeniería de procesos, la tecnología y la inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales. Nuestra visión se basa en un enfoque profundamente humano, donde la tecnología sirve para mejorar la vida de las personas y el rendimiento de las organizaciones.",
   "teamTitle": "Nuestro Equipo Directivo",
-  "commitmentTitle": "Nuestro Compromiso", 
-  "commitmentDescription": "LorConvertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.Convertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.em", 
-  "valores": [
-    {
-      "title": "Compromiso con la pyme",
-      "description": "Porque son el verdadero motor económico, nos ponemos en su lugar en cada proyecto."
-    },
-    {
-      "title": "Soluciones que funcionan",
-      "description": "Nada de informes para la estantería. Proponemos soluciones aplicables y medibles."
-    },
-    {
-      "title": "Ingeniería con propósito humano",
-      "description": " Usamos la técnica para mejorar la vida dentro y fuera de la planta. No solo para cumplir normas, sino porque las empresas están formadas por personas. Escuchamos, empatizamos y construimos desde el respeto y la colaboración."
-    },
-    {
-      "title": "Cultura de mejora continua",
-      "description": "Primero mejoramos la empresa. Luego mejoramos cómo la mejoramos. Siempre aprendiendo, siempre iterando."
-    }
-  ],
+  "commitmentTitle": "Compromiso con la Sociedad", 
+  "commitmentDescription": "En Trioptimo, nuestro éxito empresarial va de la mano con un impacto social positivo. Promovemos un entorno de trabajo inclusivo y equitativo, valorando y desarrollando cada talento. La sostenibilidad es clave en nuestras operaciones, asegurando un crecimiento responsable que beneficia a todos. Estamos orgullosos de colaborar gratuitamente con ONGs y organizaciones sin fines de lucro, aportando nuestro conocimiento y recursos para potenciar sus misiones y construir un futuro mejor. En Trioptimo, creemos en el poder de la unión para un verdadero cambio social.",
+  "CTACommitment": "¿Eres una ONG? ¡Permítenos ayudar!",
   "ceos": [
     {
       "name": "Jano Neuen Centeno",

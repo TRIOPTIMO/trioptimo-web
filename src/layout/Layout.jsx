@@ -24,7 +24,7 @@ export default function Layout({ children }) {
       <AppBar
   position="fixed"
   sx={{
-    backgroundColor: 'colors.secondary', //'rgba(20, 33, 61, 0.7)',
+    backgroundColor: 'rgba(20, 33, 61, 0.7)',
     backdropFilter: 'blur(10px)',
     boxShadow: 'none',
     width: "100%",
@@ -43,7 +43,6 @@ export default function Layout({ children }) {
       alignItems: "center",
     }}
   >
-    {/* <Logo /> */}
 
     <Box
       component={ScrollLink}
@@ -65,21 +64,21 @@ export default function Layout({ children }) {
         },
       }}
     >
-      {/* <Box
+      <Box
         component="img"
-        src="/images/icon.png"
+        src="/images/trioptimo.png"
         alt="logo"
         sx={{
           height: "auto",
           maxHeight: {
-            xs: 30,
-            sm: 40,
-            md: 40,
+            xs: 20,
+            sm: 30,
+            md: 30,
           },
           mb: 0,
         }}
-      />*/}
-    <Logo/>
+      />
+    {/* <Logo/> */}
     </Box> 
     <Box sx={{ flexGrow: 1 }} />
 

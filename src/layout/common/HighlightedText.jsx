@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const HighlightedText = ({
     children,
-    color = 'linear-gradient(120deg, #001aff62 0%, #941ed852 100%)',
+    color = 'linear-gradient(120deg, #00dd93 0%, #00dd93 100%)',
     height = '0.5em',
     duration = 1.5,
     delay = 0,
@@ -44,7 +44,7 @@ const HighlightedText = ({
             sx={{
                 position: 'relative',
                 display: 'inline-block',
-                backgroundImage: color,
+                // backgroundImage: color,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: '0 80%',
                 padding: '0 30px',

@@ -36,7 +36,7 @@ export default function Contacto() {
         <Stack spacing={4} sx={{ width: { xs: '100%', md: '50%' } }}>
           <Box sx={{ my: "auto", mx: "auto" }}>
             <Title />
-            <Box
+            {/* <Box
               component={motion.img}
               src="/images/contact.png"
               alt={t('title')}
@@ -52,7 +52,7 @@ export default function Contacto() {
                 boxShadow: 0,
                 mx: "auto"
               }}
-            />
+            /> */}
           </Box>
         </Stack>
 

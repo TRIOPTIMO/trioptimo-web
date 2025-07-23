@@ -45,14 +45,14 @@ export default function Hero() {
           }}
         >
           {/* Columna izquierda */}
-          <Box
+          {/* <Box
             sx={{
               flex: 1,
               minWidth: { xs: '100%', md: '40%', lg: '40%' },
               mb: { xs: 4, md: 0 }
             }} >
             <LogoType />
-          </Box>
+          </Box> */}
 
           {/* Columna derecha */}
 
@@ -74,7 +74,6 @@ export default function Hero() {
               transition={{ duration: 2 }}
               style={{ flex: 1, minWidth: 280 }}
             >
-              {/* Descripción */}
               <Typography
                 variant="subtitle2"
                 align="center"
@@ -86,7 +85,7 @@ export default function Hero() {
                   maxWidth: { xs: "100%", md: "90%", lg: "80%" }
                 }}
               >
-                {t("description2")}
+                {t("description")}
               </Typography>
             </motion.div>
 
