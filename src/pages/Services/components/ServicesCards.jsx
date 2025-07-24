@@ -40,7 +40,7 @@ export default function ServicesCards() {
                         }}
                     >
                         <CardContent>
-                            <Typography variant="h6" color="text.secondary" fontWeight={700} gutterBottom>
+                            <Typography variant="h3" color="text.secondary" fontSize={25} fontWeight={700} gutterBottom>
                                 {t(`services.${index}.title`)}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">

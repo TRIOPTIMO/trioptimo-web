@@ -66,7 +66,7 @@ export default function Hero() {
               style={{ flex: 1, minWidth: 280 }}
             >
               <Typography
-                variant="subtitle2"
+                variant="h2"
                 align="center"
                 sx={{
                   fontSize: { xs: "1rem", sm: "1.1rem", lg: "1.5rem" },

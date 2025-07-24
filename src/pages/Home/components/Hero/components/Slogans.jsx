@@ -21,7 +21,7 @@ export default function Slogans() {
                 }}
             >
                 {slogans.map((text, index) => (
-                    <Typography key={index} variant="subtitle1">
+                    <Typography key={index} variant="h1">
                         <HighlightedText delay={index * 1.5}>{text}</HighlightedText>
                     </Typography>
                 ))}

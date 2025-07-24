@@ -15,7 +15,7 @@ export default function Title() {
                 transition={{ duration: 0.6 }}
             >
                 <Typography
-                    variant="h4"
+                    variant="h1"
                     align="center"
                     fontWeight={700}
                     mb={6}
@@ -27,7 +27,7 @@ export default function Title() {
                 </Typography>
 
                 <Typography
-                    variant="body1"
+                    variant="subtitle1"
                     align="center"
                     color="colors.darkBlue"
                     fontSize= {20}

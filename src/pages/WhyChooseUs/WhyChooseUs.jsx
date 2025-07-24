@@ -63,7 +63,7 @@ export default function WhychooseUs() {
       >
         <Box display="flex" justifyContent="center" alignItems="center" sx={{ mx: "auto" }}>
           <Typography
-            variant="h4"
+            variant="h1"
             align="center"
             fontWeight={700}
             mb={6}
@@ -118,7 +118,7 @@ export default function WhychooseUs() {
                     {icon}
                   </Box>
                   <CardContent sx={{ p: 0 }}>
-                    <Typography variant="h6" fontSize={25} sx={{ color: 'colors.secondary', fontWeight: 'bold', mb: 1 }}>
+                    <Typography variant="subtitle1" fontSize={25} sx={{ color: 'colors.secondary', fontWeight: 'bold', mb: 1 }}>
                       {t(`reasons.${index}.title`)}
                     </Typography>
                   </CardContent>

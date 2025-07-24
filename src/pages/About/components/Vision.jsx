@@ -45,7 +45,7 @@ export default function Mision() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <Typography
-            variant="h6"
+            variant="h2"
             align="right"
             fontWeight={700}
             color="colors.white"

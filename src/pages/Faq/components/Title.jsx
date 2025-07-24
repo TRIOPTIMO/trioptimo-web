@@ -23,7 +23,7 @@ export default function Title() {
                     justifyContent={"center"}
                 >
                     <Typography
-                        variant="h4"
+                        variant="h1"
                         align="center"
                         fontWeight={700}
                         mb={6}

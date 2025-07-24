@@ -28,7 +28,8 @@ export default function SocialMedia() {
                 // },
                  {
                     icon: <EmailIcon />,
-                    href: 'mailto:info@trioptimo.com'
+                    href: 'mailto:info@trioptimo.com',
+                    label: "Email",
                 }].map((social, i) => (
                     <motion.div key={i} whileHover={{ scale: 1.2 }}>
                         <IconButton
