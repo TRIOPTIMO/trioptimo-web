@@ -10,11 +10,12 @@ export default function Slogans() {
         <>
             {/* Slogans */}
             <Stack
-                direction={{ xs: 'column', sm: 'row' }}
+                direction={{ xs: 'row', sm: 'row' }}
                 spacing={2}
                 sx={{
                     mb: { xs: 3, sm: 4 },
                     flexWrap: "wrap",
+                    width: "100%",
                     justifyContent: { xs: 'center', sm: 'start' },
                     alignItems: "center"
                 }}

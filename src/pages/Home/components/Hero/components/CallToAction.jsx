@@ -40,7 +40,8 @@ export default function MyButton() {
             borderRadius: '999px',
             overflow: 'hidden',
             backgroundColor: 'colors.primary',
-            height: { lg: '50px', md: "40px", sm: "30px" },
+            height: { lg: '50px', md: "40px", sm: "30px", xs: "50px" },
+            width: { xs: "350px", md: "600px" },
             cursor: 'pointer',
             my: { xs: 3, sm: 1, md: 1, lg: 3 },
             mx: "auto"
@@ -66,7 +67,13 @@ export default function MyButton() {
               boxShadow: 'none',
               height: { lg: '48px' },
               minHeight: 'unset',
-              lineHeight: 'normal',
+              lineHeight: 1.2,
+              textAlign: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 'fit-content', // 👈 evita que el botón se estire
+              margin: '0 auto',     // 👈 centra el botón como bloque
               '&:hover': {
                 bgcolor: 'transparent',
               },
@@ -74,6 +81,8 @@ export default function MyButton() {
           >
             {t("cta")}
           </Button>
+
+
 
           <Box
             ref={shineRef}

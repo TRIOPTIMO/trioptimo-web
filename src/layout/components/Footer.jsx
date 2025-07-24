@@ -9,7 +9,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: 'colors.darkBlue',
+        backgroundColor: 'colors.secondary', //'colors.darkBlue',
         color: 'text.primary',
         py: 6,
         px: 2,
@@ -83,7 +83,7 @@ export default function Footer() {
               },
               height: "auto",
               maxHeight: {
-                xs: 40,
+                xs: 20,
                 sm: 50,
                 md: 50,
               },

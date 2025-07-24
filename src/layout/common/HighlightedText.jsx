@@ -10,31 +10,6 @@ const HighlightedText = ({
     delay = 0,
     trigger = 'mount', }) => {
 
-    const motionProps =
-        trigger === 'view'
-            ? {
-                initial: 'hidden',
-                whileInView: 'visible',
-                viewport: { once: true, amount: 0.6 },
-            }
-            : trigger === 'hover'
-                ? { initial: 'visible', whileHover: 'hover' }
-                : { initial: 'hidden', animate: 'visible' }; // mount
-
-    const variants =
-        trigger === 'hover'
-            ? {
-                visible: { scaleX: 0, transition: { duration: 0 } },
-                hover: { scaleX: 1, transition: { duration } },
-            }
-            : {
-                hidden: { scaleX: 0 },
-                visible: {
-                    scaleX: 1,
-                    transition: { duration, delay, ease: 'easeOut' },
-                },
-            };
-
     return (
         <Box
             component={motion.span}
@@ -47,7 +22,7 @@ const HighlightedText = ({
                 // backgroundImage: color,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: '0 80%',
-                padding: '0 30px',
+                padding: {md: '0 30px', xs: '0 5px' } ,
                 borderRadius: 1
             }}
         >

@@ -2,7 +2,7 @@ import { Box, Typography, Stack } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
-import LogoType from "./components/LogoType";
+import Logo from "../../../../layout/common/Logo";
 import Slogans from "./components/Slogans";
 import GlobalBackground from './components/GlobalBackground';
 import CallToAction from './components/CallToAction';
@@ -32,7 +32,7 @@ export default function Hero() {
 
         <Stack
           id="infoHero"
-          direction={{ xs: "column", md: "row", lg: "row" }}
+          direction={{ xs: "column-reverse", md: "row", lg: "row" }}
           spacing={4}
           sx={{
             mx: 'auto',
@@ -44,18 +44,9 @@ export default function Hero() {
             zIndex: 2
           }}
         >
+          
+
           {/* Columna izquierda */}
-          {/* <Box
-            sx={{
-              flex: 1,
-              minWidth: { xs: '100%', md: '40%', lg: '40%' },
-              mb: { xs: 4, md: 0 }
-            }} >
-            <LogoType />
-          </Box> */}
-
-          {/* Columna derecha */}
-
           <Box
             sx={{
               flex: 1.5,
@@ -90,6 +81,16 @@ export default function Hero() {
             </motion.div>
 
             <CallToAction />
+          </Box>
+
+          {/* Columna derecha */}
+          <Box
+            sx={{
+              flex: 1,
+              minWidth: { xs: '100%', md: '40%', lg: '40%' },
+              mb: { xs: 4, md: 0 }
+            }} >
+            <Logo />
           </Box>
         </Stack>
       </Box>

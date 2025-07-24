@@ -30,11 +30,9 @@ export default function Faq() {
                 position: 'relative',
                 py: 10,
                 overflow: 'hidden',
-                // white base background
                 backgroundColor: 'colors.white',
             }}
         >
-            {/* Orange semi-transparent overlay */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -54,7 +52,7 @@ export default function Faq() {
             {/* Content */}
             <Stack
                 direction={{ xs: 'column', sm: 'column', md: 'row' }}
-                spacing={10}
+                spacing={4}
                 alignItems="stretch"
                 justifyContent="center"
                 useFlexGap
@@ -62,10 +60,10 @@ export default function Faq() {
                 sx={{
                     position: 'relative',
                     zIndex: 2,
-                    mx: "auto"
+                    mx: {md: 10, xs: 0}
                 }}
             >
-                <Box sx={{ my: "auto" }}>
+                <Box>
                     {!isMobile && (
                     <Title />
                 )}

@@ -48,13 +48,13 @@ export default function Mision() {
             variant="h6"
             align="right"
             fontWeight={700}
-            color="colors.darkBlue"
+            color="colors.white"
             mb={1}
             fontSize={35}
           >
             {t('visionTitle')}
           </Typography>
-          <Typography variant="body2" align="right" fontSize={20} color="colors.darkBlue">
+          <Typography variant="body2" align="right" fontSize={20} color="colors.white">
             {t('visionText')}
           </Typography>
         </Box>

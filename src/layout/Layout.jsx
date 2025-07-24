@@ -24,7 +24,7 @@ export default function Layout({ children }) {
       <AppBar
   position="fixed"
   sx={{
-    backgroundColor: 'rgba(20, 33, 61, 0.7)',
+    backgroundColor: 'colors.secondary',//'colors.darkBlue',
     backdropFilter: 'blur(10px)',
     boxShadow: 'none',
     width: "100%",
@@ -71,9 +71,9 @@ export default function Layout({ children }) {
         sx={{
           height: "auto",
           maxHeight: {
-            xs: 20,
-            sm: 30,
-            md: 30,
+            xs: 15,
+            sm: 20,
+            md: 20,
           },
           mb: 0,
         }}

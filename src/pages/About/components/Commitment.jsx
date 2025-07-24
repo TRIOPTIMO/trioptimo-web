@@ -70,13 +70,13 @@ export default function Mision() {
             variant="h6"
             align="center"
             fontWeight={700}
-            color="colors.darkBlue"
+            color="colors.white"
             mb={1}
             fontSize={35}
           >
             {t('commitmentTitle')}
           </Typography>
-          <Typography  align="center" variant="body2" fontSize={20} color="colors.darkBlue">
+          <Typography  align="center" variant="body2" fontSize={20} color="colors.white">
             {t('commitmentDescription')}
           </Typography>
 

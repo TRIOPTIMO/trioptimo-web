@@ -13,9 +13,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 const razones = [
-  { icon: <InsightsIcon /> },
-  { icon: <BuildIcon /> },
-  { icon: <VerifiedIcon /> }
+  { icon: <InsightsIcon fontSize='large'/> },
+  { icon: <BuildIcon fontSize='large'/> },
+  { icon: <VerifiedIcon fontSize='large'/> }
 ];
 
 const MotionBox = motion(Box);
@@ -26,14 +26,14 @@ export default function WhychooseUs() {
   return (
     <Box sx={{ mx: "auto", backgroundColor: 'colors.white' }}>
       <Stack
-        direction={{ xs: "column", md: "row" }}
+        direction={{ xs: "column", md: "column" }}
         spacing={4}
         alignItems="center"
         justifyContent="center"
         sx={{
           py: 8,
           px: 2,
-          backgroundColor: 'colors.white',
+          backgroundColor:'rgba(229, 229, 229, .5)',
           position: 'relative',
           minHeight: '20vh',
           mx: 'auto',
@@ -74,8 +74,8 @@ export default function WhychooseUs() {
         </Box>
         <Stack spacing={6} alignItems="center" sx={{ zIndex: 20 }}>
           {/* Primera fila: dos íconos */}
-          <Stack direction="row" sx={{ zIndex: 20 }} spacing={6} justifyContent="center">
-            {razones.slice(0, 2).map(({ icon }, index) => (
+          <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{ zIndex: 20, width: {xs: 500, md: 1200} }} spacing={6} alignItems="center" justifyContent="center">
+            {razones.map(({ icon }, index) => (
               <MotionBox
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
@@ -90,13 +90,14 @@ export default function WhychooseUs() {
                     boxShadow: 0,
                     background: "transparent",
                     color: "colors.darkBlue",
-                    minHeight: 280,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     textAlign: 'center',
                     p: 3,
+                    mx:"auto",
                     cursor: 'pointer',
+                    width: {xs: 300, md: 500}
                   }}
                 >
                   <Box
@@ -104,23 +105,19 @@ export default function WhychooseUs() {
                       width: 60,
                       height: 60,
                       borderRadius: '50%',
-                      backgroundColor: 'colors.primary',
+                      color: 'colors.secondary',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       mb: 2,
-                      color: '#fff',
                       fontSize: 30,
                     }}
                   >
                     {icon}
                   </Box>
                   <CardContent sx={{ p: 0 }}>
-                    <Typography variant="h6" fontSize={25} sx={{ color: 'colors.primary', fontWeight: 'bold', mb: 1 }}>
+                    <Typography variant="h6" fontSize={25} sx={{ color: 'colors.secondary', fontWeight: 'bold', mb: 1 }}>
                       {t(`reasons.${index}.title`)}
-                    </Typography>
-                    <Typography variant="body1" fontSize={20} sx={{ color: 'colors.darkBlue', lineHeight: 1.6 }}>
-                      {t(`reasons.${index}.description`)}
                     </Typography>
                   </CardContent>
                 </Card>
@@ -128,55 +125,6 @@ export default function WhychooseUs() {
             ))}
           </Stack>
 
-          {/* Segunda fila: un ícono centrado */}
-          <MotionBox
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            viewport={{ once: true, amount: 0.3 }}
-            sx={{ maxWidth: 400, width: '100%' }}
-          >
-            <Card
-              sx={{
-                borderRadius: 3,
-                boxShadow: 0,
-                background: "transparent",
-                color: "colors.darkBlue",
-                minHeight: 280,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center',
-                p: 3,
-                cursor: 'pointer',
-              }}
-            >
-              <Box
-                sx={{
-                  width: 60,
-                  height: 60,
-                  borderRadius: '50%',
-                  backgroundColor: 'colors.primary',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 2,
-                  color: '#fff',
-                  fontSize: 30,
-                }}
-              >
-                {razones[2].icon}
-              </Box>
-              <CardContent sx={{ p: 0 }}>
-                <Typography variant="h6" fontSize={25} sx={{ color: 'colors.primary', fontWeight: 'bold', mb: 1 }}>
-                  {t(`reasons.2.title`)}
-                </Typography>
-                <Typography variant="body1" fontSize={20} sx={{ color: 'colors.darkBlue', lineHeight: 1.6 }}>
-                  {t(`reasons.2.description`)}
-                </Typography>
-              </CardContent>
-            </Card>
-          </MotionBox>
         </Stack>
 
       </Stack>

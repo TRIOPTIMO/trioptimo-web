@@ -41,7 +41,7 @@ export default function MyButton() {
             overflow: 'hidden',
             backgroundColor: 'colors.primary',
             height: { lg: '80px', md: "40px", sm: "30px" },
-            width: "25vw",
+            width: { lg: "25vw", md: "25vw", sm: "25vw" } ,
             cursor: 'pointer',
             my: { xs: 3, sm: 1, md: 1, lg: 3 },
             mx: "auto"

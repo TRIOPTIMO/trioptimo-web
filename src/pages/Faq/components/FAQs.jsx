@@ -6,83 +6,73 @@ import {
   Stack,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 export default function FAQs() {
   const { t } = useTranslation('faq');
+  const faqs = t('items', { returnObjects: true }) || [];
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const faqs = t('items', { returnObjects: true });
-  const filteredFaqs = faqs.filter(faq =>
-    faq.question.toLowerCase()
-  );
+  const handleChange = (index) => (_event, isExpanded) => {
+    setExpandedIndex(isExpanded ? index : null);
+  };
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 1, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.3 }}
     >
-      {filteredFaqs.length > 0 ? (
-        filteredFaqs.map((faq, index) => (
-          <motion.div
+      {faqs.map((faq, index) => (
+          <Accordion
             key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
+            expanded={expandedIndex === index}
+            onChange={handleChange(index)}
+            sx={{
+              mb: 3,
+              mx: 2,
+              borderRadius: 3,
+              backgroundColor: expandedIndex === index ? 'colors.secondary' : 'transparent',
+              transition: 'all 0.3s ease',
+              color: 'colors.darkBlue',
+              boxShadow: expandedIndex === index ? 4 : 1,
+              '&::before': { display: 'none' },
+            }}
           >
-            <Accordion
-              sx={{
-                color: 'colors.darkBlue',
-                mb: 3,
-                mx: 2,
-                borderRadius: 3,
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                '&::before': { display: 'none' },
-              }}
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue' }} />}
+              sx={{ my: 2 }}
             >
-              <AccordionSummary
-                sx={{ my: 2 }}
-                expandIcon={
-                  <ExpandMoreIcon
-                    sx={{ color: 'colors.primary' }}
-                  />
-                }
-              >
-                <Stack direction="row" spacing={2} alignItems="center">
-                  {faq.icon}
-                  <Typography
-                    fontWeight={700}
-                    sx={{
-                      fontSize: { xs: 18, sm: 20, md: 22 },
-                      color: 'colors.darkBlue',
-                    }}
-                  >
-                    {t(`items.${index}.question`)}
-                  </Typography>
-                </Stack>
-              </AccordionSummary>
-              <AccordionDetails>
+              <Stack direction="row" spacing={2} alignItems="center">
+                {faq.icon}
                 <Typography
+                  fontWeight={700}
                   sx={{
-                    color: 'colors.darkBlue',
-                    fontSize: { xs: 16, sm: 18, md: 20 },
-                    lineHeight: 1.6,
+                    fontSize: { xs: 18, sm: 20, md: 22 },
+                    color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue'
                   }}
                 >
-                  {t(`items.${index}.answer`)}
+                  {t(`items.${index}.question`)}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </motion.div>
-        ))
-      ) : (
-        <Typography variant="body1" color="#14213D">
-          {t('notFound')}
-        </Typography>
-      )}
+              </Stack>
+            </AccordionSummary>
+
+            <AccordionDetails>
+              <Typography
+                sx={{
+                  fontSize: { xs: 16, sm: 18, md: 20 },
+                  lineHeight: 1.6,
+                  color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue'
+                }}
+              >
+                {t(`items.${index}.answer`)}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
     </motion.div>
   );
 }
