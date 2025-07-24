@@ -16,7 +16,7 @@ export default function Logo() {
       sx={{
         height: "auto",
         maxHeight: {
-          xs: 250,
+          xs: 374,
           sm: 300,
           md: 500,
         },

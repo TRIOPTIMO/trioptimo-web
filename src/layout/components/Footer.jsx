@@ -77,7 +77,7 @@ export default function Footer() {
             alt="logo"
             sx={{
               width: {
-                xs: "120px",
+                xs: "206px",
                 sm: "150px",
                 md: "180px",
               },
