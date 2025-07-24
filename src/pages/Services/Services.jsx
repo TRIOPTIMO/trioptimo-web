@@ -13,7 +13,7 @@ export default function Services() {
     <Box name="services" sx={{
       backgroundColor: 'colors.white',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: 'url("/images/servicesBg.webp")',
+      // backgroundImage: 'url("/images/servicesBg.webp")',
       fetchPriority: "high",
       decoding: "async",
       backgroundSize: 'cover',

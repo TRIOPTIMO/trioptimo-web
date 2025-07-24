@@ -12,7 +12,7 @@ export default function Contacto() {
   return (
     <Box name="contact" sx={{
       backgroundColor: 'colors.white',
-      backgroundImage: 'url("/images/contactBg.webp")',
+      // backgroundImage: 'url("/images/contactBg.webp")',
       fetchPriority: "high",
       decoding: "async",
       backgroundRepeat: 'no-repeat',
