@@ -1,49 +1,32 @@
 {
   "title": "About Us",
-  "description": "We are a consulting firm specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement intelligent, scalable, and sustainable solutions in your operations.",
+  "description": "We are a consultancy specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement smart, scalable, and sustainable solutions in your operations.",
   "missionTitle": "Our Mission",
-  "missionText": "Empowering SMEs on their journey to leadership. We are the strategic partner that transforms invisible processes into visible results, making every company work more efficiently, profitably, and humanely. Because when we transform SMEs, we also transform the lives of those who make them possible.",
+  "missionText": "At Trioptimo, our mission is to empower SMEs to achieve leadership in their respective markets. We act as a strategic ally, turning invisible processes into visible results. We strive to make every company more efficient, more profitable, and fundamentally, more human. We firmly believe that by transforming SMEs, we also transform the lives of those who make them possible.",
   "visionTitle": "Our Vision",
-  "visionText": "To become the number one ally for SMEs, applying process engineering, technology, and business intelligence to optimize operations, reduce costs, and solve real problems, always with a deeply human approach.",
-  "teamTitle": "Our Leadership Team",
-  "commitmentTitle": "Our Commitment", 
-  "commitmentDescription": "LorConvertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.Convertirnos en el aliado número uno para las pymes, aplicando ingeniería de procesos, tecnología e inteligencia de negocio para optimizar operaciones, reducir costes y resolver problemas reales, siempre con un enfoque profundamente humano.em", 
-  "valores": [
-    {
-      "title": "Commitment to SMEs",
-      "description": "Because they are the true economic engine, we put ourselves in their shoes for every project."
-    },
-    {
-      "title": "Solutions that Work",
-      "description": "No shelf reports. We propose actionable and measurable solutions."
-    },
-    {
-      "title": "Engineering with Human Purpose",
-      "description": "We use technical expertise to improve life inside and outside the plant. Not just to meet standards, but because companies are made of people. We listen, empathize, and build with respect and collaboration."
-    },
-    {
-      "title": "Culture of Continuous Improvement",
-      "description": "First we improve the company. Then we improve how we improve it. Always learning, always iterating."
-    }
-  ],
+  "visionText": "We aspire to become the number one ally for SMEs, applying process engineering, technology, and business intelligence to optimize operations, reduce costs, and solve real problems. Our vision is based on a deeply human approach, where technology serves to improve people's lives and organizational performance.",
+  "teamTitle": "Our Executive Team",
+  "commitmentTitle": "Commitment to Society",
+  "commitmentDescription": "At Trioptimo, our business success goes hand in hand with a positive social impact. We promote an inclusive and equitable work environment, valuing and developing each talent. Sustainability is key to our operations, ensuring responsible growth that benefits everyone. We are proud to collaborate for free with NGOs and non-profit organizations, contributing our knowledge and resources to strengthen their missions and build a better future. At Trioptimo, we believe in the power of unity for true social change.",
+  "CTACommitment": "Are you an NGO? Let us help!",
   "ceos": [
     {
       "name": "Jano Neuen Centeno",
-      "role": "Operations and Strategy Director.",
-      "bio": "Industrial Engineer with over 8 years of experience in process optimization and industrial project implementation. His practical and analytical approach has helped numerous SMEs reduce costs without compromising quality.",
+      "role": "Director of Operations and Strategy.",
+      "bio": "Industrial Engineer with over 8 years of experience in process optimization and industrial project implementation. His practical and analytical approach has helped many SMEs reduce costs without compromising quality.",
       "commitment": "“I believe in turning engineering into real solutions that impact the daily lives of companies and their teams.”"
     },
     {
       "name": "Ignacio Davanzo",
       "role": "Head of Digital Transformation and Technology.",
-      "bio": "Information Systems Engineer and expert in digital transformation, with extensive experience in implementing Industry 4.0 technologies and process digitalization. He specializes in adapting technology to each company’s reality and resources.",
+      "bio": "Information Systems Engineer and digital transformation expert, with extensive experience in implementing Industry 4.0 technologies and process digitalization. He specializes in adapting technology to each company’s reality and resources.",
       "commitment": "“My mission is to bring technological innovation closer to SMEs so they can compete and grow without losing their essence.”"
     },
     {
       "name": "Nahuel Deschutter",
       "role": "Head of Data Analysis and Business Intelligence.",
-      "bio": "Specialist in data analysis and Business Intelligence, with experience in Big Data applied to optimization and decision-making in industrial companies. He applies practical models to turn complex data into useful information.",
-      "commitment": "“I believe data is the best tool for making accurate and sustainable decisions.”"
+      "bio": "Specialist in data analysis and Business Intelligence, with experience in applying Big Data to optimization and decision-making in industrial companies. He applies practical models to turn complex data into useful information.",
+      "commitment": "“I believe that data is the best tool for making accurate and sustainable decisions.”"
     }
   ]
 }

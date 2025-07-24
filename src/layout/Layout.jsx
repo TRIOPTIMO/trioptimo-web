@@ -73,7 +73,7 @@ export default function Layout({ children }) {
           maxHeight: {
             xs: 15,
             sm: 20,
-            md: 20,
+            md: 30,
           },
           mb: 0,
         }}

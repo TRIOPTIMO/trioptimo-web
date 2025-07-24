@@ -1,27 +1,64 @@
 {
   "title": "What do we offer?",
-  "description": "We drive your industry forward by optimizing processes, implementing digital solutions without risks, and turning data into smart decisions, while training your team to sustain continuous improvement.",
-  "ctaButton": "Contact with Sales →",
+  "description": "Comprehensive solutions tailored to your needs.",
+  "ctaButton": "Contact us →",
   "services": [
     {
-      "title": "Optimización de procesos",
-      "description": "Mejoramos tus operaciones actuales para maximizar la eficiencia y reducir costes, aprovechando al máximo lo que ya tienes.",
-      "button": "Ver más"
+      "title": "Process Optimization",
+      "description": "At TriOptimo, we identify and eliminate inefficiencies in your workflows, both operational and administrative. Through thorough analysis and the implementation of proven methodologies, we help you:",
+      "beneficts": [
+        {
+          "description": "Reduce costs"
+        },
+        {
+          "description": "Increase productivity"
+        },
+        {
+          "description": "Improve quality"
+        },
+        {
+          "description": "Optimize resource allocation"
+        }
+      ],
+      "button": "Learn more"
     },
     {
-      "title": "Transformación digital industrial",
-      "description": "Implantamos tecnología adaptada a tu realidad para avanzar en la digitalización y automatización, sin riesgos ni grandes inversiones.",
-      "button": "Explorar"
+      "title": "Digital Transformation",
+      "description": "Industry 4.0 is not just a trend — it's a necessity. At TriOptimo, we guide you through the digitalization of your industrial processes by integrating advanced technologies to create smarter, more connected operations. Our services include:",
+      "beneficts": [
+        {
+          "description": "IoT (Internet of Things) implementation"
+        },
+        {
+          "description": "Smart automation"
+        },
+        {
+          "description": "Advanced management systems"
+        },
+        {
+          "description": "Real-time decision-making"
+        }
+      ],
+      "button": "Explore"
     },
     {
-      "title": "Inteligencia de negocio y gestión de datos",
-      "description": "Convertimos la información de tu empresa en decisiones efectivas que mejoran resultados y anticipan oportunidades.",
-      "button": "Conocer más"
-    },
-    {
-      "title": "Formación práctica para equipos",
-      "description": "Diseñamos cursos y talleres personalizados para que tu equipo interiorice los cambios y mantenga la mejora continua.",
-      "button": "Descubrir"
+      "title": "Business Intelligence & Data Management",
+      "description": "Your data is your most valuable asset. At TriOptimo, we transform large volumes of information into strategic, actionable decisions.",
+      "beneficts": [
+        {
+          "description": "Advanced data analysis"
+        },
+        {
+          "description": "Design and implementation of interactive dashboards"
+        },
+        {
+          "description": "Predictive modeling"
+        },
+        {
+          "description": "Data governance and quality"
+        }
+      ],
+      "button": "Discover more"
     }
   ]
 }

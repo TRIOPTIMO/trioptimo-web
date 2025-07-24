@@ -1,25 +1,23 @@
 {
   "title": "Frequently Asked Questions",
-  "searchPlaceholder": "Search question...",
-  "notFound": "No matching questions found.",
   "ctaTitle": "Didn't find what you were looking for?",
-  "ctaButton": "Send us your questions",
+  "ctaButton": "Send us your question",
   "items": [
     {
       "question": "What is Industry 4.0?",
-      "answer": "It is the digital transformation of industrial processes using technologies like IoT, AI, automation, and data analytics."
+      "answer": "It’s the digital transformation of industrial processes through technologies like IoT, AI, automation, and data analytics."
     },
     {
       "question": "What services do you offer as a consultancy?",
-      "answer": "We provide diagnostics, custom solutions, tech implementation, and training to digitize your industry."
+      "answer": "We provide diagnostics, custom solution development, technology implementation, and training to help digitize your industry."
     },
     {
-      "question": "Do you work with small companies or only large factories?",
-      "answer": "We work with businesses of all sizes. Our solutions are scalable and adaptable to each reality."
+      "question": "Do you work with small businesses or only large plants?",
+      "answer": "We collaborate with companies of all sizes. Our solutions are scalable and adaptable to each context."
     },
     {
-      "question": "Can I request a demo or consultation with no obligation?",
-      "answer": "Yes. You can schedule a meeting to discuss your needs and see how we can help."
+      "question": "Can I request a demo or consultation with no commitment?",
+      "answer": "Yes. You can schedule a meeting so we can understand your needs and show you how we can help."
     }
   ]
 }

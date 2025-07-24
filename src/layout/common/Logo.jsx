@@ -16,7 +16,7 @@ export default function Logo() {
         maxHeight: {
           xs: 250,
           sm: 300,
-          md: 400,
+          md: 500,
         },
         mb: 0,
       }}
