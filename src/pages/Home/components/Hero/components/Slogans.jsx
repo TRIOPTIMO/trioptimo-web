@@ -10,10 +10,10 @@ export default function Slogans() {
         <>
             {/* Slogans */}
             <Stack
-                direction={{ xs: 'column', sm: 'row' }}
+                direction={{ xs: 'row', sm: 'row', md: 'row' }}
                 spacing={2}
                 sx={{
-                    mb: { xs: 0, sm: 4 },
+                    my: { xs: 4, sm: 4 },
                     flexWrap: "wrap",
                     width: "100%",
                     justifyContent: { xs: 'center', sm: 'center' },
@@ -25,10 +25,10 @@ export default function Slogans() {
                         position: 'relative',
                         zIndex: 1,
                         fontWeight: 700,
-                        width: "100%",
-                        fontSize: { xs: "2rem", md: "1.5rem", lg: "3rem" },
+                        width: {xs: "auto", md: "auto"},
+                        fontSize: { xs: "1.2rem", md: "1.5rem", lg: "3rem" },
                         my: { xs: 0, sm: 2, md: 6 },
-                        color: 'colors.white'
+                        color: 'colors.darkBlue'
                     }}>
                         {text}
                         {/* <HighlightedText delay={index * 1.5}>{text}</HighlightedText> */}

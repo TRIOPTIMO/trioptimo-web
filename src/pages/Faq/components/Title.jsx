@@ -30,7 +30,7 @@ export default function Title() {
                         mr={6}
                         mx= "auto"
                         sx={{ fontSize: { xs: 35, md: 45, lg: 55 } }}
-                        color="colors.darkBlue"
+                        color="colors.secondary"
                     >
                         {t('title')}
                     </Typography>

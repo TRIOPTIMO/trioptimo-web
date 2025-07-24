@@ -21,7 +21,7 @@ export default function Title() {
                     mb={6}
                     mr={2}
                     sx={{ fontSize: { xs: 35, md: 45, lg: 55 } }}
-                    color="colors.darkBlue"
+                    color="colors.secondary"
                 >
                     {t('title')}
                 </Typography>

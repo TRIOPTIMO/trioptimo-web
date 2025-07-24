@@ -20,7 +20,9 @@
           "description": "Optimizar la asignación de recursos"
         }
       ],
-      "button": "Ver más"
+      "button": "Ver más",
+      "titleColor": "#00dd93",
+      "borderColor": "#00dd93"
     },
     {
       "title": "Transformación digital",
@@ -39,7 +41,9 @@
           "description": "Toma de decisiones en tiempo real"
         }
       ],
-      "button": "Explorar"
+      "button": "Explorar",
+      "titleColor": "#931ed8",
+      "borderColor": "#931ed8"
     },
     {
       "title": "Inteligencia de negocio y gestión de datos",
@@ -58,7 +62,9 @@
           "description": "Gobernanza y calidad de datos"
         }
       ],
-      "button": "Conocer más"
+      "button": "Conocer más",
+      "titleColor": "#001aff",
+      "borderColor": "#001aff"
     }
   ]
 }

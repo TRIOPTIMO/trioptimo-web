@@ -9,17 +9,17 @@ export default function MyButton() {
     const shineRef = useRef(null);
     const { t } = useTranslation("faq");
 
-    const handleEnter = () => {
+      const handleEnter = () => {
         gsap.fromTo(
-            shineRef.current,
-            { x: '-100%' },
-            {
-                x: '150%',
-                duration: 1,
-                ease: 'power2.out',
-            }
+          shineRef.current,
+          { x: '-120%' },
+          {
+            x: '250%',
+            duration: 1,
+            ease: 'power2.out',
+          }
         );
-    };
+      };
 
     return (
         <>

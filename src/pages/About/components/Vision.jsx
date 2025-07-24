@@ -46,7 +46,7 @@ export default function Mision() {
         >
           <Typography
             variant="h2"
-            align={{ xs: "center", md: "right" }}
+            sx={{ textAlign: { xs: "center", md: "right" } }}
             fontWeight={700}
             color="colors.white"
             mb={1}
@@ -54,7 +54,7 @@ export default function Mision() {
           >
             {t('visionTitle')}
           </Typography>
-          <Typography variant="body2" align={{ xs: "center", md: "right" }} fontSize={20} color="colors.white">
+          <Typography variant="body2" sx={{ textAlign: { xs: "center", md: "right" } }} fontSize={20} color="colors.white">
             {t('visionText')}
           </Typography>
         </Box>

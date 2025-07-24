@@ -13,8 +13,8 @@ export default function About() {
     const { t, i18n } = useTranslation('aboutUs');
 
     return (
-        <Box name="aboutus" sx={{ py: 10, backgroundColor: 'colors.transparent', }}>
-            <GlobalBackground/>
+        <Box name="aboutus" sx={{ py: 10, backgroundColor: 'colors.secondary', }}>
+            {/* <GlobalBackground/> */}
                 {/* <Title /> */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Typography, Button, Stack } from '@mui/material
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
-// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CheckIcon from '@mui/icons-material/Check';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 
 export default function ServicesCards() {
@@ -36,21 +36,42 @@ export default function ServicesCards() {
                             flexDirection: 'column',
                             justifyContent: 'space-between',
                             p: 3,
-                            backgroundColor: 'rgba(147, 30, 216, .1)',
+                            backgroundColor: 'colors.white)',
+                            borderTop: `8px solid ${service.borderColor || '#ccc'}`
                         }}
                     >
                         <CardContent>
-                            <Typography variant="h3" color="text.secondary" fontSize={25} fontWeight={700} gutterBottom>
+                            <Typography variant="h3" sx={{ color: service.titleColor || 'text.secondary' }} fontSize={25} fontWeight={700} gutterBottom>
                                 {t(`services.${index}.title`)}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
                                 {t(`services.${index}.description`)}
+
+                                {/* Lista de beneficios */}
+                                {service.beneficts && (
+                                    <Stack component="ul" spacing={1} sx={{ pl: 2, mt: 1 }}>
+                                        {service.beneficts.map((item, i) => (
+                                            <Stack
+                                                key={i}
+                                                component="li"
+                                                direction="row"
+                                                alignItems="center"
+                                                spacing={1}
+                                                sx={{ color: 'text.secondary', listStyle: 'none' }}
+                                            >
+                                                <CheckIcon fontSize="small" sx={{ color: 'success.main' }} />
+                                                <Typography variant="body2">{item.description}</Typography>
+                                            </Stack>
+                                        ))}
+                                    </Stack>
+                                )}
+
                             </Typography>
                         </CardContent>
 
                         <Box mt={2} textAlign="right">
                             <Button
-                                variant="outlined"
+                                variant="filled"
                                 aria-label="Go to contact"
                                 size="large"
                                 component={ScrollLink}
@@ -63,10 +84,12 @@ export default function ServicesCards() {
                                     borderRadius: 2,
                                     textTransform: 'none',
                                     fontWeight: 500,
-                                    color: "colors.primary",
+                                    color: "colors.white",
+                                    bgcolor: 'colors.primary',
                                     borderColor: "colors.primary",
                                     '&:hover': {
-                                        bgcolor: 'transparent',
+                                        bgcolor: 'colors.primary',
+                                        opacity: 0.8
                                     },
                                 }}
                             >

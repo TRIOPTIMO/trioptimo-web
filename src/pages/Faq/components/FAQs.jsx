@@ -35,7 +35,7 @@ export default function FAQs() {
               mb: 3,
               mx: 2,
               borderRadius: 3,
-              backgroundColor: expandedIndex === index ? 'colors.secondary' : 'transparent',
+              backgroundColor: 'colors.white',
               transition: 'all 0.3s ease',
               color: 'colors.darkBlue',
               boxShadow: expandedIndex === index ? 4 : 1,
@@ -43,7 +43,7 @@ export default function FAQs() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue' }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color:  'colors.tertiary' }} />}
               sx={{ my: 2 }}
             >
               <Stack direction="row" spacing={2} alignItems="center">
@@ -52,7 +52,7 @@ export default function FAQs() {
                   fontWeight={700}
                   sx={{
                     fontSize: { xs: 18, sm: 20, md: 22 },
-                    color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue'
+                    color: 'colors.secondary'
                   }}
                 >
                   {t(`items.${index}.question`)}
@@ -65,7 +65,7 @@ export default function FAQs() {
                 sx={{
                   fontSize: { xs: 16, sm: 18, md: 20 },
                   lineHeight: 1.6,
-                  color: expandedIndex === index ? 'colors.white' : 'colors.darkBlue'
+                  color: 'colors.darkBlue'
                 }}
               >
                 {t(`items.${index}.answer`)}

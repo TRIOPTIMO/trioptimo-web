@@ -25,10 +25,11 @@ export default function ScrollTopButton() {
           position: 'fixed',
           bottom: 32,
           right: 32,
-          bgcolor: 'colors.primary',      
+          bgcolor: 'colors.tertiary',      
           color: 'white',
           '&:hover': {
-            bgcolor: '#04be80ff',
+            bgcolor: 'colors.tertiary',
+            opacity: 0.8
           },
         }}
       >

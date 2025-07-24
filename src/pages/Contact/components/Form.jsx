@@ -15,17 +15,17 @@ export default function Form() {
   const wrapperRef = useRef(null);
   const shineRef = useRef(null);
 
-  const handleEnter = () => {
-    gsap.fromTo(
-      shineRef.current,
-      { x: '-100%' },
-      {
-        x: '150%',
-        duration: 1,
-        ease: 'power2.out',
-      }
-    );
-  };
+    const handleEnter = () => {
+      gsap.fromTo(
+        shineRef.current,
+        { x: '-120%' },
+        {
+          x: '250%',
+          duration: 1,
+          ease: 'power2.out',
+        }
+      );
+    };
 
   const { t } = useTranslation('contact');
 

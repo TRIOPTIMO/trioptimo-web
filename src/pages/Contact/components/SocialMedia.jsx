@@ -41,11 +41,12 @@ export default function SocialMedia() {
                             sx={{
                                 width: 50,
                                 height: 50,
-                                backgroundColor: 'colors.primary',
+                                backgroundColor: 'colors.tertiary',
                                 color: '#fff',
                                 '&:hover': {
-                                    backgroundColor: 'colors.primary',
+                                    backgroundColor: 'colors.tertiary',
                                     boxShadow: '0 4px 12px rgba(20, 33, 61, 0.2)',
+                                    opacity: 0.8
                                 },
                             }}
                         >

@@ -2,7 +2,7 @@ import { Box, Typography, Stack } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
-import Logo from "../../../../layout/common/Logo";
+import Title from "./components/Title";
 import Slogans from "./components/Slogans";
 import GlobalBackground from './components/GlobalBackground';
 import CallToAction from './components/CallToAction';
@@ -23,7 +23,7 @@ export default function Hero() {
           justifyContent: 'center',
           textAlign: 'center',
           px: 2,
-          backgroundColor: "transparent",
+          backgroundColor: "colors.white",
           color: 'colors.white',
           position: 'relative',
         }}
@@ -44,9 +44,6 @@ export default function Hero() {
             zIndex: 2
           }}
         >
-          
-
-          {/* Columna izquierda */}
           <Box
             sx={{
               flex: 1.5,
@@ -58,6 +55,7 @@ export default function Hero() {
               textAlign: "center"
             }}
           >
+            <Title/>
             <Slogans />
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -72,7 +70,7 @@ export default function Hero() {
                   fontSize: { xs: "1rem", sm: "1.1rem", lg: "1.5rem" },
                   my: { xs: 3, sm: 4 },
                   mx: "auto",
-                  color: 'colors.grey',
+                  color: 'colors.darkBlue',
                   maxWidth: { xs: "100%", md: "90%", lg: "80%" }
                 }}
               >
@@ -82,16 +80,6 @@ export default function Hero() {
 
             <CallToAction />
           </Box>
-
-          {/* Columna derecha */}
-          {/* <Box
-            sx={{
-              flex: 1,
-              minWidth: { xs: '100%', md: '40%', lg: '40%' },
-              mb: { xs: 4, md: 0 }
-            }} >
-            <Logo />
-          </Box> */}
         </Stack>
       </Box>
     </>

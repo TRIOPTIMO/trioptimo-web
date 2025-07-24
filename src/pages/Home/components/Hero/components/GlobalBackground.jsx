@@ -1,37 +1,58 @@
-import { Box } from '@mui/material';
+import { Box, Stack, useTheme, useMediaQuery } from '@mui/material';
+import { motion } from "framer-motion";
 
 export default function GlobalBackground() {
-  return (
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const GlowBox = ({ top, left, bottom, right, width, height, color }) => (
     <Box
       sx={{
-        position: 'fixed',
-        width: '100vw',
-        height: '100vh',
-        zIndex: -1,
-        top: 0,
-        left: 0,
-        overflow: 'hidden',
-        backgroundImage: 'url("/images/bg.webp"), linear-gradient(135deg, #000000, #931ed8)',
-        fetchPriority: "high",
-        decoding: "async",
-        opacity: 0.4,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          width: 600,
-          height: 600,
-          borderRadius: '50%',
-          // background: 'radial-gradient(circle, #001aff, #00dd93)',
-          filter: 'blur(150px)',
-          top: '20%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          opacity: 0.4,
-        },
+        position: "absolute",
+        top,
+        left,
+        bottom,
+        right,
+        width,
+        height,
+        backgroundColor: color,
+        borderRadius: "50%",
+        filter: "blur(48px)",
+        zIndex: 0,
       }}
     />
+  );
+  return (
+    <>
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: "",
+          zIndex: 0,
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "#fff",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          opacity: 0.7,
+          zIndex: 0,
+        }}
+      />
+
+      {!isMobile && (
+        <Stack>
+          <GlowBox top="5%" left="5%" width={256} height={256} color="rgba(0, 221, 147, 0.3)" />
+          <GlowBox top="1%" left="95%" width={256} height={256} color="rgba(147, 30, 216, 0.3)" />
+          <GlowBox bottom="-10%" left="1%" width={384} height={384} color="rgba(0, 26, 255, 0.1)" />
+        </Stack>
+      )}
+
+    </>
   );
 }

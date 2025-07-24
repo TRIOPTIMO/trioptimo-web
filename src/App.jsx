@@ -20,7 +20,7 @@ function AppWrapper() {
   }, []);
 
   return (
-    <Layout>
+    <Layout id="layout">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />

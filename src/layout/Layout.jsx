@@ -99,7 +99,7 @@ export default function Layout({ children }) {
       <Box
         component="main"
         sx={{
-          mt: { xs: 8, sm: 10 },
+          mt: 0,
           overflowX: "hidden", // ¡extra protección!
         }}
       >

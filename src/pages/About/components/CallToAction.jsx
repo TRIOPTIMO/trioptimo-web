@@ -13,9 +13,9 @@ export default function MyButton() {
   const handleEnter = () => {
     gsap.fromTo(
       shineRef.current,
-      { x: '-100%' },
+      { x: '-120%' },
       {
-        x: '150%',
+        x: '250%',
         duration: 1,
         ease: 'power2.out',
       }
