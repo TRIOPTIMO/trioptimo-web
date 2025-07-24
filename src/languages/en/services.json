@@ -20,7 +20,9 @@
           "description": "Optimize resource allocation"
         }
       ],
-      "button": "Learn more"
+      "button": "Learn more",
+      "titleColor": "#00dd93",
+      "borderColor": "#00dd93"
     },
     {
       "title": "Digital Transformation",
@@ -39,7 +41,9 @@
           "description": "Real-time decision-making"
         }
       ],
-      "button": "Explore"
+      "button": "Explore",
+      "titleColor": "#931ed8",
+      "borderColor": "#931ed8"
     },
     {
       "title": "Business Intelligence & Data Management",
@@ -58,7 +62,9 @@
           "description": "Data governance and quality"
         }
       ],
-      "button": "Discover more"
+      "button": "Discover more",
+      "titleColor": "#001aff",
+      "borderColor": "#001aff"
     }
   ]
 }
