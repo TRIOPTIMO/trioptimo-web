@@ -103,7 +103,7 @@ export default function Form() {
       >
         <form onSubmit={handleSubmit}>
           <Stack direction="column" spacing={2}>
-            <Stack direction="row" spacing={2}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <TextField
                 name="name"
                 label={t('name')}
@@ -130,7 +130,7 @@ export default function Form() {
               sx={fieldStyles}
               fullWidth
             />
-            <Stack direction="row" spacing={2}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <TextField
                 name="country"
                 label={t('country')}
@@ -155,7 +155,7 @@ export default function Form() {
               sx={fieldStyles}
               fullWidth
             />
-            <Stack direction="row" spacing={2}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <TextField
                 name="phone"
                 label={t('phone')}

@@ -25,7 +25,7 @@ export default function Title() {
           variant="h1"
           align="center"
           fontWeight={700}
-          fontSize={55}
+          sx={{ fontSize: { xs: 35, md: 45, lg: 55 } }}
           mb={6}
           color="colors.darkBlue"
         >

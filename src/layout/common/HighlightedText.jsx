@@ -34,7 +34,7 @@ const HighlightedText = ({
                     fontWeight: 700,
                     width: "100%",
                     fontSize: { xs: "1.5rem", md: "1.5rem", lg: "3rem" },
-                    my: { xs: 4, sm: 2, md: 6 },
+                    my: { xs: 0, sm: 2, md: 6 },
                     color: 'colors.white'
                 }}
             >

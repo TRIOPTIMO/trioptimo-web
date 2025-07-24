@@ -40,7 +40,7 @@ export default function MyButton() {
             borderRadius: '999px',
             overflow: 'hidden',
             backgroundColor: 'colors.primary',
-            height: { lg: '80px', md: "40px", sm: "30px" },
+            height: { lg: '80px', md: "40px", sm: "30px", xs: "80px" },
             width: { lg: "25vw", md: "25vw", sm: "25vw" } ,
             cursor: 'pointer',
             my: { xs: 3, sm: 1, md: 1, lg: 3 },
@@ -60,7 +60,7 @@ export default function MyButton() {
             sx={{
               px: 5,
               fontWeight: 'bold',
-              fontSize: { xs: '0.8rem', md: '1.5rem' },
+              fontSize: { xs: '1rem', md: '1.5rem' },
               borderRadius: '999px',
               bgcolor: 'transparent',
               color: 'white',

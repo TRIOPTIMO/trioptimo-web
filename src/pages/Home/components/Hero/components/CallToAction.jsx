@@ -60,7 +60,7 @@ export default function MyButton() {
             sx={{
               px: 5,
               fontWeight: 'bold',
-              fontSize: { xs: '0.8rem', md: '1.5rem' },
+              fontSize: { xs: '1rem', md: '1.5rem' },
               borderRadius: '999px',
               bgcolor: 'transparent',
               color: 'white',

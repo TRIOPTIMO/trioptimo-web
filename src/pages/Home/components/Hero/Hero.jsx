@@ -15,7 +15,7 @@ export default function Hero() {
       <Box
         name="hero"
         sx={{
-          minHeight: { xs: '100vh', sm: '90vh', md: '90vh', lg: '100vh' },
+          minHeight: { xs: '60vh', sm: '90vh', md: '90vh', lg: '100vh' },
           width: '100%',
           mx: 'auto',
           display: 'flex',

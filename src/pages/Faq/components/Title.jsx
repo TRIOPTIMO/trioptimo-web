@@ -29,7 +29,7 @@ export default function Title() {
                         mb={6}
                         mr={6}
                         mx= "auto"
-                        fontSize= {55}
+                        sx={{ fontSize: { xs: 35, md: 45, lg: 55 } }}
                         color="colors.darkBlue"
                     >
                         {t('title')}

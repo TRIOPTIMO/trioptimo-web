@@ -52,21 +52,47 @@ export default function Faq() {
                 sx={{
                     position: 'relative',
                     zIndex: 2,
-                    mx: {md: 10, xs: 0}
+                    mx: { md: 10, xs: 0 }
                 }}
             >
-                <Box>
-                    {!isMobile && (
-                    <Title />
-                )}
-                    <CTA />
-                </Box>
-                {isMobile && (
-                    <Title />
-                )}
-                <FAQs />
 
-                
+                {!isMobile && (
+                    <Box
+                        sx={{
+                            px: 2,
+                            py: 4,
+                            display: "flex",
+                            flexDirection: { xs: "column", md: "row" },
+                            justifyContent: "space-between",
+                            alignItems: "flex-start",
+                            gap: 4
+                        }}
+                    >
+                        {/* Columna izquierda */}
+                        <Stack spacing={4} sx={{ flex: 1 }}>
+                            <Title />
+                            <CTA />
+                        </Stack>
+
+                        {/* Columna derecha */}
+                        <Box sx={{ flex: 1 }}>
+                            <FAQs />
+                        </Box>
+                    </Box>
+                )}
+
+
+                {isMobile && (
+                    <Box >
+                        <Title />
+                        <FAQs />
+                        <CTA />
+                    </Box>
+
+                )}
+
+
+
             </Stack>
         </Box>
 
