@@ -16,7 +16,7 @@ export default function Slogans() {
                     mb: { xs: 3, sm: 4 },
                     flexWrap: "wrap",
                     width: "100%",
-                    justifyContent: { xs: 'center', sm: 'start' },
+                    justifyContent: { xs: 'center', sm: 'center' },
                     alignItems: "center"
                 }}
             >

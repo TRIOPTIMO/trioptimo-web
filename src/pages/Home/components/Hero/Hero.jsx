@@ -84,14 +84,14 @@ export default function Hero() {
           </Box>
 
           {/* Columna derecha */}
-          <Box
+          {/* <Box
             sx={{
               flex: 1,
               minWidth: { xs: '100%', md: '40%', lg: '40%' },
               mb: { xs: 4, md: 0 }
             }} >
             <Logo />
-          </Box>
+          </Box> */}
         </Stack>
       </Box>
     </>
