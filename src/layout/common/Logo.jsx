@@ -5,7 +5,7 @@ export default function Logo() {
 
   return (
     <Box
-      // component={motion.img}
+      component="img"
       src="/images/icon.webp"
       alt="logo"
       fetchPriority="high"
