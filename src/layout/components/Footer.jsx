@@ -82,6 +82,8 @@ export default function Footer() {
                 md: "180px",
               },
               height: "auto",
+              fetchPriority: "high",
+              decoding: "async",
               maxHeight: {
                 xs: 20,
                 sm: 50,

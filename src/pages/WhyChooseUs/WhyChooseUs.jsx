@@ -13,9 +13,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 const razones = [
-  { icon: <InsightsIcon fontSize='large'/> },
-  { icon: <BuildIcon fontSize='large'/> },
-  { icon: <VerifiedIcon fontSize='large'/> }
+  { icon: <InsightsIcon fontSize='large' /> },
+  { icon: <BuildIcon fontSize='large' /> },
+  { icon: <VerifiedIcon fontSize='large' /> }
 ];
 
 const MotionBox = motion(Box);
@@ -33,7 +33,7 @@ export default function WhychooseUs() {
         sx={{
           py: 8,
           px: 2,
-          backgroundColor:'rgba(229, 229, 229, .5)',
+          backgroundColor: 'rgba(229, 229, 229, .5)',
           position: 'relative',
           minHeight: '20vh',
           mx: 'auto',
@@ -45,7 +45,9 @@ export default function WhychooseUs() {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: 'url("/images/iconSecondary.png")',
+            backgroundImage: 'url("/images/iconSecondary.webp")',
+            fetchPriority: "high",
+            decoding: "async",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: { xs: 'center -50%', md: '-30% center' },
             backgroundSize: { xs: '60%', md: '700px' },
@@ -74,7 +76,7 @@ export default function WhychooseUs() {
         </Box>
         <Stack spacing={6} alignItems="center" sx={{ zIndex: 20 }}>
           {/* Primera fila: dos íconos */}
-          <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{ zIndex: 20, width: {xs: 500, md: 1200} }} spacing={6} alignItems="center" justifyContent="center">
+          <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{ zIndex: 20, width: { xs: 500, md: 1200 } }} spacing={6} alignItems="center" justifyContent="center">
             {razones.map(({ icon }, index) => (
               <MotionBox
                 key={index}
@@ -95,9 +97,9 @@ export default function WhychooseUs() {
                     alignItems: 'center',
                     textAlign: 'center',
                     p: 3,
-                    mx:"auto",
+                    mx: "auto",
                     cursor: 'pointer',
-                    width: {xs: 300, md: 500}
+                    width: { xs: 300, md: 500 }
                   }}
                 >
                   <Box

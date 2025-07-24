@@ -1,17 +1,17 @@
 {
-  "title": "Why choose us?",
+  "title": "Why Choose Us?",
   "reasons": [
     {
-      "title": "Data-driven approach",
-      "description": "We use data intelligence to make strategic decisions that improve your operations."
+      "title": "Data-Driven Approach",
+      "description": "We use data intelligence as the main driver to power strategic decisions that improve your operations and outcomes."
     },
     {
-      "title": "Tailored solutions",
-      "description": "We adapt our tools to the specific needs of your plant or industry."
+      "title": "Tailored Solutions",
+      "description": "We don't believe in one-size-fits-all solutions. We adapt our tools and strategies to your organization's specific needs, ensuring effective implementation."
     },
     {
-      "title": "Proven experience",
-      "description": "We have successful case studies in real production environments."
+      "title": "Commitment to Society",
+      "description": "Learn about our NGO support program."
     }
   ]
 }

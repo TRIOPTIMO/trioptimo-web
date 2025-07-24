@@ -11,15 +11,17 @@ export default function Services() {
 
   return (
     <Box name="services" sx={{
-      backgroundColor: 'colors.white', 
+      backgroundColor: 'colors.white',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: 'url("/images/servicesBg.png")', 
-      backgroundSize: 'cover', 
+      backgroundImage: 'url("/images/servicesBg.webp")',
+      fetchPriority: "high",
+      decoding: "async",
+      backgroundSize: 'cover',
       py: 10,
       mx: 0
     }}>
-        <Title />
-        <ServicesCards />
+      <Title />
+      <ServicesCards />
     </Box>
   );
 }

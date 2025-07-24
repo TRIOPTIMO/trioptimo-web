@@ -12,6 +12,8 @@ export default function GlobalBackground() {
         left: 0,
         overflow: 'hidden',
         backgroundImage: 'url("/images/bg.webp"), linear-gradient(135deg, #000000, #931ed8)',
+        fetchPriority: "high",
+        decoding: "async",
         opacity: 0.4,
         backgroundSize: 'cover',
         backgroundPosition: 'center',

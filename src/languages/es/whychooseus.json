@@ -1,17 +1,17 @@
 {
-  "title": "Why Choose Us?",
+  "title": "¿Por qué elegirnos?",
   "reasons": [
     {
-      "title": "Data-Driven Approach",
-      "description": "We use data intelligence as the main driver to power strategic decisions that improve your operations and outcomes."
+      "title": "Enfoque basado en datos",
+      "description": "Utilizamos la inteligencia de datos como el motor principal para impulsar decisiones estratégicas que mejoran tus operaciones y resultados."
     },
     {
-      "title": "Tailored Solutions",
-      "description": "We don't believe in one-size-fits-all solutions. We adapt our tools and strategies to your organization's specific needs, ensuring effective implementation."
+      "title": "Soluciones a medida",
+      "description": "No creemos en soluciones genéricas. Adaptamos nuestras herramientas y estrategias a las necesidades específicas de tu organización, garantizando una implementación efectiva."
     },
     {
-      "title": "Commitment to Society",
-      "description": "Learn about our NGO support program."
+      "title": "Compromiso con la sociedad",
+      "description": "Conoce nuestro programa de ayuda a ONGs."
     }
   ]
 }

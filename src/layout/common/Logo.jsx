@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 export default function Logo() {
 
   return (
-     <Box
+    <Box
       component={motion.img}
-      src="/images/icon.png"
+      src="/images/icon.webp"
       alt="logo"
+      fetchPriority="high"
+      decoding="async"
       initial={{ rotate: 0 }}
       animate={{ rotate: 360 }}
       transition={{ duration: 2, ease: "easeOut" }}
