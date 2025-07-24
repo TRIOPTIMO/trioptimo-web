@@ -5,14 +5,14 @@ export default function Logo() {
 
   return (
     <Box
-      component={motion.img}
+      // component={motion.img}
       src="/images/icon.webp"
       alt="logo"
       fetchPriority="high"
       decoding="async"
-      initial={{ rotate: 0 }}
-      animate={{ rotate: 360 }}
-      transition={{ duration: 2, ease: "easeOut" }}
+      // initial={{ rotate: 0 }}
+      // animate={{ rotate: 360 }}
+      // transition={{ duration: 2, ease: "easeOut" }}
       sx={{
         height: "auto",
         maxHeight: {
