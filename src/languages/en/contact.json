@@ -10,13 +10,5 @@
   "email": "Email",
   "company": "Company (optional)",
   "message": "Message",
-  "send": "Send message",
-  "meta": {
-    "title": "Contact | Trioptimo",
-    "description": "We drive digital transformation in industrial companies.",
-    "keywords": "industry 4.0, automation, digital transformation"
-  },
-  "home": {
-    "heading": "Welcome to Trioptimo"
-  }
+  "send": "Send message"
 }

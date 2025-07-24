@@ -19,8 +19,8 @@ export default function MobileNav() {
 
   const navItems = [
     { label: t('services'), to: 'services' },
-    { label: t('aboutUs'), to: 'aboutus' },
     { label: t('faq'), to: 'faq' },
+    { label: t('aboutUs'), to: 'aboutus' },
     { label: t('contact'), to: 'contact' },
   ];
 

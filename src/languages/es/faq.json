@@ -21,13 +21,5 @@
       "question": "¿Puedo solicitar una demo o asesoría sin compromiso?",
       "answer": "Sí. Podés agendar una reunión para entender tus necesidades y mostrarte cómo podríamos ayudarte."
     }
-  ],
-  "meta": {
-    "title": "FAQ | Trioptimo",
-    "description": "Impulsamos la transformación digital en empresas industriales.",
-    "keywords": "industria 4.0, automatización, transformación digital"
-  },
-  "home": {
-    "heading": "Bienvenido a Trioptimo"
-  }
+  ]
 }

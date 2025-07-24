@@ -40,7 +40,7 @@ export default function SocialMedia() {
                             sx={{
                                 width: 50,
                                 height: 50,
-                                backgroundColor: 'colors.darkBlue',
+                                backgroundColor: 'colors.primary',
                                 color: '#fff',
                                 '&:hover': {
                                     backgroundColor: 'colors.primary',

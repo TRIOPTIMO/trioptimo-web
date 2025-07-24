@@ -4,7 +4,6 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { useMetaTags } from "../../services/useMetaTags";
 import Mision from "./components/Mision";
 import Vision from "./components/Vision";
 import Commitment from "./components/Commitment";
@@ -12,13 +11,6 @@ import GlobalBackground from '../Home/components/Hero/components/GlobalBackgroun
 
 export default function About() {
     const { t, i18n } = useTranslation('aboutUs');
-
-    useMetaTags({
-        title: t("meta.title"),
-        description: t("meta.description"),
-        keywords: t("meta.description"),
-        lang: i18n.language,
-    });
 
     return (
         <Box name="aboutus" sx={{ py: 10, backgroundColor: 'colors.transparent', }}>

@@ -13,8 +13,8 @@ export default function DesktopNav() {
   const { t } = useTranslation('layout');
   const navItems = [
     { label: t('services'), href: `#services` },
-    { label: t('aboutUs'), href: `#aboutus` },
     { label: t('faq'), href: `#faq` },
+    { label: t('aboutUs'), href: `#aboutus` },
     { label: t('contact'), href: `#contact` },
   ];
 
@@ -42,7 +42,7 @@ export default function DesktopNav() {
                   fontSize: '1.1rem',
                   textTransform: 'none',
                   '&:hover': {
-                    color: 'colors.primary',
+                    opacity: 0.8,
                     backgroundColor: 'transparent',
                   },
                 }}

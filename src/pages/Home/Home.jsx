@@ -9,14 +9,6 @@ import Contact from "../Contact/Contact";
 import Faq from "../Faq/Faq";
 
 export default function Home() {
-  const { t, i18n } = useTranslation('home');
-
-  useMetaTags({
-    title: t("meta.title"),
-    description: t("meta.description"),
-    keywords: t("meta.description"),
-    lang: i18n.language,
-  });
 
   return (
     <>

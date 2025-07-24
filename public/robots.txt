@@ -1,0 +1,10 @@
+# robots.txt para trioptimo.com
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Allow: /
+
+# Sitemap
+Sitemap: https://trioptimo.com/sitemap.xml

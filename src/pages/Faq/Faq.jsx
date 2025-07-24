@@ -5,7 +5,6 @@ import {
 } from '@mui/material';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { useMetaTags } from "../../services/useMetaTags";
 
 import CTA from "./components/CTA";
 import FAQs from "./components/FAQs";
@@ -15,13 +14,6 @@ export default function Faq() {
     const { t, i18n } = useTranslation('faq');
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-    useMetaTags({
-        title: t("meta.title"),
-        description: t("meta.description"),
-        keywords: t("meta.description"),
-        lang: i18n.language,
-    });
 
     return (
         <Box
