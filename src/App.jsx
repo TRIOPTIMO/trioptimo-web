@@ -3,12 +3,20 @@ import { useEffect } from 'react';
 
 import Layout from './layout/Layout';
 import Home from './pages/Home/Home';
-import { initGA } from './services/analytics';
+import { initGA, logPageView } from "./services/analytics";
 
 function AppWrapper() {
 
   useEffect(() => {
-    initGA();
+    const onLoad = () => {
+      initGA();
+      logPageView(window.location.pathname + window.location.search);
+    };
+
+    // Retrasá la inicialización hasta que cargue todo el sitio
+    window.addEventListener("load", onLoad);
+
+    return () => window.removeEventListener("load", onLoad);
   }, []);
 
   return (
