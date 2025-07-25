@@ -15,17 +15,17 @@ export default function Form() {
   const wrapperRef = useRef(null);
   const shineRef = useRef(null);
 
-    const handleEnter = () => {
-      gsap.fromTo(
-        shineRef.current,
-        { x: '-120%' },
-        {
-          x: '250%',
-          duration: 1,
-          ease: 'power2.out',
-        }
-      );
-    };
+  const handleEnter = () => {
+    gsap.fromTo(
+      shineRef.current,
+      { x: '-120%' },
+      {
+        x: '250%',
+        duration: 1,
+        ease: 'power2.out',
+      }
+    );
+  };
 
   const { t } = useTranslation('contact');
 
@@ -46,31 +46,6 @@ export default function Form() {
     };
 
     e.preventDefault();
-
-    // const name = formData.get('name');
-    // const email = formData.get('email');
-    // const lastName = formData.get('lastName');
-    // const phone = formData.get('phone');
-
-    // if (!name || name.length < 2) {
-    //   alert("El nombre es obligatorio y debe tener al menos 2 caracteres.");
-    //   return;
-    // }
-
-    // if (!lastName || lastName.length < 2) {
-    //   alert("El apellido es obligatorio y debe tener al menos 2 caracteres.");
-    //   return;
-    // }
-
-    // if (phone && !/^\d{7,}$/.test(phone)) {
-    //   alert("El teléfono debe tener al menos 7 dígitos numéricos.");
-    //   return;
-    // }
-
-    // if (!email || !email.includes("@")) {
-    //   alert("Ingrese un email válido.");
-    //   return;
-    // }
 
     try {
       const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
@@ -189,62 +164,64 @@ export default function Form() {
             />
           </Stack>
           <motion.div whileHover={{ scale: 1.05 }}>
-            <Box
-              ref={wrapperRef}
-              textAlign="center"
-              component="span"
-              onMouseEnter={handleEnter}
-              sx={{
-                display: 'inline-flex',
-                position: 'relative',
-                borderRadius: '999px',
-                overflow: 'hidden',
-                backgroundColor: 'colors.primary',
-                height: '48px',
-                cursor: 'pointer',
-                my: { xs: 3 },
-              }}
-            >
-
-              <Button
-                aria-label="Send mail"
-                variant="text"
-                size="large"
-                type="submit"
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Box
+                ref={wrapperRef}
+                textAlign="center"
+                component="span"
+                onMouseEnter={handleEnter}
                 sx={{
-                  px: 5,
-                  fontWeight: 'bold',
-                  fontSize: { xs: '0.8rem', md: '1.5rem' },
+                  display: 'inline-flex',
+                  position: 'relative',
                   borderRadius: '999px',
-                  bgcolor: 'transparent',
-                  color: 'white',
-                  boxShadow: 'none',
+                  overflow: 'hidden',
+                  backgroundColor: 'colors.primary',
                   height: '48px',
-                  minHeight: 'unset',
-                  lineHeight: 'normal',
-                  '&:hover': {
-                    bgcolor: 'transparent',
-                  },
+                  cursor: 'pointer',
+                  my: { xs: 3 },
                 }}
               >
-                {t("send")}
-              </Button>
+                <Button
+                  aria-label="Send mail"
+                  variant="text"
+                  size="large"
+                  type="submit"
+                  sx={{
+                    px: 5,
+                    fontWeight: 'bold',
+                    fontSize: { xs: '0.8rem', md: '1.5rem' },
+                    borderRadius: '999px',
+                    bgcolor: 'transparent',
+                    color: 'white',
+                    boxShadow: 'none',
+                    height: '48px',
+                    minHeight: 'unset',
+                    lineHeight: 'normal',
+                    '&:hover': {
+                      bgcolor: 'transparent',
+                    },
+                  }}
+                >
+                  {t("send")}
+                </Button>
 
-              <Box
-                ref={shineRef}
-                sx={{
-                  content: '""',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '50%',
-                  height: '100%',
-                  background: 'linear-gradient( 120deg, rgba(255, 255, 255, 0) 0%,  rgba(255, 255, 255, 0.4) 50%,  rgba(255, 255, 255, 0) 100% )',
-                  transform: 'skewX(-20deg)',
-                  pointerEvents: 'none',
-                }}
-              />
+                <Box
+                  ref={shineRef}
+                  sx={{
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '50%',
+                    height: '100%',
+                    background: 'linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%)',
+                    transform: 'skewX(-20deg)',
+                    pointerEvents: 'none',
+                  }}
+                />
+              </Box>
             </Box>
+
           </motion.div>
         </form>
       </motion.div>

@@ -44,27 +44,25 @@ export default function ServicesCards() {
                             <Typography variant="h3" sx={{ color: service.titleColor || 'text.secondary' }} fontSize={25} fontWeight={700} gutterBottom>
                                 {t(`services.${index}.title`)}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" component="div" color="text.secondary">
                                 {t(`services.${index}.description`)}
-
-                                {/* Lista de beneficios */}
-                                {service.beneficts && (
-                                    <Stack component="ul" spacing={1} sx={{ pl: 2, mt: 1 }}>
-                                        {service.beneficts.map((item, i) => (
-                                            <Stack
-                                                key={i}
-                                                component="li"
-                                                direction="row"
-                                                alignItems="center"
-                                                spacing={1}
-                                                sx={{ color: 'text.secondary', listStyle: 'none' }}
-                                            >
-                                                <CheckIcon fontSize="small" sx={{ color: 'success.main' }} />
-                                                <Typography variant="body2">{item.description}</Typography>
-                                            </Stack>
-                                        ))}
-                                    </Stack>
-                                )}
+                                <Box component="ul" sx={{ pl: 2, mt: 1 }}>
+                                    {service.beneficts?.map((item, i) => (
+                                        <Stack
+                                            key={i}
+                                            component="li"
+                                            direction="row"
+                                            spacing={1}
+                                            alignItems="center"
+                                            sx={{ listStyle: 'none' }}
+                                        >
+                                            <CheckIcon fontSize="small" sx={{ color: 'success.main' }} />
+                                            <Typography variant="body2" component="span">
+                                                {item.description}
+                                            </Typography>
+                                        </Stack>
+                                    ))}
+                                </Box>
 
                             </Typography>
                         </CardContent>
@@ -95,7 +93,6 @@ export default function ServicesCards() {
                             >
                                 {t(`services.${index}.button`)}
                                 <NorthEastIcon />
-                                {/* <KeyboardArrowDownIcon /> */}
                             </Button>
                         </Box>
                     </Card>

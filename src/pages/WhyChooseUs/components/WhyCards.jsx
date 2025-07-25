@@ -25,7 +25,7 @@ export default function WhyCards() {
 
   return (
    <Stack spacing={6} alignItems="center" sx={{ zIndex: 20 }}>
-          <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{ zIndex: 20, width: { xs: 500, md: 1200 } }} spacing={6} alignItems="center" justifyContent="center">
+          <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} sx={{ zIndex: 20, width: { xs: "100%", md: "100%" } }} spacing={6} alignItems="center" justifyContent="center">
             {razones.map(({ icon }, index) => (
               <MotionBox
                 key={index}

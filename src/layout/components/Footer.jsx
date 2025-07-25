@@ -73,7 +73,7 @@ export default function Footer() {
 
           <Box
             component="img"
-            src="/images/trioptimo.webp"
+            src="/images/logo-small.webp"
             alt="logo"
             sx={{
               width: {
@@ -85,7 +85,7 @@ export default function Footer() {
               fetchPriority: "high",
               decoding: "async",
               maxHeight: {
-                xs: 20,
+                xs: 15,
                 sm: 50,
                 md: 50,
               },

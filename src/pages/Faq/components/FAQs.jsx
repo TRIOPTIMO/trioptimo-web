@@ -43,8 +43,7 @@ export default function FAQs() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color:  'colors.tertiary' }} />}
-              sx={{ my: 2 }}
+              expandIcon={<ExpandMoreIcon sx={{ color:  'colors.secondary' }} />}
             >
               <Stack direction="row" spacing={2} alignItems="center">
                 {faq.icon}
@@ -52,7 +51,8 @@ export default function FAQs() {
                   fontWeight={700}
                   sx={{
                     fontSize: { xs: 18, sm: 20, md: 22 },
-                    color: 'colors.secondary'
+                    color: 'colors.secondary',
+                    p: 1
                   }}
                 >
                   {t(`items.${index}.question`)}
@@ -65,7 +65,8 @@ export default function FAQs() {
                 sx={{
                   fontSize: { xs: 16, sm: 18, md: 20 },
                   lineHeight: 1.6,
-                  color: 'colors.darkBlue'
+                  color: 'colors.darkBlue',
+                    p: 2
                 }}
               >
                 {t(`items.${index}.answer`)}

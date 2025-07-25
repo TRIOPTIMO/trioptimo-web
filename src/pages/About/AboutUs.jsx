@@ -22,7 +22,7 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                 >
                     <Stack
-                        direction={{ xs: 'column', md: 'row' }}
+                        direction={{ xs: 'column', sm: 'column', md: 'row' }}
                         spacing={1}
                         sx={{ width: '100%', px: 2 }}
                     >
