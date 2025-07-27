@@ -4,20 +4,24 @@
   "ctaButton": "Envíamos tu pregunta",
   "items": [
     {
+      "question": "¿Cómo optimiza TriOptimo nuestros procesos? ",
+      "answer": "Optimizamos vuestros flujos de trabajo e integramos IA para aumentar vuestra productividad y reducir vuestros costes operativos."
+    },
+    {
       "question": "¿Qué es la Industria 4.0?",
-      "answer": "Es la transformación digital de los procesos industriales mediante tecnologías como IoT, IA, automatización y análisis de datos."
+      "answer": "La Industria 4.0 es la transformación digital de la fabricación y operaciones, integrando tecnologías como IoT, IA y análisis de datos. En TriOptimo, os guiamos en esta digitalización, implementando las soluciones necesarias para que vuestra empresa sea más inteligente y conectada."
     },
     {
-      "question": "¿Qué servicios ofrecen como consultora?",
-      "answer": "Brindamos diagnóstico, desarrollo de soluciones a medida, implementación tecnológica y capacitación para digitalizar tu industria."
+      "question": "¿Qué ventajas obtendremos con los sistemas ERP y CRM?",
+      "answer": "Centralizaréis la información y optimizaréis la relación con vuestros clientes, mejorando la toma de decisiones y la eficiencia de vuestra organización."
     },
     {
-      "question": "¿Trabajan con empresas pequeñas o solo grandes plantas?",
-      "answer": "Colaboramos con empresas de todos los tamaños. Nuestras soluciones son escalables y adaptables a cada realidad."
+      "question": "¿Cómo puede ayudarnos la inteligencia de negocio?",
+      "answer": "Convertimos vuestros datos en conocimiento accionable mediante análisis avanzados, KPIs y gobernanza de datos, para que toméis decisiones estratégicas."
     },
     {
-      "question": "¿Puedo solicitar una demo o asesoría sin compromiso?",
-      "answer": "Sí. Podés agendar una reunión para entender tus necesidades y mostrarte cómo podríamos ayudarte."
+      "question": "¿Podemos solicitar una demo o asesoría sin compromiso?",
+      "answer": "Sí, por supuesto. Podéis agendar una reunión sin compromiso para que en TriOptimo entendamos vuestras necesidades y os ayudemos."
     }
   ]
 }

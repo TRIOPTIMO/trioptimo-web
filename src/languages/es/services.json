@@ -5,19 +5,16 @@
   "services": [
     {
       "title": "Optimización de procesos",
-      "description": "En TriOptimo identificamos y eliminamos ineficiencias en tus flujos de trabajo, tanto en el ámbito operativo como administrativo. A través de un análisis exhaustivo y la implementación de metodologías, te ayudamos a:",
+      "description": "Con TriOptimo, elevamos la productividad de tus flujos de trabajo. Nuestros expertos optimizan tus procesos operativos y administrativos para un rendimiento superior. Te ayudamos a:",
       "beneficts": [
         {
-          "description": "Reducir costes"
+          "description": "Aumentar la Productividad y Reducir Costes Operativos"
         },
         {
-          "description": "Aumentar la productividad"
+          "description": "Mejorar la Calidad de los Procesos"
         },
         {
-          "description": "Mejorar la calidad"
-        },
-        {
-          "description": "Optimizar la asignación de recursos"
+          "description": "Integrar Inteligencia Artificial (IA)"
         }
       ],
       "button": "Ver más",
@@ -26,19 +23,16 @@
     },
     {
       "title": "Transformación digital",
-      "description": "La Industria 4.0 no es solo una tendencia, es una necesidad. En TriOptimo, te guiamos en la digitalización de tus procesos industriales, integrando tecnologías avanzadas para crear operaciones más inteligentes y conectadas. Nuestros servicios incluyen:",
+      "description": "La Industria 4.0 no es solo una tendencia, es una necesidad. En Trioptimo, te guiamos en la digitalización de tus procesos industriales, integrando tecnologías para crear operaciones más inteligentes y conectadas. Te ayudamos a:",
       "beneficts": [
         {
-          "description": "Implementación de IoT (Internet de las Cosas)"
+          "description": "Implementar Estratégicamente ERP/CRM"
         },
         {
-          "description": "Automatización inteligente"
+          "description": "Consultar y Gestionar Sistemas Avanzados"
         },
         {
-          "description": "Sistemas de gestión avanzados"
-        },
-        {
-          "description": "Toma de decisiones en tiempo real"
+          "description": "Incorporar Internet de las Cosas (IoT)"
         }
       ],
       "button": "Explorar",
@@ -46,20 +40,17 @@
       "borderColor": "#931ed8"
     },
     {
-      "title": "Inteligencia de negocio y gestión de datos",
-      "description": "Tus datos son tu activo más valioso. En TriOptimo, transformamos grandes volúmenes de información en decisiones estratégicas y accionables.",
+      "title": "Inteligencia de negocio",
+      "description": "Tus datos son tu activo más valioso. Con Trioptimo, transformarás grandes volúmenes de información en decisiones estratégicas y accionables. Te ayudamos a:",
       "beneficts": [
         {
-          "description": "Análisis de datos avanzado"
+          "description": "Realizar Análisis de Datos Avanzado"
         },
         {
-          "description": "Diseño e implementación de dashboards interactivos"
+          "description": "Desarrollar KPIs"
         },
         {
-          "description": "Modelado predictivo"
-        },
-        {
-          "description": "Gobernanza y calidad de datos"
+          "description": "Establecer Gobernanza y Calidad de Datos"
         }
       ],
       "button": "Conocer más",

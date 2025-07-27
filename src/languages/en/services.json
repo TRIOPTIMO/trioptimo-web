@@ -1,23 +1,20 @@
 {
-  "title": "What do we offer?",
-  "description": "Comprehensive solutions tailored to your needs.",
+  "title": "What Do We Offer?",
+  "description": "Tailor-made comprehensive solutions.",
   "ctaButton": "Contact us →",
   "services": [
     {
       "title": "Process Optimization",
-      "description": "At TriOptimo, we identify and eliminate inefficiencies in your workflows, both operational and administrative. Through thorough analysis and the implementation of proven methodologies, we help you:",
+      "description": "At TriOptimo, we boost the productivity of your workflows. Our experts optimize your operational and administrative processes for superior performance. We help you:",
       "beneficts": [
         {
-          "description": "Reduce costs"
+          "description": "Increase Productivity and Reduce Operational Costs"
         },
         {
-          "description": "Increase productivity"
+          "description": "Improve Process Quality"
         },
         {
-          "description": "Improve quality"
-        },
-        {
-          "description": "Optimize resource allocation"
+          "description": "Integrate Artificial Intelligence (AI)"
         }
       ],
       "button": "Learn more",
@@ -26,19 +23,16 @@
     },
     {
       "title": "Digital Transformation",
-      "description": "Industry 4.0 is not just a trend — it's a necessity. At TriOptimo, we guide you through the digitalization of your industrial processes by integrating advanced technologies to create smarter, more connected operations. Our services include:",
+      "description": "Industry 4.0 is not just a trend — it's a necessity. At TriOptimo, we guide you through the digitalization of your industrial processes, integrating technologies to create smarter and more connected operations. We help you:",
       "beneficts": [
         {
-          "description": "IoT (Internet of Things) implementation"
+          "description": "Strategically Implement ERP/CRM"
         },
         {
-          "description": "Smart automation"
+          "description": "Consult and Manage Advanced Systems"
         },
         {
-          "description": "Advanced management systems"
-        },
-        {
-          "description": "Real-time decision-making"
+          "description": "Incorporate Internet of Things (IoT)"
         }
       ],
       "button": "Explore",
@@ -46,20 +40,17 @@
       "borderColor": "#931ed8"
     },
     {
-      "title": "Business Intelligence & Data Management",
-      "description": "Your data is your most valuable asset. At TriOptimo, we transform large volumes of information into strategic, actionable decisions.",
+      "title": "Business Intelligence",
+      "description": "Your data is your most valuable asset. With TriOptimo, you’ll turn large volumes of information into actionable and strategic decisions. We help you:",
       "beneficts": [
         {
-          "description": "Advanced data analysis"
+          "description": "Conduct Advanced Data Analysis"
         },
         {
-          "description": "Design and implementation of interactive dashboards"
+          "description": "Develop KPIs"
         },
         {
-          "description": "Predictive modeling"
-        },
-        {
-          "description": "Data governance and quality"
+          "description": "Establish Data Governance and Quality"
         }
       ],
       "button": "Discover more",

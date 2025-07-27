@@ -28,7 +28,7 @@ export default function Slogans() {
                         width: {xs: "auto", md: "auto"},
                         fontSize: { xs: "1.2rem", md: "1.5rem", lg: "3rem" },
                         my: { xs: 0, sm: 2, md: 6 },
-                        color: 'colors.darkBlue'
+                        color: 'colors.secondary',
                     }}>
                         {text}
                         {/* <HighlightedText delay={index * 1.5}>{text}</HighlightedText> */}

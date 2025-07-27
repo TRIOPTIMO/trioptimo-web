@@ -4,20 +4,24 @@
   "ctaButton": "Send us your question",
   "items": [
     {
+      "question": "How does TriOptimo optimize our processes?",
+      "answer": "We optimize your workflows and integrate AI to increase productivity and reduce operational costs."
+    },
+    {
       "question": "What is Industry 4.0?",
-      "answer": "It’s the digital transformation of industrial processes through technologies like IoT, AI, automation, and data analytics."
+      "answer": "Industry 4.0 is the digital transformation of manufacturing and operations, integrating technologies such as IoT, AI, and data analytics. At TriOptimo, we guide you through this digitalization by implementing the solutions your company needs to become smarter and more connected."
     },
     {
-      "question": "What services do you offer as a consultancy?",
-      "answer": "We provide diagnostics, custom solution development, technology implementation, and training to help digitize your industry."
+      "question": "What benefits do we get from ERP and CRM systems?",
+      "answer": "You will centralize your information and optimize customer relationships, improving decision-making and organizational efficiency."
     },
     {
-      "question": "Do you work with small businesses or only large plants?",
-      "answer": "We collaborate with companies of all sizes. Our solutions are scalable and adaptable to each context."
+      "question": "How can business intelligence help us?",
+      "answer": "We turn your data into actionable knowledge through advanced analytics, KPIs, and data governance, empowering you to make strategic decisions."
     },
     {
-      "question": "Can I request a demo or consultation with no commitment?",
-      "answer": "Yes. You can schedule a meeting so we can understand your needs and show you how we can help."
+      "question": "Can we request a demo or consultation without obligation?",
+      "answer": "Yes, absolutely. You can schedule a free meeting so TriOptimo can understand your needs and assist you."
     }
   ]
 }

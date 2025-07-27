@@ -1,32 +1,32 @@
 {
   "title": "About Us",
-  "description": "We are a consultancy specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement smart, scalable, and sustainable solutions in your operations.",
+  "description": "We are a consulting firm specialized in digital transformation and industrial innovation. We combine technical expertise with strategic vision to help you implement smart, scalable, and sustainable solutions in your operation.",
   "missionTitle": "Our Mission",
-  "missionText": "At TriOptimo, our mission is to empower SMEs to achieve leadership in their respective markets. We act as a strategic ally, turning invisible processes into visible results. We strive to make every company more efficient, more profitable, and fundamentally, more human. We firmly believe that by transforming SMEs, we also transform the lives of those who make them possible.",
+  "missionText": "At TriOptimo, our mission is to drive organizations toward leadership. We act as a strategic partner, turning invisible processes into visible results. We strive to make every organization more efficient, more profitable, and fundamentally, more human. We firmly believe that by transforming an organization, we also transform the lives of those who make it possible.",
   "visionTitle": "Our Vision",
-  "visionText": "We aspire to become the number one ally for SMEs, applying process engineering, technology, and business intelligence to optimize operations, reduce costs, and solve real problems. Our vision is based on a deeply human approach, where technology serves to improve people's lives and organizational performance.",
-  "teamTitle": "Our Executive Team",
+  "visionText": "We aspire to become the number one ally for organizations by applying process engineering, technology, and business intelligence to enhance operations, minimize costs, and solve real-world challenges. Our vision, rooted in a deeply human approach, holds that technology must serve to improve people's lives.",
+  "teamTitle": "Our Leadership Team",
   "commitmentTitle": "Commitment to Society",
-  "commitmentDescription": "At TriOptimo, our business success goes hand in hand with a positive social impact. We promote an inclusive and equitable work environment, valuing and developing each talent. Sustainability is key to our operations, ensuring responsible growth that benefits everyone. We are proud to collaborate for free with NGOs and non-profit organizations, contributing our knowledge and resources to strengthen their missions and build a better future. At TriOptimo, we believe in the power of unity for true social change.",
-  "CTACommitment": "Are you an NGO? Let us help!",
+  "commitmentDescription": "At TriOptimo, our success goes hand in hand with a positive social impact. We promote a culture of inclusion and equity within the company, valuing each talent. We integrate sustainability into all our operations to ensure responsible growth. We are proud to actively collaborate with NGOs and nonprofit organizations, contributing our knowledge and resources to support their missions. Moreover, we allocate 10% of all our profits to social purpose projects. We firmly believe in the power of unity to build a better and more prosperous future for all.",
+  "CTACommitment": "NGOs: Let’s Boost Your Cause!",
   "ceos": [
     {
       "name": "Jano Neuen Centeno",
-      "role": "Director of Operations and Strategy.",
-      "bio": "Industrial Engineer with over 8 years of experience in process optimization and industrial project implementation. His practical and analytical approach has helped many SMEs reduce costs without compromising quality.",
-      "commitment": "“I believe in turning engineering into real solutions that impact the daily lives of companies and their teams.”"
+      "role": "Director of Operations and Strategy",
+      "bio": "Industrial Engineer with over 8 years of experience in process optimization and implementation of industrial projects. His practical and analytical approach has helped many SMEs reduce costs without compromising quality.",
+      "commitment": "“I believe in turning engineering into real solutions that impact the everyday life of companies and their teams.”"
     },
     {
       "name": "Ignacio Davanzo",
-      "role": "Head of Digital Transformation and Technology.",
-      "bio": "Information Systems Engineer and digital transformation expert, with extensive experience in implementing Industry 4.0 technologies and process digitalization. He specializes in adapting technology to each company’s reality and resources.",
+      "role": "Head of Digital Transformation and Technology",
+      "bio": "Information Systems Engineer and expert in digital transformation, with extensive experience in implementing Industry 4.0 technologies and process digitalization. He specializes in adapting technology to the reality and resources of each company.",
       "commitment": "“My mission is to bring technological innovation closer to SMEs so they can compete and grow without losing their essence.”"
     },
     {
       "name": "Nahuel Deschutter",
-      "role": "Head of Data Analysis and Business Intelligence.",
-      "bio": "Specialist in data analysis and Business Intelligence, with experience in applying Big Data to optimization and decision-making in industrial companies. He applies practical models to turn complex data into useful information.",
-      "commitment": "“I believe that data is the best tool for making accurate and sustainable decisions.”"
+      "role": "Data Analysis and Business Intelligence Lead",
+      "bio": "Specialist in data analysis and Business Intelligence, with experience in Big Data applied to optimization and decision-making in industrial companies. He applies practical models to turn complex data into useful information.",
+      "commitment": "“I believe data is the best tool for making accurate and sustainable decisions.”"
     }
   ]
 }

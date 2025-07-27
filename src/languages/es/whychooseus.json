@@ -1,17 +1,16 @@
 {
   "title": "¿Por qué elegirnos?",
+  "description": "Elegir a Trioptimo significa asociarse con un equipo comprometido con tu éxito. Nos diferenciamos por:",
   "reasons": [
     {
-      "title": "Enfoque basado en datos",
-      "description": "Utilizamos la inteligencia de datos como el motor principal para impulsar decisiones estratégicas que mejoran tus operaciones y resultados."
+      "title": "Soluciones Digitales a Medida"
     },
     {
-      "title": "Soluciones a medida",
-      "description": "No creemos en soluciones genéricas. Adaptamos nuestras herramientas y estrategias a las necesidades específicas de tu organización, garantizando una implementación efectiva."
+      "title": "Decisiones Basadas en Datos Reales"
     },
     {
-      "title": "Compromiso con la sociedad",
-      "description": "Conoce nuestro programa de ayuda a ONGs."
+      "title": "Compromiso con Tu Equipo y Tu Éxito"
     }
-  ]
+  ],
+  "cta": "¡Quiero mi diagnóstico gratuito!"
 }

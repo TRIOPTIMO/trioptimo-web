@@ -55,7 +55,7 @@ export default function Hero() {
               textAlign: "center"
             }}
           >
-            <Title/>
+            {/* <Title/> */}
             <Slogans />
             <motion.div
               initial={{ opacity: 0, y: -20 }}

@@ -1,17 +1,16 @@
 {
   "title": "Why Choose Us?",
+  "description": "Choosing TriOptimo means partnering with a team committed to your success. We stand out for:",
   "reasons": [
     {
-      "title": "Data-Driven Approach",
-      "description": "We use data intelligence as the main driver to power strategic decisions that improve your operations and outcomes."
+      "title": "Tailored Digital Solutions"
     },
     {
-      "title": "Tailored Solutions",
-      "description": "We don't believe in one-size-fits-all solutions. We adapt our tools and strategies to your organization's specific needs, ensuring effective implementation."
+      "title": "Decisions Based on Real Data"
     },
     {
-      "title": "Commitment to Society",
-      "description": "Learn about our NGO support program."
+      "title": "Commitment to Your Team and Your Success"
     }
-  ]
+  ],
+  "cta": "I want my free assessment!"
 }
