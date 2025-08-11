@@ -12,34 +12,69 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+import { scroller } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function MobileNav() {
   const { i18n, t } = useTranslation('layout');
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = (open) => () => setDrawerOpen(open);
+
+  // Aquí puedes incluir rutas internas además de secciones
   const navItems = [
-    { label: t('services'), to: 'services' },
-    { label: t('faq'), to: 'faq' },
-    { label: t('aboutUs'), to: 'aboutus' },
-    { label: t('contact'), to: 'contact' },
+    { label: t('services'), to: 'services', type: 'section' },
+    { label: t('faq'), to: 'faq', type: 'section' },
+    { label: t('aboutUs'), to: 'aboutus', type: 'section' },
+    { label: t('contact'), to: 'contact', type: 'section' },
+    { label: t('cookiesPolicy'), to: '/politica-de-cookies', type: 'page' }
   ];
+
+  const handleNavClick = (item) => {
+    setDrawerOpen(false);
+
+    if (item.type === 'page') {
+      // Navegación directa a otra ruta
+      navigate(item.to);
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      // Ir a home y luego hacer scroll
+      navigate('/');
+      setTimeout(() => {
+        scroller.scrollTo(item.to, {
+          smooth: true,
+          duration: 500,
+          offset: -80,
+        });
+      }, 100);
+    } else {
+      // Ya estamos en home, hacer scroll directo
+      scroller.scrollTo(item.to, {
+        smooth: true,
+        duration: 500,
+        offset: -80,
+      });
+    }
+  };
 
   const handleLanguageChange = (code) => {
     i18n.changeLanguage(code);
     setDrawerOpen(false);
   };
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const toggleDrawer = (open) => () => setDrawerOpen(open);
-
   return (
     <>
       {isMobile && (
         <>
           <IconButton
-          aria-label="Menu"
+            aria-label="Menu"
             color="inherit"
             edge="end"
             onClick={toggleDrawer(true)}
@@ -62,35 +97,51 @@ export default function MobileNav() {
           >
             <Box sx={{ width: 250 }} role="presentation">
               <List>
-                {navItems.map(({ label, to }) => (
+                {navItems.map((item) => (
                   <ListItem
                     button
-                    aria-label={label}
-                    key={to}
-                    component={ScrollLink}
-                    to={to}
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    spy={true}
-                    onClick={toggleDrawer(false)}
+                    aria-label={item.label}
+                    key={item.to}
+                    onClick={() => handleNavClick(item)}
                     sx={{
                       '&:hover': {
                         backgroundColor: 'rgba(0,191,255,0.1)',
                       },
                     }}
                   >
-                    <ListItemText primary={label} sx={{ color: 'text.secondary' }} />
+                    <ListItemText
+                      primary={item.label}
+                      sx={{ color: 'text.secondary' }}
+                    />
                   </ListItem>
                 ))}
               </List>
 
-              <Stack direction="row" spacing={2} justifyContent="center" mt={2}>
-                <IconButton onClick={() => handleLanguageChange('es')} aria-label="Español">
-                  <img aria-label="ES" src="https://flagcdn.com/24x18/es.png" />
+              <Stack
+                direction="row"
+                spacing={2}
+                justifyContent="center"
+                mt={2}
+              >
+                <IconButton
+                  onClick={() => handleLanguageChange('es')}
+                  aria-label="Español"
+                >
+                  <img
+                    aria-label="ES"
+                    src="https://flagcdn.com/24x18/es.png"
+                    alt="ES"
+                  />
                 </IconButton>
-                <IconButton onClick={() => handleLanguageChange('en')} aria-label="English">
-                  <img aria-label="EN" src="https://flagcdn.com/24x18/gb.png" />
+                <IconButton
+                  onClick={() => handleLanguageChange('en')}
+                  aria-label="English"
+                >
+                  <img
+                    aria-label="EN"
+                    src="https://flagcdn.com/24x18/gb.png"
+                    alt="EN"
+                  />
                 </IconButton>
               </Stack>
             </Box>

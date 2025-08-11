@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 
 import Layout from './layout/Layout';
 import Home from './pages/Home/Home';
+import PrivacyPolicy from "./layout/common/PrivacyPolicy";
+import PrivacyPolicyPage from "./layout/components/PrivacyPolicyPage";
 import { initGA, logPageView } from "./services/analytics";
 
 function AppWrapper() {
@@ -24,8 +26,9 @@ function AppWrapper() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/politica-de-cookies" element={<PrivacyPolicyPage />} />
       </Routes>
-
+      <PrivacyPolicy />
     </Layout>
   );
 }

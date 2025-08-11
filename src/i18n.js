@@ -22,6 +22,8 @@ import aboutUsEs from './languages/es/aboutUs.json';
 import aboutUsEn from './languages/en/aboutUs.json';
 import statisticsEs from './languages/es/statistics.json';
 import statisticsEn from './languages/en/statistics.json';
+import privacyPolicyEs from "./languages/es/privacyPolicy.json";
+import privacyPolicyEn from "./languages/en/privacyPolicy.json";
 
 i18n
     .use(LanguageDetector)
@@ -40,6 +42,7 @@ i18n
                 footer: footerEs,
                 aboutUs: aboutUsEs,
                 statistics: statisticsEs,
+                privacyPolicy: privacyPolicyEs,
             },
             en: {
                 layout: layoutEn,
@@ -52,6 +55,7 @@ i18n
                 footer: footerEn,
                 aboutUs: aboutUsEn,
                 statistics: statisticsEn,
+                privacyPolicy: privacyPolicyEn,
             },
         },
         fallbackLng: 'es',

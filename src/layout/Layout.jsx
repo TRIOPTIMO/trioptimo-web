@@ -1,26 +1,42 @@
 import Footer from './components/Footer';
-import { useTheme, useMediaQuery } from '@mui/material';
-import {
-  AppBar,
-  Box,
-  Toolbar,
-} from '@mui/material';
-import { Link as ScrollLink } from 'react-scroll';
-
+import { useTheme, useMediaQuery, AppBar, Box, Toolbar } from '@mui/material';
 import DesktopNav from './components/DesktopNav';
 import MobileNav from './components/MobileNav';
 import ScrollToTop from "../layout/components/ScrollToTop";
+import { useNavigate, useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 export default function Layout({ children }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scroller.scrollTo('hero', {
+          smooth: true,
+          duration: 500,
+          offset: -80,
+        });
+      }, 100);
+    } else {
+      scroller.scrollTo('hero', {
+        smooth: true,
+        duration: 500,
+        offset: -80,
+      });
+    }
+  };
 
   return (
     <>
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: 'colors.secondary',
+          backgroundColor: 'colors.darkBlue',
           boxShadow: 'none',
           width: "100%",
         }}
@@ -40,11 +56,7 @@ export default function Layout({ children }) {
         >
 
           <Box
-            component={ScrollLink}
-            to="hero"
-            smooth={true}
-            duration={500}
-            offset={-80}
+            onClick={handleLogoClick}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -74,6 +86,7 @@ export default function Layout({ children }) {
               }}
             />
           </Box>
+
           <Box sx={{ flexGrow: 1 }} />
 
           <Box
@@ -88,7 +101,6 @@ export default function Layout({ children }) {
           </Box>
         </Toolbar>
       </AppBar>
-
 
       <Box
         component="main"

@@ -9,7 +9,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: 'colors.secondary', //'colors.darkBlue',
+        backgroundColor: 'colors.darkBlue', //'colors.darkBlue',
         color: 'text.primary',
         py: 6,
         px: 2,
@@ -36,12 +36,12 @@ export default function Footer() {
             <Typography variant="h4" sx={{ fontWeight: 500 }}>
               {t('title1')}
             </Typography>
-            <Link href="#" underline="hover" color="text.primary">
+            <Link href="/politica-de-cookies" underline="hover" color="text.primary">
               {t('privacy')}
             </Link>
-            <Link href="#" underline="hover" color="text.primary">
+            {/* <Link href="#" underline="hover" color="text.primary">
               {t('terms')}
-            </Link>
+            </Link> */}
           </Box>
 
           {/* Bloque 3 (opcional mensaje extra) */}
