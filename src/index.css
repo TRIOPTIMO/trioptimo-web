@@ -1,4 +1,8 @@
-:root {
+html {
+  scroll-behavior: smooth;
+}
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,25 +16,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Syne';
-  src: url('/fonts/Syne.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 
 a {
   font-weight: 500;
@@ -84,4 +69,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
