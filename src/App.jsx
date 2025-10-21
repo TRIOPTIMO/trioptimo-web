@@ -143,7 +143,7 @@ export default function LandingTriOptimo() {
           >
             <Box
               component="img"
-              src="./public/icon.png" // 👉 tu ruta real del logo
+              src="/icon.png" // 👉 tu ruta real del logo
               alt="TriOptimo Logo"
               sx={{
                 width: 40,
