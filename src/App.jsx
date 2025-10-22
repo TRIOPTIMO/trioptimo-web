@@ -804,11 +804,11 @@ export default function LandingTriOptimo() {
               <Stack spacing={1.5} sx={{ mt: 3 }}>
                 <Stack direction="row" spacing={1.5} alignItems="center">
                   <MailOutlineIcon />
-                  <Typography>contacto@trioptimo.org</Typography>
+                  <Typography>info@trioptimo.com</Typography>
                 </Stack>
                 <Stack direction="row" spacing={1.5} alignItems="center">
                   <PhoneAndroidIcon />
-                  <Typography>+34 600 000 000</Typography>
+                  <Typography>+34 663 477 089</Typography>
                 </Stack>
               </Stack>
             </Box>
