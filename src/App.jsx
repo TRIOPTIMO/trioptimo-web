@@ -89,7 +89,7 @@ export default function LandingTriOptimo() {
           >
             <Box
               component="img"
-              src="/public/icon.png" // ajusta si tu path es distinto
+              src="/icon.png" // ajusta si tu path es distinto
               alt="TriOptimo Logo"
               sx={{
                 width: 40,
@@ -219,7 +219,7 @@ export default function LandingTriOptimo() {
           <Stack direction="row" spacing={1.5} alignItems="center">
             <Box
               component="img"
-              src="/public/icon.png"
+              src="/icon.png"
               alt="TriOptimo Logo"
               sx={{
                 width: 28,
