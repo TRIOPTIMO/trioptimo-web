@@ -176,7 +176,7 @@ export default function Contact() {
                           Cuéntanos más sobre tu proyecto o reto (esencial)
                         </Typography>
                         <TextField
-                          name="detalle"
+                          name="message"
                           required
                           fullWidth
                           multiline
