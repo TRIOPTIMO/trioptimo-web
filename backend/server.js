@@ -19,6 +19,9 @@ const transporter = nodemailer.createTransport({
     user: "info@trioptimo.com",
     pass: "cfdd glvq vvwt gvca",
   },
+  connectionTimeout: 10000, // 10s
+  greetingTimeout: 10000,
+  socketTimeout: 10000,
 });
 
 // ---------- ENDPOINT DEL FORMULARIO ----------
@@ -52,8 +55,15 @@ ${detalle || "-"}
       `.trim(),
     };
 
-   const info = await transporter.sendMail(mailOptions);
-    console.log("✅ Mail enviado, messageId:", info.messageId);
+   // 👇 le ponemos un timeout manual por si el SMTP se cuelga
+    const sendPromise = transporter.sendMail(mailOptions);
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("SMTP timeout")), 10000)
+    );
+
+    const info = await Promise.race([sendPromise, timeoutPromise]);
+
+    console.log("✅ Mail enviado:", info && info.messageId);
     res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Error al enviar mail:", err);
