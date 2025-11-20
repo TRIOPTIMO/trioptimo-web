@@ -30,7 +30,7 @@ app.get("/api/health", (req, res) => {
 app.post("/api/contact", async (req, res) => {
   try {
     const data = req.body || {};
-
+    console.log("📩 /api/contact body =>", req.body);
     const {
       nombre,
       email,
@@ -57,8 +57,8 @@ ${detalle || "-"}
       `.trim(),
     };
 
-    await transporter.sendMail(mailOptions);
-
+   const info = await transporter.sendMail(mailOptions);
+    console.log("✅ Mail enviado, messageId:", info.messageId);
     res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Error al enviar mail:", err);
