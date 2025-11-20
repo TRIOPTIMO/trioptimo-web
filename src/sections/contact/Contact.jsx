@@ -31,7 +31,7 @@ export default function Contact() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("https://mail-sender-0dt2.onrender.com/api/contact", {
+      const res = await fetch("https://trioptimo-web-backend.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -176,7 +176,7 @@ export default function Contact() {
                           Cuéntanos más sobre tu proyecto o reto (esencial)
                         </Typography>
                         <TextField
-                          name="message"
+                          name="detalle"
                           required
                           fullWidth
                           multiline
