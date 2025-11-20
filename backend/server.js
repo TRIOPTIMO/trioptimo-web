@@ -12,18 +12,13 @@ app.use(express.json());
 
 // ---------- CONFIGURAR TRANSPORT DE MAIL ----------
 const transporter = nodemailer.createTransport({
-  host: smtp.gmail.com,      // ej: smtp.gmail.com o smtp.sendgrid.net
+  host: "smtp.gmail.com",      // ej: smtp.gmail.com o smtp.sendgrid.net
   port: Number(465) || 587,
-  secure: false,                    // true si usás 465
+  secure: true,                    // true si usás 465
   auth: {
     user: "info@trioptimo.com",
     pass: "cfdd glvq vvwt gvca",
   },
-});
-
-// Endpoint de salud (opcional)
-app.get("/api/health", (req, res) => {
-  res.json({ ok: true });
 });
 
 // ---------- ENDPOINT DEL FORMULARIO ----------
@@ -66,20 +61,11 @@ ${detalle || "-"}
   }
 });
 
-// ---------- SERVIR REACT (si todo está en el mismo servicio) ----------
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Asumiendo que tu build de React va a /build
-app.use(express.static(path.join(__dirname, "build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+// Opcional: endpoint para probar que el backend responde
+app.get("/api/health", (req, res) => {
+  res.json({ ok: true });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`✅ Backend escuchando en puerto ${PORT}`);
 });
