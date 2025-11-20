@@ -28,7 +28,7 @@ export default function Phylosophy() {
     >
       <Box
         component="img"
-        src="/public/icon.png" 
+        src="/icon.png" 
         alt="TriOptimo Logo"
         sx={{
           position: "absolute",

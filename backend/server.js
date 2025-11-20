@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Middlewares
 app.use(cors());
@@ -18,9 +18,9 @@ app.post("/api/contact", async (req, res) => {
     const { nombre, email, subject, web, detalle } = data;
 
     // 🔐 Cargar API key de Resend desde variables de entorno
-    const RESEND_API_KEY = "re_BCaqeSiV_4iGHayXMDrqLWJBDSNqCxjz4";
-    const EMAIL_FROM = "info@trioptimo.com"|| "no-reply@trioptimo.com";
-    const EMAIL_TO = "info@trioptimo.com";
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const EMAIL_FROM = process.env.EMAIL_FROM || "info@trioptimo.com";
+    const EMAIL_TO = process.env.EMAIL_TO || "info@trioptimo.com";
 
     // ❗ Validación mínima
     if (!email || !detalle || !nombre) {
