@@ -7,15 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "render-build": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.546.0",
+    "nodemailer": "^7.0.10",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

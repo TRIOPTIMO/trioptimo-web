@@ -275,7 +275,7 @@ export default function LandingTriOptimo() {
 
               <IconButton
                 component="a"
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/trioptimo/"
                 target="_blank"
                 rel="noreferrer noopener"
                 size="small"
