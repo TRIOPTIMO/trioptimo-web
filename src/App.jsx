@@ -12,8 +12,11 @@ import {
   Link as MLink,
   IconButton,
 } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+
+import React, { useState, useMemo } from "react";
 
 import Hero from "./sections/hero/Hero";
 import Values from "./sections/values/Values";
@@ -23,34 +26,50 @@ import Team from "./sections/team/Team";
 import Stories from "./sections/stories/Stories";
 import Contact from "./sections/contact/Contact";
 
-// === THEME (paleta solicitada) ===
-const theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: { main: "#5F215E" },
-    secondary: { main: "#8C2315" },
-    tertiary: { main: "#F6A623" },
-    background: { default: "#FFFFFF" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: [
-      "Inter",
-      "system-ui",
-      "-apple-system",
-      "Segoe UI",
-      "Roboto",
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-  },
-});
-
 export default function LandingTriOptimo() {
+  const [mode, setMode] = useState("light");
+
+
+  const toggleColorMode = () => {
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          primary: { main: "#5F215E" },
+          secondary: { main: "#8C2315" },
+          tertiary: { main: "#F6A623" },
+          ...(mode === "light"
+            ? {
+              background: { default: "#FFFFFF", paper: "#F9F9F9" },
+            }
+            : {
+              background: { default: "#121212", paper: "#1E1E1E" },
+            }),
+        },
+        shape: { borderRadius: 16 },
+        typography: {
+          fontFamily: [
+            "Inter",
+            "system-ui",
+            "-apple-system",
+            "Segoe UI",
+            "Roboto",
+            "Helvetica",
+            "Arial",
+            "sans-serif",
+          ].join(","),
+          h1: { fontWeight: 800 },
+          h2: { fontWeight: 800 },
+          h3: { fontWeight: 700 },
+        },
+      }),
+    [mode]
+  );
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -62,8 +81,10 @@ export default function LandingTriOptimo() {
         color="transparent"
         sx={{
           backdropFilter: "blur(14px)",
-          background:
-            "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))",
+           background:
+      mode === "light"
+        ? "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))"
+        : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
         }}
       >
         <Toolbar
@@ -183,16 +204,25 @@ export default function LandingTriOptimo() {
             >
               Hablemos
             </Button>
+           
+
           </Stack>
+           <IconButton
+              onClick={toggleColorMode}
+              color="inherit"
+              sx={{ ml: 2 }}
+            >
+              {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+            </IconButton>
         </Toolbar>
       </AppBar>
 
       {/* SECCIONES */}
-      <Hero />
+      <Hero mode={mode}/>
       <Values />
-      <Process />
+      <Process mode={mode}/>
       <Phylosophy />
-      <Team />
+      <Team mode={mode}/>
       <Stories />
       <Contact />
 
@@ -202,7 +232,7 @@ export default function LandingTriOptimo() {
         sx={{
           borderTop: "1px solid",
           borderColor: "divider",
-          bgcolor: "grey.50",
+          bgcolor: mode === "light" ? "grey.50" : "#140714",
         }}
       >
         <Container

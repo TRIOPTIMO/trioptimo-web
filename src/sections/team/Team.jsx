@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export default function Team() {
+export default function Team({ mode }) {
   const people = [
     {
       name: "Nahuel Deschuter",
@@ -18,7 +18,7 @@ export default function Team() {
       quote:
         "Mi foco es la ejecución. Traduzco la visión en resultados concretos. Me apasiona la eficiencia operativa y la mejora continua, garantizando impacto medible y sostenible.",
       linkedin: "https://www.linkedin.com/in/nahuel-deschutter/",
-      photo: "/deschu.jpeg", // 👈 ajustá el path real
+      photo: "/deschu.jpeg"
     },
     {
       name: "Jano Centeno",
@@ -26,7 +26,7 @@ export default function Team() {
       quote:
         "Aseguro el crecimiento sostenible, forjo alianzas clave y diseño modelos para llevar nuestra ingeniería de impacto al mayor número de organizaciones.",
       linkedin: "https://www.linkedin.com/in/jano-centeno/",
-      photo: "/jano.jpeg",
+      photo: "/jano.jpeg"
     },
     {
       name: "Ignacio Davanzo",
@@ -34,7 +34,7 @@ export default function Team() {
       quote:
         "Soy la palanca tecnológica. Lidero la digitalización y automatización para decisiones inteligentes, con menos burocracia y más impacto.",
       linkedin: "https://www.linkedin.com/in/ignaciodavanzo/",
-      photo: "/nacho.png",
+      photo: "/nacho.png"
     },
   ];
 
@@ -42,7 +42,7 @@ export default function Team() {
     <Box
       id="equipo"
       sx={{
-        bgcolor: "grey.50",
+        bgcolor: mode === "light" ? "grey.50" : "grey.900",
       }}
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
@@ -80,7 +80,7 @@ export default function Team() {
                 minWidth: { xs: "100%", sm: 0 },
               })}
             >
-              <TeamCard {...person} />
+              <TeamCard {...person}  mode={mode}  />
             </Box>
           ))}
         </Stack>
@@ -89,7 +89,7 @@ export default function Team() {
   );
 }
 
-function TeamCard({ name, role, quote, linkedin, photo }) {
+function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
   return (
     <Card
       variant="outlined"
@@ -99,7 +99,7 @@ function TeamCard({ name, role, quote, linkedin, photo }) {
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "grey.50"
+        backgroundColor: mode === "light" ? "grey.50" : "grey.900",
       }}
     >
       {/* Foto */}

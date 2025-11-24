@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-export default function Hero() {
+export default function Hero({mode}) {
 
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -153,7 +153,7 @@ export default function Hero() {
                       flex: 1,
                       borderRadius: 999,
                       border: `1px solid ${theme.palette.divider}`,
-                      bgcolor: "grey.50",
+                      bgcolor: mode === "light" ? "grey.50" : "grey.900",
                       px: 3,
                       py: 1.5,
                       textAlign: "center",

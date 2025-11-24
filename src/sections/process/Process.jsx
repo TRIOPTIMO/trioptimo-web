@@ -12,7 +12,7 @@ import {
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Process() {
+export default function Process({mode}) {
   const steps = [
     {
       num: "01",
@@ -44,7 +44,7 @@ export default function Process() {
     <Box
       id="como"
       sx={{
-        bgcolor: "grey.50",
+        bgcolor: mode === "light" ? "grey.50" : "grey.900",
       }}
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
@@ -96,6 +96,7 @@ export default function Process() {
                   title={step.title}
                   desc={step.desc}
                   defaultExpanded={index === 0}
+                  mode={mode}
                 />
               ))}
             </Stack>
@@ -106,7 +107,7 @@ export default function Process() {
   );
 }
 
-function StepAccordion({ num, title, desc, defaultExpanded = false }) {
+function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
   return (
     <Accordion
       defaultExpanded={defaultExpanded}
@@ -114,7 +115,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
       square={false}
       elevation={0}
       sx={(theme) => ({
-        backgroundColor: "grey.50",
+        backgroundColor: mode === "light" ? "grey.50" : "grey.900",
         borderRadius: 3,
         "&::before": {
           display: "none",
