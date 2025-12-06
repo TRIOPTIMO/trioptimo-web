@@ -18,7 +18,7 @@ export default function Team({ mode }) {
       quote:
         "Mi foco es la ejecución. Traduzco la visión en resultados concretos. Me apasiona la eficiencia operativa y la mejora continua, garantizando impacto medible y sostenible.",
       linkedin: "https://www.linkedin.com/in/nahuel-deschutter/",
-      photo: "/deschu.jpeg"
+      photo: "/deschu.jpg"
     },
     {
       name: "Jano Centeno",
