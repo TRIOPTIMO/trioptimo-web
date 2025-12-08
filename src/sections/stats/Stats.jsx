@@ -100,7 +100,7 @@ export default function Stats({ mode }) {
                 Somos un{" "}
                 <Box
                   component="span"
-                  sx={{ fontWeight: 700, color: "primary.main" }}
+                  sx={{ fontWeight: 700, color: mode === "light" ? "primary.main" : "primary.secondary" }}
                 >
                   aliado estratégico
                 </Box>{" "}
@@ -149,17 +149,17 @@ export default function Stats({ mode }) {
       sx={{ position: "absolute", inset: 0 }}
     >
       {/* sombra del domo */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           bottom: 0,
           right: -40,
           width: "78%",
           height: "90%",
-          bgcolor: "secondary.main",
+          bgcolor: "secondary.secondary",
           borderRadius: "70% 0 70% 70%",
         }}
-      />
+      /> */}
 
       {/* domo principal */}
       <Box
@@ -167,6 +167,7 @@ export default function Stats({ mode }) {
           position: "absolute",
           inset: 0,
           bgcolor: "#C7431D",
+          boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
           borderRadius: "70% 0 70% 70%",
           display: "flex",
           flexDirection: "column",

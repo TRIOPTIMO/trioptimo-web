@@ -2,14 +2,14 @@ import { Box, Container, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
-export default function Hero() {
+export default function Hero({ mode }) {
   return (
     <Box
       id="hero"
       sx={{
-        minHeight: "100vh",
+        minHeight: { xs: "80vh", md: "100vh" },
         position: "relative",
-        bgcolor: "primary.main",
+        bgcolor: mode === "light" ? "primary.main" : "primary.secondary",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -28,7 +28,8 @@ export default function Hero() {
       </Container>
 
       {/* ↓ FLECHA SCROLL CALL-TO-ACTION ↓ */}
-      <motion.div
+      <Box
+        component={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, scale: [1, 1.12, 1] }} // pulso suave
         transition={{
@@ -36,16 +37,24 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        style={{
+        sx={{
           position: "absolute",
-          bottom: "100px",
-          left: "50%",
-          transform: "translateX(-50%)",
+          bottom: { xs: 24, md: 150 }, // más cerca en mobile
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+          pointerEvents: "none", // solo el botón recibe clicks
         }}
       >
         <motion.div
-          whileHover={{ scale: 1.2, boxShadow: "0 0 18px rgba(255,255,255,0.6)", borderRadius: "50%", }}
+          whileHover={{
+            scale: 1.2,
+            boxShadow: "0 0 18px rgba(255,255,255,0.6)",
+            borderRadius: "50%",
+          }}
           transition={{ type: "spring", stiffness: 220 }}
+          style={{ pointerEvents: "auto" }}
         >
           <IconButton
             onClick={() =>
@@ -67,7 +76,7 @@ export default function Hero() {
             <KeyboardArrowDownRoundedIcon sx={{ fontSize: 40 }} />
           </IconButton>
         </motion.div>
-      </motion.div>
+      </Box>
     </Box>
   );
 }

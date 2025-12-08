@@ -101,8 +101,9 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
       <Box
         sx={{
           position: "relative",
-          borderRadius: 4,
+          borderRadius: "0 140px 120px 0",
           overflow: "visible",
+          boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
         }}
       >
         {/* Parte superior gris (domo) */}
@@ -122,8 +123,7 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
             px: 3,
             py: 3,
             color: "#FFFFFF",
-            background:
-              "linear-gradient(180deg, #5F215E 0%, #7A1F6A 100%)",
+            backgroundColor: mode === "light" ? "primary.main" : "primary.secondary",
             borderRadius: "0 0 120px 10px", // borde inferior redondeado grande
             minHeight: 230,
             display: "flex",

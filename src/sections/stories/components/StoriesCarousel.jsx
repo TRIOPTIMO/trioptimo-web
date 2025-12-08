@@ -86,10 +86,10 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
                   px: { xs: 3, sm: 4 },
                   pt: { xs: 7, sm: 7 }, // deja espacio para la barra superior
                   pb: 4,
-                  bgcolor: "#C7431D",
+                  bgcolor: "secondary.main",
                   color: "#FFFFFF",
                   borderRadius: 1.5, // menos redondeado
-                  // boxShadow: "0px 10px 0px #D3D3D3",
+                    boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
 
                   // cola del globo con sombra sólida
                   "&::after": {
@@ -110,14 +110,14 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
                   "&::before": {
                     content: '""',
                     position: "absolute",
-                    left: "20%",
-                    bottom: -35,                      // un poco más abajo para generar sombra visible
+                    left: "21%",
+                    bottom: -40,                      // un poco más abajo para generar sombra visible
                     transform: "translateX(-50%)",
                     width: 0,
                     height: 0,
                     borderLeft: "26px solid transparent",
                     borderRight: "26px solid transparent",
-                    // borderTop: "30px solid #D3D3D3",  // color sombra sólida
+                    borderTop: "30px solid rgba(0,0,0,0.18)",  // color sombra sólida
                     zIndex: 1,
                   },
 
@@ -159,8 +159,8 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    zIndex: 4,                         // la barra queda debajo del quote
-                    // boxShadow: "0px 7px 0px #2A0D45",   // sombra sólida lateral dura
+                    zIndex: 4,
+                    boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
                   }}
                 >
                   <Typography sx={{ fontSize: 15, fontWeight: 700, lineHeight: 1.2, textAlign: "right" }}>

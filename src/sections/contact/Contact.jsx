@@ -9,14 +9,16 @@ import {
   CardContent,
   Stack,
   TextField,
-  Link as MLink,
   Alert,
+  IconButton,
 } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendIcon from "@mui/icons-material/Send";
 
-export default function Contact() {
+export default function Contact({mode}) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -31,11 +33,14 @@ export default function Contact() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("https://trioptimo-web-backend.onrender.com/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        "https://trioptimo-web-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
       if (!res.ok) throw new Error("No se pudo enviar el formulario");
       setSent(true);
       form.reset();
@@ -48,189 +53,285 @@ export default function Contact() {
 
   return (
     <Box
-        id="contacto"
-        sx={{ bgcolor: "primary.main", color: "#fff" }}
-      >
-        <Container maxWidth="lg" sx={{ py: 8 }}>
-          {/* Layout principal en horizontal */}
-          <Stack
-            direction="row"
-            flexWrap="wrap"
-            useFlexGap
-            alignItems="flex-start"
+      id="contacto"
+      sx={{
+        bgcolor: "background.default",
+        color: "text.primary",
+        py: { xs: 6, md: 8 },
+      }}
+    >
+      <Container maxWidth="lg">
+        {/* Layout principal */}
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 5, md: 6 }}
+          alignItems="flex-start"
+        >
+          {/* ---- Columna izquierda ---- */}
+          <Box
             sx={(theme) => ({
-              gap: theme.spacing(6),
+              flexBasis: { xs: "100%", md: "45%" },
+              pr: { xs: 0, md: 4 },
+              borderRight: {
+                xs: "none",
+                md: `4px solid ${theme.palette.primary.main}`,
+              },
             })}
           >
-            {/* ---- Columna izquierda ---- */}
-            <Box
-              sx={(theme) => ({
-                flexGrow: 0,
-                flexShrink: 0,
-                flexBasis: {
-                  xs: "100%",
-                  md: `calc((100% - ${theme.spacing(6)}) * 0.42)`, // ~5/12 aprox
-                },
-                minWidth: { xs: "100%", sm: 0 },
-              })}
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 900,
+                textTransform: "uppercase",
+                fontSize: { xs: "2rem", md: "3.7rem" },
+                lineHeight: 1.1,
+                color: mode === "light" ? "primary.main" : "primary.secondary",
+              }}
             >
-              <Typography variant="h4" fontWeight={800} sx={{
-            fontSize: { xs: "1.9rem", md: "3.4rem" },
-          }}>
-                Hablemos de tu Misión
-              </Typography>
-              <Typography sx={{ mt: 1.5, color: "#fff" }}>
-                Hablenos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aqui para ayudarte a hacerlo realidad.
-              </Typography>
+              Cuéntanos
+              <br />
+              tu proyecto
+            </Typography>
 
-              <Stack spacing={1.5} sx={{ mt: 3 }}>
-                <Stack direction="row" spacing={1.5} alignItems="center">
-                  <MailOutlineIcon />
-                  <Typography>info@trioptimo.com</Typography>
-                </Stack>
-                <Stack direction="row" spacing={1.5} alignItems="center">
-                  <PhoneAndroidIcon />
-                  <Typography>+34 663 47 70 89</Typography>
-                </Stack>
+            <Stack spacing={1.8} sx={{ mt: 4 }}>
+              <Stack direction="row" spacing={1.5} alignItems="center">
+                <MailOutlineIcon color="primary" />
+                <Typography>info@trioptimo.com</Typography>
               </Stack>
+              <Stack direction="row" spacing={1.5} alignItems="center">
+                <PhoneAndroidIcon color="primary" />
+                <Typography>+34 663 47 70 89</Typography>
+              </Stack>
+
+              <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 1 }}>
+                <IconButton
+                  size="small"
+                  sx={{
+                    bgcolor: "secondary.main",
+                    color: "#fff",
+                    "&:hover": { bgcolor: "secondary.main" },
+                  }}
+                >
+                  <InstagramIcon fontSize="small" />
+                </IconButton>
+                <IconButton
+                  size="small"
+                  sx={{
+                    bgcolor: "secondary.main",
+                    color: "#fff",
+                    "&:hover": { bgcolor: "secondary.main" },
+                  }}
+                >
+                  <LinkedInIcon fontSize="small" />
+                </IconButton>
+              </Stack>
+            </Stack>
+          </Box>
+
+          {/* ---- Columna derecha (texto + formulario) ---- */}
+          <Box
+            sx={{
+              flexBasis: { xs: "100%", md: "55%" },
+              width: "100%",
+            }}
+          >
+            {/* Título sobre el formulario */}
+            <Box sx={{ mb: 2.5 }}>
+              <Typography
+                sx={{
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  color: "secondary.main",
+                  fontSize: 36,
+                }}
+              >
+                Hablemos
+              </Typography>
+              <Typography
+                sx={{
+                  mt: 0.5,
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  fontSize: 25,
+                }}
+              >
+                ¿Cuál es tu misión?
+              </Typography>
+              <Typography
+                sx={{
+                  mt: 0.5,
+                  fontSize: 20,
+                  maxWidth: 560,
+                }}
+              >
+                Cuéntanos en qué punto estás y qué quieres lograr. Te
+                responderemos con un plan claro, accionable y alineado a tus
+                objetivos.
+              </Typography>
             </Box>
 
-            {/* ---- Columna derecha (formulario) ---- */}
-            <Box
-              sx={(theme) => ({
-                flexGrow: 1,
-                flexShrink: 0,
-                flexBasis: {
-                  xs: "100%",
-                  md: `calc((100% - ${theme.spacing(6)}) * 0.58)`, // ~7/12 aprox
-                },
-                minWidth: { xs: "100%", sm: 0 },
-              })}
+            {/* Formulario tipo tarjeta violeta */}
+            <Card
+              sx={{
+                borderRadius: 4,
+                bgcolor: mode === "light" ? "primary.main" : "primary.secondary",
+                color: "#fff",
+                boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
+              }}
             >
-              <Card sx={{ borderRadius: 3, p: 3 }}>
-                <CardContent>
-                  <Box component="form" onSubmit={handleSubmit} noValidate>
-                    <Stack
-                      direction="row"
-                      flexWrap="wrap"
-                      useFlexGap
-                      sx={(theme) => ({
-                        gap: theme.spacing(2),
-                      })}
-                    >
-                      {/* Campo helper */}
-                      {[
-                        { label: "Nombre Completo", name: "nombre", required: true },
-                        { label: "Email", name: "email", type: "email", required: true },
-                        { label: "Motivo", name: "subject", required: true },
-                        { label: "Página Web (opcional)", name: "web" },
-                      ].map((f) => (
-                        <Box
-                          key={f.name}
-                          sx={(theme) => ({
-                            flexBasis: {
-                              xs: "100%",
-                              md: f.name === "sector" || f.name === "asesoria" ? "100%" : `calc((100% - ${theme.spacing(2)}) / 2)`,
-                            },
-                            minWidth: { xs: "100%", sm: 0 },
-                          })}
-                        >
-                          <Typography
-                            variant="body2"
-                            fontWeight={600}
-                            sx={{ mb: 0.5, color: "text.primary" }}
-                          >
-                            {f.label}
-                            {f.required && <span style={{ color: "#d32f2f" }}> *</span>}
-                          </Typography>
-
-                          <TextField
-                            name={f.name}
-                            type={f.type || "text"}
-                            required={f.required}
-                            fullWidth
-                            variant="outlined"
-                            InputProps={{
-                              sx: {
-                                borderRadius: 2,
-                                bgcolor: "background.paper",
-                                "& fieldset": {
-                                  borderColor: "grey.300",
-                                },
-                                "&:hover fieldset": {
-                                  borderColor: "primary.main",
-                                },
-                                "&.Mui-focused fieldset": {
-                                  borderColor: "primary.main",
-                                  boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
-                                },
-                              },
-                            }}
-                          />
-                        </Box>
-                      ))}
-
-                      {/* Campo multilinea */}
-                      <Box sx={{ flexBasis: "100%" }}>
-                        <Typography variant="body2" fontWeight={600}>
-                          Cuéntanos más sobre tu proyecto o reto (opcional)
-                        </Typography>
-                        <TextField
-                          name="detalle"
-                          required
-                          fullWidth
-                          multiline
-                          minRows={4}
-                          variant="outlined"
+              <CardContent sx={{ p: { xs: 3, md: 3.5 } }}>
+                <Box component="form" onSubmit={handleSubmit} noValidate>
+                  <Stack
+                    direction="row"
+                    flexWrap="wrap"
+                    useFlexGap
+                    sx={(theme) => ({
+                      gap: theme.spacing(2),
+                    })}
+                  >
+                    {[
+                      { label: "Nombre Completo", name: "nombre", required: true },
+                      { label: "Email de contacto", name: "email", type: "email", required: true },
+                      { label: "Motivo", name: "subject", required: true },
+                      { label: "Página Web (opcional)", name: "web" },
+                    ].map((f) => (
+                      <Box
+                        key={f.name}
+                        sx={(theme) => ({
+                          flexBasis: {
+                            xs: "100%",
+                            md: `calc((100% - ${theme.spacing(2)}) / 2)`,
+                          },
+                        })}
+                      >
+                        <Typography
+                          variant="caption"
                           sx={{
-                            mt: 1,
-                            "& .MuiOutlinedInput-root": {
-                              borderRadius: 2,
-                              bgcolor: "background.paper",
-                              "& fieldset": { borderColor: "grey.300" },
-                              "&:hover fieldset": { borderColor: "primary.main" },
+                            mb: 0.5,
+                            fontWeight: 600,
+                            textTransform: "none",
+                          }}
+                        >
+                          {f.label}
+                          {f.required && (
+                            <Box component="span" sx={{ color: "#ffd1d1", ml: 0.2 }}>
+                              *
+                            </Box>
+                          )}
+                        </Typography>
+
+                        <TextField
+                          name={f.name}
+                          type={f.type || "text"}
+                          required={f.required}
+                          fullWidth
+                          variant="outlined"
+                          InputProps={{
+                            sx: {
+                              borderRadius: 999,
+                              bgcolor: "#FFFFFF",
+                              fontSize: 14,
+                              "& fieldset": {
+                                borderColor: "transparent",
+                              },
+                              "&:hover fieldset": {
+                                borderColor: "transparent",
+                              },
                               "&.Mui-focused fieldset": {
-                                borderColor: "primary.main",
-                                boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
+                                borderColor: "transparent",
+                                boxShadow: (theme) =>
+                                  `0 0 0 3px ${theme.palette.secondary.main}44`,
                               },
                             },
                           }}
                         />
                       </Box>
+                    ))}
 
-                      {/* Botón enviar */}
-                      <Box sx={{ flexBasis: "100%" }}>
-                        <Button
-                          type="submit"
-                          variant="contained"
-                          color="secondary"
-                          size="large"
-                          endIcon={<SendIcon />}
-                          disabled={sending}
-                        >
-                          {sending ? "Enviando..." : "Enviar Solicitud"}
-                        </Button>
-                      </Box>
+                    {/* Campo multilinea */}
+                    <Box sx={{ flexBasis: "100%" }}>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 600 }}
+                      >
+                        Cuéntanos más sobre tu proyecto o reto (esencial)
+                      </Typography>
+                      <TextField
+                        name="detalle"
+                        required
+                        fullWidth
+                        multiline
+                        minRows={4}
+                        variant="outlined"
+                        sx={{
+                          mt: 0.8,
+                          "& .MuiOutlinedInput-root": {
+                            borderRadius: 3,
+                            bgcolor: "#FFFFFF",
+                            fontSize: 14,
+                            "& fieldset": { borderColor: "transparent" },
+                            "&:hover fieldset": { borderColor: "transparent" },
+                            "&.Mui-focused fieldset": {
+                              borderColor: "transparent",
+                              boxShadow: (theme) =>
+                                `0 0 0 3px ${theme.palette.secondary.main}44`,
+                            },
+                          },
+                        }}
+                      />
+                    </Box>
 
-                      {/* Feedback */}
-                      {sent && (
-                        <Box sx={{ flexBasis: "100%" }}>
-                          <Alert severity="success">¡Gracias! Tu solicitud fue enviada.</Alert>
-                        </Box>
-                      )}
-                      {error && (
-                        <Box sx={{ flexBasis: "100%" }}>
-                          <Alert severity="error">{error}</Alert>
-                        </Box>
-                      )}
-                    </Stack>
+                    {/* Botón enviar */}
+                    <Box
+                  sx={{
+                    right: -24,
+                    bottom: -20,
+                    zIndex: 3,
+                  }}
+                >
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="secondary"
+                    endIcon={<SendIcon />}
+                    disabled={sending}
+                    sx={{
+                      borderRadius: 999,
+                      px: 3.2,
+                      py: 1,
+                      textTransform: "uppercase",
+                      fontWeight: 800,
+                      fontSize: 13,
+                      letterSpacing: 0.8,
+                      boxShadow: "0 10px 0 rgba(0,0,0,0.18)",
+                    }}
+                  >
+                    {sending ? "Enviando..." : "Enviar solicitud"}
+                  </Button>
                   </Box>
-                </CardContent>
-              </Card>
 
-            </Box>
-          </Stack>
-        </Container>
-      </Box>
+                    {/* Feedback */}
+                    {sent && (
+                      <Box sx={{ flexBasis: "100%" }}>
+                        <Alert severity="success" sx={{ mt: 1 }}>
+                          ¡Gracias! Tu solicitud fue enviada.
+                        </Alert>
+                      </Box>
+                    )}
+                    {error && (
+                      <Box sx={{ flexBasis: "100%" }}>
+                        <Alert severity="error" sx={{ mt: 1 }}>
+                          {error}
+                        </Alert>
+                      </Box>
+                    )}
+                  </Stack>
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
   );
 }

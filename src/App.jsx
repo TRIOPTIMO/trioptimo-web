@@ -57,8 +57,8 @@ const navItems = [
       createTheme({
         palette: {
           mode,
-          primary: { main: "#5F215E" },
-          secondary: { main: "#8C2315" },
+          primary: { main: "#5F215E", secondary: "#8b2c8aff" },
+          secondary: { main: "#C7431D", secondary: "#8C2315" },
           tertiary: { main: "#F6A623" },
           ...(mode === "light"
             ? {
@@ -97,7 +97,7 @@ const navItems = [
         position="sticky"
         elevation={0}
         sx={{
-          bgcolor: "primary.main",
+          bgcolor: mode === "light" ? "primary.main" : "primary.secondary",
           color: "common.white",
           backdropFilter: "blur(16px)",
         }}
@@ -271,7 +271,7 @@ const navItems = [
       <Phylosophy />
       <Team mode={mode}/>
       <Stories />
-      <Contact />
+      <Contact mode={mode}/>
 
       {/* FOOTER */}
       <Box
@@ -279,7 +279,7 @@ const navItems = [
         sx={{
           borderTop: "1px solid",
           borderColor: "divider",
-          bgcolor: mode === "light" ? "grey.50" : "#140714",
+          bgcolor: mode === "light" ? "primary.main" : "primary.secondary",
         }}
       >
         <Container
@@ -296,21 +296,21 @@ const navItems = [
           <Stack direction="row" spacing={1.5} alignItems="center">
             <Box
               component="img"
-              src="/icon.png"
+              src="/iconWhite.png"
               alt="TriOptimo Logo"
               sx={{
-                width: 28,
-                height: 28,
+                width: 40,
+                height: 40,
                 objectFit: "contain",
                 borderRadius: 1.5,
                 opacity: 0.9,
               }}
             />
             <Box>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="white">
                 © {new Date().getFullYear()} TriOptimo.
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="white">
                 Todos los derechos reservados.
               </Typography>
             </Box>
@@ -325,7 +325,7 @@ const navItems = [
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: 600, color: "text.primary" }}
+              sx={{ fontWeight: 600, color: "white" }}
             >
               Ingeniería con propósito
             </Typography>
@@ -342,8 +342,8 @@ const navItems = [
                   underline="none"
                   sx={{
                     fontSize: "0.85rem",
-                    color: "text.secondary",
-                    "&:hover": { color: "primary.main" },
+                    color: "white",
+                    "&:hover": { color: "secondary.main" },
                   }}
                 >
                   {link.label}

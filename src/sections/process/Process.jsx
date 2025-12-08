@@ -55,7 +55,7 @@ return (
             fontSize: { xs: "2.4rem", md: "4.8rem" },
             textTransform: "uppercase",
             letterSpacing: 2,
-            color: theme.palette.primary.main,
+            color: mode === "light" ? theme.palette.primary.main : theme.palette.primary.secondary,
           })}
         >
           Cómo trabajamos
@@ -68,7 +68,8 @@ return (
             mx: "auto",
             maxWidth: 960,
             borderRadius: 999,
-            background: theme.palette.primary.main,
+            background: mode === "light" ? theme.palette.primary.main : theme.palette.primary.secondary,
+            boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "stretch",
@@ -207,7 +208,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
             alignItems: "center",
             borderRadius: "999px",
             height: "60px",
-            border: `2px solid ${theme.palette.primary.main}`, // ← solo borde violeta
+            border: mode === "light" ? `2px solid ${theme.palette.primary.main}`  : `2px solid ${theme.palette.primary.secondary}`,
             bgcolor: mode === "light" ? "grey.50" : "grey.900",
             position: "relative",
           })}
@@ -222,7 +223,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
               width: {xs: 55, md:  65},
               height: {xs: 55, md:  65},
               borderRadius: "50%",
-              bgcolor: theme.palette.primary.main,
+              bgcolor: mode === "light" ? theme.palette.primary.main : theme.palette.primary.secondary,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -260,7 +261,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
               height: {xs: 55, md:  65},
               borderRadius: "50%",
               color: "#FFFFFF",
-              bgcolor: (theme) => theme.palette.primary.main,
+              bgcolor: (theme) => mode === "light" ? theme.palette.primary.main : theme.palette.primary.secondary,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -290,6 +291,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
             py: 2,
             mt: -2,
             bgcolor: (theme) => theme.palette.secondary.main,           // naranja
+            boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
             borderRadius: "0 0 24px 0",
             color: "#FFFFFF",
           }}
