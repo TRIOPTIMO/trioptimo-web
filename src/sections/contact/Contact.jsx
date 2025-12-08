@@ -121,7 +121,7 @@ export default function Contact() {
                       {/* Campo helper */}
                       {[
                         { label: "Nombre Completo", name: "nombre", required: true },
-                        { label: "Email de Contacto", name: "email", type: "email", required: true },
+                        { label: "Email", name: "email", type: "email", required: true },
                         { label: "Motivo", name: "subject", required: true },
                         { label: "Página Web (opcional)", name: "web" },
                       ].map((f) => (
@@ -173,7 +173,7 @@ export default function Contact() {
                       {/* Campo multilinea */}
                       <Box sx={{ flexBasis: "100%" }}>
                         <Typography variant="body2" fontWeight={600}>
-                          Cuéntanos más sobre tu proyecto o reto (esencial)
+                          Cuéntanos más sobre tu proyecto o reto (opcional)
                         </Typography>
                         <TextField
                           name="detalle"
@@ -203,7 +203,7 @@ export default function Contact() {
                         <Button
                           type="submit"
                           variant="contained"
-                          color="tertiary"
+                          color="secondary"
                           size="large"
                           endIcon={<SendIcon />}
                           disabled={sending}

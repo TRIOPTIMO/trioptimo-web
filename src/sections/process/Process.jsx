@@ -102,38 +102,6 @@ return (
               </Box>
             </Typography>
           </Box>
-
-          {/* Botón naranja dentro de la pastilla */}
-          {/* <Box
-            sx={{
-              minWidth: { xs: "100%", md: 220 },
-              px: { xs: 3, md: 0 },
-              py: { xs: 2.5, md: 0 },
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: { xs: 0, md: "999px" },
-              bgcolor: "#A4341B", // naranja oscuro del diseño
-            }}
-          >
-            <Button
-              href="#contacto"
-              sx={{
-                textTransform: "none",
-                fontWeight: 800,
-                fontSize: 18,
-                color: "#FFFFFF",
-                p: 0,
-                minWidth: "auto",
-                "&:hover": {
-                  backgroundColor: "transparent",
-                  opacity: 0.9,
-                },
-              }}
-            >
-              +info
-            </Button>
-          </Box> */}
         </Box>
       </Box>
 {/* === SECCIÓN DE PASOS + TEXTO AL COSTADO (RESPONSIVE) === */}
@@ -209,7 +177,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
       disableGutters
       elevation={0}
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: mode === "light" ? "grey.50" : "grey.900",
         boxShadow: "none",
         "&::before": { display: "none" },
         "&.Mui-expanded": { margin: 0 },
@@ -240,7 +208,7 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
             borderRadius: "999px",
             height: "60px",
             border: `2px solid ${theme.palette.primary.main}`, // ← solo borde violeta
-            bgcolor: "#FFFFFF",
+            bgcolor: mode === "light" ? "grey.50" : "grey.900",
             position: "relative",
           })}
         >

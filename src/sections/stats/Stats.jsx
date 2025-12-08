@@ -93,7 +93,7 @@ export default function Stats({ mode }) {
               <Typography
                 sx={{
                   mt: 2.5,
-                  fontSize: { xs: 14, md: 15 },
+                  fontSize: { xs: 14, md: 24 },
                   lineHeight: 1.6,
                 }}
               >

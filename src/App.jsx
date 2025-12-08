@@ -11,7 +11,12 @@ import {
   Stack,
   Link as MLink,
   IconButton,
+   Drawer,
+  List,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -29,11 +34,23 @@ import Stats from "./sections/stats/Stats";
 
 export default function LandingTriOptimo() {
   const [mode, setMode] = useState("light");
-
+  const [mobileOpen, setMobileOpen] = useState(false);
+const navItems = [
+  { href: "#hero", label: "Inicio" },
+  { href: "#como", label: "Cómo trabajamos" },
+  { href: "#filosofia", label: "Filosofía" },
+  { href: "#equipo", label: "Equipo" },
+  { href: "#historias", label: "Historias" },
+];
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prev) => !prev);
+  };
+
 
   const theme = useMemo(
     () =>
@@ -76,16 +93,13 @@ export default function LandingTriOptimo() {
       <CssBaseline />
 
       {/* NAVBAR */}
-      <AppBar
+ <AppBar
         position="sticky"
         elevation={0}
-        color="transparent"
         sx={{
-          backdropFilter: "blur(14px)",
-           background:
-      mode === "light"
-        ? "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))"
-        : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
+          bgcolor: "primary.main",
+          color: "common.white",
+          backdropFilter: "blur(16px)",
         }}
       >
         <Toolbar
@@ -100,87 +114,57 @@ export default function LandingTriOptimo() {
             gap: 2,
           }}
         >
-          {/* Logo + tagline */}
-          <Box
+          {/* HAMBURGER (solo mobile) */}
+          <IconButton
+            edge="start"
+            onClick={handleDrawerToggle}
             sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 1.5,
-              flexGrow: 1,
+              display: { xs: "inline-flex", md: "none" },
+              color: "common.white",
             }}
           >
-            <Box
-              component="img"
-              src="/icon.png" // ajusta si tu path es distinto
-              alt="TriOptimo Logo"
-              sx={{
-                width: 40,
-                height: 40,
-                objectFit: "contain",
-                borderRadius: 2,
-              }}
-            />
-            <Box>
-              <Typography
-                fontWeight={700}
-                variant="h6"
-                color="text.primary"
-                sx={{ letterSpacing: 0.4, lineHeight: 1.1 }}
-              >
-                TRIOPTIMO
-              </Typography>
-              <Typography
-                variant="caption"
-                sx={{
-                  color: "text.secondary",
-                  display: { xs: "none", sm: "block" },
-                }}
-              >
-                Ingeniería con propósito
-              </Typography>
-            </Box>
-          </Box>
+            <MenuIcon />
+          </IconButton>
 
-          {/* Links desktop */}
+          {/* LINKS IZQUIERDA (solo desktop) */}
           <Stack
             direction="row"
-            spacing={3}
+            spacing={{ xs: 2, md: 3 }}
             alignItems="center"
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{
+              flexGrow: 1,
+              fontSize: { xs: "0.85rem", md: "0.95rem" },
+              textTransform: "uppercase",
+              fontWeight: 600,
+              display: { xs: "none", md: "flex" },
+            }}
           >
-            {[
-              { href: "#como", label: "Cómo trabajamos" },
-              { href: "#filosofia", label: "Filosofía" },
-              { href: "#equipo", label: "Equipo" },
-              { href: "#historias", label: "Historias" },
-            ].map((link) => (
+            {navItems.map((link) => (
               <MLink
                 key={link.href}
                 href={link.href}
                 underline="none"
                 sx={{
                   position: "relative",
-                  color: "text.primary",
-                  fontWeight: 500,
-                  fontSize: "0.95rem",
+                  color: "common.white",
+                  letterSpacing: 0.6,
                   py: 0.5,
                   transition: "color 0.2s ease",
                   "&::after": {
                     content: '""',
                     position: "absolute",
                     bottom: 0,
-                    left: "50%",
-                    transform: "translateX(-50%)",
+                    left: 0,
                     width: 0,
                     height: 2,
                     borderRadius: 999,
-                    bgcolor: "primary.main",
+                    bgcolor: "secondary.main",
                     transition: "width 0.25s ease",
                   },
                   "&:hover": {
-                    color: "primary.main",
+                    color: "tertiary.main",
                     "&::after": {
-                      width: "60%",
+                      width: "100%",
                     },
                   },
                 }}
@@ -188,35 +172,96 @@ export default function LandingTriOptimo() {
                 {link.label}
               </MLink>
             ))}
+          </Stack>
 
+          {/* RELLENO PARA CENTRAR EN DESKTOP CUANDO NO HAY LOGO */}
+          <Box sx={{ flexGrow: { xs: 1, md: 0 } }} />
+
+          {/* DERECHA: Hablemos + modo claro/oscuro */}
+          <Stack direction="row" spacing={1.5} alignItems="center">
             <Button
               href="#contacto"
               variant="contained"
-              color="tertiary"
               disableElevation
               sx={{
-                ml: 1,
                 borderRadius: 999,
-                px: 2.8,
-                py: 0.7,
-                textTransform: "none",
-                fontWeight: 600,
+                px: { xs: 2.2, md: 3 },
+                py: 0.8,
+                textTransform: "uppercase",
+                fontWeight: 800,
+                fontSize: { xs: "0.8rem", md: "0.85rem" },
+                letterSpacing: 1,
+                bgcolor: "secondary.main",
+                color: "common.white",
+                border: "2px solid #fff",
+                "&:hover": {
+                  bgcolor: "secondary.main",
+                  filter: "brightness(1.05)",
+                },
               }}
             >
               Hablemos
             </Button>
-           
 
-          </Stack>
-           <IconButton
+            <IconButton
               onClick={toggleColorMode}
-              color="inherit"
-              sx={{ ml: 2 }}
+              sx={{
+                ml: 0.5,
+                borderRadius: "999px",
+                border: "1px solid rgba(255,255,255,0.6)",
+                color: "common.white",
+                width: 38,
+                height: 38,
+                "&:hover": {
+                  bgcolor: "rgba(255,255,255,0.1)",
+                },
+              }}
             >
-              {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+              {mode === "dark" ? (
+                <LightModeIcon fontSize="small" />
+              ) : (
+                <DarkModeIcon fontSize="small" />
+              )}
             </IconButton>
+          </Stack>
         </Toolbar>
       </AppBar>
+
+      {/* DRAWER MOBILE */}
+      <Drawer
+        anchor="left"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        sx={{ display: { xs: "block", md: "none" } }}
+      >
+        <Box
+          sx={{ width: 260, pt: 2 }}
+          role="presentation"
+          onClick={handleDrawerToggle}
+        >
+          <List>
+            {navItems.map((item) => (
+              <ListItemButton
+                key={item.href}
+                component="a"
+                href={item.href}
+              >
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{
+                    sx: {
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      letterSpacing: 0.8,
+                    },
+                  }}
+                />
+              </ListItemButton>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+
 
       {/* SECCIONES */}
       <Hero mode={mode}/>
