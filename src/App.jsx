@@ -80,9 +80,9 @@ const navItems = [
             "Arial",
             "sans-serif",
           ].join(","),
-          h1: { fontWeight: 800 },
-          h2: { fontWeight: 800 },
-          h3: { fontWeight: 700 },
+          h1: { fontWeight: 800, fontFamily: "Nunito" },
+          h2: { fontWeight: 800, fontFamily: "Nunito" },
+          h3: { fontWeight: 700, fontFamily: "Nunito" },
         },
       }),
     [mode]
@@ -265,12 +265,12 @@ const navItems = [
 
       {/* SECCIONES */}
       <Hero mode={mode}/>
-      <Stats/>
-      <Values />
+      <Stats mode={mode}/>
+      <Values mode={mode}/>
       <Process mode={mode}/>
-      <Phylosophy />
+      <Phylosophy mode={mode}/>
       <Team mode={mode}/>
-      <Stories />
+      <Stories mode={mode}/>
       <Contact mode={mode}/>
 
       {/* FOOTER */}

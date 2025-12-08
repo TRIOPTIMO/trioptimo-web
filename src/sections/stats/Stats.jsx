@@ -13,7 +13,7 @@ import {
   Button,
   Stack,
 } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import KeyboardArrowRightRounded from "@mui/icons-material/KeyboardArrowRightRounded";
 
 const HERO_STATS = [
   {
@@ -124,7 +124,7 @@ export default function Stats({ mode }) {
                     backgroundColor: "#8C2A15",
                   },
                 }}
-                endIcon={<ArrowForwardIcon sx={{ fontSize: 20 }} />}
+                endIcon={<KeyboardArrowRightRounded sx={{ fontSize: 20 }} />}
               >
                 Cuéntanos tu idea
               </Button>
@@ -214,22 +214,14 @@ export default function Stats({ mode }) {
           width: 36,
           height: 36,
           borderRadius: "50%",
-          bgcolor: "#FFFFFF",
+          bgcolor:  mode === "light" ? "#FFFFFF" : "#121212",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 0 0 4px #FFFFFF",
+          boxShadow: mode === "light" ? "0 0 0 4px #FFFFFF" : "0 0 0 4px #121212",
         }}
       >
-        <Typography
-          sx={{
-            fontSize: 20,
-            fontWeight: 800,
-            color: "#A4341B",
-          }}
-        >
-          →
-        </Typography>
+          <KeyboardArrowRightRounded sx={{ fontSize: 40, color: mode === "light" ? "secondary.secondary" : "secondary.main"}}/>
       </Box>
     </Box>
   </AnimatePresence>

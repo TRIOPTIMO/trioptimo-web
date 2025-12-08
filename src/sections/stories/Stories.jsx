@@ -27,7 +27,7 @@ const stories = [
   },
 ];
 
-export default function Stories() {
+export default function Stories({mode}) {
   return (
     <Container
       id="historias"

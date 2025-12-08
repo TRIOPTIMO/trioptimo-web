@@ -18,7 +18,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendIcon from "@mui/icons-material/Send";
 
-export default function Contact({mode}) {
+export default function Contact({ mode }) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -65,7 +65,7 @@ export default function Contact({mode}) {
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 5, md: 6 }}
-          alignItems="flex-start"
+          alignItems={{ xs: "center", md: "flex-start" }} // centrado en mobile
         >
           {/* ---- Columna izquierda ---- */}
           <Box
@@ -76,6 +76,7 @@ export default function Contact({mode}) {
                 xs: "none",
                 md: `4px solid ${theme.palette.primary.main}`,
               },
+              textAlign: { xs: "center", md: "left" }, // textos centrados en mobile
             })}
           >
             <Typography
@@ -85,7 +86,7 @@ export default function Contact({mode}) {
                 textTransform: "uppercase",
                 fontSize: { xs: "2rem", md: "3.7rem" },
                 lineHeight: 1.1,
-                color: mode === "light" ? "primary.main" : "primary.secondary",
+                color: mode === "light" ? "primary.main" : "secondary.main", // corregido primary.secondary
               }}
             >
               Cuéntanos
@@ -94,16 +95,32 @@ export default function Contact({mode}) {
             </Typography>
 
             <Stack spacing={1.8} sx={{ mt: 4 }}>
-              <Stack direction="row" spacing={1.5} alignItems="center">
+              <Stack
+                direction="row"
+                spacing={1.5}
+                alignItems="center"
+                justifyContent={{ xs: "center", md: "flex-start" }} // centrado en mobile
+              >
                 <MailOutlineIcon color="primary" />
                 <Typography>info@trioptimo.com</Typography>
               </Stack>
-              <Stack direction="row" spacing={1.5} alignItems="center">
+              <Stack
+                direction="row"
+                spacing={1.5}
+                alignItems="center"
+                justifyContent={{ xs: "center", md: "flex-start" }} // centrado en mobile
+              >
                 <PhoneAndroidIcon color="primary" />
                 <Typography>+34 663 47 70 89</Typography>
               </Stack>
 
-              <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 1 }}>
+              <Stack
+                direction="row"
+                spacing={1}
+                alignItems="center"
+                justifyContent={{ xs: "center", md: "flex-start" }} // centrado en mobile
+                sx={{ mt: 1 }}
+              >
                 <IconButton
                   size="small"
                   sx={{
@@ -136,7 +153,12 @@ export default function Contact({mode}) {
             }}
           >
             {/* Título sobre el formulario */}
-            <Box sx={{ mb: 2.5 }}>
+            <Box
+              sx={{
+                mb: 2.5,
+                textAlign: { xs: "center", md: "left" }, // centrado en mobile
+              }}
+            >
               <Typography
                 sx={{
                   fontWeight: 800,
@@ -162,6 +184,7 @@ export default function Contact({mode}) {
                   mt: 0.5,
                   fontSize: 20,
                   maxWidth: 560,
+                  mx: { xs: "auto", md: 0 }, // centrado y ancho controlado en mobile
                 }}
               >
                 Cuéntanos en qué punto estás y qué quieres lograr. Te
@@ -174,7 +197,7 @@ export default function Contact({mode}) {
             <Card
               sx={{
                 borderRadius: 4,
-                bgcolor: mode === "light" ? "primary.main" : "primary.secondary",
+                bgcolor: mode === "light" ? "primary.main" : "primary.secondary", // corregido primary.secondary
                 color: "#fff",
                 boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
               }}
@@ -190,10 +213,26 @@ export default function Contact({mode}) {
                     })}
                   >
                     {[
-                      { label: "Nombre Completo", name: "nombre", required: true },
-                      { label: "Email de contacto", name: "email", type: "email", required: true },
-                      { label: "Motivo", name: "subject", required: true },
-                      { label: "Página Web (opcional)", name: "web" },
+                      {
+                        label: "Nombre Completo",
+                        name: "nombre",
+                        required: true,
+                      },
+                      {
+                        label: "Email de contacto",
+                        name: "email",
+                        type: "email",
+                        required: true,
+                      },
+                      {
+                        label: "Motivo",
+                        name: "subject",
+                        required: true,
+                      },
+                      {
+                        label: "Página Web (opcional)",
+                        name: "web",
+                      },
                     ].map((f) => (
                       <Box
                         key={f.name}
@@ -214,7 +253,10 @@ export default function Contact({mode}) {
                         >
                           {f.label}
                           {f.required && (
-                            <Box component="span" sx={{ color: "#ffd1d1", ml: 0.2 }}>
+                            <Box
+                              component="span"
+                              sx={{ color: "#ffd1d1", ml: 0.2 }}
+                            >
                               *
                             </Box>
                           )}
@@ -283,32 +325,33 @@ export default function Contact({mode}) {
 
                     {/* Botón enviar */}
                     <Box
-                  sx={{
-                    right: -24,
-                    bottom: -20,
-                    zIndex: 3,
-                  }}
-                >
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="secondary"
-                    endIcon={<SendIcon />}
-                    disabled={sending}
-                    sx={{
-                      borderRadius: 999,
-                      px: 3.2,
-                      py: 1,
-                      textTransform: "uppercase",
-                      fontWeight: 800,
-                      fontSize: 13,
-                      letterSpacing: 0.8,
-                      boxShadow: "0 10px 0 rgba(0,0,0,0.18)",
-                    }}
-                  >
-                    {sending ? "Enviando..." : "Enviar solicitud"}
-                  </Button>
-                  </Box>
+                      sx={{
+                        flexBasis: "100%",
+                        display: "flex",
+                        justifyContent: { xs: "center", md: "flex-end" }, // centrado en mobile
+                        mt: 1.5,
+                      }}
+                    >
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        color="secondary"
+                        endIcon={<SendIcon />}
+                        disabled={sending}
+                        sx={{
+                          borderRadius: 999,
+                          px: 3.2,
+                          py: 1,
+                          textTransform: "uppercase",
+                          fontWeight: 800,
+                          fontSize: 13,
+                          letterSpacing: 0.8,
+                          boxShadow: "0 10px 0 rgba(0,0,0,0.18)",
+                        }}
+                      >
+                        {sending ? "Enviando..." : "Enviar solicitud"}
+                      </Button>
+                    </Box>
 
                     {/* Feedback */}
                     {sent && (

@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import KeyboardArrowRightRounded from "@mui/icons-material/KeyboardArrowRightRounded";
 
 export default function Team({ mode }) {
   const people = [
@@ -75,7 +76,7 @@ export default function Team({ mode }) {
                 flexBasis: {
                   xs: "100%", // 1 columna en móvil
                   sm: `calc((100% - ${theme.spacing(3)}) / 2)`, // 2 columnas en tablets
-                  md: `calc((100% - ${theme.spacing(3)} * 2) / 3)`, // 3 columnas en desktop
+                  md: `calc((95% - ${theme.spacing(3)} * 2) / 3)`, // 3 columnas en desktop
                 },
                 minWidth: { xs: "100%", sm: 0 },
               })}
@@ -203,22 +204,17 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
             width: 36,
             height: 36,
             borderRadius: "50%",
-            bgcolor: "#FFFFFF",
+            bgcolor: mode === "light" ? "grey.50" : "grey.900",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0px 0px 0px 3px #FFFFFF",
+            boxShadow: mode === "light" ? "0px 0px 0px 3px grey.50" : "0px 0px 0px 3px grey.900" ,
           }}
         >
-          <Typography
-            sx={{
-              fontSize: 20,
-              fontWeight: 800,
+          <KeyboardArrowRightRounded sx={{
+              fontSize: 30,
               color: "secondary.main",
-            }}
-          >
-            →
-          </Typography>
+            }}/>
         </Box>
       </Box>
     </Box>
