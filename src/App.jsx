@@ -25,6 +25,7 @@ import Phylosophy from "./sections/phylosophy/Phylosophy";
 import Team from "./sections/team/Team";
 import Stories from "./sections/stories/Stories";
 import Contact from "./sections/contact/Contact";
+import Stats from "./sections/stats/Stats";
 
 export default function LandingTriOptimo() {
   const [mode, setMode] = useState("light");
@@ -219,6 +220,7 @@ export default function LandingTriOptimo() {
 
       {/* SECCIONES */}
       <Hero mode={mode}/>
+      <Stats/>
       <Values />
       <Process mode={mode}/>
       <Phylosophy />
