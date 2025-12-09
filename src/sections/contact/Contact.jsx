@@ -55,9 +55,10 @@ export default function Contact({ mode }) {
     <Box
       id="contacto"
       sx={{
-        bgcolor: "background.default",
         color: "text.primary",
         py: { xs: 6, md: 8 },
+        
+        bgcolor: mode === "light" ? "grey.50" : "grey.900",
       }}
     >
       <Container maxWidth="lg">
@@ -123,23 +124,27 @@ export default function Contact({ mode }) {
               >
                 <IconButton
                   size="small"
+                  href="https://www.instagram.com/trioptimo?igsh=OHV5MWhlaXh6NG14"
+                  target="_blank"
                   sx={{
                     bgcolor: "secondary.main",
                     color: "#fff",
                     "&:hover": { bgcolor: "secondary.main" },
                   }}
                 >
-                  <InstagramIcon fontSize="small" />
+                  <InstagramIcon fontSize="medium" />
                 </IconButton>
                 <IconButton
                   size="small"
+                  href="https://www.linkedin.com/company/trioptimo"
+                  target="_blank"
                   sx={{
                     bgcolor: "secondary.main",
                     color: "#fff",
                     "&:hover": { bgcolor: "secondary.main" },
                   }}
                 >
-                  <LinkedInIcon fontSize="small" />
+                  <LinkedInIcon fontSize="medium" />
                 </IconButton>
               </Stack>
             </Stack>

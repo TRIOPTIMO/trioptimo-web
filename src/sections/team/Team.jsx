@@ -48,14 +48,14 @@ export default function Team({ mode }) {
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: 800, mx: "auto" }}>
-          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" } }}>
+          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, color: mode === "light" ? "primary.main" : "primary.secondary" }}>
             Nuestro Equipo
           </Typography>
 
-          <Typography color="text.secondary" sx={{ mt: 1.5, maxWidth: 800 }}>
+          {/* <Typography color="text.secondary" sx={{ mt: 1.5, maxWidth: 800 }}>
             Somos profesionales de la ingeniería y la gestión, apasionados por aplicar
             nuestro conocimiento para generar un impacto social real.
-          </Typography>
+          </Typography> */}
         </Box>
         <Stack
           direction="row"

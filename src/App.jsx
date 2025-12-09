@@ -31,6 +31,7 @@ import Team from "./sections/team/Team";
 import Stories from "./sections/stories/Stories";
 import Contact from "./sections/contact/Contact";
 import Stats from "./sections/stats/Stats";
+import { WhyChooseUs } from "./sections/phylosophy/WhyChooseUs";
 
 export default function LandingTriOptimo() {
   const [mode, setMode] = useState("light");
@@ -270,6 +271,7 @@ const navItems = [
       <Process mode={mode}/>
       <Phylosophy mode={mode}/>
       <Team mode={mode}/>
+      <WhyChooseUs mode={mode}/>
       <Stories mode={mode}/>
       <Contact mode={mode}/>
 
