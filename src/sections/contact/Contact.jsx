@@ -165,6 +165,7 @@ export default function Contact({ mode }) {
               }}
             >
               <Typography
+              variant="h2"
                 sx={{
                   fontWeight: 800,
                   textTransform: "uppercase",

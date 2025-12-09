@@ -56,6 +56,7 @@ export default function Phylosophy({mode}) {
             }}
           >
             <Typography
+            variant="h2"
               sx={{
                 fontSize: { xs: "1.8rem", md: "3.1rem" },
                 letterSpacing: 4,
@@ -65,6 +66,7 @@ export default function Phylosophy({mode}) {
               NUESTRA
             </Typography>
             <Typography
+            variant="h2"
               sx={{
                 fontSize: { xs: "2.3rem", md: "3.8rem" },
                 fontWeight: 800,

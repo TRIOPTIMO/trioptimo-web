@@ -209,7 +209,7 @@ useEffect(() => {
                     width: { xs: 40, md: 64 },
                     height: { xs: 40, md: 64 },
                     borderRadius: 999,
-                    bgcolor: "#c9421f",
+                    bgcolor: "secondary.main",
                     transition: "left 0.35s ease",
                     zIndex: 0,
                   }}
@@ -224,7 +224,7 @@ useEffect(() => {
                         width: { xs: 40, md: 80 },
                         height: { xs: 40, md: 80 },
                         borderRadius: 999,
-                        color: index === active ? "#fff" : "#c9421f",
+                        color: index === active ? "#fff" : "secondary.main",
                         "&:hover": {
                           bgcolor: "transparent",
                         },
@@ -249,6 +249,7 @@ useEffect(() => {
             }}
           >
             <Typography
+            variant="h2"
               sx={{
                 fontSize: { xs: "2.8rem", md: "5.1rem" },
                 fontWeight: 900,
@@ -259,6 +260,7 @@ useEffect(() => {
               TU MISIÓN
             </Typography>
             <Typography
+            variant="h2"
               sx={{
                 fontSize: { xs: "2.6rem", md: "4.4rem" },
                 fontWeight: 400,

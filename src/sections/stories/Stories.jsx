@@ -27,7 +27,7 @@ const stories = [
   },
 ];
 
-export default function Stories({mode}) {
+export default function Stories({ mode }) {
   return (
     <Container
       id="historias"
@@ -44,19 +44,19 @@ export default function Stories({mode}) {
       <Box sx={{ textAlign: "center" }}>
         <Stack sx={{ direction: { xs: "column", md: "row" } }}>
           <Typography
-            variant="h4"
-            fontWeight={800}
-            sx={{
-              fontSize: { xs: "1.9rem", md: "3.4rem" },
+            variant="h2" fontWeight={900} sx={{
+              fontSize: { xs: "2.4rem", md: "4.8rem" },
+              textTransform: "uppercase",
+              letterSpacing: 2,
             }}
           >
             Nuestro trabajo {" "}
           </Typography>
           <Typography
-            variant="h4"
-            fontWeight={800}
-            sx={{
-              fontSize: { xs: "1.9rem", md: "3.4rem" },
+            variant="h2"
+            fontWeight={900} sx={{
+              fontSize: { xs: "2.4rem", md: "4.8rem" },
+              textTransform: "uppercase",
               color: "primary.main"
             }}
           >
@@ -70,7 +70,7 @@ export default function Stories({mode}) {
         <StoriesCarousel items={stories} intervalMs={6000} />
       </Box>
 
-      <FinalStatement/>
+      <FinalStatement />
 
     </Container>
   );

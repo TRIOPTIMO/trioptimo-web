@@ -48,7 +48,11 @@ export default function Team({ mode }) {
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: 800, mx: "auto" }}>
-          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, color: mode === "light" ? "primary.main" : "primary.secondary" }}>
+          <Typography variant="h2" fontWeight={900} sx={{ 
+            fontSize: { xs: "2.4rem", md: "4.8rem" },
+            textTransform: "uppercase",
+            letterSpacing: 2, 
+            color: mode === "light" ? "primary.main" : "primary.secondary" }}>
             Nuestro Equipo
           </Typography>
 
