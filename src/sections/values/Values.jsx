@@ -59,7 +59,6 @@ export default function Values() {
         </Typography>
       </Box>
 
-      {/* === GRID DE VALORES === */}
       <Stack
         direction="row"
         flexWrap="wrap"
