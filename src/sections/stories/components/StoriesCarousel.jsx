@@ -43,7 +43,7 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
       <Box
         sx={{
           position: "relative",
-          height: { xs: 230, sm: 240 },
+          height: { xs: 260, sm: 270 }, // un poco más alto para la barra y la cola
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -72,61 +72,122 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
                 left: "50%",
                 transform: `translateX(-50%) translateX(${translateX}px) scale(${scale}) rotate(${rotate}deg)`,
                 opacity: isActive ? 1 : 0.35, // activo siempre 1
-                transition: "transform 450ms ease", // solo animamos transform
+                transition: "transform 450ms ease",
                 width: "100%",
                 maxWidth: isMobile ? 460 : 520,
                 pointerEvents: isActive ? "auto" : "none",
                 zIndex: isActive ? 3 : 2,
               }}
             >
+              {/* GLOBO NARANJA */}
               <Box
                 sx={{
-                  borderRadius: 2,
+                  position: "relative",
                   px: { xs: 3, sm: 4 },
-                  py: { xs: 3, sm: 3.5 },
-                  bgcolor: "background.paper",
-                  boxShadow: isActive
-                    ? "0 18px 45px rgba(15, 23, 42, 0.18)"
-                    : "0 8px 20px rgba(15, 23, 42, 0.06)",
+                  pt: { xs: 7, sm: 7 }, // deja espacio para la barra superior
+                  pb: 4,
+                  bgcolor: "secondary.main",
+                  color: "#FFFFFF",
+                  borderRadius: 1.5, // menos redondeado
+                    boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
+
+                  // cola del globo con sombra sólida
+                  "&::after": {
+                    content: '""',
+                    position: "absolute",
+                    left: "20%",                      // como solicitaste
+                    bottom: -26,
+                    transform: "translateX(-50%)",
+                    width: 0,
+                    height: 0,
+                    borderLeft: "22px solid transparent",
+                    borderRight: "22px solid transparent",
+                    borderTop: "26px solid #C7431D",
+                    zIndex: 2,
+                  },
+
+                  // sombra de la cola (se coloca detrás creando el efecto sólido)
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    left: "21%",
+                    bottom: -40,                      // un poco más abajo para generar sombra visible
+                    transform: "translateX(-50%)",
+                    width: 0,
+                    height: 0,
+                    borderLeft: "26px solid transparent",
+                    borderRight: "26px solid transparent",
+                    borderTop: "30px solid rgba(0,0,0,0.18)",  // color sombra sólida
+                    zIndex: 1,
+                  },
+
                 }}
               >
-                <Box sx={{ position: "relative" }}>
-                  {/* Comillas de color */}
-                  <Typography
-                    component="span"
-                    sx={{
-                      position: "absolute",
-                      top: -28,
-                      left: -6,
-                      fontSize: 64,
-                      lineHeight: 1,
-                      color: theme.palette.tertiary.main,
-                      opacity: 1,
-                      pointerEvents: "none",
-                      userSelect: "none",
-                    }}
-                  >
-                    “
-                  </Typography>
+                {/* BARRA SUPERIOR MORADA */}
+                {/* QUOTE flotando sobre la barra morada */}
+                <Typography
+                  sx={{
+                    position: "absolute",
+                    top: -45,
+                    left: { xs: "20%", md: "15%" },
+                    transform: "translateX(-50%)",
+                    fontSize: { xs: 80, md: 100 },
+                    fontWeight: 700,
+                    color: "#FFF",               // mismo tono del violeta para cohesión
+                    // textShadow: "0px 4px 0px #D3D3D3", // sombra sólida tipo sticker
+                    lineHeight: 1,
+                    zIndex: 5,
+                    fontFamily: "Twingle Star",
+                  }}
+                >
+                  “
+                </Typography>
 
-                  <Typography
-                    fontStyle="italic"
-                    sx={{
-                      position: "relative",
-                      px: { xs: 1, sm: 0 },
-                    }}
-                  >
-                    {item.quote}
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mt: 2, textAlign: "right" }}
-                  >
+                {/* BARRA SUPERIOR DEL AUTOR */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: -42,
+                    left: 50,
+                    right: {xs: -10, md: -20},
+                    bgcolor: "#5F215E",
+                    height: "80px",
+                    px: 3,
+                    py: 1.1,
+                    color: "#FFFFFF",
+                    borderRadius: 1.2,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    zIndex: 4,
+                    boxShadow: "10px 10px 0 rgba(0,0,0,0.18)",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 15, fontWeight: 700, lineHeight: 1.2, textAlign: "right" }}>
                     {item.author}
                   </Typography>
+
+                  {item.role && (
+                    <Typography sx={{ fontSize: 13, opacity: 0.9, mt: 0.3 }}>
+                      {item.role}
+                    </Typography>
+                  )}
                 </Box>
+
+
+                {/* TEXTO DEL TESTIMONIO */}
+                <Typography
+                  sx={{
+                    fontSize: { xs: 15, sm: 17 },
+                    fontWeight: 400,
+                    lineHeight: 1.55,
+                    fontStyle: "italic",
+                    textAlign: "left",
+                    letterSpacing: "0.2px",
+                  }}
+                >
+                  {item.quote}
+                </Typography>
               </Box>
             </Box>
           );
