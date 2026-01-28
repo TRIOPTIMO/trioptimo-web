@@ -15,6 +15,7 @@ import {
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import SendIcon from "@mui/icons-material/Send";
+import MeshBackground from "../common/MeshBackground";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -51,6 +52,7 @@ export default function Contact() {
         id="contacto"
         sx={{ bgcolor: "primary.main", color: "#fff" }}
       >
+        <MeshBackground sx={{ minHeight: "70vh" }}>
         <Container maxWidth="lg" sx={{ py: 8 }}>
           {/* Layout principal en horizontal */}
           <Stack
@@ -231,6 +233,7 @@ export default function Contact() {
             </Box>
           </Stack>
         </Container>
+        </MeshBackground>
       </Box>
   );
 }

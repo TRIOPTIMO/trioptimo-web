@@ -39,7 +39,7 @@ export default function LandingTriOptimo() {
       createTheme({
         palette: {
           mode,
-          primary: { main: "#5F215E" },
+          primary: { main: "#9139D2" },
           secondary: { main: "#00dd93" },
           tertiary: { main: "#0104FE" },
           ...(mode === "light"
@@ -53,6 +53,7 @@ export default function LandingTriOptimo() {
         shape: { borderRadius: 16 },
         typography: {
           fontFamily: [
+            "Nunito",
             "Inter",
             "system-ui",
             "-apple-system",
@@ -204,7 +205,7 @@ export default function LandingTriOptimo() {
                 color:"white",
               }}
             >
-              Hablemos
+              Empieza tu proyecto
             </Button>
            
 
@@ -225,7 +226,7 @@ export default function LandingTriOptimo() {
       <Process mode={mode}/>
       <Phylosophy />
       <Team mode={mode}/>
-      <Stories />
+      <Stories mode={mode}/>
       <Contact />
 
       {/* FOOTER */}
@@ -318,7 +319,7 @@ export default function LandingTriOptimo() {
                   "&:hover": { bgcolor: "grey.100" },
                 }}
               >
-                <LinkedInIcon fontSize="small" color="tertiary" />
+                <LinkedInIcon fontSize="small" color= {mode === "light" ? "tertiary" : "secondary"} />
               </IconButton>
             </Stack>
           </Stack>

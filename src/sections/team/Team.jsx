@@ -11,6 +11,7 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Team({ mode }) {
+
   const people = [
     {
       name: "Nahuel Deschuter",
@@ -134,7 +135,7 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
             href={linkedin}
             target="_blank"
             rel="noreferrer noopener"
-            color="tertiary"
+            color= { mode === "light" ? "tertiary" : "secondary" }
             underline="none"
             sx={{
               display: "inline-flex",

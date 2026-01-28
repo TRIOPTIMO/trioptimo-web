@@ -77,7 +77,7 @@ export default function Process({mode}) {
               endIcon={<ArrowForwardIcon />}
               sx={{ mt: 3 }}
             >
-              Quiero optimizar mi gestión
+              Quiero conocer más
             </Button>
           </Box>
 
@@ -139,12 +139,12 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
         <Chip
           label={num}
           sx={(theme) => ({
-            backgroundColor: `${theme.palette.secondary.main}`,
+            color: `${theme.palette.secondary.main}`,
             borderRadius: 2,
-            color:"white",
+            backgroundColor:"transparent",
             fontWeight: 700,
           })}
-          size="medium"
+          size="large"
         />
         <Typography fontWeight={700}>{title}</Typography>
       </AccordionSummary>

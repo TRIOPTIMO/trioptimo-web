@@ -38,15 +38,17 @@ export default function Hero({ mode }) {
                 component="h1"
                 gutterBottom
                 sx={{
-                  fontWeight: 800,
+                  fontWeight: 900,
                   fontSize: {
                     xs: "2.4rem",
                     sm: "3rem",
                     md: "3.4rem",
                   },
                   textTransform: "uppercase",
-                  lineHeight: 1.5,
-                  letterSpacing: "0.04em",
+                  lineHeight: 1.2,
+                  letterSpacing: "0.09em",
+                  transform: "scaleY(1.3)",
+
                 }}
               >
                 Convertimos ideas de{" "}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Typography, Box, useTheme, useMediaQuery } from "@mui/material";
 import PropTypes from "prop-types";
 
-export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
+export default function StoriesCarousel({ items = [], intervalMs = 3000, mode }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
@@ -100,7 +100,7 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000 }) {
                       left: -6,
                       fontSize: 64,
                       lineHeight: 1,
-                      color: theme.palette.tertiary.main,
+                      color:  mode === "light" ? theme.palette.tertiary.main : theme.palette.secondary.main,
                       opacity: 1,
                       pointerEvents: "none",
                       userSelect: "none",

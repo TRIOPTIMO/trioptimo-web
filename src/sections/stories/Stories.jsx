@@ -14,12 +14,12 @@ const stories = [
   {
     quote:
       "Trabajar con TriOptimo marcó un antes y un después. No solo conseguimos la financiación que necesitábamos, sino que optimizamos procesos como nunca creímos posible.",
-    author: "— Fundación Crece, Directora General",
+    author: "— El Andar escuela de equinoterapia, Directora General",
   },
   {
     quote:
       "Pasamos de procesos manuales a flujos automatizados. Ganamos velocidad y trazabilidad, y pudimos medir mejor nuestro impacto.",
-    author: "— Asociación Horizonte, Director de Operaciones",
+    author: "— Frontera Cero, Directora",
   },
   {
     quote:
@@ -28,7 +28,7 @@ const stories = [
   },
 ];
 
-export default function Stories() {
+export default function Stories({mode}) {
   return (
     <Container
       id="historias"
@@ -60,7 +60,7 @@ export default function Stories() {
 
       {/* Carrusel circular */}
       <Box sx={{ width: "100%", maxWidth: 700 }}>
-        <StoriesCarousel items={stories} intervalMs={6000} />
+        <StoriesCarousel items={stories} intervalMs={6000} mode={mode}/>
       </Box>
 
       {/* Card + CTA */}
