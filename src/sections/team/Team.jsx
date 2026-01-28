@@ -134,7 +134,7 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
             href={linkedin}
             target="_blank"
             rel="noreferrer noopener"
-            color="primary"
+            color="tertiary"
             underline="none"
             sx={{
               display: "inline-flex",

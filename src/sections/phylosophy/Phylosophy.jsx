@@ -137,7 +137,7 @@ function ReasonsCard({ reasons }) {
 function Bullet({ children }) {
   return (
     <Stack direction="row" spacing={1.5} alignItems="flex-start">
-      <CheckCircleOutlineIcon color="primary" sx={{ mt: "2px" }} />
+      <CheckCircleOutlineIcon color="secondary" sx={{ mt: "2px" }} />
       <Typography variant="body2" color="text.secondary">
         {children}
       </Typography>

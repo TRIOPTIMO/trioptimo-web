@@ -40,8 +40,8 @@ export default function LandingTriOptimo() {
         palette: {
           mode,
           primary: { main: "#5F215E" },
-          secondary: { main: "#8C2315" },
-          tertiary: { main: "#F6A623" },
+          secondary: { main: "#00dd93" },
+          tertiary: { main: "#0104FE" },
           ...(mode === "light"
             ? {
               background: { default: "#FFFFFF", paper: "#F9F9F9" },
@@ -110,16 +110,17 @@ export default function LandingTriOptimo() {
           >
             <Box
               component="img"
-              src="/icon.png" // ajusta si tu path es distinto
+              src={ mode === "light" ? "/trioptimo-black.png" : "/trioptimo-white.png"}
               alt="TriOptimo Logo"
+              href="#hero"
               sx={{
-                width: 40,
-                height: 40,
+                width: 180,
+                height: 60,
                 objectFit: "contain",
                 borderRadius: 2,
               }}
             />
-            <Box>
+            {/* <Box>
               <Typography
                 fontWeight={700}
                 variant="h6"
@@ -137,7 +138,7 @@ export default function LandingTriOptimo() {
               >
                 Ingeniería con propósito
               </Typography>
-            </Box>
+            </Box> */}
           </Box>
 
           {/* Links desktop */}
@@ -191,7 +192,7 @@ export default function LandingTriOptimo() {
             <Button
               href="#contacto"
               variant="contained"
-              color="tertiary"
+              color="secondary"
               disableElevation
               sx={{
                 ml: 1,
@@ -200,6 +201,7 @@ export default function LandingTriOptimo() {
                 py: 0.7,
                 textTransform: "none",
                 fontWeight: 600,
+                color:"white",
               }}
             >
               Hablemos
@@ -316,7 +318,7 @@ export default function LandingTriOptimo() {
                   "&:hover": { bgcolor: "grey.100" },
                 }}
               >
-                <LinkedInIcon fontSize="small" color="primary" />
+                <LinkedInIcon fontSize="small" color="tertiary" />
               </IconButton>
             </Stack>
           </Stack>

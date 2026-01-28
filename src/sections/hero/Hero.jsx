@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-export default function Hero({mode}) {
+export default function Hero({ mode }) {
 
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -44,7 +44,9 @@ export default function Hero({mode}) {
                     sm: "3rem",
                     md: "3.4rem",
                   },
-                  lineHeight: 1.1,
+                  textTransform: "uppercase",
+                  lineHeight: 1.5,
+                  letterSpacing: "0.04em",
                 }}
               >
                 Convertimos ideas de{" "}
@@ -71,7 +73,6 @@ export default function Hero({mode}) {
                 >
                   sostenibles
                 </Box>
-                .
               </Typography>
 
               <Typography
@@ -98,7 +99,7 @@ export default function Hero({mode}) {
                 >
                   Empieza tu proyecto
                 </Button>
-                <Button href="#como" variant="outlined" size="large" color="tertiary" endIcon={<ArrowForwardIcon />} sx={{border: 0}}>
+                <Button href="#como" variant="outlined" size="large" color="secondary" endIcon={<ArrowForwardIcon />} sx={{ border: 0 }}>
                   Cómo trabajamos
                 </Button>
               </Stack>
@@ -164,7 +165,7 @@ export default function Hero({mode}) {
                       variant="h5"
                       sx={{
                         fontWeight: 800,
-                        color: "primary.main",
+                        color: "secondary.main",
                         lineHeight: 1.1,
                       }}
                     >

@@ -203,7 +203,7 @@ export default function Contact() {
                         <Button
                           type="submit"
                           variant="contained"
-                          color="tertiary"
+                          color="secondary"
                           size="large"
                           endIcon={<SendIcon />}
                           disabled={sending}

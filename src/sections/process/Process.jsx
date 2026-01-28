@@ -73,7 +73,7 @@ export default function Process({mode}) {
             <Button
               href="#contacto"
               variant="contained"
-              color="tertiary"
+              color="primary"
               endIcon={<ArrowForwardIcon />}
               sx={{ mt: 3 }}
             >
@@ -139,8 +139,9 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
         <Chip
           label={num}
           sx={(theme) => ({
-            backgroundColor: `${theme.palette.tertiary.main}`,
+            backgroundColor: `${theme.palette.secondary.main}`,
             borderRadius: 2,
+            color:"white",
             fontWeight: 700,
           })}
           size="medium"
