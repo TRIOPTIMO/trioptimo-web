@@ -83,6 +83,7 @@ export default function Hero({ mode }) {
                 sx={{
                   maxWidth: 720,
                   mx: "auto",
+                  mt: 8
                 }}
               >
                 Aplicamos ingeniería y optimización para que tu organización
