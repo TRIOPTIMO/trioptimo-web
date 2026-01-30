@@ -18,7 +18,7 @@ const driftB = keyframes`
 
 export default function AnimatedMesh({ children, sx }) {
   const primary = "#9139D2";
-  const secondary = "#00DD93";
+  const secondary = "#00dd93";
   const tertiary = "#0104FE";
 
   return (
@@ -63,16 +63,7 @@ export default function AnimatedMesh({ children, sx }) {
       />
 
       {/* Overlay para legibilidad */}
-      <Box
-        aria-hidden
-        sx={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 0,
-          background:
-            "radial-gradient(1200px 700px at 50% 30%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.7) 100%)",
-        }}
-      />
+     
 
       {/* Content */}
       <Box sx={{ position: "relative", zIndex: 1 }}>{children}</Box>

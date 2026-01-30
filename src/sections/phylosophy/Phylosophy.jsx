@@ -64,10 +64,10 @@ export default function Phylosophy() {
             minWidth: { xs: "100%", sm: 0 },
           })}
         >
-          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" } }}>
+          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"}  }}>
             Nuestra Filosofía
           </Typography>
-          <Typography color="text.secondary" sx={{ mt: 2 }}>
+          <Typography color="text.secondary" sx={{ mt: 2, textAlign: {xs: "center", md: "left"}  }}>
             Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y tambièn la sensaciòn de que a veces faltan recursos o apoyo.
             Queremos acompañarte, liberar tu carga técnica y ayudarte a enfocarte en lo escencial: <strong>seguir generando impacto real</strong>.
           </Typography>

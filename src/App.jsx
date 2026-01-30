@@ -34,42 +34,74 @@ export default function LandingTriOptimo() {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-          primary: { main: "#9139D2" },
-          secondary: { main: "#00dd93" },
-          tertiary: { main: "#0104FE" },
-          ...(mode === "light"
-            ? {
+const theme = useMemo(
+  () =>
+    createTheme({
+      palette: {
+        mode,
+        primary: { main: "#9139D2" },
+        secondary: { main: "#00dd93" },
+        tertiary: { main: "#0104FE" },
+        ...(mode === "light"
+          ? {
               background: { default: "#FFFFFF", paper: "#F9F9F9" },
             }
-            : {
+          : {
               background: { default: "#121212", paper: "#1E1E1E" },
             }),
+      },
+      shape: { borderRadius: 16 },
+      typography: {
+        // Base: textos normales
+        fontFamily: [
+          "Nunito",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ].join(","),
+
+        // Títulos con Rubik
+        h1: {
+          fontFamily: "Rubik",
+          fontWeight: 700,
         },
-        shape: { borderRadius: 16 },
-        typography: {
-          fontFamily: [
-            "Nunito",
-            "Inter",
-            "system-ui",
-            "-apple-system",
-            "Segoe UI",
-            "Roboto",
-            "Helvetica",
-            "Arial",
-            "sans-serif",
-          ].join(","),
-          h1: { fontWeight: 800 },
-          h2: { fontWeight: 800 },
-          h3: { fontWeight: 700 },
+        h2: {
+          fontFamily: "Rubik",
+          fontWeight: 700,
         },
-      }),
-    [mode]
-  );
+        h3: {
+          fontFamily: "Rubik",
+          fontWeight: 600,
+        },
+        h4: {
+          fontFamily: "Rubik",
+          fontWeight: 600,
+        },
+        h5: {
+          fontFamily: "Rubik",
+          fontWeight: 600,
+        },
+        h6: {
+          fontFamily: "Rubik",
+          fontWeight: 600,
+        },
+
+        // Texto y UI
+        body1: { fontWeight: 400 },
+        body2: { fontWeight: 400 },
+        button: {
+          fontWeight: 600,
+          textTransform: "none",
+        },
+      },
+    }),
+  [mode]
+);
 
   return (
     <ThemeProvider theme={theme}>
@@ -121,25 +153,6 @@ export default function LandingTriOptimo() {
                 borderRadius: 2,
               }}
             />
-            {/* <Box>
-              <Typography
-                fontWeight={700}
-                variant="h6"
-                color="text.primary"
-                sx={{ letterSpacing: 0.4, lineHeight: 1.1 }}
-              >
-                TRIOPTIMO
-              </Typography>
-              <Typography
-                variant="caption"
-                sx={{
-                  color: "text.secondary",
-                  display: { xs: "none", sm: "block" },
-                }}
-              >
-                Ingeniería con propósito
-              </Typography>
-            </Box> */}
           </Box>
 
           {/* Links desktop */}

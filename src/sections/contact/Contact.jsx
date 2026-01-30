@@ -77,11 +77,11 @@ export default function Contact() {
               })}
             >
               <Typography variant="h4" fontWeight={800} sx={{
-            fontSize: { xs: "1.9rem", md: "3.4rem" },
+            fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"} 
           }}>
                 Hablemos de tu Misión
               </Typography>
-              <Typography sx={{ mt: 1.5, color: "#fff" }}>
+              <Typography sx={{ mt: 1.5, color: "#fff", textAlign: {xs: "center", md: "left"}  }}>
                 Hablenos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aqui para ayudarte a hacerlo realidad.
               </Typography>
 

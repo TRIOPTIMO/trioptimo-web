@@ -61,10 +61,10 @@ export default function Process({mode}) {
               maxWidth: { md: 480 },
             }}
           >
-            <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, }}>
+            <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"}  }}>
               Cómo trabajamos
             </Typography>
-            <Typography color="text.secondary" sx={{ mt: 1.5 }}>
+            <Typography color="text.secondary" sx={{ mt: 1.5, textAlign: {xs: "center", md: "left"}  }}>
               Nuestra metodología integral asegura que cada paso esté alineado
               con tus objetivos y maximice las oportunidades de financiación y
               sostenibilidad.

@@ -46,7 +46,7 @@ export default function Hero({ mode }) {
                   },
                   textTransform: "uppercase",
                   lineHeight: 1.2,
-                  letterSpacing: "0.09em",
+                  letterSpacing: {xs: 0, md: "0.09em"},
                   transform: "scaleY(1.3)",
 
                 }}
