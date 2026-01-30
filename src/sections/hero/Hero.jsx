@@ -19,7 +19,7 @@ export default function Hero({ mode }) {
   };
 
   return (
-    <Box sx={{ position: "relative", overflow: "hidden" }}>
+    <Box id="hero" sx={{ position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
         <motion.div {...fadeUp}>
           <Stack
@@ -44,7 +44,7 @@ export default function Hero({ mode }) {
                     sm: "3rem",
                     md: "3.4rem",
                   },
-                  textTransform: "uppercase",
+                  // textTransform: "uppercase",
                   lineHeight: 1.2,
                   letterSpacing: {xs: 0, md: "0.09em"},
                   transform: "scaleY(1.3)",

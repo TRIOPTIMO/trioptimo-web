@@ -34,74 +34,74 @@ export default function LandingTriOptimo() {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-const theme = useMemo(
-  () =>
-    createTheme({
-      palette: {
-        mode,
-        primary: { main: "#9139D2" },
-        secondary: { main: "#00dd93" },
-        tertiary: { main: "#0104FE" },
-        ...(mode === "light"
-          ? {
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          primary: { main: "#9139D2" },
+          secondary: { main: "#00dd93" },
+          tertiary: { main: "#0104FE" },
+          ...(mode === "light"
+            ? {
               background: { default: "#FFFFFF", paper: "#F9F9F9" },
             }
-          : {
+            : {
               background: { default: "#121212", paper: "#1E1E1E" },
             }),
-      },
-      shape: { borderRadius: 16 },
-      typography: {
-        // Base: textos normales
-        fontFamily: [
-          "Nunito",
-          "Inter",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ].join(","),
+        },
+        shape: { borderRadius: 16 },
+        typography: {
+          // Base: textos normales
+          fontFamily: [
+            "Nunito",
+            "Inter",
+            "system-ui",
+            "-apple-system",
+            "Segoe UI",
+            "Roboto",
+            "Helvetica",
+            "Arial",
+            "sans-serif",
+          ].join(","),
 
-        // Títulos con Rubik
-        h1: {
-          fontFamily: "Rubik",
-          fontWeight: 700,
-        },
-        h2: {
-          fontFamily: "Rubik",
-          fontWeight: 700,
-        },
-        h3: {
-          fontFamily: "Rubik",
-          fontWeight: 600,
-        },
-        h4: {
-          fontFamily: "Rubik",
-          fontWeight: 600,
-        },
-        h5: {
-          fontFamily: "Rubik",
-          fontWeight: 600,
-        },
-        h6: {
-          fontFamily: "Rubik",
-          fontWeight: 600,
-        },
+          // Títulos con Rubik
+          h1: {
+            fontFamily: "Rubik",
+            fontWeight: 700,
+          },
+          h2: {
+            fontFamily: "Rubik",
+            fontWeight: 700,
+          },
+          h3: {
+            fontFamily: "Rubik",
+            fontWeight: 600,
+          },
+          h4: {
+            fontFamily: "Rubik",
+            fontWeight: 600,
+          },
+          h5: {
+            fontFamily: "Rubik",
+            fontWeight: 600,
+          },
+          h6: {
+            fontFamily: "Rubik",
+            fontWeight: 600,
+          },
 
-        // Texto y UI
-        body1: { fontWeight: 400 },
-        body2: { fontWeight: 400 },
-        button: {
-          fontWeight: 600,
-          textTransform: "none",
+          // Texto y UI
+          body1: { fontWeight: 400 },
+          body2: { fontWeight: 400 },
+          button: {
+            fontWeight: 600,
+            textTransform: "none",
+          },
         },
-      },
-    }),
-  [mode]
-);
+      }),
+    [mode]
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -114,10 +114,10 @@ const theme = useMemo(
         color="transparent"
         sx={{
           backdropFilter: "blur(14px)",
-           background:
-      mode === "light"
-        ? "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))"
-        : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
+          background:
+            mode === "light"
+              ? "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))"
+              : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
         }}
       >
         <Toolbar
@@ -134,6 +134,8 @@ const theme = useMemo(
         >
           {/* Logo + tagline */}
           <Box
+            component="a"
+            href="#hero"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -143,7 +145,7 @@ const theme = useMemo(
           >
             <Box
               component="img"
-              src={ mode === "light" ? "/trioptimo-black.png" : "/trioptimo-white.png"}
+              src={mode === "light" ? "/trioptimo-black.png" : "/trioptimo-white.png"}
               alt="TriOptimo Logo"
               href="#hero"
               sx={{
@@ -215,31 +217,31 @@ const theme = useMemo(
                 py: 0.7,
                 textTransform: "none",
                 fontWeight: 600,
-                color:"white",
+                color: "white",
               }}
             >
               Empieza tu proyecto
             </Button>
-           
+
 
           </Stack>
-           <IconButton
-              onClick={toggleColorMode}
-              color="inherit"
-              sx={{ ml: 2 }}
-            >
-              {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
-            </IconButton>
+          <IconButton
+            onClick={toggleColorMode}
+            color="inherit"
+            sx={{ ml: 2 }}
+          >
+            {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+          </IconButton>
         </Toolbar>
       </AppBar>
 
       {/* SECCIONES */}
-      <Hero mode={mode}/>
+      <Hero mode={mode} />
       <Values />
-      <Process mode={mode}/>
+      <Process mode={mode} />
       <Phylosophy />
-      <Team mode={mode}/>
-      <Stories mode={mode}/>
+      <Team mode={mode} />
+      <Stories mode={mode} />
       <Contact />
 
       {/* FOOTER */}
@@ -332,7 +334,7 @@ const theme = useMemo(
                   "&:hover": { bgcolor: "grey.100" },
                 }}
               >
-                <LinkedInIcon fontSize="small" color= {mode === "light" ? "tertiary" : "secondary"} />
+                <LinkedInIcon fontSize="small" color={mode === "light" ? "tertiary" : "secondary"} />
               </IconButton>
             </Stack>
           </Stack>
