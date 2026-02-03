@@ -42,17 +42,34 @@ export default function LandingTriOptimo() {
           primary: { main: "#9139D2" },
           secondary: { main: "#00dd93" },
           tertiary: { main: "#0104FE" },
+
+          text: {
+            primary: mode === "light"
+              ? "rgba(0,0,0,0.8)"
+              : "rgba(255,255,255,0.9)",
+            secondary: mode === "light"
+              ? "rgba(0,0,0,0.6)"
+              : "rgba(255,255,255,0.7)",
+          },
+
           ...(mode === "light"
             ? {
-              background: { default: "#FFFFFF", paper: "#F9F9F9" },
+              background: {
+                default: "#F8F8F8",
+                paper: "#F9F9F9",
+              },
             }
             : {
-              background: { default: "#121212", paper: "#1E1E1E" },
+              background: {
+                default: "#121212",
+                paper: "#1E1E1E",
+              },
             }),
         },
+
         shape: { borderRadius: 16 },
+
         typography: {
-          // Base: textos normales
           fontFamily: [
             "Nunito",
             "Inter",
@@ -65,35 +82,28 @@ export default function LandingTriOptimo() {
             "sans-serif",
           ].join(","),
 
-          // Títulos con Rubik
-          h1: {
-            fontFamily: "Rubik",
-            fontWeight: 700,
+          // Títulos
+          h1: { fontFamily: "Rubik", fontWeight: 700 },
+          h2: { fontFamily: "Rubik", fontWeight: 700 },
+          h3: { fontFamily: "Rubik", fontWeight: 600 },
+          h4: { fontFamily: "Rubik", fontWeight: 600 },
+          h5: { fontFamily: "Rubik", fontWeight: 600 },
+          h6: { fontFamily: "Rubik", fontWeight: 600 },
+
+          // Texto base
+          body1: {
+            fontWeight: 400,
+            color: mode === "light"
+              ? "rgba(0,0,0,0.8)"
+              : "rgba(255,255,255,0.9)",
           },
-          h2: {
-            fontFamily: "Rubik",
-            fontWeight: 700,
-          },
-          h3: {
-            fontFamily: "Rubik",
-            fontWeight: 600,
-          },
-          h4: {
-            fontFamily: "Rubik",
-            fontWeight: 600,
-          },
-          h5: {
-            fontFamily: "Rubik",
-            fontWeight: 600,
-          },
-          h6: {
-            fontFamily: "Rubik",
-            fontWeight: 600,
+          body2: {
+            fontWeight: 400,
+            color: mode === "light"
+              ? "rgba(0,0,0,0.6)"
+              : "rgba(255,255,255,0.7)",
           },
 
-          // Texto y UI
-          body1: { fontWeight: 400 },
-          body2: { fontWeight: 400 },
           button: {
             fontWeight: 600,
             textTransform: "none",
@@ -102,6 +112,7 @@ export default function LandingTriOptimo() {
       }),
     [mode]
   );
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -116,7 +127,7 @@ export default function LandingTriOptimo() {
           backdropFilter: "blur(14px)",
           background:
             mode === "light"
-              ? "linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.86))"
+              ? "linear-gradient(to bottom, rgba(245, 245, 245, 0.95), rgba(245,245,245,0.86))"
               : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
         }}
       >
@@ -125,7 +136,7 @@ export default function LandingTriOptimo() {
             maxWidth: 1200,
             mx: "auto",
             width: "100%",
-            minHeight: 72,
+            minHeight: 68,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -208,7 +219,7 @@ export default function LandingTriOptimo() {
             <Button
               href="#contacto"
               variant="contained"
-              color="secondary"
+              color="tertiary"
               disableElevation
               sx={{
                 ml: 1,
@@ -250,7 +261,7 @@ export default function LandingTriOptimo() {
         sx={{
           borderTop: "1px solid",
           borderColor: "divider",
-          bgcolor: mode === "light" ? "grey.50" : "#140714",
+          bgcolor: mode === "light" ? "grey.50" : "grey.900",
         }}
       >
         <Container
@@ -267,7 +278,7 @@ export default function LandingTriOptimo() {
           <Stack direction="row" spacing={1.5} alignItems="center">
             <Box
               component="img"
-              src="/icon.png"
+              src= { mode === "light" ? "/logo-black.png" : "/logo-white.png" }
               alt="TriOptimo Logo"
               sx={{
                 width: 28,
@@ -279,7 +290,7 @@ export default function LandingTriOptimo() {
             />
             <Box>
               <Typography variant="body2" color="text.secondary">
-                © {new Date().getFullYear()} TriOptimo.
+                © {new Date().getFullYear()} Trioptimo.
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Todos los derechos reservados.

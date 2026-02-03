@@ -8,7 +8,8 @@ export default function AnimatedMesh({ children, sx }) {
       sx={{
         position: "relative",
         overflow: "hidden",
-        p: { xs: 3, md: 5 },
+        borderRadius: 1,
+        p: { xs: 3, md: 10 },
         backgroundColor: (t) => (t.palette.mode === "light" ? "#9139D2" : "#00dd93"),
         isolation: "isolate",
 

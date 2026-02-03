@@ -17,7 +17,7 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import SendIcon from "@mui/icons-material/Send";
 import MeshBackground from "../common/MeshBackground";
 
-export default function Contact() {
+export default function Contact({ mode }) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -49,71 +49,95 @@ export default function Contact() {
 
   return (
     <Box
-        id="contacto"
-        sx={{ bgcolor: "primary.main", color: "#fff" }}
-      >
-        <MeshBackground sx={{ minHeight: "70vh" }}>
-        <Container maxWidth="lg" sx={{ py: 8 }}>
-          {/* Layout principal en horizontal */}
-          <Stack
-            direction="row"
-            flexWrap="wrap"
-            useFlexGap
-            alignItems="flex-start"
+      id="contacto"
+    >
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        {/* Layout principal en horizontal */}
+        <Stack
+          direction="row"
+          flexWrap="wrap"
+          useFlexGap
+          alignItems="flex-start"
+          sx={(theme) => ({
+            gap: theme.spacing(6),
+          })}
+        >
+          {/* ---- Columna izquierda ---- */}
+          <Box
             sx={(theme) => ({
-              gap: theme.spacing(6),
+              flexGrow: 0,
+              flexShrink: 0,
+              flexBasis: {
+                xs: "100%",
+                md: `calc((100% - ${theme.spacing(6)}) * 0.42)`, // ~5/12 aprox
+              },
+              minWidth: { xs: "100%", sm: 0 },
             })}
           >
-            {/* ---- Columna izquierda ---- */}
-            <Box
-              sx={(theme) => ({
-                flexGrow: 0,
-                flexShrink: 0,
-                flexBasis: {
-                  xs: "100%",
-                  md: `calc((100% - ${theme.spacing(6)}) * 0.42)`, // ~5/12 aprox
-                },
-                minWidth: { xs: "100%", sm: 0 },
-              })}
-            >
-              <Typography variant="h4" fontWeight={800} sx={{
-            fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"} 
-          }}>
-                Hablemos de tu Misión
-              </Typography>
-              <Typography sx={{ mt: 1.5, color: "#fff", textAlign: {xs: "center", md: "left"}  }}>
-                Hablenos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aqui para ayudarte a hacerlo realidad.
-              </Typography>
+            <Typography variant="h4" fontWeight={800} sx={{
+              fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" }
+            }}>
+              ¿Listo para multiplicar tu impacto?
+            </Typography>
+            <Typography sx={{ mt: 1.5, color: "text.primary", textAlign: { xs: "center", md: "left" } }}>
+              Hablemos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aquí para ayudarte a hacerlo realidad.
+            </Typography>
 
-              <Stack spacing={1.5} sx={{ mt: 3 }}>
-                <Stack direction="row" spacing={1.5} alignItems="center">
-                  <MailOutlineIcon />
-                  <Typography>info@trioptimo.com</Typography>
-                </Stack>
-                <Stack direction="row" spacing={1.5} alignItems="center">
-                  <PhoneAndroidIcon />
-                  <Typography>+34 663 47 70 89</Typography>
-                </Stack>
+            <Stack spacing={1.5} sx={{ mt: 3 }}>
+              <Stack direction="row" spacing={1.5} alignItems="center">
+                <MailOutlineIcon />
+                <Typography>info@trioptimo.com</Typography>
               </Stack>
-            </Box>
+              <Stack
+                component="a"
+                href="https://wa.me/34663477089"
+                target="_blank"
+                rel="noopener noreferrer"
+                direction="row"
+                spacing={1.5}
+                alignItems="center"
+                sx={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  cursor: "pointer",
 
-            {/* ---- Columna derecha (formulario) ---- */}
-            <Box
-              sx={(theme) => ({
-                flexGrow: 1,
-                flexShrink: 0,
-                flexBasis: {
-                  xs: "100%",
-                  md: `calc((100% - ${theme.spacing(6)}) * 0.58)`, // ~7/12 aprox
-                },
-                minWidth: { xs: "100%", sm: 0 },
-              })}
-            >
-              <Card sx={{ borderRadius: 3, p: 3 }}>
+                  "&:hover": {
+                    opacity: 0.8, // feedback sutil
+                  },
+                }}
+              >
+                <PhoneAndroidIcon />
+                <Typography>+34 663 47 70 89</Typography>
+              </Stack>
+            </Stack>
+          </Box>
+
+          {/* ---- Columna derecha (formulario) ---- */}
+          <Box
+            sx={(theme) => ({
+              flexGrow: 1,
+              flexShrink: 0,
+              flexBasis: {
+                xs: "100%",
+                md: `calc((100% - ${theme.spacing(6)}) * 0.58)`, // ~7/12 aprox
+              },
+              minWidth: { xs: "100%", sm: 0 },
+            })}
+          >
+
+            <MeshBackground sx={{
+              minHeight: "70vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              px: { xs: 2, sm: 6 }, // responsive
+              py: { xs: 6, sm: 6 }, // >= 50px
+            }}>
+              <Card sx={{ borderRadius: 1, p: 3 }}>
                 <CardContent>
                   <Box component="form" onSubmit={handleSubmit} noValidate>
                     <Stack
-                      direction="row"
+                      direction="column"
                       flexWrap="wrap"
                       useFlexGap
                       sx={(theme) => ({
@@ -122,8 +146,8 @@ export default function Contact() {
                     >
                       {/* Campo helper */}
                       {[
-                        { label: "Nombre Completo", name: "nombre", required: true },
-                        { label: "Email de Contacto", name: "email", type: "email", required: true },
+                        { label: "Nombre", name: "nombre", required: true },
+                        { label: "Email", name: "email", type: "email", required: true },
                         { label: "Motivo", name: "subject", required: true },
                         { label: "Página Web (opcional)", name: "web" },
                       ].map((f) => (
@@ -175,7 +199,7 @@ export default function Contact() {
                       {/* Campo multilinea */}
                       <Box sx={{ flexBasis: "100%" }}>
                         <Typography variant="body2" fontWeight={600}>
-                          Cuéntanos más sobre tu proyecto o reto (esencial)
+                          Cuéntanos más sobre tu proyecto o reto
                         </Typography>
                         <TextField
                           name="detalle"
@@ -205,10 +229,19 @@ export default function Contact() {
                         <Button
                           type="submit"
                           variant="contained"
-                          color="secondary"
+                          color="tertiary"
                           size="large"
                           endIcon={<SendIcon />}
                           disabled={sending}
+                          sx={{
+                            ml: 1,
+                            borderRadius: 999,
+                            px: 2.8,
+                            py: 0.7,
+                            textTransform: "none",
+                            fontWeight: 600,
+                            color: "white",
+                          }}
                         >
                           {sending ? "Enviando..." : "Enviar Solicitud"}
                         </Button>
@@ -229,11 +262,10 @@ export default function Contact() {
                   </Box>
                 </CardContent>
               </Card>
-
-            </Box>
-          </Stack>
-        </Container>
-        </MeshBackground>
-      </Box>
+            </MeshBackground>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
   );
 }

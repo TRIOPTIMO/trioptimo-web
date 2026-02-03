@@ -9,32 +9,31 @@ import {
   AccordionDetails,
   Chip,
 } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Process({mode}) {
+export default function Process({ mode }) {
   const steps = [
     {
       num: "01",
-      title: "Análisis y Planificación",
+      title: "Análisis y planificación",
       desc:
         "Entendemos tu idea, evaluamos su viabilidad y diseñamos un plan de proyecto sólido y financiable.",
     },
     {
       num: "02",
-      title: "Optimización y Digitalización",
+      title: "Optimización y digitalización",
       desc:
         "Aplicamos ingeniería para mejorar tus procesos, digitalizar tareas y hacer tu operación más eficiente.",
     },
     {
       num: "03",
-      title: "Captación de Fondos",
+      title: "Captación de fondos",
       desc:
         "Identificamos convocatorias, preparamos propuestas ganadoras y te conectamos con oportunidades de financiación.",
     },
     {
       num: "04",
-      title: "Ejecución y Evaluación",
+      title: "Ejecución y evaluación",
       desc:
         "Te acompañamos en la implementación y medimos el impacto para asegurar resultados sostenibles.",
     },
@@ -61,10 +60,10 @@ export default function Process({mode}) {
               maxWidth: { md: 480 },
             }}
           >
-            <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"}  }}>
+            <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" } }}>
               Cómo trabajamos
             </Typography>
-            <Typography color="text.secondary" sx={{ mt: 1.5, textAlign: {xs: "center", md: "left"}  }}>
+            <Typography color="text.secondary" sx={{ mt: 1.5, textAlign: { xs: "center", md: "left" } }}>
               Nuestra metodología integral asegura que cada paso esté alineado
               con tus objetivos y maximice las oportunidades de financiación y
               sostenibilidad.
@@ -73,11 +72,19 @@ export default function Process({mode}) {
             <Button
               href="#contacto"
               variant="contained"
-              color="primary"
-              endIcon={<ArrowForwardIcon />}
-              sx={{ mt: 3 }}
+              size="large"
+              color="tertiary"
+              sx={{
+                borderRadius: 999,
+                px: 2.8,
+                py: 0.7,
+                my: 4,
+                textTransform: "none",
+                fontWeight: 600,
+                color: "white",
+              }}
             >
-              Quiero conocer más
+              Empieza tu proyecto
             </Button>
           </Box>
 
@@ -136,19 +143,18 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
           },
         }}
       >
-        <Chip
-          label={num}
-          sx={(theme) => ({
-            color: `${theme.palette.secondary.main}`,
-            borderRadius: 2,
-            backgroundColor:"transparent",
-            fontWeight: 700,
-          })}
-          size="large"
-        />
-        <Typography fontWeight={700}>{title}</Typography>
+        <Typography fontWeight={700} sx={(theme) => ({
+          color: `${theme.palette.secondary.main}`,
+          backgroundColor: "transparent",
+          fontWeight: 700,
+        })}>{num}
+        </Typography>
+        <Typography fontWeight={700} sx={{
+        "&:hover": {
+          color: "grey.700",
+        },}}>{title}</Typography>
       </AccordionSummary>
-      <AccordionDetails sx={{ px: 2.5, pb: 2.5, pt: 0 }}>
+      <AccordionDetails sx={{ px: 9.5, pb: 2.5, pt: 0 }}>
         <Typography variant="body2" color="text.secondary">
           {desc}
         </Typography>

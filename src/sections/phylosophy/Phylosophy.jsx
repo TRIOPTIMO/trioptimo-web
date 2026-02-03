@@ -6,15 +6,15 @@ import {
   CardContent,
   Stack,
 } from "@mui/material";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Phylosophy() {
   const reasons = [
-    "Compromiso con el impacto social: su misión es nuestro motor.",
-    "Accesibilidad y cercanía: soluciones claras, asequibles y a medida.",
-    "Transparencia y confianza: ética y comunicación honesta.",
-    "Innovación práctica: de lo complejo a lo fácil de usar.",
-    "Colaboración y empoderamiento: compartimos conocimiento para tu autonomía.",
+    "Compromiso con el impacto social: tu misión también es la nuestra.",
+    "Claridad y cercanía: hablamos simple y caminamos a tu ritmo.",
+    "Transparencia y confianza: trabajamos con ética y comunicación honesta.",
+    "Innovación práctica: transformamos procesos complejos en soluciones fáciles de usar.",
+    "Colaboración y empoderamiento: compartimos conocimientos para que ganes autonomía.",
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function Phylosophy() {
     >
       <Box
         component="img"
-        src="/icon.png" 
+        src="/logo-grey.png" 
         alt="TriOptimo Logo"
         sx={{
           position: "absolute",
@@ -54,18 +54,26 @@ export default function Phylosophy() {
       >
         {/* ---- Columna izquierda ---- */}
         <Box
-          sx={(theme) => ({
-            flexGrow: 0,
-            flexShrink: 0,
-            flexBasis: {
-              xs: "100%", // 1 columna en móvil
-              md: `calc((100% - ${theme.spacing(6)}) / 2)`, // 2 columnas iguales
-            },
-            minWidth: { xs: "100%", sm: 0 },
-          })}
-        >
+    sx={(theme) => ({
+      flexGrow: 0,
+      flexShrink: 0,
+      flexBasis: {
+        xs: "100%",
+        md: `calc((100% - ${theme.spacing(6)}) / 2)`,
+      },
+      minWidth: { xs: "100%", sm: 0 },
+
+      // 👇 Sticky solo en desktop
+      position: { xs: "static", md: "sticky" },
+      top: { xs: "auto", md: theme.spacing(12) }, // ajusta el offset (12*8=96px)
+      alignSelf: "flex-start",
+
+      // opcional: evita que el bloque se estire raro
+      height: "fit-content",
+    })}
+  >
           <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"}  }}>
-            Nuestra Filosofía
+            Nuestra filosofía
           </Typography>
           <Typography color="text.secondary" sx={{ mt: 2, textAlign: {xs: "center", md: "left"}  }}>
             Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y tambièn la sensaciòn de que a veces faltan recursos o apoyo.
@@ -106,9 +114,9 @@ function InfoCard({ title, desc }) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography fontWeight={700}>{title}</Typography>
+        <Typography variant="h5" color="primary" fontWeight={700}>{title}</Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           color="text.secondary"
           sx={{ mt: 1.5 }}
         >
@@ -123,7 +131,7 @@ function ReasonsCard({ reasons }) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography fontWeight={700}>Por qué elegirnos</Typography>
+        <Typography variant="h5" color="primary" fontWeight={700}>¿Por qué elegirnos?</Typography>
         <Stack spacing={1.5} sx={{ mt: 1.5 }}>
           {reasons.map((text) => (
             <Bullet key={text}>{text}</Bullet>
@@ -137,8 +145,8 @@ function ReasonsCard({ reasons }) {
 function Bullet({ children }) {
   return (
     <Stack direction="row" spacing={1.5} alignItems="flex-start">
-      <CheckCircleOutlineIcon color="secondary" sx={{ mt: "2px" }} />
-      <Typography variant="body2" color="text.secondary">
+      <KeyboardArrowRightIcon color="secondary" sx={{ mt: "2px" }} /> 
+      <Typography variant="body1" color="text.secondary">
         {children}
       </Typography>
     </Stack>

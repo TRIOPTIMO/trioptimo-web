@@ -17,7 +17,7 @@ export default function Team({ mode }) {
       name: "Nahuel Deschuter",
       role: "Cofundador | Operaciones y Proyecto",
       quote:
-        "Mi foco es la ejecución. Traduzco la visión en resultados concretos. Me apasiona la eficiencia operativa y la mejora continua, garantizando impacto medible y sostenible.",
+        "Mi foco es la ejecución. Traduzco la visión de nuestros proyectos en resultados concretos. Me apaciona la eficiencia operativa y la mejora continua, garantizando que cada iniciativa tenga un impacto medible y sostenible.",
       linkedin: "https://www.linkedin.com/in/nahuel-deschutter/",
       photo: "/deschu.jpg"
     },
@@ -25,7 +25,7 @@ export default function Team({ mode }) {
       name: "Jano Centeno",
       role: "Cofundador | Crecimiento y Alianzas",
       quote:
-        "Aseguro el crecimiento sostenible, forjo alianzas clave y diseño modelos para llevar nuestra ingeniería de impacto al mayor número de organizaciones.",
+        "Mi trabajo es asegurar el crecimiento sostenible, forjando las alianzas clave y diseñando los modelos que nos permiten llevar nuestra ingeniería de impacto al mayor número de organizaciones posibles.",
       linkedin: "https://www.linkedin.com/in/jano-centeno/",
       photo: "/jano.jpeg"
     },
@@ -33,7 +33,7 @@ export default function Team({ mode }) {
       name: "Ignacio Davanzo",
       role: "Cofundador | Tecnología y Sistemas",
       quote:
-        "Soy la palanca tecnológica. Lidero la digitalización y automatización para decisiones inteligentes, con menos burocracia y más impacto.",
+        "Soy la palanca tecnológica. Lidero la digitalización y automatización de procesos para que TriOptimo y nuestros aliados tomen decisiones inteligentes y basadas en datos. Menos burocracia, más impacto.",
       linkedin: "https://www.linkedin.com/in/ignaciodavanzo/",
       photo: "/nacho.png"
     },
@@ -131,22 +131,6 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
               {role}
             </Typography>
           </Box>
-          <MLink
-            href={linkedin}
-            target="_blank"
-            rel="noreferrer noopener"
-            color= { mode === "light" ? "tertiary" : "secondary" }
-            underline="none"
-            sx={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 1,
-              fontSize: "0.8rem",
-              whiteSpace: "nowrap",
-            }}
-          >
-            <LinkedInIcon fontSize="small" /> LinkedIn
-          </MLink>
         </Box>
 
         <Divider sx={{ my: 2 }} />
@@ -158,6 +142,26 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
         >
           "{quote}"
         </Typography>
+        
+          <MLink
+            href={linkedin}
+            target="_blank"
+            rel="noreferrer noopener"
+            color= "text.primary" 
+            underline="none"
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 1,
+              whiteSpace: "nowrap",
+              mt: 2,
+              "&:hover": {
+                    color: mode === "light" ? "tertiary.main" : "secondary.main" ,
+                  },
+            }}
+          >
+            <LinkedInIcon fontSize="small" /> LinkedIn
+          </MLink>
       </CardContent>
     </Card>
   );

@@ -26,7 +26,6 @@ export default function Hero({ mode }) {
             spacing={6}
             alignItems="center"
           >
-            {/* === TEXTO PRINCIPAL DEL HERO (ARRIBA) === */}
             <Box
               sx={{
                 maxWidth: { xs: 800, md: 1200 },
@@ -44,11 +43,7 @@ export default function Hero({ mode }) {
                     sm: "3rem",
                     md: "3.4rem",
                   },
-                  // textTransform: "uppercase",
                   lineHeight: 1.2,
-                  letterSpacing: {xs: 0, md: "0.09em"},
-                  transform: "scaleY(1.3)",
-
                 }}
               >
                 Convertimos ideas de{" "}
@@ -62,20 +57,23 @@ export default function Hero({ mode }) {
                   })}
                 >
                   impacto
-                </Box>{" "}
-                en proyectos{" "}
-                <Box
-                  component="span"
-                  sx={(theme) => ({
-                    background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.tertiary.main})`,
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    display: "inline-block",
-                  })}
-                >
-                  sostenibles
+                </Box>
+                <Box component="span" display="block">
+                  en proyectos{" "}
+                  <Box
+                    component="span"
+                    sx={(theme) => ({
+                      background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.tertiary.main})`,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      display: "inline-block",
+                    })}
+                  >
+                    sostenibles
+                  </Box>
                 </Box>
               </Typography>
+
 
               <Typography
                 variant="h6"
@@ -83,7 +81,7 @@ export default function Hero({ mode }) {
                 sx={{
                   maxWidth: 720,
                   mx: "auto",
-                  mt: 8
+                  mt: 8,
                 }}
               >
                 Aplicamos ingeniería y optimización para que tu organización
@@ -99,30 +97,41 @@ export default function Hero({ mode }) {
                   href="#contacto"
                   variant="contained"
                   size="large"
+                  color="tertiary"
+                  sx={{
+                    ml: 1,
+                    borderRadius: 999,
+                    px: 2.8,
+                    py: 0.7,
+                    textTransform: "none",
+                    fontWeight: 600,
+                    color: "white",
+                  }}
                 >
                   Empieza tu proyecto
                 </Button>
-                <Button href="#como" variant="outlined" size="large" color="secondary" endIcon={<ArrowForwardIcon />} sx={{ border: 0 }}>
+                <Button
+                  href="#como"
+                  variant="outlined"
+                  size="large"
+                  endIcon={">"}
+                  sx={{
+                    border: 0,
+                    borderRadius: 999,
+                    color: (theme) => theme.palette.grey[500],
+                    "&:hover": {
+                      color: (theme) => theme.palette.tertiary.main,
+                      backgroundColor: "transparent",
+                    },
+                  }}
+                >
                   Cómo trabajamos
                 </Button>
+
               </Stack>
             </Box>
 
-            {/* === KPIs (STRIP DEBAJO DEL HERO) === */}
             <Box sx={{ width: "100%", maxWidth: 900 }}>
-              <Typography
-                variant="overline"
-                sx={{
-                  display: "block",
-                  textAlign: "center",
-                  letterSpacing: 1,
-                  color: "text.secondary",
-                  mb: 1.5,
-                }}
-              >
-                Resultados que solemos impulsar
-              </Typography>
-
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}
@@ -155,21 +164,17 @@ export default function Hero({ mode }) {
                     key={item.label}
                     sx={(theme) => ({
                       flex: 1,
-                      borderRadius: 999,
-                      border: `1px solid ${theme.palette.divider}`,
-                      bgcolor: mode === "light" ? "grey.50" : "grey.900",
                       px: 3,
                       py: 1.5,
-                      textAlign: "center",
-                      boxShadow: "0 10px 30px rgba(15, 23, 42, 0.05)",
+                      textAlign: "left",
                     })}
                   >
                     <Typography
                       variant="h5"
                       sx={{
                         fontWeight: 800,
-                        color: "secondary.main",
                         lineHeight: 1.1,
+                        fontSize: "2.1rem",
                       }}
                     >
                       <AnimatedNumber
