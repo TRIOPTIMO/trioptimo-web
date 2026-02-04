@@ -8,7 +8,8 @@ import {
   Button,
   Stack,
 } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import CTAButton from "../common/CTAButton";
 
 export default function Hero({ mode }) {
 
@@ -93,28 +94,13 @@ export default function Hero({ mode }) {
                 spacing={2}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
-                <Button
-                  href="#contacto"
-                  variant="contained"
-                  size="large"
-                  color="tertiary"
-                  sx={{
-                    ml: 1,
-                    borderRadius: 999,
-                    px: 2.8,
-                    py: 0.7,
-                    textTransform: "none",
-                    fontWeight: 600,
-                    color: "white",
-                  }}
-                >
-                  Empieza tu proyecto
-                </Button>
+                <CTAButton/>
+
                 <Button
                   href="#como"
                   variant="outlined"
                   size="large"
-                  endIcon={">"}
+                  endIcon={<KeyboardArrowRightIcon/>}
                   sx={{
                     border: 0,
                     borderRadius: 999,

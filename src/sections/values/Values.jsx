@@ -95,34 +95,54 @@ function ValueCard({ title, desc, icon }) {
   return (
     <Card
       variant="outlined"
-      sx={{
-        position: "relative",
-        height: "100%",
-        borderRadius: 1,
-        overflow: "hidden",
-        transition: "transform 0.25s ease, box-shadow 0.25s ease",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          inset: 0,
-          borderRadius: "inherit",
-          padding: "1.5px", // grosor del borde
-          background: "linear-gradient(90deg, #9139D2, #0104FE, #00dd93)",
-          WebkitMask:
-            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-          WebkitMaskComposite: "xor",
-          maskComposite: "exclude",
-          opacity: 0,
-          transition: "opacity 0.25s ease",
-          pointerEvents: "none",
-        },
-        "&:hover": {
-          boxShadow: "0 12px 28px rgba(0,0,0,0.08)",
-          transform: "translateY(-4px)",
+      sx={(theme) => {
+        const bw = 2;
+        const br = theme.shape.borderRadius; 
+        return {
+          position: "relative",
+          height: "100%",
+          borderRadius: 1,
+          overflow: "hidden",
+          transition: "transform 0.25s ease, box-shadow 0.25s ease",
+          borderColor: "divider",
+          backgroundColor: "transparent",
+
           "&::before": {
-            opacity: 1,
+            content: '""',
+            position: "absolute",
+            inset: 0,
+            borderRadius: "inherit",
+            background: "linear-gradient(90deg, #9139D2, #0104FE, #00dd93)",
+            opacity: 0,
+            transition: "opacity 0.25s ease",
+            pointerEvents: "none",
+            zIndex: 0,
           },
-        },
+
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            inset: `${bw}px`,
+            borderRadius: `calc(${br}px - ${bw}px)`,
+            backgroundColor: theme.palette.background.paper,
+            pointerEvents: "none",
+            zIndex: 1,
+          },
+          "& > *": {
+            position: "relative",
+            zIndex: 2,
+          },
+
+          "&:hover": {
+            boxShadow: "0 12px 28px rgba(0,0,0,0.08)",
+            transform: "translateY(-4px)",
+            borderColor: "transparent",
+
+            "&::before": {
+              opacity: 1,
+            },
+          },
+        };
       }}
     >
       <CardContent sx={{ p: 3 }}>

@@ -25,6 +25,7 @@ import Phylosophy from "./sections/phylosophy/Phylosophy";
 import Team from "./sections/team/Team";
 import Stories from "./sections/stories/Stories";
 import Contact from "./sections/contact/Contact";
+import CTAButton from "./sections/common/CTAButton";
 
 export default function LandingTriOptimo() {
   const [mode, setMode] = useState("light");
@@ -41,7 +42,7 @@ export default function LandingTriOptimo() {
           mode,
           primary: { main: "#9139D2" },
           secondary: { main: "#00dd93" },
-          tertiary: { main: "#0104FE" },
+          tertiary: { main: "#0104FE", hover: "#0408f1" },
 
           text: {
             primary: mode === "light"
@@ -125,10 +126,7 @@ export default function LandingTriOptimo() {
         color="transparent"
         sx={{
           backdropFilter: "blur(14px)",
-          background:
-            mode === "light"
-              ? "linear-gradient(to bottom, rgba(245, 245, 245, 0.95), rgba(245,245,245,0.86))"
-              : "linear-gradient(to bottom, rgba(18,18,18,0.95), rgba(18,18,18,0.86))",
+          background: "background.default"
         }}
       >
         <Toolbar
@@ -216,24 +214,7 @@ export default function LandingTriOptimo() {
               </MLink>
             ))}
 
-            <Button
-              href="#contacto"
-              variant="contained"
-              color="tertiary"
-              disableElevation
-              sx={{
-                ml: 1,
-                borderRadius: 999,
-                px: 2.8,
-                py: 0.7,
-                textTransform: "none",
-                fontWeight: 600,
-                color: "white",
-              }}
-            >
-              Empieza tu proyecto
-            </Button>
-
+            <CTAButton/>
 
           </Stack>
           <IconButton

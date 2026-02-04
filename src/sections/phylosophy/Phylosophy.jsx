@@ -28,16 +28,16 @@ export default function Phylosophy() {
     >
       <Box
         component="img"
-        src="/logo-grey.png" 
+        src="/logo-grey.png"
         alt="TriOptimo Logo"
         sx={{
           position: "absolute",
           bottom: 10,
-          left: -500,
+          left: -200,
           width: 580,          // tamaño del watermark
           height: "auto",
-          opacity: 0.06,  
-          zIndex: -1,      
+          opacity: 0.06,
+          zIndex: -1,
           pointerEvents: "none",
           userSelect: "none",
           display: { xs: "none", md: "block" },
@@ -54,29 +54,29 @@ export default function Phylosophy() {
       >
         {/* ---- Columna izquierda ---- */}
         <Box
-    sx={(theme) => ({
-      flexGrow: 0,
-      flexShrink: 0,
-      flexBasis: {
-        xs: "100%",
-        md: `calc((100% - ${theme.spacing(6)}) / 2)`,
-      },
-      minWidth: { xs: "100%", sm: 0 },
+          sx={(theme) => ({
+            flexGrow: 0,
+            flexShrink: 0,
+            flexBasis: {
+              xs: "100%",
+              md: `calc((100% - ${theme.spacing(6)}) / 2)`,
+            },
+            minWidth: { xs: "100%", sm: 0 },
 
-      // 👇 Sticky solo en desktop
-      position: { xs: "static", md: "sticky" },
-      top: { xs: "auto", md: theme.spacing(12) }, // ajusta el offset (12*8=96px)
-      alignSelf: "flex-start",
+            // 👇 Sticky solo en desktop
+            position: { xs: "static", md: "sticky" },
+            top: { xs: "auto", md: theme.spacing(12) }, // ajusta el offset (12*8=96px)
+            alignSelf: "flex-start",
 
-      // opcional: evita que el bloque se estire raro
-      height: "fit-content",
-    })}
-  >
-          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: {xs: "center", md: "left"}  }}>
+            // opcional: evita que el bloque se estire raro
+            height: "fit-content",
+          })}
+        >
+          <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" } }}>
             Nuestra filosofía
           </Typography>
-          <Typography color="text.secondary" sx={{ mt: 2, textAlign: {xs: "center", md: "left"}  }}>
-            Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y tambièn la sensaciòn de que a veces faltan recursos o apoyo.
+          <Typography color="text.secondary" sx={{ mt: 2, textAlign: { xs: "center", md: "left" }, fontSize: "1.2rem" }}>
+            Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y también la sensación de que a veces faltan recursos o apoyo.
             Queremos acompañarte, liberar tu carga técnica y ayudarte a enfocarte en lo escencial: <strong>seguir generando impacto real</strong>.
           </Typography>
         </Box>
@@ -114,7 +114,7 @@ function InfoCard({ title, desc }) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography variant="h5" color="primary" fontWeight={700}>{title}</Typography>
+        <Typography variant="h5" color="primary" fontWeight={700} sx={{ fontFamily: "Nunito" }}>{title}</Typography>
         <Typography
           variant="body1"
           color="text.secondary"
@@ -131,7 +131,7 @@ function ReasonsCard({ reasons }) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography variant="h5" color="primary" fontWeight={700}>¿Por qué elegirnos?</Typography>
+        <Typography variant="h5" color="primary" fontWeight={700} sx={{ fontFamily: "Nunito" }}>¿Por qué elegirnos?</Typography>
         <Stack spacing={1.5} sx={{ mt: 1.5 }}>
           {reasons.map((text) => (
             <Bullet key={text}>{text}</Bullet>
@@ -145,7 +145,7 @@ function ReasonsCard({ reasons }) {
 function Bullet({ children }) {
   return (
     <Stack direction="row" spacing={1.5} alignItems="flex-start">
-      <KeyboardArrowRightIcon color="secondary" sx={{ mt: "2px" }} /> 
+      <KeyboardArrowRightIcon color="primary" sx={{ mt: "2px" }} />
       <Typography variant="body1" color="text.secondary">
         {children}
       </Typography>

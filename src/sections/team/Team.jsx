@@ -49,7 +49,7 @@ export default function Team({ mode }) {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: 800, mx: "auto" }}>
           <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" } }}>
-            Nuestro Equipo
+            Nuestro equipo
           </Typography>
 
           <Typography color="text.secondary" sx={{ mt: 1.5, maxWidth: 800 }}>

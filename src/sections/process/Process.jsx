@@ -10,6 +10,7 @@ import {
   Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CTAButton from "../common/CTAButton";
 
 export default function Process({ mode }) {
   const steps = [
@@ -63,29 +64,13 @@ export default function Process({ mode }) {
             <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" } }}>
               Cómo trabajamos
             </Typography>
-            <Typography color="text.secondary" sx={{ mt: 1.5, textAlign: { xs: "center", md: "left" } }}>
+            <Typography color="text.secondary" sx={{ my: 1.5, textAlign: { xs: "center", md: "left" } }}>
               Nuestra metodología integral asegura que cada paso esté alineado
               con tus objetivos y maximice las oportunidades de financiación y
               sostenibilidad.
             </Typography>
 
-            <Button
-              href="#contacto"
-              variant="contained"
-              size="large"
-              color="tertiary"
-              sx={{
-                borderRadius: 999,
-                px: 2.8,
-                py: 0.7,
-                my: 4,
-                textTransform: "none",
-                fontWeight: 600,
-                color: "white",
-              }}
-            >
-              Empieza tu proyecto
-            </Button>
+            <CTAButton />
           </Box>
 
           {/* === Columna derecha: acordeón de pasos === */}
@@ -144,15 +129,17 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
         }}
       >
         <Typography fontWeight={700} sx={(theme) => ({
-          color: `${theme.palette.secondary.main}`,
+          color: "default",
           backgroundColor: "transparent",
           fontWeight: 700,
+          ".Mui-expanded &": { color: "secondary.main" }
         })}>{num}
         </Typography>
         <Typography fontWeight={700} sx={{
-        "&:hover": {
-          color: "grey.700",
-        },}}>{title}</Typography>
+          "&:hover": {
+            color: "grey.700",
+          },
+        }}>{title}</Typography>
       </AccordionSummary>
       <AccordionDetails sx={{ px: 9.5, pb: 2.5, pt: 0 }}>
         <Typography variant="body2" color="text.secondary">

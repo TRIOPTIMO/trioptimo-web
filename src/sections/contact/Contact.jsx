@@ -148,7 +148,7 @@ export default function Contact({ mode }) {
                       {[
                         { label: "Nombre", name: "nombre", required: true },
                         { label: "Email", name: "email", type: "email", required: true },
-                        { label: "Motivo", name: "subject", required: true },
+                        // { label: "Motivo", name: "subject", required: true },
                         { label: "Página Web (opcional)", name: "web" },
                       ].map((f) => (
                         <Box
@@ -184,7 +184,7 @@ export default function Contact({ mode }) {
                                   borderColor: "grey.300",
                                 },
                                 "&:hover fieldset": {
-                                  borderColor: "primary.main",
+                                  borderColor: "default",
                                 },
                                 "&.Mui-focused fieldset": {
                                   borderColor: "primary.main",
@@ -199,7 +199,7 @@ export default function Contact({ mode }) {
                       {/* Campo multilinea */}
                       <Box sx={{ flexBasis: "100%" }}>
                         <Typography variant="body2" fontWeight={600}>
-                          Cuéntanos más sobre tu proyecto o reto
+                          Cuéntanos más sobre tu proyecto
                         </Typography>
                         <TextField
                           name="detalle"
@@ -214,7 +214,7 @@ export default function Contact({ mode }) {
                               borderRadius: 2,
                               bgcolor: "background.paper",
                               "& fieldset": { borderColor: "grey.300" },
-                              "&:hover fieldset": { borderColor: "primary.main" },
+                              "&:hover fieldset": { borderColor: "default" },
                               "&.Mui-focused fieldset": {
                                 borderColor: "primary.main",
                                 boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
@@ -231,7 +231,6 @@ export default function Contact({ mode }) {
                           variant="contained"
                           color="tertiary"
                           size="large"
-                          endIcon={<SendIcon />}
                           disabled={sending}
                           sx={{
                             ml: 1,
@@ -243,7 +242,7 @@ export default function Contact({ mode }) {
                             color: "white",
                           }}
                         >
-                          {sending ? "Enviando..." : "Enviar Solicitud"}
+                          {sending ? "Enviando..." : "Enviar"}
                         </Button>
                       </Box>
 
