@@ -13,18 +13,18 @@ import StoriesCarousel from "./components/StoriesCarousel";
 const stories = [
   {
     quote:
-      "Trabajar con TriOptimo marcó un antes y un después. No solo conseguimos la financiación que necesitábamos, sino que optimizamos procesos como nunca creímos posible.",
+      "Trioptimo nos acompañó con compromiso  en el proceso de reconstruir y ordenar nuestra identidad institucional, brindándonos herramientas valiosas que hoy sostienen y fortalecen nuestro modo de organizarnos y trabajar.",
     author: "— El Andar escuela de equinoterapia, Directora General",
   },
   {
     quote:
-      "Pasamos de procesos manuales a flujos automatizados. Ganamos velocidad y trazabilidad, y pudimos medir mejor nuestro impacto.",
-    author: "— Frontera Cero, Directora",
+      "Gracias a Trioptimo, he aprendido a diseñar y gestionar los diferentes Proyectos de la organización, con una metodología estructurada y tomando decisiones a partir de datos precisos y objetivos estrategicos. Gracias por el acompañamiento",
+    author: "— El Kiri, Directora",
   },
   {
     quote:
-      "Nos ayudaron a convertir una buena idea en un proyecto financiable y sostenible. La diferencia fue clarísima.",
-    author: "— Red Joven, Coordinadora",
+      "Trioptimo nos acompañó en la reconstrucción de nuestra identidad institucional, aportando herramientas clave que hoy fortalecen nuestro funcionamiento y crecimiento.",
+    author: "— El Andar, Coordinadora",
   },
 ];
 
