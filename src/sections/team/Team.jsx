@@ -81,7 +81,7 @@ export default function Team({ mode }) {
                 minWidth: { xs: "100%", sm: 0 },
               })}
             >
-              <TeamCard {...person}  mode={mode}  />
+              <TeamCard {...person} mode={mode} />
             </Box>
           ))}
         </Stack>
@@ -90,18 +90,26 @@ export default function Team({ mode }) {
   );
 }
 
-function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
+function TeamCard({ name, role, quote, linkedin, photo, mode }) {
+  const bw = 2
+
   return (
     <Card
-      variant="outlined"
-      sx={{
+      sx={(theme) => ({
         height: "100%",
-        border: 0,
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
+        borderRadius: 1,
         backgroundColor: mode === "light" ? "grey.50" : "grey.900",
-      }}
+        overflow: "hidden",
+        transition: "transform .25s ease, box-shadow .25s ease",
+        "&:hover": {
+          boxShadow: "0 12px 28px rgba(0,0,0,0.08)",
+          transform: "translateY(-4px)",
+          border: `${bw}px solid transparent`,
+          background:
+            `linear-gradient(${theme.palette.background.paper}, ${theme.palette.background.paper}) padding-box,` +
+            `linear-gradient(90deg, #9139D2, #0104FE, #00dd93) border-box`,
+        },
+      })}
     >
       {/* Foto */}
       <Box
@@ -112,19 +120,12 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
           width: "100%",
           height: 220,
           objectFit: "cover",
+          display: "block",
         }}
       />
 
       <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        {/* Nombre + LinkedIn */}
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
-            gap: 2,
-          }}
-        >
+        <Box sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}>
           <Box>
             <Typography fontWeight={700}>{name}</Typography>
             <Typography variant="body2" color="text.secondary">
@@ -135,34 +136,31 @@ function TeamCard({ name, role, quote, linkedin, photo, mode  }) {
 
         <Divider sx={{ my: 2 }} />
 
-        <Typography
-          variant="body2"
-          fontStyle="italic"
-          sx={{ flex: 1 }}
-        >
+        <Typography variant="body2" fontStyle="italic" sx={{ flex: 1 }}>
           "{quote}"
         </Typography>
-        
-          <MLink
-            href={linkedin}
-            target="_blank"
-            rel="noreferrer noopener"
-            color= "text.primary" 
-            underline="none"
-            sx={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 1,
-              whiteSpace: "nowrap",
-              mt: 2,
-              "&:hover": {
-                    color: mode === "light" ? "tertiary.main" : "secondary.main" ,
-                  },
-            }}
-          >
-            <LinkedInIcon fontSize="small" /> LinkedIn
-          </MLink>
+
+        <MLink
+          href={linkedin}
+          target="_blank"
+          rel="noreferrer noopener"
+          color="text.primary"
+          underline="none"
+          sx={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 1,
+            whiteSpace: "nowrap",
+            mt: 2,
+            "&:hover": {
+              color: mode === "light" ? "tertiary.main" : "secondary.main",
+            },
+          }}
+        >
+          <LinkedInIcon fontSize="small" /> LinkedIn
+        </MLink>
       </CardContent>
     </Card>
-  );
+  )
 }
+
