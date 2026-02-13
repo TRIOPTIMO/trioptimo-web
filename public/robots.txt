@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trioptimo.com/sitemap.xml
