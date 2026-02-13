@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const MotionPaper = motion(Paper);
 
 export default function CookieBanner() {
+    if (typeof window === "undefined") return null;
     const { consent, accept, reject } = useCookieConsent();
 
     if (consent !== null) return null;
@@ -30,35 +31,35 @@ export default function CookieBanner() {
                         zIndex: 9999,
                     }}
                 >
-                        <Stack direction="row" spacing={2} justifyContent="space-between">
-                            <Typography variant="body2">
-                                Utilizamos cookies analíticas (Google Analytics) para mejorar la
-                                experiencia del usuario. Puedes aceptar o rechazar su uso.
-                            </Typography>
-                            <Stack direction="row" spacing={2} justifyContent="flex-end">
-                                <Button variant="outlined" size="small" onClick={reject}>
-                                    Rechazar
-                                </Button>
-                                <Button variant="contained" size="small" onClick={accept} sx={(theme) => {
-                                    return {
-                                        backgroundColor: theme.palette.secondary.main
-                                    };
-                                }}>
-                                    Aceptar
-                                </Button>
-                            </Stack>
-                        </Stack>
-
-                        <Typography variant="caption">
-                            Más información en nuestra{" "}
-                            <RouterLink to="/politica-de-cookies" sx={(theme) => {
+                    <Stack direction="row" spacing={2} justifyContent="space-between">
+                        <Typography variant="body2">
+                            Utilizamos cookies analíticas (Google Analytics) para mejorar la
+                            experiencia del usuario. Puedes aceptar o rechazar su uso.
+                        </Typography>
+                        <Stack direction="row" spacing={2} justifyContent="flex-end">
+                            <Button variant="outlined" size="small" onClick={reject}>
+                                Rechazar
+                            </Button>
+                            <Button variant="contained" size="small" onClick={accept} sx={(theme) => {
                                 return {
-                                    color: "text.primary", "&:hover": { color: theme.palette.secondary.main }
+                                    backgroundColor: theme.palette.secondary.main
                                 };
                             }}>
-                                Política de Cookies
-                            </RouterLink>
-                        </Typography>
+                                Aceptar
+                            </Button>
+                        </Stack>
+                    </Stack>
+
+                    <Typography variant="caption">
+                        Más información en nuestra{" "}
+                        <RouterLink to="/politica-de-cookies" sx={(theme) => {
+                            return {
+                                color: "text.primary", "&:hover": { color: theme.palette.secondary.main }
+                            };
+                        }}>
+                            Política de Cookies
+                        </RouterLink>
+                    </Typography>
                 </MotionPaper>
             )}
         </AnimatePresence>

@@ -1,4 +1,8 @@
 export default function loadGA(measurementId) {
+  // ✅ En prerender/Node no existe window/document
+  if (typeof window === "undefined" || typeof document === "undefined") return;
+
+  if (!measurementId) return;
   if (window.gtag) return;
 
   const script = document.createElement("script");

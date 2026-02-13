@@ -18,23 +18,33 @@ export default function App() {
   const { consent } = useCookieConsent();
 
   useEffect(() => {
-    if (consent === "accepted") {
-      loadGA(GA_ID);
-    }
-  }, [consent]);
-
-  const [mode, setMode] = useState(() => {
-    const saved = localStorage.getItem("color-mode");
-    return saved === "light" || saved === "dark" ? saved : "light";
-  });
+  if (typeof window === "undefined") return;
+  if (consent === "accepted") loadGA(GA_ID);
+}, [consent]);
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  const [mode, setMode] = useState("light");
+
   useEffect(() => {
-    localStorage.setItem("color-mode", mode);
+    if (typeof window === "undefined") return;
+
+    try {
+      const saved = window.localStorage.getItem("color-mode");
+      if (saved === "light" || saved === "dark") setMode(saved);
+    } catch { }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    try {
+      window.localStorage.setItem("color-mode", mode);
+    } catch { }
   }, [mode]);
+
 
   const theme = useMemo(
     () =>
