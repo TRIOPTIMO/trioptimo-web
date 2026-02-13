@@ -13,6 +13,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useColorMode } from "../../../../theme/ColorModeContext";
 import FooterLegalMUI from "./components/FooterLegal";
 import { FooterContact } from "./components/Contact";
+import { FooterLocations } from "./components/Locations";
 
 export function Footer() {
   const { mode } = useColorMode();
@@ -36,9 +37,10 @@ export function Footer() {
             gap: 2,
           }}
         >
-          <Stack direction="row" alignItems="left" width={"100%"}>
+          <Stack direction="row" alignItems="left" width={"100%"} gap={8}>
             <FooterContact></FooterContact>
             <FooterLegalMUI />
+            <FooterLocations/>
           </Stack>
         </Container>
 

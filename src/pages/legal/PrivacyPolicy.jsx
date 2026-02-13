@@ -10,22 +10,21 @@ import {
 } from "@mui/material";
 
 export default function PoliticaDePrivacidadPage() {
-  const lastUpdate = "06/02/2026"; // cámbialo cuando actualices la política
+  const lastUpdate = "13/02/2026"; // cámbialo cuando actualices la política
 
   // Completa estos datos
   const company = {
-    name: "[Nombre completo o razón social]",
+    name: "Jano Neuen Baudino Centeno",
     nif: "[NIF/CIF (si aplica)]",
-    address: "[Dirección]",
-    email: "[Email de contacto]",
-    phone: "[Teléfono (opcional)]",
-    dpoEmail: "[Email DPO si aplica / o el mismo de contacto]",
+    address: "Sevilla, España",
+    email: "info@trioptimo.com",
+    phone: "+34 663 47 70 89",
     website: "https://trioptimo.com/",
   };
 
   return (
     <Box sx={{ py: { xs: 4, sm: 6 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Typography variant="h3" component="h1" sx={{ fontWeight: 700 }}>
             Política de Privacidad
@@ -42,7 +41,12 @@ export default function PoliticaDePrivacidadPage() {
               En cumplimiento del Reglamento (UE) 2016/679 (Reglamento General de
               Protección de Datos – GDPR), te informamos sobre el tratamiento de
               tus datos personales a través del sitio web{" "}
-              <MUILink href={company.website} target="_blank" rel="noreferrer">
+              <MUILink href={company.website} target="_blank" rel="noreferrer"
+                sx={(theme) => {
+                  return {
+                    color: "text.primary", "&:hover": { color: theme.palette.secondary.main }
+                  };
+                }}>
                 {company.website}
               </MUILink>
               .
@@ -54,8 +58,8 @@ export default function PoliticaDePrivacidadPage() {
               <Typography variant="body1">
                 <strong>Titular:</strong> {company.name}
                 <br />
-                <strong>NIF/CIF:</strong> {company.nif}
-                <br />
+                {/* <strong>NIF/CIF:</strong> {company.nif}
+                <br /> */}
                 <strong>Dirección:</strong> {company.address}
                 <br />
                 <strong>Correo electrónico:</strong> {company.email}
@@ -174,8 +178,7 @@ export default function PoliticaDePrivacidadPage() {
               />
               <Typography variant="body1" sx={{ mt: 1 }}>
                 Para ejercerlos, escríbenos a{" "}
-                <strong>{company.email}</strong> (o{" "}
-                <strong>{company.dpoEmail}</strong> si aplica), indicando el
+                <strong>{company.email}</strong> indicando el
                 derecho que deseas ejercer e identificándote.
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
@@ -193,17 +196,31 @@ export default function PoliticaDePrivacidadPage() {
               </Typography>
             </Section>
 
-            <Section title="10. Cookies">
+            {/* <Section title="10. Cookies">
               <Typography variant="body1">
                 Este sitio utiliza cookies propias y/o de terceros para fines
                 técnicos y analíticos. Puedes consultar información detallada en
                 nuestra{" "}
-                <MUILink href="/politica-de-cookies" underline="hover">
+                <MUILink href="/politica-de-cookies" sx={(theme) => {
+                  return {
+                    color: "text.primary", "&:hover": { color: theme.palette.secondary.main }
+                  };
+                }}>
                   Política de Cookies
                 </MUILink>
                 .
               </Typography>
+            </Section> */}
+
+            <Section title="10. Cookies">
+              <Typography variant="body1">
+                Actualmente este sitio web no utiliza cookies no esenciales.
+                En caso de incorporar herramientas de análisis o cookies de terceros
+                (por ejemplo, para estadísticas de uso), se solicitará previamente el
+                consentimiento del usuario y se actualizará esta política en consecuencia.
+              </Typography>
             </Section>
+
 
             <Section title="11. Cambios en esta política">
               <Typography variant="body1">
@@ -212,6 +229,14 @@ export default function PoliticaDePrivacidadPage() {
                 La versión vigente estará siempre disponible en esta página.
               </Typography>
             </Section>
+
+            <Section title="12. Decisiones automatizadas y perfiles">
+              <Typography>
+                Este sitio web no realiza decisiones automatizadas ni elaboración de perfiles
+                que produzcan efectos jurídicos sobre el usuario.
+              </Typography>
+            </Section>
+
           </Stack>
         </Paper>
       </Container>

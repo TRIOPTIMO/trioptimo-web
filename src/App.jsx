@@ -6,11 +6,24 @@ import { ColorModeProvider } from "./theme/ColorModeContext";
 import { Layout } from "./sections/layout/Layout";
 import HomePage from "./pages/mainPage/Main";
 import PoliticaDePrivacidadPage from "./pages/legal/PrivacyPolicy";
-// import PoliticaDeCookiesPage from "./pages/legal/FooterLegal";
-// import AvisoLegalPage from "./pages/legal/FooterLegal";
+import AvisoLegalPage from "./pages/legal/LegalAdvise";
+import PoliticaDeCookiesPage from "./pages/legal/CookiesPolicy";
+import useCookieConsent from "./hooks/useCookieConsent";
+import loadGA from "./utils/loadGA";
+import CookieBanner from "./sections/layout/components/cookies/CookieBanner";
+
+const GA_ID = "G-ZBWR315DJR";
 
 export default function App() {
-const [mode, setMode] = useState(() => {
+  const { consent } = useCookieConsent();
+
+  useEffect(() => {
+    if (consent === "accepted") {
+      loadGA(GA_ID);
+    }
+  }, [consent]);
+
+  const [mode, setMode] = useState(() => {
     const saved = localStorage.getItem("color-mode");
     return saved === "light" || saved === "dark" ? saved : "light";
   });
@@ -22,7 +35,7 @@ const [mode, setMode] = useState(() => {
   useEffect(() => {
     localStorage.setItem("color-mode", mode);
   }, [mode]);
-  
+
   const theme = useMemo(
     () =>
       createTheme({
@@ -102,7 +115,7 @@ const [mode, setMode] = useState(() => {
     [mode]
   );
 
- const colorModeValue = useMemo(
+  const colorModeValue = useMemo(
     () => ({ mode, toggleColorMode, setMode }),
     [mode]
   );
@@ -117,10 +130,11 @@ const [mode, setMode] = useState(() => {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/politica-de-privacidad" element={<PoliticaDePrivacidadPage />} />
-            {/* <Route path="/politica-de-cookies" element={<PoliticaDeCookiesPage />} />
-            <Route path="/aviso-legal" element={<AvisoLegalPage />} /> */}
+            <Route path="/politica-de-cookies" element={<PoliticaDeCookiesPage />} />
+            <Route path="/aviso-legal" element={<AvisoLegalPage />} />
           </Route>
         </Routes>
+        <CookieBanner />
       </ThemeProvider>
     </ColorModeProvider>
   );
