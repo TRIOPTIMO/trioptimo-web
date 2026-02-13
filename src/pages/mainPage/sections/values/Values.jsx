@@ -11,7 +11,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 
-export default function Values() {
+export default function Values({mode}) {
   const items = [
     {
       title: "Financiación e innovación a tu alcance",

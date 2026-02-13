@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-export default function Phylosophy() {
+export default function Phylosophy({mode}) {
   const reasons = [
     "Compromiso con el impacto social: tu misión también es la nuestra.",
     "Claridad y cercanía: hablamos simple y caminamos a tu ritmo.",

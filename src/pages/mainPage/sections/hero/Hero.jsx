@@ -9,7 +9,7 @@ import {
   Stack,
 } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import CTAButton from "../common/CTAButton";
+import CTAButton from "../../../../sections/common/CTAButton";
 
 export default function Hero({ mode }) {
 

@@ -14,8 +14,7 @@ import {
 } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import SendIcon from "@mui/icons-material/Send";
-import MeshBackground from "../common/MeshBackground";
+import MeshBackground from "../../../../sections/common/MeshBackground";
 
 export default function Contact({ mode }) {
   const [sending, setSending] = useState(false);

@@ -42,9 +42,6 @@ export default function Team({ mode }) {
   return (
     <Box
       id="equipo"
-      sx={{
-        bgcolor: mode === "light" ? "grey.50" : "grey.900",
-      }}
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: 800, mx: "auto" }}>
@@ -98,7 +95,6 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
       sx={(theme) => ({
         height: "100%",
         borderRadius: 1,
-        backgroundColor: mode === "light" ? "grey.50" : "grey.900",
         overflow: "hidden",
         transition: "transform .25s ease, box-shadow .25s ease",
         "&:hover": {

@@ -10,7 +10,7 @@ import {
   Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CTAButton from "../common/CTAButton";
+import CTAButton from "../../../../sections/common/CTAButton";
 
 export default function Process({ mode }) {
   const steps = [
@@ -43,9 +43,6 @@ export default function Process({ mode }) {
   return (
     <Box
       id="como"
-      sx={{
-        bgcolor: mode === "light" ? "grey.50" : "grey.900",
-      }}
     >
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Stack
@@ -88,7 +85,6 @@ export default function Process({ mode }) {
                   title={step.title}
                   desc={step.desc}
                   defaultExpanded={index === 0}
-                  mode={mode}
                 />
               ))}
             </Stack>
@@ -99,7 +95,7 @@ export default function Process({ mode }) {
   );
 }
 
-function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
+function StepAccordion({ num, title, desc, defaultExpanded = false }) {
   return (
     <Accordion
       defaultExpanded={defaultExpanded}
@@ -107,7 +103,6 @@ function StepAccordion({ num, title, desc, defaultExpanded = false, mode }) {
       square={false}
       elevation={0}
       sx={(theme) => ({
-        backgroundColor: mode === "light" ? "grey.50" : "grey.900",
         borderRadius: 3,
         "&::before": {
           display: "none",

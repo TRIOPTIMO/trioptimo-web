@@ -1,21 +1,27 @@
-import {
-  ThemeProvider,
-  createTheme,
-  CssBaseline,
-} from "@mui/material";
-
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
+import { ColorModeProvider } from "./theme/ColorModeContext";
 import { Layout } from "./sections/layout/Layout";
-import PoliticaDePrivacidadPage from "./sections/legal/PrivacyPolicy";
+import HomePage from "./pages/mainPage/Main";
+import PoliticaDePrivacidadPage from "./pages/legal/PrivacyPolicy";
+// import PoliticaDeCookiesPage from "./pages/legal/FooterLegal";
+// import AvisoLegalPage from "./pages/legal/FooterLegal";
 
 export default function App() {
-const [mode, setMode] = useState("light");
+const [mode, setMode] = useState(() => {
+    const saved = localStorage.getItem("color-mode");
+    return saved === "light" || saved === "dark" ? saved : "light";
+  });
 
-const toggleColorMode = () => {
+  const toggleColorMode = () => {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
+
+  useEffect(() => {
+    localStorage.setItem("color-mode", mode);
+  }, [mode]);
   
   const theme = useMemo(
     () =>
@@ -96,17 +102,26 @@ const toggleColorMode = () => {
     [mode]
   );
 
+ const colorModeValue = useMemo(
+    () => ({ mode, toggleColorMode, setMode }),
+    [mode]
+  );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <ColorModeProvider value={colorModeValue}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
 
-      <Routes>
-      <Route path="/" element={<Layout mode={mode} toggleColorMode={toggleColorMode}/>} />
-      <Route path="/politica-de-privacidad" element={<PoliticaDePrivacidadPage />} />
-      {/* <Route path="/politica-de-cookies" element={<PoliticaDeCookiesPage />} />
-      <Route path="/aviso-legal" element={<AvisoLegalPage />} /> */}
-    </Routes>
-    </ThemeProvider>
+        <Routes>
+          {/* Layout envuelve todas estas rutas */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/politica-de-privacidad" element={<PoliticaDePrivacidadPage />} />
+            {/* <Route path="/politica-de-cookies" element={<PoliticaDeCookiesPage />} />
+            <Route path="/aviso-legal" element={<AvisoLegalPage />} /> */}
+          </Route>
+        </Routes>
+      </ThemeProvider>
+    </ColorModeProvider>
   );
 }
