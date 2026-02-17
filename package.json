@@ -5,14 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && react-snap",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "render-build": "npm run build"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "inlineCss": true
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
