@@ -16,7 +16,7 @@ export default function PoliticaDeCookiesPage() {
   // Ajusta estos datos a tu proyecto
   const site = {
     domain: "trioptimo.com",
-    ownerName: "Jano Neuen Baudino Centeno",
+    ownerName: "Ignacio Davanzo",
     contactEmail: "info@trioptimo.com",
     gaProvider: "Google LLC",
     gaService: "Google Analytics",

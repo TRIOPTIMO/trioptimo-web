@@ -15,8 +15,8 @@ export default function AvisoLegalPage() {
 
   // 🔹 COMPLETAR
   const owner = {
-    name: "Jano Neuen Baudino Centeno",
-    address: "Sevilla, España",
+    name: "Ignacio Davanzo",
+    address: "Malaga, España",
     email: "info@trioptimo.com",
     website: "https://trioptimo.com/",
   };

@@ -14,9 +14,8 @@ export default function PoliticaDePrivacidadPage() {
 
   // Completa estos datos
   const company = {
-    name: "Jano Neuen Baudino Centeno",
-    nif: "[NIF/CIF (si aplica)]",
-    address: "Sevilla, España",
+    name: "Ignacio Davanzo",
+    address: "Malaga, España",
     email: "info@trioptimo.com",
     phone: "+34 663 47 70 89",
     website: "https://trioptimo.com/",

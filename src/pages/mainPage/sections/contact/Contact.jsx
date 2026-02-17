@@ -9,9 +9,13 @@ import {
   CardContent,
   Stack,
   TextField,
-  Link as MLink,
   Alert,
+  FormControlLabel,
+  Checkbox,
+  Link as MUILink,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MeshBackground from "../../../../sections/common/MeshBackground";
@@ -20,6 +24,7 @@ export default function Contact({ mode }) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -223,6 +228,26 @@ export default function Contact({ mode }) {
                         />
                       </Box>
 
+                      <Box sx={{ flexBasis: "100%", mb: 2 }}>
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              required
+                              checked={acceptedPrivacy}
+                              onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+                            />
+                          }
+                          label={
+                            <span>
+                              He leído y acepto la{" "}
+                              <MUILink component={RouterLink} to="/politica-de-privacidad" target="_blank" underline="hover">
+                                política de privacidad
+                              </MUILink>
+                            </span>
+                          }
+                        />
+                      </Box>
+
                       {/* Botón enviar */}
                       <Box sx={{ flexBasis: "100%" }}>
                         <Button
@@ -230,7 +255,7 @@ export default function Contact({ mode }) {
                           variant="contained"
                           color="tertiary"
                           size="large"
-                          disabled={sending}
+                          disabled={sending || !acceptedPrivacy}
                           sx={{
                             ml: 1,
                             borderRadius: 999,
@@ -245,10 +270,11 @@ export default function Contact({ mode }) {
                         </Button>
                       </Box>
 
+
                       {/* Feedback */}
                       {sent && (
                         <Box sx={{ flexBasis: "100%" }}>
-                          <Alert severity="success">¡Gracias! Tu solicitud fue enviada.</Alert>
+                          <Alert severity="success">Gracias por tu mensaje. Te responderemos en un plazo máximo de 48hs.</Alert>
                         </Box>
                       )}
                       {error && (
