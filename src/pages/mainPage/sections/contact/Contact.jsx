@@ -148,70 +148,95 @@ export default function Contact({ mode }) {
                         gap: theme.spacing(2),
                       })}
                     >
-                      {/* Campo helper */}
                       {[
-                        { label: "Nombre", name: "nombre", required: true },
-                        { label: "Email", name: "email", type: "email", required: true },
-                        // { label: "Motivo", name: "subject", required: true },
-                        { label: "Página Web (opcional)", name: "web" },
-                      ].map((f) => (
-                        <Box
-                          key={f.name}
-                          sx={(theme) => ({
-                            flexBasis: {
-                              xs: "100%",
-                              md: f.name === "sector" || f.name === "asesoria" ? "100%" : `calc((100% - ${theme.spacing(2)}) / 2)`,
-                            },
-                            minWidth: { xs: "100%", sm: 0 },
-                          })}
-                        >
-                          <Typography
-                            variant="body2"
-                            fontWeight={600}
-                            sx={{ mb: 0.5, color: "text.primary" }}
-                          >
-                            {f.label}
-                            {f.required && <span style={{ color: "#d32f2f" }}> *</span>}
-                          </Typography>
+                        { label: "Nombre", name: "nombre", required: true, autoComplete: "name" },
+                        { label: "Email", name: "email", type: "email", required: true, autoComplete: "email" },
+                        { label: "Página Web (opcional)", name: "web", autoComplete: "url" },
+                      ].map((f) => {
+                        const labelId = `label-${f.name}`;
+                        const inputId = `input-${f.name}`;
 
-                          <TextField
-                            name={f.name}
-                            type={f.type || "text"}
-                            required={f.required}
-                            fullWidth
-                            variant="outlined"
-                            InputProps={{
-                              sx: {
-                                borderRadius: 2,
-                                bgcolor: "background.paper",
-                                "& fieldset": {
-                                  borderColor: "grey.300",
-                                },
-                                "&:hover fieldset": {
-                                  borderColor: "default",
-                                },
-                                "&.Mui-focused fieldset": {
-                                  borderColor: "primary.main",
-                                  boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
-                                },
+                        return (
+                          <Box
+                            key={f.name}
+                            sx={(theme) => ({
+                              flexBasis: {
+                                xs: "100%",
+                                md:
+                                  f.name === "sector" || f.name === "asesoria"
+                                    ? "100%"
+                                    : `calc((100% - ${theme.spacing(2)}) / 2)`,
                               },
-                            }}
-                          />
-                        </Box>
-                      ))}
+                              minWidth: { xs: "100%", sm: 0 },
+                            })}
+                          >
+                            <Typography
+                              id={labelId}
+                              component="label"
+                              htmlFor={inputId}
+                              variant="body2"
+                              fontWeight={600}
+                              sx={{ mb: 0.5, color: "text.primary", display: "block" }}
+                            >
+                              {f.label}
+                              {f.required && <span aria-hidden="true" style={{ color: "#d32f2f" }}> *</span>}
+                            </Typography>
+
+                            <TextField
+                              id={inputId}
+                              name={f.name}
+                              type={f.type || "text"}
+                              required={f.required}
+                              fullWidth
+                              variant="outlined"
+                              autoComplete={f.autoComplete}
+                              inputProps={{
+                                "aria-labelledby": labelId,
+                                "aria-required": f.required ? "true" : undefined,
+                              }}
+                              InputProps={{
+                                sx: {
+                                  borderRadius: 2,
+                                  bgcolor: "background.paper",
+                                  "& fieldset": { borderColor: "grey.300" },
+                                  "&:hover fieldset": { borderColor: "default" },
+                                  "&.Mui-focused fieldset": {
+                                    borderColor: "primary.main",
+                                    boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
+                                  },
+                                },
+                              }}
+                            />
+                          </Box>
+                        );
+                      })}
+
 
                       {/* Campo multilinea */}
                       <Box sx={{ flexBasis: "100%" }}>
-                        <Typography variant="body2" fontWeight={600}>
-                          Cuéntanos más sobre tu proyecto
+                        <Typography
+                          id="label-detalle"
+                          component="label"
+                          htmlFor="input-detalle"
+                          variant="body2"
+                          fontWeight={600}
+                          sx={{ display: "block" }}
+                        >
+                          Cuéntanos más sobre tu proyecto <span aria-hidden="true" style={{ color: "#d32f2f" }}> *</span>
                         </Typography>
+
                         <TextField
+                          id="input-detalle"
                           name="detalle"
                           required
                           fullWidth
                           multiline
                           minRows={4}
                           variant="outlined"
+                          inputProps={{
+                            "aria-labelledby": "label-detalle",
+                            "aria-required": "true",
+                          }}
                           sx={{
                             mt: 1,
                             "& .MuiOutlinedInput-root": {
@@ -235,6 +260,7 @@ export default function Contact({ mode }) {
                               required
                               checked={acceptedPrivacy}
                               onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+                              inputProps={{ "aria-label": "He leído y acepto la política de privacidad" }}
                             />
                           }
                           label={
@@ -273,12 +299,14 @@ export default function Contact({ mode }) {
 
                       {/* Feedback */}
                       {sent && (
-                        <Box sx={{ flexBasis: "100%" }}>
-                          <Alert severity="success">Gracias por tu mensaje. Te responderemos en un plazo máximo de 48hs.</Alert>
+                        <Box sx={{ flexBasis: "100%" }} role="status" aria-live="polite">
+                          <Alert severity="success">
+                            Gracias por tu mensaje. Te responderemos en un plazo máximo de 48hs.
+                          </Alert>
                         </Box>
                       )}
                       {error && (
-                        <Box sx={{ flexBasis: "100%" }}>
+                        <Box sx={{ flexBasis: "100%" }} role="alert" aria-live="assertive">
                           <Alert severity="error">{error}</Alert>
                         </Box>
                       )}

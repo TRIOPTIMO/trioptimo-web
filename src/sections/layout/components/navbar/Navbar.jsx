@@ -20,14 +20,16 @@ export function NavBar() {
   return (
     <>
       <AppBar
-        position="sticky"
-        elevation={0}
-        color="transparent"
-        sx={{
-          backdropFilter: "blur(14px)",
-          bgcolor: "background.default",
-        }}
-      >
+  position="sticky"
+  elevation={0}
+  color="transparent"
+  sx={(theme) => ({
+    top: 0,
+    zIndex: 100, // o theme.zIndex.drawer + 1 si tienes drawer
+    backdropFilter: "blur(14px)",
+    bgcolor: "background.default",
+  })}
+>
         <Toolbar
           sx={{
             maxWidth: 1200,
@@ -94,7 +96,7 @@ export function NavBar() {
             <CTAButton />
           </Stack>
 
-          <IconButton onClick={toggleColorMode} color="inherit" sx={{ ml: 2 }}>
+          <IconButton label="Modo claro/oscuro" onClick={toggleColorMode} color="inherit" sx={{ ml: 2 }}>
             {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
           </IconButton>
         </Toolbar>

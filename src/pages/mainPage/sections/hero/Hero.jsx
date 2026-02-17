@@ -78,42 +78,42 @@ export default function Hero({ mode }) {
 
               <Typography
                 variant="h6"
+                component="p"
                 color="text.secondary"
-                sx={{
-                  maxWidth: 720,
-                  mx: "auto",
-                  mt: 8,
-                }}
+                sx={{ maxWidth: 720, mx: "auto", mt: 8 }}
               >
-                Aplicamos ingeniería y optimización para que tu organización
-                transforme la realidad.
+                Aplicamos ingeniería y optimización para que tu organización transforme la realidad.
               </Typography>
+
 
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
-                <CTAButton/>
+                <CTAButton />
 
                 <Button
                   href="#como"
                   variant="outlined"
                   size="large"
-                  endIcon={<KeyboardArrowRightIcon/>}
+                  endIcon={<KeyboardArrowRightIcon />}
                   sx={{
                     border: 0,
                     borderRadius: 999,
-                    color: (theme) => theme.palette.grey[500],
+                    color: (theme) => theme.palette.text.primary,
                     "&:hover": {
                       color: (theme) => theme.palette.tertiary.main,
                       backgroundColor: "transparent",
+                    },
+                    "&:focus-visible": {
+                      outline: "2px solid",
+                      outlineOffset: "2px",
                     },
                   }}
                 >
                   Cómo trabajamos
                 </Button>
-
               </Stack>
             </Box>
 

@@ -94,20 +94,23 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000, mode })
                   {/* Comillas de color */}
                   <Typography
                     component="span"
+                    aria-hidden="true"
+                    role="presentation"
                     sx={{
                       position: "absolute",
                       top: -28,
                       left: -6,
                       fontSize: 64,
                       lineHeight: 1,
-                      color:  mode === "light" ? theme.palette.tertiary.main : theme.palette.secondary.main,
-                      opacity: 1,
+                      color: mode === "light" ? theme.palette.tertiary.main : theme.palette.secondary.main,
+                      opacity: 0.5, 
                       pointerEvents: "none",
                       userSelect: "none",
                     }}
                   >
                     “
                   </Typography>
+
 
                   <Typography
                     fontStyle="italic"
@@ -121,7 +124,7 @@ export default function StoriesCarousel({ items = [], intervalMs = 3000, mode })
 
                   <Typography
                     variant="body2"
-                    color="text.secondary"
+                    color={theme.palette.text.secondary}
                     sx={{ mt: 2, textAlign: "right" }}
                   >
                     {item.author}

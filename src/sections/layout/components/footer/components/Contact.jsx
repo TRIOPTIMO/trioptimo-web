@@ -29,13 +29,13 @@ export function FooterContact() {
                 >
                     <Typography>Contacto</Typography>
                     <Stack component="a" href="mailto:info@trioptimo.com" rel="noopener noreferrer" direction="row" spacing={1.5} alignItems="center" sx={{
-                            textDecoration: "none",
-                            color: "inherit",
-                            cursor: "pointer",
-                            "&:hover": {
-                                textDecoration: "underline",
-                            },
-                        }}>
+                        textDecoration: "none",
+                        color: "inherit",
+                        cursor: "pointer",
+                        "&:hover": {
+                            textDecoration: "underline",
+                        },
+                    }}>
                         <MailOutlineIcon />
                         <Typography variant="body2">info@trioptimo.com</Typography>
                     </Stack>
@@ -66,21 +66,37 @@ export function FooterContact() {
                             target="_blank"
                             rel="noreferrer noopener"
                             size="small"
+                            aria-label="Abrir LinkedIn de Trioptimo (se abre en una nueva pestaña)"
+                            title="LinkedIn de Trioptimo"
                             sx={{
                                 bgcolor: "background.paper",
                                 borderRadius: "999px",
                                 boxShadow: 0,
                                 "&:hover": { bgcolor: "transparent" },
+                                "&:focus-visible": {
+                                    outline: "2px solid",
+                                    outlineOffset: "2px",
+                                },
                             }}
                         >
-                            <LinkedInIcon fontSize="small" sx={{ color: mode === "light" ? "#0104FE" : "#00dd93", background: "transparent", border: 0 }} />
+                            <LinkedInIcon
+                                fontSize="small"
+                                sx={{
+                                    color: mode === "light" ? "#0104FE" : "#00dd93",
+                                    background: "transparent",
+                                    border: 0,
+                                }}
+                            />
                         </IconButton>
+
                         <IconButton
                             component="a"
                             href="https://www.instagram.com/trioptimo?igsh=OHV5MWhlaXh6NG14"
                             target="_blank"
                             rel="noreferrer noopener"
                             size="small"
+                            aria-label="Abrir Instagram de Trioptimo (se abre en una nueva pestaña)"
+                            title="Instagram de Trioptimo"
                             sx={{
                                 bgcolor: "background.paper",
                                 borderRadius: "999px",

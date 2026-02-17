@@ -114,28 +114,59 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
-        sx={{
+        sx={(theme) => ({
           px: 2.5,
           py: 1.5,
           "& .MuiAccordionSummary-content": {
             alignItems: "center",
             gap: 2,
+            minWidth: 0,
           },
-        }}
+
+          // Cuando está expandido, cambia color a algo con contraste
+          "&.Mui-expanded .step-num, &.Mui-expanded .step-title": {
+            color: theme.palette.secondary.main,
+          },
+
+          // Focus visible claro
+          "&:focus-visible": {
+            outline: `2px solid ${theme.palette.secondary.main}`,
+            outlineOffset: 2,
+            borderRadius: 12,
+          },
+        })}
       >
-        <Typography fontWeight={700} sx={(theme) => ({
-          color: "default",
-          backgroundColor: "transparent",
-          fontWeight: 700,
-          ".Mui-expanded &": { color: "secondary.main" }
-        })}>{num}
+        <Typography
+          className="step-num"
+          fontWeight={800}
+          sx={(theme) => ({
+            color: theme.palette.text.primary, // ✅ contraste
+            minWidth: 44, // alinea visualmente
+            flexShrink: 0,
+          })}
+        >
+          {num}
         </Typography>
-        <Typography fontWeight={700} sx={{
-          "&:hover": {
-            color: "grey.700",
-          },
-        }}>{title}</Typography>
+
+        <Typography
+          className="step-title"
+          fontWeight={700}
+          sx={(theme) => ({
+            color: theme.palette.text.primary, // ✅ contraste
+            minWidth: 0,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+
+            "&:hover": {
+              color: theme.palette.text.primary, // ✅ no baja contraste
+            },
+          })}
+        >
+          {title}
+        </Typography>
       </AccordionSummary>
+
       <AccordionDetails sx={{ px: 9.5, pb: 2.5, pt: 0 }}>
         <Typography variant="body2" color="text.secondary">
           {desc}

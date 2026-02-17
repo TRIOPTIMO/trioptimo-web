@@ -47,6 +47,7 @@ export default function Values({mode}) {
 
         <Typography
           variant="h6"
+          component="p"
           color="text.secondary"
           sx={{
             mt: 2,
