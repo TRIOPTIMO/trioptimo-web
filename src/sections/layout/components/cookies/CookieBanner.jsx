@@ -38,7 +38,7 @@ export default function CookieBanner() {
 
                         // Mobile: no fuerces width, deja que left/right manden
                         width: { xs: "auto", sm: 900 },
-                        maxWidth: { xs: "65%", sm: 900 },
+                        maxWidth: { xs: "95%", sm: 900 },
 
                         // Blindaje anti overflow
                         boxSizing: "border-box",
@@ -105,7 +105,7 @@ export default function CookieBanner() {
                             to="/politica-de-cookies"
                             underline="hover"
                             sx={(theme) => ({
-                                color: "text.primary",
+                                color: "primary.main",
                                 "&:hover": { color: theme.palette.secondary.main },
                             })}
                         >

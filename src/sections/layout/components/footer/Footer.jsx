@@ -19,47 +19,56 @@ export function Footer() {
   const { mode } = useColorMode();
 
   return (
-    <>
-      <Box
-        component="footer"
-        sx={{
-          borderTop: "1px solid",
-          borderColor: "divider",
-          bgcolor: mode === "light" ? "grey.50" : "grey.900",
-        }}
-      >
-        <Container
-          sx={{
-            py: 1,
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "left",
-            gap: 2,
-          }}
+    <Box
+      component="footer"
+      sx={{
+        borderTop: "1px solid",
+        borderColor: "divider",
+        bgcolor: mode === "light" ? "grey.50" : "grey.900",
+      }}
+    >
+      <Container sx={{ py: { xs: 2, md: 2 } }}>
+        {/* Bloques superiores */}
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 2, md: 4 }}
+          alignItems={{ xs: "stretch", md: "flex-start" }}
+          sx={{ width: "100%" }}
         >
-          <Stack direction="row" alignItems="left" width={"100%"} gap={8}>
-            <FooterContact></FooterContact>
-            <FooterLegalMUI />
-            <FooterLocations/>
-          </Stack>
-        </Container>
-
-
-        <Divider sx={{ mx: 4 }}></Divider>
-        <Stack direction="row" spacing={1.5} alignItems="center" sx={{ px: 3.5, py: 2 }}>
-          <Box
-            component="img"
-            src={mode === "light" ? "/logo-black.png" : "/logo-white.png"}
-            alt="TriOptimo Logo"
-            sx={{ width: 20, height: 20, objectFit: "contain", borderRadius: 1.5, opacity: 0.9, background:"transparent" }}
-          />
-          <Box>
-            <Typography variant="body2" color="text.secondary">
-              © {new Date().getFullYear()} Todos los derechos reservados. Trioptimo. Ingeniería con propósito
-            </Typography>
-          </Box>
+          <FooterContact />
+          <FooterLegalMUI />
+          <FooterLocations />
         </Stack>
-      </Box>
-    </>
+      </Container>
+
+      <Divider sx={{ mx: { xs: 2, md: 4 } }} />
+
+      {/* Barra inferior */}
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={1.5}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ px: 2, py: 2, textAlign: { xs: "center", sm: "left" } }}
+      >
+        <Box
+          component="img"
+          src={mode === "light" ? "/logo-black.png" : "/logo-white.png"}
+          alt="TriOptimo Logo"
+          sx={{
+            width: 20,
+            height: 20,
+            objectFit: "contain",
+            borderRadius: 1.5,
+            opacity: 0.9,
+          }}
+        />
+
+        <Typography variant="body2" color="text.secondary">
+          © {new Date().getFullYear()} Todos los derechos reservados. Trioptimo. Ingeniería con propósito
+        </Typography>
+      </Stack>
+    </Box>
   );
 }
+
