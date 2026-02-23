@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   Container,
   Box,
@@ -15,12 +14,15 @@ import {
   Link as MUILink,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MeshBackground from "../../../../sections/common/MeshBackground";
 
 export default function Contact({ mode }) {
+  const { t } = useTranslation();
+
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -41,30 +43,32 @@ export default function Contact({ mode }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error("No se pudo enviar el formulario");
+      if (!res.ok) throw new Error(t("contact.feedback.sendError"));
       setSent(true);
       form.reset();
+      setAcceptedPrivacy(false);
     } catch (err) {
-      setError(err.message || "Error desconocido");
+      setError(err.message || t("contact.feedback.genericError"));
     } finally {
       setSending(false);
     }
   }
 
+  const fields = [
+    { key: "name", name: "nombre", required: true, autoComplete: "name" },
+    { key: "email", name: "email", type: "email", required: true, autoComplete: "email" },
+    { key: "websiteOptional", name: "web", autoComplete: "url" },
+  ];
+
   return (
-    <Box
-      id="contacto"
-    >
+    <Box id="contacto">
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* Layout principal en horizontal */}
         <Stack
           direction="row"
           flexWrap="wrap"
           useFlexGap
           alignItems="flex-start"
-          sx={(theme) => ({
-            gap: theme.spacing(6),
-          })}
+          sx={(theme) => ({ gap: theme.spacing(6) })}
         >
           {/* ---- Columna izquierda ---- */}
           <Box
@@ -73,18 +77,24 @@ export default function Contact({ mode }) {
               flexShrink: 0,
               flexBasis: {
                 xs: "100%",
-                md: `calc((100% - ${theme.spacing(6)}) * 0.42)`, // ~5/12 aprox
+                md: `calc((100% - ${theme.spacing(6)}) * 0.42)`,
               },
               minWidth: { xs: "100%", sm: 0 },
             })}
           >
-            <Typography variant="h4" fontWeight={800} sx={{
-              fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" }
-            }}>
-              ¿Listo para multiplicar tu impacto?
+            <Typography
+              variant="h4"
+              fontWeight={800}
+              sx={{
+                fontSize: { xs: "1.9rem", md: "3.4rem" },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              {t("contact.title")}
             </Typography>
+
             <Typography sx={{ mt: 1.5, color: "text.primary", textAlign: { xs: "center", md: "left" } }}>
-              Hablemos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aquí para ayudarte a hacerlo realidad.
+              {t("contact.subtitle")}
             </Typography>
 
             <Stack spacing={1.5} sx={{ mt: 3 }}>
@@ -92,6 +102,7 @@ export default function Contact({ mode }) {
                 <MailOutlineIcon />
                 <Typography>info@trioptimo.com</Typography>
               </Stack>
+
               <Stack
                 component="a"
                 href="https://wa.me/34663477089"
@@ -104,10 +115,7 @@ export default function Contact({ mode }) {
                   textDecoration: "none",
                   color: "inherit",
                   cursor: "pointer",
-
-                  "&:hover": {
-                    opacity: 0.8, // feedback sutil
-                  },
+                  "&:hover": { opacity: 0.8 },
                 }}
               >
                 <PhoneAndroidIcon />
@@ -123,20 +131,21 @@ export default function Contact({ mode }) {
               flexShrink: 0,
               flexBasis: {
                 xs: "100%",
-                md: `calc((100% - ${theme.spacing(6)}) * 0.58)`, // ~7/12 aprox
+                md: `calc((100% - ${theme.spacing(6)}) * 0.58)`,
               },
               minWidth: { xs: "100%", sm: 0 },
             })}
           >
-
-            <MeshBackground sx={{
-              minHeight: "70vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              px: { xs: 2, sm: 6 }, // responsive
-              py: { xs: 6, sm: 6 }, // >= 50px
-            }}>
+            <MeshBackground
+              sx={{
+                minHeight: "70vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                px: { xs: 2, sm: 6 },
+                py: { xs: 6, sm: 6 },
+              }}
+            >
               <Card sx={{ borderRadius: 1, p: 3 }}>
                 <CardContent>
                   <Box component="form" onSubmit={handleSubmit} noValidate>
@@ -144,15 +153,9 @@ export default function Contact({ mode }) {
                       direction="column"
                       flexWrap="wrap"
                       useFlexGap
-                      sx={(theme) => ({
-                        gap: theme.spacing(2),
-                      })}
+                      sx={(theme) => ({ gap: theme.spacing(2) })}
                     >
-                      {[
-                        { label: "Nombre", name: "nombre", required: true, autoComplete: "name" },
-                        { label: "Email", name: "email", type: "email", required: true, autoComplete: "email" },
-                        { label: "Página Web (opcional)", name: "web", autoComplete: "url" },
-                      ].map((f) => {
+                      {fields.map((f) => {
                         const labelId = `label-${f.name}`;
                         const inputId = `input-${f.name}`;
 
@@ -178,8 +181,13 @@ export default function Contact({ mode }) {
                               fontWeight={600}
                               sx={{ mb: 0.5, color: "text.primary", display: "block" }}
                             >
-                              {f.label}
-                              {f.required && <span aria-hidden="true" style={{ color: "#d32f2f" }}> *</span>}
+                              {t(`contact.fields.${f.key}`)}
+                              {f.required && (
+                                <span aria-hidden="true" style={{ color: "#d32f2f" }}>
+                                  {" "}
+                                  *
+                                </span>
+                              )}
                             </Typography>
 
                             <TextField
@@ -202,7 +210,8 @@ export default function Contact({ mode }) {
                                   "&:hover fieldset": { borderColor: "default" },
                                   "&.Mui-focused fieldset": {
                                     borderColor: "primary.main",
-                                    boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
+                                    boxShadow: (theme) =>
+                                      `0 0 0 3px ${theme.palette.primary.main}22`,
                                   },
                                 },
                               }}
@@ -210,7 +219,6 @@ export default function Contact({ mode }) {
                           </Box>
                         );
                       })}
-
 
                       {/* Campo multilinea */}
                       <Box sx={{ flexBasis: "100%" }}>
@@ -222,7 +230,10 @@ export default function Contact({ mode }) {
                           fontWeight={600}
                           sx={{ display: "block" }}
                         >
-                          Cuéntanos más sobre tu proyecto <span aria-hidden="true" style={{ color: "#d32f2f" }}> *</span>
+                          {t("contact.fields.details")}{" "}
+                          <span aria-hidden="true" style={{ color: "#d32f2f" }}>
+                            *
+                          </span>
                         </Typography>
 
                         <TextField
@@ -246,7 +257,8 @@ export default function Contact({ mode }) {
                               "&:hover fieldset": { borderColor: "default" },
                               "&.Mui-focused fieldset": {
                                 borderColor: "primary.main",
-                                boxShadow: (theme) => `0 0 0 3px ${theme.palette.primary.main}22`,
+                                boxShadow: (theme) =>
+                                  `0 0 0 3px ${theme.palette.primary.main}22`,
                               },
                             },
                           }}
@@ -260,14 +272,19 @@ export default function Contact({ mode }) {
                               required
                               checked={acceptedPrivacy}
                               onChange={(e) => setAcceptedPrivacy(e.target.checked)}
-                              inputProps={{ "aria-label": "He leído y acepto la política de privacidad" }}
+                              inputProps={{ "aria-label": t("contact.privacy.checkboxAria") }}
                             />
                           }
                           label={
                             <span>
-                              He leído y acepto la{" "}
-                              <MUILink component={RouterLink} to="/politica-de-privacidad" target="_blank" underline="hover">
-                                política de privacidad
+                              {t("contact.privacy.labelPrefix")}{" "}
+                              <MUILink
+                                component={RouterLink}
+                                to="/politica-de-privacidad"
+                                target="_blank"
+                                underline="hover"
+                              >
+                                {t("contact.privacy.linkText")}
                               </MUILink>
                             </span>
                           }
@@ -282,6 +299,7 @@ export default function Contact({ mode }) {
                           color="tertiary"
                           size="large"
                           disabled={sending || !acceptedPrivacy}
+                          aria-label={t("contact.submit.aria")}
                           sx={{
                             ml: 1,
                             borderRadius: 999,
@@ -292,19 +310,17 @@ export default function Contact({ mode }) {
                             color: "white",
                           }}
                         >
-                          {sending ? "Enviando..." : "Enviar"}
+                          {sending ? t("contact.submit.sending") : t("contact.submit.send")}
                         </Button>
                       </Box>
-
 
                       {/* Feedback */}
                       {sent && (
                         <Box sx={{ flexBasis: "100%" }} role="status" aria-live="polite">
-                          <Alert severity="success">
-                            Gracias por tu mensaje. Te responderemos en un plazo máximo de 48hs.
-                          </Alert>
+                          <Alert severity="success">{t("contact.feedback.success")}</Alert>
                         </Box>
                       )}
+
                       {error && (
                         <Box sx={{ flexBasis: "100%" }} role="alert" aria-live="assertive">
                           <Alert severity="error">{error}</Alert>

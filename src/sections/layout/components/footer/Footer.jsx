@@ -4,11 +4,9 @@ import {
   Box,
   Typography,
   Stack,
-  Link as MLink,
   Divider
 } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useTranslation } from "react-i18next";
 
 import { useColorMode } from "../../../../theme/ColorModeContext";
 import FooterLegalMUI from "./components/FooterLegal";
@@ -17,6 +15,7 @@ import { FooterLocations } from "./components/Locations";
 
 export function Footer() {
   const { mode } = useColorMode();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -65,10 +64,9 @@ export function Footer() {
         />
 
         <Typography variant="body2" color="text.secondary">
-          © {new Date().getFullYear()} Todos los derechos reservados. Trioptimo. Ingeniería con propósito
+          {t("footer.copyright", { year: new Date().getFullYear() })}
         </Typography>
       </Stack>
     </Box>
   );
 }
-

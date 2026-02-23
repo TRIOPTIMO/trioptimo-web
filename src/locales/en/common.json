@@ -1,0 +1,380 @@
+{
+  "navbar": {
+    "how": "How we work",
+    "philosophy": "Philosophy",
+    "team": "Team",
+    "stories": "Stories",
+    "cta": "Request demo",
+    "labels": {
+      "darkMode": "Dark/Light mode"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} All rights reserved. Trioptimo. Engineering with purpose",
+    "locations": {
+      "title": "Locations",
+      "sevilla": "Seville",
+      "malaga": "Malaga",
+      "granada": "Granada"
+    },
+    "legal": {
+      "title": "Legal Information",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "notice": "Legal Notice",
+      "label": "Legal Information"
+    },
+    "contact": {
+      "title": "Contact",
+      "aria": "Contact",
+      "linkedinAria": "Open Trioptimo LinkedIn (opens in a new tab)",
+      "instagramAria": "Open Trioptimo Instagram (opens in a new tab)",
+      "linkedinTitle": "Trioptimo LinkedIn",
+      "instagramTitle": "Trioptimo Instagram"
+    }
+  },
+  "cookieBanner": {
+    "ariaLabel": "Cookie preferences",
+    "message": "We use analytics cookies (Google Analytics) to improve the user experience. You can accept or reject their use.",
+    "reject": "Reject",
+    "accept": "Accept",
+    "moreInfo": "More information in our",
+    "cookiesPolicy": "Cookie Policy"
+  },
+  "cta": {
+    "startProject": "Start your project",
+    "aria": "Start project"
+  },
+  "cookiesPolicy": {
+    "title": "Cookie Policy",
+    "lastUpdateLabel": "Last updated: {{date}}",
+
+    "intro": "This Cookie Policy explains what cookies are, which types are used on <1>{{domain}}</1>, and how you can manage them.",
+
+    "sections": {
+      "s1Title": "1. What are cookies?",
+      "s1Body": "Cookies are small text files that a website can store on your device (computer, mobile phone, or tablet) to remember information about your visit (for example, preferences, usage statistics, or technical settings).",
+
+      "s2Title": "2. What types of cookies exist?",
+      "s2Body": "In general, cookies can be classified by:",
+      "s2Bullets": [
+        "Who manages them: first-party or third-party cookies.",
+        "How long they remain: session or persistent cookies.",
+        "Purpose: technical (necessary), personalization, analytics, advertising, etc."
+      ],
+
+      "s3Title": "3. Cookies used on this site",
+      "s3BodyStrong": "This site uses analytics cookies",
+      "s3BodyRest": "(non-essential) to measure and analyze site usage, in order to improve user experience and performance.",
+      "s3ToolLabel": "Tool:",
+      "s3ProviderLabel": "Provider:",
+      "s3PurposeLabel": "Purpose:",
+      "s3PurposeValue": "statistical analysis",
+      "s3PurposeDetails": "(pages visited, visit duration, device type, etc.)",
+      "s3DurationLabel": "Approximate duration:",
+      "s3Note": "Note: The information collected by these cookies is generally aggregated or pseudonymized depending on the provider’s configuration. In any case, you can reject their installation.",
+
+      "s4Title": "4. Legal basis",
+      "s4Body": "The legal basis for using analytics cookies (non-essential) is <1>user consent</1>, requested via the cookie banner before installation.",
+
+      "s5Title": "5. How to manage, withdraw, or change consent",
+      "s5Body1": "You can block or delete cookies from your browser settings. Please note that if you disable certain cookies, some features may not work properly.",
+      "s5Body2": "Also, if you accepted analytics cookies and want to withdraw your consent, you can:",
+      "s5Bullets": [
+        "Delete cookies from your browser.",
+        "Clear the site’s local storage (localStorage) using your browser developer tools.",
+        "Reload the site: the banner will be shown if no preference is stored."
+      ],
+      "s5Hint": "(If you implement a “Cookie settings” button, you’ll be able to change your choice easily from the site itself.)",
+
+      "s6Title": "6. More information about data processing",
+      "s6Body": "For more information about how we process personal data, see our <1>Privacy Policy</1>.",
+
+      "s7Title": "7. Controller identification",
+      "s7OwnerLabel": "Controller:",
+      "s7EmailLabel": "Contact email:"
+    },
+
+    "footerNote": "This Cookie Policy may be updated to reflect changes in cookie usage or legal requirements. The current version will always be available on this page."
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "lastUpdateLabel": "Last updated: {{date}}",
+
+    "sections": {
+      "s1Title": "1. Identification details",
+      "s1Intro": "In accordance with Law 34/2002 (LSSI-CE), we inform you that this website",
+      "s1AfterLink": "is owned by:",
+      "nameLabel": "Name:",
+      "locationLabel": "Location:",
+      "emailLabel": "Email:",
+
+      "s2Title": "2. Purpose",
+      "s2Body": "This website aims to provide information about the owner’s services and activities.",
+
+      "s3Title": "3. Terms of use",
+      "s3Body": "Accessing and using the website grants you user status and implies full acceptance of the terms set out herein.",
+
+      "s4Title": "4. Intellectual property",
+      "s4Body": "All content on the website (texts, images, logos, design, source code) is owned by the owner or used under license, and reproduction without express authorization is prohibited.",
+
+      "s5Title": "5. Liability",
+      "s5Body": "The owner is not responsible for improper use of the website content or for any damages that may arise from accessing or using the published information.",
+
+      "s6Title": "6. External links",
+      "s6Body": "This site may contain links to third-party pages over which the owner has no control and assumes no responsibility.",
+
+      "s7Title": "7. Applicable law",
+      "s7Body": "This Legal Notice is governed by Spanish law."
+    },
+
+     "footerNote": "For any questions related to this Legal Notice, you can write to <strong>{{email}}</strong>."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdateLabel": "Last updated: {{date}}",
+
+    "intro": "In compliance with Regulation (EU) 2016/679 (General Data Protection Regulation – GDPR), we inform you about the processing of your personal data through the website <link>{{website}}</link>.",
+    "sections": {
+      "s1Title": "1. Data controller",
+      "s1OwnerLabel": "Owner:",
+      "s1AddressLabel": "Address:",
+      "s1EmailLabel": "Email:",
+      "s1PhoneLabel": "Phone:",
+
+      "s2Title": "2. Personal data we collect",
+      "s2Body": "We may collect the following data, depending on how you use the site:",
+      "s2Bullets": [
+        "Name and surname (if you enter them in forms)",
+        "Email address",
+        "Phone number (if requested in forms)",
+        "Messages sent via contact forms",
+        "IP address",
+        "Browsing data (cookies, identifiers, browser, pages visited, etc.)"
+      ],
+
+      "s3Title": "3. Purpose of processing",
+      "s3Body": "We process your personal data for the following purposes:",
+      "s3Bullets": [
+        "Respond to inquiries sent via forms or email",
+        "Provide the requested services and manage the relationship with the user",
+        "Manage commercial communications (only if you give your consent)",
+        "Analyze website usage and improve user experience",
+        "Ensure site security and prevent fraud or misuse",
+        "Comply with applicable legal obligations"
+      ],
+
+      "s4Title": "4. Legal basis for processing",
+      "s4Body": "The legal basis for processing is:",
+      "s4Bullets": [
+        "Your consent (for example, when submitting forms or accepting non-essential cookies)",
+        "Performance of a contract or pre-contractual steps (if you request a service)",
+        "The controller’s legitimate interest (security, site improvement, and user support)",
+        "Compliance with legal obligations"
+      ],
+
+      "s5Title": "5. Data retention",
+      "s5Body": "We will keep your data only for as long as necessary to fulfill the purpose for which it was collected and to determine any potential liabilities arising from processing.",
+      "s5Bullets": [
+        "Inquiries/contact: for the time needed to respond and close the request",
+        "Contractual relationship: for the duration of the relationship and, thereafter, for the applicable legal periods",
+        "Analytics/cookies: according to the duration indicated in the Cookie Policy and/or the provider’s settings"
+      ],
+
+      "s6Title": "6. Data recipients and processors",
+      "s6Body": "We do not share your data with third parties unless legally required. However, certain providers may process data on our behalf (e.g., hosting, email, analytics), acting as <strong>data processors</strong> under appropriate contracts and safeguards.",
+      "s7Title": "7. International transfers",
+      "s7Body": "If we use providers that process data outside the European Economic Area (e.g., analytics or email services), transfers will be carried out with appropriate safeguards (e.g., Standard Contractual Clauses or other mechanisms permitted by the GDPR).",
+
+      "s8Title": "8. Your rights",
+      "s8Body": "You can exercise the following rights:",
+      "s8Bullets": [
+        "Access to your data",
+        "Rectification of inaccurate data",
+        "Erasure (right to be forgotten)",
+        "Restriction of processing",
+        "Objection to processing",
+        "Data portability",
+        "Withdraw consent at any time (without affecting prior lawfulness)"
+      ],
+      "s8HowTo": "To exercise them, email us at <strong>{{email}}</strong> indicating the right you wish to exercise and identifying yourself.",
+      "s8Note": "You also have the right to lodge a complaint with the competent data protection authority.",
+
+      "s9Title": "9. Security measures",
+      "s9Body": "We apply reasonable technical and organizational measures to protect your personal data and prevent unauthorized access, loss, alteration, or improper disclosure.",
+
+      "s10Title": "10. Cookies",
+      "s10Body": "Currently, this website does not use non-essential cookies. If analytics tools or third-party cookies are added (for example, for usage statistics), user consent will be requested in advance and this policy will be updated accordingly.",
+
+      "s11Title": "11. Changes to this policy",
+      "s11Body": "We reserve the right to modify this Privacy Policy to adapt it to legislative changes or site updates. The current version will always be available on this page.",
+
+      "s12Title": "12. Automated decisions and profiling",
+      "s12Body": "This website does not carry out automated decision-making or profiling that produces legal effects on the user."
+    }
+  },
+   "hero": {
+    "title": {
+      "line1Before": "We turn ideas of",
+      "highlight1": "impact",
+      "line2Before": "into",
+      "highlight2": "sustainable projects"
+    },
+    "subtitle": "We apply engineering and optimization so your organization can transform reality.",
+    "secondaryCta": "How we work",
+    "stats": {
+      "efficiency": "Improvement in operational efficiency",
+      "funding": "Higher funding success rate",
+      "automation": "Key processes automated"
+    }
+  },
+  "values": {
+    "title": "Your mission is our fuel",
+    "subtitle": "We remove the technical and administrative burden so you can focus all your energy on what truly matters: <bold>your cause</bold>.",
+    "items": {
+      "funding": {
+        "title": "Funding and innovation within reach",
+        "desc": "We help you secure funding and turn it into concrete operational improvements through engineering and digitalization."
+      },
+      "resources": {
+        "title": "Maximizing your resources",
+        "desc": "We implement clear, tailored technical solutions to professionalize your management, optimizing every available resource."
+      },
+      "endToEnd": {
+        "title": "End-to-end support",
+        "desc": "We’re with you all the way: from shaping the idea to execution, fundraising, and measuring results."
+      }
+    }
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "Our end-to-end methodology ensures every step aligns with your goals and maximizes funding and sustainability opportunities.",
+    "aria": {
+      "stepSummary": "Step {{num}}: {{title}}"
+    },
+    "steps": {
+      "s1": {
+        "num": "01",
+        "title": "Analysis and planning",
+        "desc": "We understand your idea, assess its feasibility, and design a solid, fundable project plan."
+      },
+      "s2": {
+        "num": "02",
+        "title": "Optimization and digitalization",
+        "desc": "We apply engineering to improve processes, digitize tasks, and make operations more efficient."
+      },
+      "s3": {
+        "num": "03",
+        "title": "Funding acquisition",
+        "desc": "We identify calls, prepare winning proposals, and connect you with funding opportunities."
+      },
+      "s4": {
+        "num": "04",
+        "title": "Execution and evaluation",
+        "desc": "We support implementation and measure impact to ensure sustainable results."
+      }
+    }
+  },
+  "philosophy": {
+    "watermarkAlt": "TriOptimo logo",
+    "title": "Our philosophy",
+    "intro": "We know what it takes to sustain a social project: the passion, the dedication, the endless hours—and also the feeling that sometimes resources or support are missing. We want to support you, remove your technical burden, and help you focus on what’s essential: <strong>continuing to create real impact</strong>.",
+
+    "cards": {
+      "commitment": {
+        "title": "Our commitment to you",
+        "desc": "We join your cause as an ally who understands your challenges. We turn your ideas into sustainable projects and support you every step of the way, so your team can focus on what they do best: creating opportunities and transforming lives."
+      },
+      "dream": {
+        "title": "The change we dream of",
+        "desc": "We want a stronger social ecosystem where every organization has access to the tools, funding, and knowledge it needs to grow without losing its essence. We dream of a sector where collaboration is the norm and no one is left behind due to lack of support."
+      },
+      "reasons": {
+        "title": "Why choose us?",
+        "items": [
+          "Commitment to social impact: your mission is ours too.",
+          "Clarity and closeness: we speak plainly and move at your pace.",
+          "Transparency and trust: we work ethically and communicate honestly.",
+          "Practical innovation: we turn complex processes into easy-to-use solutions.",
+          "Collaboration and empowerment: we share knowledge so you gain autonomy."
+        ]
+      }
+    }
+  },
+   "team": {
+    "title": "Our team",
+    "subtitle": "We are engineering and management professionals, passionate about applying our knowledge to create real social impact.",
+
+    "aria": {
+      "linkedin": "Open {{name}}’s LinkedIn (opens in a new tab)",
+      "photoAlt": "Photo of {{name}}"
+    },
+
+    "linkedinLabel": "LinkedIn",
+
+    "people": {
+      "nahuel": {
+        "name": "Nahuel Deschuter",
+        "role": "Co-founder | Operations & Delivery",
+        "quote": "My focus is execution. I translate our project vision into concrete results. I’m passionate about operational efficiency and continuous improvement, ensuring every initiative delivers measurable, sustainable impact."
+      },
+      "jano": {
+        "name": "Jano Centeno",
+        "role": "Co-founder | Growth & Partnerships",
+        "quote": "My work is to ensure sustainable growth by forging key partnerships and designing the models that allow us to bring impact engineering to as many organizations as possible."
+      },
+      "ignacio": {
+        "name": "Ignacio Davanzo",
+        "role": "Co-founder | Technology & Systems",
+        "quote": "I’m the technology lever. I lead process digitization and automation so TriOptimo and our partners can make smart, data-driven decisions. Less bureaucracy, more impact."
+      }
+    }
+  },
+  "stories": {
+    "title": "Impact stories",
+    "subtitle": "Our clients’ success is our best proof.",
+    "items": [
+      {
+        "quote": "Trioptimo supported us with real commitment as we rebuilt and organized our institutional identity, providing valuable tools that now sustain and strengthen the way we organize and work.",
+        "author": "— El Andar equine therapy school, General Director"
+      },
+      {
+        "quote": "Thanks to Trioptimo, I learned how to design and manage the organization’s different projects with a structured methodology, making decisions based on precise data and strategic objectives. Thank you for the support.",
+        "author": "— El Kiri, Director"
+      },
+      {
+        "quote": "Trioptimo supported us in rebuilding our institutional identity, providing key tools that now strengthen our operations and growth.",
+        "author": "— El Andar, Coordinator"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to multiply your impact?",
+    "subtitle": "Let’s talk. Take the first step toward a fundable, sustainable project with measurable results. We’re here to help you make it happen.",
+
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "websiteOptional": "Website (optional)",
+      "details": "Tell us more about your project"
+    },
+
+    "privacy": {
+      "checkboxAria": "I have read and accept the privacy policy",
+      "labelPrefix": "I have read and accept the",
+      "linkText": "privacy policy"
+    },
+
+    "submit": {
+      "sending": "Sending...",
+      "send": "Send",
+      "aria": "Submit contact form"
+    },
+
+    "feedback": {
+      "success": "Thanks for your message. We’ll get back to you within 48 hours.",
+      "genericError": "Unknown error",
+      "sendError": "The form could not be sent"
+    }
+  }
+}

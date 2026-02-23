@@ -1,0 +1,380 @@
+{
+  "navbar": {
+    "how": "Cómo trabajamos",
+    "philosophy": "Filosofía",
+    "team": "Equipo",
+    "stories": "Historias",
+    "cta": "Solicitar demo",
+    "labels": {
+      "darkMode": "Modo claro/oscuro"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Todos los derechos reservados. Trioptimo. Ingeniería con propósito",
+    "locations": {
+      "title": "Ubicaciones",
+      "sevilla": "Sevilla",
+      "malaga": "Málaga",
+      "granada": "Granada"
+    },
+     "legal": {
+      "title": "Información Legal",
+      "privacy": "Política de Privacidad",
+      "cookies": "Política de Cookies",
+      "notice": "Aviso Legal",
+      "label": "Enlaces legales"
+    },
+     "contact": {
+      "title": "Contacto",
+      "aria": "Contacto",
+      "linkedinAria": "Abrir LinkedIn de Trioptimo (se abre en una nueva pestaña)",
+      "instagramAria": "Abrir Instagram de Trioptimo (se abre en una nueva pestaña)",
+      "linkedinTitle": "LinkedIn de Trioptimo",
+      "instagramTitle": "Instagram de Trioptimo"
+    }
+  },
+  "cookieBanner": {
+    "ariaLabel": "Preferencias de cookies",
+    "message": "Utilizamos cookies analíticas (Google Analytics) para mejorar la experiencia del usuario. Puedes aceptar o rechazar su uso.",
+    "reject": "Rechazar",
+    "accept": "Aceptar",
+    "moreInfo": "Más información en nuestra",
+    "cookiesPolicy": "Política de Cookies"
+  },
+  "cta": {
+    "startProject": "Empieza tu proyecto",
+    "aria": "Empezar proyecto"
+  },
+  "cookiesPolicy": {
+    "title": "Política de Cookies",
+    "lastUpdateLabel": "Última actualización: {{date}}",
+
+    "intro": "Esta Política de Cookies explica qué son las cookies, qué tipos se utilizan en <1>{{domain}}</1> y cómo puedes gestionarlas.",
+
+    "sections": {
+      "s1Title": "1. ¿Qué son las cookies?",
+      "s1Body": "Las cookies son pequeños archivos de texto que un sitio web puede almacenar en tu dispositivo (ordenador, móvil o tablet) para recordar información sobre tu visita (por ejemplo, preferencias, estadísticas de uso o configuración técnica).",
+
+      "s2Title": "2. ¿Qué tipos de cookies existen?",
+      "s2Body": "De forma general, las cookies pueden clasificarse por:",
+      "s2Bullets": [
+        "Según la entidad que las gestione: cookies propias o de terceros.",
+        "Según el tiempo de permanencia: de sesión o persistentes.",
+        "Según su finalidad: técnicas (necesarias), de personalización, analíticas, publicitarias, etc."
+      ],
+
+      "s3Title": "3. Cookies utilizadas en este sitio",
+      "s3BodyStrong": "Este sitio utiliza cookies analíticas",
+      "s3BodyRest": "(no esenciales) para medir y analizar el uso del sitio, con el fin de mejorar la experiencia de usuario y el rendimiento.",
+      "s3ToolLabel": "Herramienta:",
+      "s3ProviderLabel": "Proveedor:",
+      "s3PurposeLabel": "Finalidad:",
+      "s3PurposeValue": "análisis estadístico",
+      "s3PurposeDetails": "(páginas visitadas, duración de visitas, tipo de dispositivo, etc.)",
+      "s3DurationLabel": "Duración aproximada:",
+      "s3Note": "Nota: La información recogida por estas cookies es, por lo general, agregada o seudonimizada según la configuración del proveedor. En cualquier caso, puedes rechazar su instalación.",
+
+      "s4Title": "4. Base legal",
+      "s4Body": "La base legal para el uso de cookies analíticas (no esenciales) es el <1>consentimiento del usuario</1>, solicitado a través del banner de cookies antes de su instalación.",
+
+      "s5Title": "5. Cómo gestionar, retirar o cambiar el consentimiento",
+      "s5Body1": "Puedes bloquear o eliminar cookies desde la configuración de tu navegador. Ten en cuenta que, si deshabilitas ciertas cookies, algunas funcionalidades podrían no funcionar correctamente.",
+      "s5Body2": "Además, si aceptaste las cookies analíticas y quieres retirar tu consentimiento, puedes:",
+      "s5Bullets": [
+        "Eliminar las cookies desde tu navegador.",
+        "Borrar el almacenamiento local del sitio (localStorage) desde las herramientas del navegador.",
+        "Volver a cargar el sitio: se te mostrará el banner si no hay preferencia guardada."
+      ],
+      "s5Hint": "(Si implementas un botón “Configurar cookies”, podrás cambiar tu elección fácilmente desde el propio sitio.)",
+
+      "s6Title": "6. Más información sobre el tratamiento de datos",
+      "s6Body": "Para más información sobre cómo tratamos los datos personales, consulta nuestra <1>Política de Privacidad</1>.",
+
+      "s7Title": "7. Identificación del responsable",
+      "s7OwnerLabel": "Responsable:",
+      "s7EmailLabel": "Email de contacto:"
+    },
+
+    "footerNote": "Esta Política de Cookies puede actualizarse para reflejar cambios en el uso de cookies o cambios normativos. La versión vigente estará siempre disponible en esta página."
+  },
+  "legalNotice": {
+    "title": "Aviso Legal",
+    "lastUpdateLabel": "Última actualización: {{date}}",
+
+    "sections": {
+      "s1Title": "1. Datos identificativos",
+      "s1Intro": "En cumplimiento de la Ley 34/2002 (LSSI-CE), se informa que el presente sitio web",
+      "s1AfterLink": "es titularidad de:",
+      "nameLabel": "Nombre:",
+      "locationLabel": "Ubicación:",
+      "emailLabel": "Email:",
+
+      "s2Title": "2. Objeto",
+      "s2Body": "El presente sitio web tiene como finalidad ofrecer información sobre los servicios y actividades del titular.",
+
+      "s3Title": "3. Condiciones de uso",
+      "s3Body": "El acceso y uso del sitio web atribuye la condición de usuario e implica la aceptación plena de las condiciones aquí establecidas.",
+
+      "s4Title": "4. Propiedad intelectual",
+      "s4Body": "Todos los contenidos del sitio web (textos, imágenes, logotipos, diseño, código fuente) son propiedad del titular o cuentan con licencia de uso, quedando prohibida su reproducción sin autorización expresa.",
+
+      "s5Title": "5. Responsabilidad",
+      "s5Body": "El titular no se hace responsable del uso indebido del contenido del sitio web ni de los daños que pudieran derivarse del acceso o uso de la información publicada.",
+
+      "s6Title": "6. Enlaces externos",
+      "s6Body": "Este sitio puede contener enlaces a páginas de terceros, sobre las cuales el titular no tiene control ni asume responsabilidad.",
+
+      "s7Title": "7. Legislación aplicable",
+      "s7Body": "El presente Aviso Legal se rige por la legislación española."
+    },
+
+    "footerNote": "Para cualquier consulta relacionada con este Aviso Legal puedes escribir a <strong>{{email}}</strong>."
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad",
+    "lastUpdateLabel": "Última actualización: {{date}}",
+
+    "intro": "En cumplimiento del Reglamento (UE) 2016/679 (Reglamento General de Protección de Datos – GDPR), te informamos sobre el tratamiento de tus datos personales a través del sitio web <link>{{website}}</link>.",
+    "sections": {
+      "s1Title": "1. Responsable del tratamiento",
+      "s1OwnerLabel": "Titular:",
+      "s1AddressLabel": "Dirección:",
+      "s1EmailLabel": "Correo electrónico:",
+      "s1PhoneLabel": "Teléfono:",
+
+      "s2Title": "2. Datos personales que recopilamos",
+      "s2Body": "Podemos recopilar los siguientes datos, según el uso que hagas del sitio:",
+      "s2Bullets": [
+        "Nombre y apellidos (si los introduces en formularios)",
+        "Dirección de correo electrónico",
+        "Teléfono (si se solicita en formularios)",
+        "Mensajes enviados mediante formularios de contacto",
+        "Dirección IP",
+        "Datos de navegación (cookies, identificadores, navegador, páginas visitadas, etc.)"
+      ],
+
+      "s3Title": "3. Finalidad del tratamiento",
+      "s3Body": "Tratamos tus datos personales con las siguientes finalidades:",
+      "s3Bullets": [
+        "Responder consultas enviadas mediante formularios o correo electrónico",
+        "Prestar los servicios solicitados y gestionar la relación con el usuario",
+        "Gestionar comunicaciones comerciales (solo si das tu consentimiento)",
+        "Analizar el uso del sitio web y mejorar la experiencia del usuario",
+        "Garantizar la seguridad del sitio y prevenir fraudes o usos indebidos",
+        "Cumplir obligaciones legales aplicables"
+      ],
+
+      "s4Title": "4. Base legal para el tratamiento",
+      "s4Body": "La base legal del tratamiento es:",
+      "s4Bullets": [
+        "Tu consentimiento (por ejemplo, al enviar formularios o aceptar cookies no esenciales)",
+        "La ejecución de un contrato o la aplicación de medidas precontractuales (si solicitas un servicio)",
+        "Interés legítimo del Responsable (seguridad, mejora del sitio y atención al usuario)",
+        "Cumplimiento de obligaciones legales"
+      ],
+
+      "s5Title": "5. Conservación de los datos",
+      "s5Body": "Conservaremos tus datos únicamente durante el tiempo necesario para cumplir la finalidad para la que se recabaron y para determinar posibles responsabilidades derivadas del tratamiento.",
+      "s5Bullets": [
+        "Consultas/contacto: durante el tiempo necesario para atender y cerrar la solicitud",
+        "Relación contractual: mientras dure la relación y, posteriormente, durante los plazos legales aplicables",
+        "Analítica/cookies: según la duración indicada en la Política de Cookies y/o configuración del proveedor"
+      ],
+
+      "s6Title": "6. Destinatarios de los datos y encargados del tratamiento",
+      "s6Body": "No cedemos tus datos a terceros, salvo obligación legal. No obstante, determinados proveedores pueden tratar datos en nuestro nombre (por ejemplo, hosting, correo, analítica), actuando como <strong>encargados del tratamiento</strong> bajo contratos y garantías adecuadas.",
+      "s7Title": "7. Transferencias internacionales",
+      "s7Body": "Si utilizamos proveedores que traten datos fuera del Espacio Económico Europeo (por ejemplo, servicios de analítica o correo), las transferencias se realizarán con garantías adecuadas (p. ej., Cláusulas Contractuales Tipo u otros mecanismos permitidos por el GDPR).",
+
+      "s8Title": "8. Derechos del usuario",
+      "s8Body": "Puedes ejercer los derechos de:",
+      "s8Bullets": [
+        "Acceso a tus datos",
+        "Rectificación de datos inexactos",
+        "Supresión (derecho al olvido)",
+        "Limitación del tratamiento",
+        "Oposición al tratamiento",
+        "Portabilidad de tus datos",
+        "Retirar el consentimiento en cualquier momento (sin afectar la licitud previa)"
+      ],
+      "s8HowTo": "Para ejercerlos, escríbenos a <strong>{{email}}</strong> indicando el derecho que deseas ejercer e identificándote.",
+      "s8Note": "También tienes derecho a presentar una reclamación ante la autoridad de control competente en materia de protección de datos.",
+
+      "s9Title": "9. Medidas de seguridad",
+      "s9Body": "Aplicamos medidas técnicas y organizativas razonables para proteger tus datos personales y evitar accesos no autorizados, pérdidas, alteraciones o divulgación indebida.",
+
+      "s10Title": "10. Cookies",
+      "s10Body": "Actualmente este sitio web no utiliza cookies no esenciales. En caso de incorporar herramientas de análisis o cookies de terceros (por ejemplo, para estadísticas de uso), se solicitará previamente el consentimiento del usuario y se actualizará esta política en consecuencia.",
+
+      "s11Title": "11. Cambios en esta política",
+      "s11Body": "Nos reservamos el derecho a modificar esta Política de Privacidad para adaptarla a novedades legislativas o cambios en el sitio. La versión vigente estará siempre disponible en esta página.",
+
+      "s12Title": "12. Decisiones automatizadas y perfiles",
+      "s12Body": "Este sitio web no realiza decisiones automatizadas ni elaboración de perfiles que produzcan efectos jurídicos sobre el usuario."
+    }
+  },
+   "hero": {
+    "title": {
+      "line1Before": "Convertimos ideas de",
+      "highlight1": "impacto",
+      "line2Before": "en proyectos",
+      "highlight2": "sostenibles"
+    },
+    "subtitle": "Aplicamos ingeniería y optimización para que tu organización transforme la realidad.",
+    "secondaryCta": "Cómo trabajamos",
+    "stats": {
+      "efficiency": "Mejora en eficiencia operativa",
+      "funding": "Mayor tasa de éxito en financiación",
+      "automation": "Procesos clave automatizados"
+    }
+  },
+   "values": {
+    "title": "Tu misión es nuestro motor",
+    "subtitle": "Te eliminamos la carga técnica y administrativa para que toda tu energía se centre en lo que de verdad importa: <bold>tu causa</bold>.",
+    "items": {
+      "funding": {
+        "title": "Financiación e innovación a tu alcance",
+        "desc": "Te ayudamos a conseguir fondos y los transformamos en mejoras operativas concretas mediante ingeniería y digitalización."
+      },
+      "resources": {
+        "title": "Maximización de tus recursos",
+        "desc": "Implementamos soluciones técnicas claras y a medida para profesionalizar tu gestión, optimizando cada recurso disponible."
+      },
+      "endToEnd": {
+        "title": "Acompañamiento de punta a punta",
+        "desc": "Estamos contigo en todo el camino: desde la concepción de la idea hasta la ejecución, la captación de fondos y la medición de resultados."
+      }
+    }
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "subtitle": "Nuestra metodología integral asegura que cada paso esté alineado con tus objetivos y maximice las oportunidades de financiación y sostenibilidad.",
+    "aria": {
+      "stepSummary": "Paso {{num}}: {{title}}"
+    },
+    "steps": {
+      "s1": {
+        "num": "01",
+        "title": "Análisis y planificación",
+        "desc": "Entendemos tu idea, evaluamos su viabilidad y diseñamos un plan de proyecto sólido y financiable."
+      },
+      "s2": {
+        "num": "02",
+        "title": "Optimización y digitalización",
+        "desc": "Aplicamos ingeniería para mejorar tus procesos, digitalizar tareas y hacer tu operación más eficiente."
+      },
+      "s3": {
+        "num": "03",
+        "title": "Captación de fondos",
+        "desc": "Identificamos convocatorias, preparamos propuestas ganadoras y te conectamos con oportunidades de financiación."
+      },
+      "s4": {
+        "num": "04",
+        "title": "Ejecución y evaluación",
+        "desc": "Te acompañamos en la implementación y medimos el impacto para asegurar resultados sostenibles."
+      }
+    }
+  },
+  "philosophy": {
+    "watermarkAlt": "TriOptimo Logo",
+    "title": "Nuestra filosofía",
+    "intro": "Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y también la sensación de que a veces faltan recursos o apoyo. Queremos acompañarte, liberar tu carga técnica y ayudarte a enfocarte en lo escencial: <strong>seguir generando impacto real</strong>.",
+
+    "cards": {
+      "commitment": {
+        "title": "Nuestro compromiso contigo",
+        "desc": "Nos sumamos a tu causa como un aliado que entiende tus desafíos. Transformamos tus ideas en proyectos sostenibles y te acompañamos en cada paso, para que tu equipo pueda concentrarse en lo que mejor sabe hacer: crear oportunidades y transformar vidas."
+      },
+      "dream": {
+        "title": "El cambio que soñamos",
+        "desc": "Queremos un ecosistema social más fuerte, donde cada organización tenga acceso a las herramientas, la financiación y el conocimiento que necesita para crecer sin perder su esencia. Soñamos con un sector donde el trabajo colaborativo sea la norma y nadie quede atrás por falta de apoyo."
+      },
+      "reasons": {
+        "title": "¿Por qué elegirnos?",
+        "items": [
+          "Compromiso con el impacto social: tu misión también es la nuestra.",
+          "Claridad y cercanía: hablamos simple y caminamos a tu ritmo.",
+          "Transparencia y confianza: trabajamos con ética y comunicación honesta.",
+          "Innovación práctica: transformamos procesos complejos en soluciones fáciles de usar.",
+          "Colaboración y empoderamiento: compartimos conocimientos para que ganes autonomía."
+        ]
+      }
+    }
+  },
+   "team": {
+    "title": "Nuestro equipo",
+    "subtitle": "Somos profesionales de la ingeniería y la gestión, apasionados por aplicar nuestro conocimiento para generar un impacto social real.",
+
+    "aria": {
+      "linkedin": "Abrir LinkedIn de {{name}} (se abre en una nueva pestaña)",
+      "photoAlt": "Foto de {{name}}"
+    },
+
+    "linkedinLabel": "LinkedIn",
+
+    "people": {
+      "nahuel": {
+        "name": "Nahuel Deschuter",
+        "role": "Cofundador | Operaciones y Proyecto",
+        "quote": "Mi foco es la ejecución. Traduzco la visión de nuestros proyectos en resultados concretos. Me apaciona la eficiencia operativa y la mejora continua, garantizando que cada iniciativa tenga un impacto medible y sostenible."
+      },
+      "jano": {
+        "name": "Jano Centeno",
+        "role": "Cofundador | Crecimiento y Alianzas",
+        "quote": "Mi trabajo es asegurar el crecimiento sostenible, forjando las alianzas clave y diseñando los modelos que nos permiten llevar nuestra ingeniería de impacto al mayor número de organizaciones posibles."
+      },
+      "ignacio": {
+        "name": "Ignacio Davanzo",
+        "role": "Cofundador | Tecnología y Sistemas",
+        "quote": "Soy la palanca tecnológica. Lidero la digitalización y automatización de procesos para que TriOptimo y nuestros aliados tomen decisiones inteligentes y basadas en datos. Menos burocracia, más impacto."
+      }
+    }
+  },
+  "stories": {
+    "title": "Historias de impacto",
+    "subtitle": "El éxito de nuestros clientes es nuestra mejor carta de presentación.",
+    "items": [
+      {
+        "quote": "Trioptimo nos acompañó con compromiso  en el proceso de reconstruir y ordenar nuestra identidad institucional, brindándonos herramientas valiosas que hoy sostienen y fortalecen nuestro modo de organizarnos y trabajar.",
+        "author": "— El Andar escuela de equinoterapia, Directora General"
+      },
+      {
+        "quote": "Gracias a Trioptimo, he aprendido a diseñar y gestionar los diferentes Proyectos de la organización, con una metodología estructurada y tomando decisiones a partir de datos precisos y objetivos estrategicos. Gracias por el acompañamiento",
+        "author": "— El Kiri, Directora"
+      },
+      {
+        "quote": "Trioptimo nos acompañó en la reconstrucción de nuestra identidad institucional, aportando herramientas clave que hoy fortalecen nuestro funcionamiento y crecimiento.",
+        "author": "— El Andar, Coordinadora"
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Listo para multiplicar tu impacto?",
+    "subtitle": "Hablemos. Da el primer paso hacia un proyecto financiable, sostenible y con resultados medibles. Estamos aquí para ayudarte a hacerlo realidad.",
+
+    "fields": {
+      "name": "Nombre",
+      "email": "Email",
+      "websiteOptional": "Página Web (opcional)",
+      "details": "Cuéntanos más sobre tu proyecto"
+    },
+
+    "privacy": {
+      "checkboxAria": "He leído y acepto la política de privacidad",
+      "labelPrefix": "He leído y acepto la",
+      "linkText": "política de privacidad"
+    },
+
+    "submit": {
+      "sending": "Enviando...",
+      "send": "Enviar",
+      "aria": "Enviar formulario de contacto"
+    },
+
+    "feedback": {
+      "success": "Gracias por tu mensaje. Te responderemos en un plazo máximo de 48hs.",
+      "genericError": "Error desconocido",
+      "sendError": "No se pudo enviar el formulario"
+    }
+  }
+}

@@ -9,8 +9,11 @@ import {
   Typography,
   Paper,
 } from "@mui/material";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function PoliticaDeCookiesPage() {
+  const { t } = useTranslation();
+
   const lastUpdate = "13/02/2026"; // cámbialo cuando actualices la política
 
   // Ajusta estos datos a tu proyecto
@@ -23,143 +26,126 @@ export default function PoliticaDeCookiesPage() {
     gaCookieDuration: "entre la sesión y hasta 2 años",
   };
 
+  const s2Bullets = t("cookiesPolicy.sections.s2Bullets", { returnObjects: true });
+  const s5Bullets = t("cookiesPolicy.sections.s5Bullets", { returnObjects: true });
+
   return (
     <Box sx={{ py: { xs: 4, sm: 6 } }}>
       <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Typography variant="h3" component="h1" sx={{ fontWeight: 700 }}>
-            Política de Cookies
+            {t("cookiesPolicy.title")}
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
-            Última actualización: {lastUpdate}
+            {t("cookiesPolicy.lastUpdateLabel", { date: lastUpdate })}
           </Typography>
         </Stack>
 
         <Paper variant="outlined" sx={{ p: { xs: 2, sm: 3 }, borderRadius: 2 }}>
           <Stack spacing={3}>
             <Typography variant="body1">
-              Esta Política de Cookies explica qué son las cookies, qué tipos se
-              utilizan en <strong>{site.domain}</strong> y cómo puedes
-              gestionarlas.
+              <Trans i18nKey="cookiesPolicy.intro" values={{ domain: site.domain }}>
+                {/* 0 */}This Cookie Policy explains...{/* 1 */}<strong />
+              </Trans>
             </Typography>
 
             <Divider />
 
-            <Section title="1. ¿Qué son las cookies?">
+            <Section title={t("cookiesPolicy.sections.s1Title")}>
               <Typography variant="body1">
-                Las cookies son pequeños archivos de texto que un sitio web
-                puede almacenar en tu dispositivo (ordenador, móvil o tablet)
-                para recordar información sobre tu visita (por ejemplo,
-                preferencias, estadísticas de uso o configuración técnica).
+                {t("cookiesPolicy.sections.s1Body")}
               </Typography>
             </Section>
 
-            <Section title="2. ¿Qué tipos de cookies existen?">
+            <Section title={t("cookiesPolicy.sections.s2Title")}>
               <Typography variant="body1">
-                De forma general, las cookies pueden clasificarse por:
+                {t("cookiesPolicy.sections.s2Body")}
               </Typography>
-              <Bullets
-                items={[
-                  "Según la entidad que las gestione: cookies propias o de terceros.",
-                  "Según el tiempo de permanencia: de sesión o persistentes.",
-                  "Según su finalidad: técnicas (necesarias), de personalización, analíticas, publicitarias, etc.",
-                ]}
-              />
+              <Bullets items={Array.isArray(s2Bullets) ? s2Bullets : []} />
             </Section>
 
-            <Section title="3. Cookies utilizadas en este sitio">
+            <Section title={t("cookiesPolicy.sections.s3Title")}>
               <Typography variant="body1">
-                <strong>Este sitio utiliza cookies analíticas</strong> (no
-                esenciales) para medir y analizar el uso del sitio, con el fin
-                de mejorar la experiencia de usuario y el rendimiento.
+                <strong>{t("cookiesPolicy.sections.s3BodyStrong")}</strong>{" "}
+                {t("cookiesPolicy.sections.s3BodyRest")}
               </Typography>
 
               <Typography variant="body1" sx={{ mt: 1 }}>
-                Herramienta: <strong>{site.gaService}</strong>
+                {t("cookiesPolicy.sections.s3ToolLabel")}{" "}
+                <strong>{site.gaService}</strong>
                 <br />
-                Proveedor: <strong>{site.gaProvider}</strong>
+                {t("cookiesPolicy.sections.s3ProviderLabel")}{" "}
+                <strong>{site.gaProvider}</strong>
                 <br />
-                Finalidad: <strong>análisis estadístico</strong> (páginas
-                visitadas, duración de visitas, tipo de dispositivo, etc.)
+                {t("cookiesPolicy.sections.s3PurposeLabel")}{" "}
+                <strong>{t("cookiesPolicy.sections.s3PurposeValue")}</strong>{" "}
+                {t("cookiesPolicy.sections.s3PurposeDetails")}
                 <br />
-                Duración aproximada: <strong>{site.gaCookieDuration}</strong>
+                {t("cookiesPolicy.sections.s3DurationLabel")}{" "}
+                <strong>{site.gaCookieDuration}</strong>
               </Typography>
 
               <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                Nota: La información recogida por estas cookies es, por lo
-                general, agregada o seudonimizada según la configuración del
-                proveedor. En cualquier caso, puedes rechazar su instalación.
+                {t("cookiesPolicy.sections.s3Note")}
               </Typography>
             </Section>
 
-            <Section title="4. Base legal">
+            <Section title={t("cookiesPolicy.sections.s4Title")}>
               <Typography variant="body1">
-                La base legal para el uso de cookies analíticas (no esenciales)
-                es el <strong>consentimiento del usuario</strong>, solicitado a
-                través del banner de cookies antes de su instalación.
+                <Trans i18nKey="cookiesPolicy.sections.s4Body">
+                  {/* 0 */}The legal basis...{/* 1 */}<strong />
+                </Trans>
               </Typography>
             </Section>
 
-            <Section title="5. Cómo gestionar, retirar o cambiar el consentimiento">
+            <Section title={t("cookiesPolicy.sections.s5Title")}>
               <Typography variant="body1">
-                Puedes bloquear o eliminar cookies desde la configuración de tu
-                navegador. Ten en cuenta que, si deshabilitas ciertas cookies,
-                algunas funcionalidades podrían no funcionar correctamente.
+                {t("cookiesPolicy.sections.s5Body1")}
               </Typography>
 
               <Typography variant="body1" sx={{ mt: 1 }}>
-                Además, si aceptaste las cookies analíticas y quieres retirar tu
-                consentimiento, puedes:
+                {t("cookiesPolicy.sections.s5Body2")}
               </Typography>
 
-              <Bullets
-                items={[
-                  "Eliminar las cookies desde tu navegador.",
-                  "Borrar el almacenamiento local del sitio (localStorage) desde las herramientas del navegador.",
-                  "Volver a cargar el sitio: se te mostrará el banner si no hay preferencia guardada.",
-                ]}
-              />
+              <Bullets items={Array.isArray(s5Bullets) ? s5Bullets : []} />
 
               <Typography variant="body2" color="text.secondary">
-                (Si implementas un botón “Configurar cookies”, podrás cambiar tu
-                elección fácilmente desde el propio sitio.)
+                {t("cookiesPolicy.sections.s5Hint")}
               </Typography>
             </Section>
 
-            <Section title="6. Más información sobre el tratamiento de datos">
+            <Section title={t("cookiesPolicy.sections.s6Title")}>
               <Typography variant="body1">
-                Para más información sobre cómo tratamos los datos personales,
-                consulta nuestra{" "}
-                <MUILink
-                  component={RouterLink}
-                  to="/politica-de-privacidad"
-                  underline="hover"
-                  sx={(theme) => ({
-                    color: "text.primary",
-                    "&:hover": { color: theme.palette.secondary.main },
-                  })}
-                >
-                  Política de Privacidad
-                </MUILink>
-                .
+                <Trans i18nKey="cookiesPolicy.sections.s6Body">
+                  {/* 0 */}For more information...{/* 1 */}
+                  <MUILink
+                    component={RouterLink}
+                    to="/politica-de-privacidad"
+                    underline="hover"
+                    sx={(theme) => ({
+                      color: "text.primary",
+                      "&:hover": { color: theme.palette.secondary.main },
+                    })}
+                  />
+                </Trans>
               </Typography>
             </Section>
 
-            <Section title="7. Identificación del responsable">
+            <Section title={t("cookiesPolicy.sections.s7Title")}>
               <Typography variant="body1">
-                Responsable: <strong>{site.ownerName}</strong>
+                {t("cookiesPolicy.sections.s7OwnerLabel")}{" "}
+                <strong>{site.ownerName}</strong>
                 <br />
-                Email de contacto: <strong>{site.contactEmail}</strong>
+                {t("cookiesPolicy.sections.s7EmailLabel")}{" "}
+                <strong>{site.contactEmail}</strong>
               </Typography>
             </Section>
 
             <Divider />
 
             <Typography variant="body2" color="text.secondary">
-              Esta Política de Cookies puede actualizarse para reflejar cambios
-              en el uso de cookies o cambios normativos. La versión vigente
-              estará siempre disponible en esta página.
+              {t("cookiesPolicy.footerNote")}
             </Typography>
           </Stack>
         </Paper>
@@ -182,9 +168,9 @@ function Section({ title, children }) {
 function Bullets({ items }) {
   return (
     <Box component="ul" sx={{ m: 0, pl: 3 }}>
-      {items.map((t, i) => (
+      {items.map((text, i) => (
         <Box component="li" key={i} sx={{ mb: 0.75 }}>
-          <Typography variant="body1">{t}</Typography>
+          <Typography variant="body1">{text}</Typography>
         </Box>
       ))}
     </Box>

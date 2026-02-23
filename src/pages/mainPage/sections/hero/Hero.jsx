@@ -1,17 +1,13 @@
 import { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { Container, Box, Typography, Button, Stack } from "@mui/material";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useTranslation } from "react-i18next";
 
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  Stack,
-} from "@mui/material";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CTAButton from "../../../../sections/common/CTAButton";
 
 export default function Hero({ mode }) {
+  const { t } = useTranslation();
 
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -19,14 +15,32 @@ export default function Hero({ mode }) {
     transition: { duration: 0.6 },
   };
 
+  const stats = [
+    {
+      value: 30,
+      prefix: "+",
+      suffix: "%",
+      label: t("hero.stats.efficiency"),
+    },
+    {
+      value: 4,
+      prefix: "",
+      suffix: "x",
+      label: t("hero.stats.funding"),
+    },
+    {
+      value: 95,
+      prefix: ">",
+      suffix: "%",
+      label: t("hero.stats.automation"),
+    },
+  ];
+
   return (
     <Box id="hero" sx={{ position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
         <motion.div {...fadeUp}>
-          <Stack
-            spacing={6}
-            alignItems="center"
-          >
+          <Stack spacing={6} alignItems="center">
             <Box
               sx={{
                 maxWidth: { xs: 800, md: 1200 },
@@ -39,15 +53,11 @@ export default function Hero({ mode }) {
                 gutterBottom
                 sx={{
                   fontWeight: 900,
-                  fontSize: {
-                    xs: "2.4rem",
-                    sm: "3rem",
-                    md: "3.4rem",
-                  },
+                  fontSize: { xs: "2.4rem", sm: "3rem", md: "3.4rem" },
                   lineHeight: 1.2,
                 }}
               >
-                Convertimos ideas de{" "}
+                {t("hero.title.line1Before")}{" "}
                 <Box
                   component="span"
                   sx={(theme) => ({
@@ -57,10 +67,10 @@ export default function Hero({ mode }) {
                     display: "inline-block",
                   })}
                 >
-                  impacto
+                  {t("hero.title.highlight1")}
                 </Box>
                 <Box component="span" display="block">
-                  en proyectos{" "}
+                  {t("hero.title.line2Before")}{" "}
                   <Box
                     component="span"
                     sx={(theme) => ({
@@ -70,11 +80,10 @@ export default function Hero({ mode }) {
                       display: "inline-block",
                     })}
                   >
-                    sostenibles
+                    {t("hero.title.highlight2")}
                   </Box>
                 </Box>
               </Typography>
-
 
               <Typography
                 variant="h6"
@@ -82,9 +91,8 @@ export default function Hero({ mode }) {
                 color="text.secondary"
                 sx={{ maxWidth: 720, mx: "auto", mt: 8 }}
               >
-                Aplicamos ingeniería y optimización para que tu organización transforme la realidad.
+                {t("hero.subtitle")}
               </Typography>
-
 
               <Stack
                 direction={{ xs: "column", sm: "row" }}
@@ -112,7 +120,7 @@ export default function Hero({ mode }) {
                     },
                   }}
                 >
-                  Cómo trabajamos
+                  {t("hero.secondaryCta")}
                 </Button>
               </Stack>
             </Box>
@@ -126,34 +134,15 @@ export default function Hero({ mode }) {
                   alignItems: { xs: "stretch", sm: "center" },
                 }}
               >
-                {[
-                  {
-                    value: 30,
-                    prefix: "+",
-                    suffix: "%",
-                    label: "Mejora en eficiencia operativa",
-                  },
-                  {
-                    value: 4,
-                    prefix: "",
-                    suffix: "x",
-                    label: "Mayor tasa de éxito en financiación",
-                  },
-                  {
-                    value: 95,
-                    prefix: ">",
-                    suffix: "%",
-                    label: "Procesos clave automatizados",
-                  },
-                ].map((item) => (
+                {stats.map((item) => (
                   <Box
                     key={item.label}
-                    sx={(theme) => ({
+                    sx={{
                       flex: 1,
                       px: 3,
                       py: 1.5,
                       textAlign: "left",
-                    })}
+                    }}
                   >
                     <Typography
                       variant="h5"
@@ -169,11 +158,8 @@ export default function Hero({ mode }) {
                         suffix={item.suffix}
                       />
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      sx={{ mt: 0.5 }}
-                    >
+
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
                       {item.label}
                     </Typography>
                   </Box>
@@ -196,7 +182,6 @@ function AnimatedNumber({ value, prefix = "", suffix = "", duration = 1.4 }) {
       duration,
       ease: "easeOut",
     });
-
     return () => controls.stop();
   }, [value, duration, count]);
 
@@ -208,4 +193,3 @@ function AnimatedNumber({ value, prefix = "", suffix = "", duration = 1.4 }) {
     </span>
   );
 }
-

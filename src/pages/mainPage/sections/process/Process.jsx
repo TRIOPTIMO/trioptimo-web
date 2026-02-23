@@ -2,48 +2,28 @@ import {
   Container,
   Box,
   Typography,
-  Button,
   Stack,
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useTranslation } from "react-i18next";
+
 import CTAButton from "../../../../sections/common/CTAButton";
 
 export default function Process({ mode }) {
-  const steps = [
-    {
-      num: "01",
-      title: "Análisis y planificación",
-      desc:
-        "Entendemos tu idea, evaluamos su viabilidad y diseñamos un plan de proyecto sólido y financiable.",
-    },
-    {
-      num: "02",
-      title: "Optimización y digitalización",
-      desc:
-        "Aplicamos ingeniería para mejorar tus procesos, digitalizar tareas y hacer tu operación más eficiente.",
-    },
-    {
-      num: "03",
-      title: "Captación de fondos",
-      desc:
-        "Identificamos convocatorias, preparamos propuestas ganadoras y te conectamos con oportunidades de financiación.",
-    },
-    {
-      num: "04",
-      title: "Ejecución y evaluación",
-      desc:
-        "Te acompañamos en la implementación y medimos el impacto para asegurar resultados sostenibles.",
-    },
-  ];
+  const { t } = useTranslation();
+
+  const steps = ["s1", "s2", "s3", "s4"].map((key) => ({
+    key,
+    num: t(`process.steps.${key}.num`),
+    title: t(`process.steps.${key}.title`),
+    desc: t(`process.steps.${key}.desc`),
+  }));
 
   return (
-    <Box
-      id="como"
-    >
+    <Box id="como">
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -58,13 +38,22 @@ export default function Process({ mode }) {
               maxWidth: { md: 480 },
             }}
           >
-            <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" }, textAlign: { xs: "center", md: "left" } }}>
-              Cómo trabajamos
+            <Typography
+              variant="h2"
+              fontWeight={800}
+              sx={{
+                fontSize: { xs: "1.9rem", md: "3.4rem" },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              {t("process.title")}
             </Typography>
-            <Typography color="text.secondary" sx={{ my: 1.5, textAlign: { xs: "center", md: "left" } }}>
-              Nuestra metodología integral asegura que cada paso esté alineado
-              con tus objetivos y maximice las oportunidades de financiación y
-              sostenibilidad.
+
+            <Typography
+              color="text.secondary"
+              sx={{ my: 1.5, textAlign: { xs: "center", md: "left" } }}
+            >
+              {t("process.subtitle")}
             </Typography>
 
             <CTAButton />
@@ -80,11 +69,15 @@ export default function Process({ mode }) {
             <Stack spacing={1.5}>
               {steps.map((step, index) => (
                 <StepAccordion
-                  key={step.num}
+                  key={step.key}
                   num={step.num}
                   title={step.title}
                   desc={step.desc}
                   defaultExpanded={index === 0}
+                  ariaLabel={t("process.aria.stepSummary", {
+                    num: step.num,
+                    title: step.title,
+                  })}
                 />
               ))}
             </Stack>
@@ -95,7 +88,7 @@ export default function Process({ mode }) {
   );
 }
 
-function StepAccordion({ num, title, desc, defaultExpanded = false }) {
+function StepAccordion({ num, title, desc, defaultExpanded = false, ariaLabel }) {
   return (
     <Accordion
       defaultExpanded={defaultExpanded}
@@ -104,16 +97,13 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
       elevation={0}
       sx={(theme) => ({
         borderRadius: 3,
-        "&::before": {
-          display: "none",
-        },
-        "&.Mui-expanded": {
-          margin: 0,
-        },
+        "&::before": { display: "none" },
+        "&.Mui-expanded": { margin: 0 },
       })}
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
+        aria-label={ariaLabel}
         sx={(theme) => ({
           px: 2.5,
           py: 1.5,
@@ -123,12 +113,10 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
             minWidth: 0,
           },
 
-          // Cuando está expandido, cambia color a algo con contraste
           "&.Mui-expanded .step-num, &.Mui-expanded .step-title": {
             color: theme.palette.secondary.main,
           },
 
-          // Focus visible claro
           "&:focus-visible": {
             outline: `2px solid ${theme.palette.secondary.main}`,
             outlineOffset: 2,
@@ -140,8 +128,8 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
           className="step-num"
           fontWeight={800}
           sx={(theme) => ({
-            color: theme.palette.text.primary, // ✅ contraste
-            minWidth: 44, // alinea visualmente
+            color: theme.palette.text.primary,
+            minWidth: 44,
             flexShrink: 0,
           })}
         >
@@ -152,15 +140,12 @@ function StepAccordion({ num, title, desc, defaultExpanded = false }) {
           className="step-title"
           fontWeight={700}
           sx={(theme) => ({
-            color: theme.palette.text.primary, // ✅ contraste
+            color: theme.palette.text.primary,
             minWidth: 0,
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
-
-            "&:hover": {
-              color: theme.palette.text.primary, // ✅ no baja contraste
-            },
+            "&:hover": { color: theme.palette.text.primary },
           })}
         >
           {title}

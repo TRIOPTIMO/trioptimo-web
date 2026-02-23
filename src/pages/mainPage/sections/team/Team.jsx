@@ -9,51 +9,47 @@ import {
   Divider,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useTranslation } from "react-i18next";
 
 export default function Team({ mode }) {
+  const { t } = useTranslation();
 
   const people = [
     {
-      name: "Nahuel Deschuter",
-      role: "Cofundador | Operaciones y Proyecto",
-      quote:
-        "Mi foco es la ejecución. Traduzco la visión de nuestros proyectos en resultados concretos. Me apaciona la eficiencia operativa y la mejora continua, garantizando que cada iniciativa tenga un impacto medible y sostenible.",
+      key: "nahuel",
       linkedin: "https://www.linkedin.com/in/nahuel-deschutter/",
-      photo: "/deschu.jpg"
+      photo: "/deschu.jpg",
     },
     {
-      name: "Jano Centeno",
-      role: "Cofundador | Crecimiento y Alianzas",
-      quote:
-        "Mi trabajo es asegurar el crecimiento sostenible, forjando las alianzas clave y diseñando los modelos que nos permiten llevar nuestra ingeniería de impacto al mayor número de organizaciones posibles.",
+      key: "jano",
       linkedin: "https://www.linkedin.com/in/jano-centeno/",
-      photo: "/jano.jpeg"
+      photo: "/jano.jpeg",
     },
     {
-      name: "Ignacio Davanzo",
-      role: "Cofundador | Tecnología y Sistemas",
-      quote:
-        "Soy la palanca tecnológica. Lidero la digitalización y automatización de procesos para que TriOptimo y nuestros aliados tomen decisiones inteligentes y basadas en datos. Menos burocracia, más impacto.",
+      key: "ignacio",
       linkedin: "https://www.linkedin.com/in/ignaciodavanzo/",
-      photo: "/nacho.png"
+      photo: "/nacho.png",
     },
-  ];
+  ].map((p) => ({
+    ...p,
+    name: t(`team.people.${p.key}.name`),
+    role: t(`team.people.${p.key}.role`),
+    quote: t(`team.people.${p.key}.quote`),
+  }));
 
   return (
-    <Box
-      id="equipo"
-    >
+    <Box id="equipo">
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: 800, mx: "auto" }}>
           <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: "1.9rem", md: "3.4rem" } }}>
-            Nuestro equipo
+            {t("team.title")}
           </Typography>
 
           <Typography color="text.secondary" sx={{ mt: 1.5, maxWidth: 800 }}>
-            Somos profesionales de la ingeniería y la gestión, apasionados por aplicar
-            nuestro conocimiento para generar un impacto social real.
+            {t("team.subtitle")}
           </Typography>
         </Box>
+
         <Stack
           direction="row"
           flexWrap="wrap"
@@ -66,14 +62,14 @@ export default function Team({ mode }) {
         >
           {people.map((person) => (
             <Box
-              key={person.name}
+              key={person.key}
               sx={(theme) => ({
                 flexGrow: 0,
                 flexShrink: 0,
                 flexBasis: {
-                  xs: "100%", // 1 columna en móvil
-                  sm: `calc((100% - ${theme.spacing(3)}) / 2)`, // 2 columnas en tablets
-                  md: `calc((100% - ${theme.spacing(3)} * 2) / 3)`, // 3 columnas en desktop
+                  xs: "100%",
+                  sm: `calc((100% - ${theme.spacing(3)}) / 2)`,
+                  md: `calc((100% - ${theme.spacing(3)} * 2) / 3)`,
                 },
                 minWidth: { xs: "100%", sm: 0 },
               })}
@@ -88,7 +84,8 @@ export default function Team({ mode }) {
 }
 
 function TeamCard({ name, role, quote, linkedin, photo, mode }) {
-  const bw = 2
+  const { t } = useTranslation();
+  const bw = 2;
 
   return (
     <Card
@@ -111,7 +108,7 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
       <Box
         component="img"
         src={photo}
-        alt={name}
+        alt={t("team.aria.photoAlt", { name })}
         sx={{
           width: "100%",
           height: 220,
@@ -140,6 +137,7 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
           href={linkedin}
           target="_blank"
           rel="noreferrer noopener"
+          aria-label={t("team.aria.linkedin", { name })}
           color="text.primary"
           underline="none"
           sx={{
@@ -153,10 +151,9 @@ function TeamCard({ name, role, quote, linkedin, photo, mode }) {
             },
           }}
         >
-          <LinkedInIcon fontSize="small" /> LinkedIn
+          <LinkedInIcon fontSize="small" /> {t("team.linkedinLabel")}
         </MLink>
       </CardContent>
     </Card>
-  )
+  );
 }
-

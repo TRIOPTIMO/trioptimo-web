@@ -10,26 +10,29 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { useTranslation } from "react-i18next";
 
 import { useColorMode } from "../../../../theme/ColorModeContext";
 import CTAButton from "../../../common/CTAButton";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export function NavBar() {
   const { mode, toggleColorMode } = useColorMode();
+  const { t } = useTranslation();
 
   return (
     <>
       <AppBar
-  position="sticky"
-  elevation={0}
-  color="transparent"
-  sx={(theme) => ({
-    top: 0,
-    zIndex: 100, // o theme.zIndex.drawer + 1 si tienes drawer
-    backdropFilter: "blur(14px)",
-    bgcolor: "background.default",
-  })}
->
+        position="sticky"
+        elevation={0}
+        color="transparent"
+        sx={{
+          top: 0,
+          zIndex: 100,
+          backdropFilter: "blur(14px)",
+          bgcolor: "background.default",
+        }}
+      >
         <Toolbar
           sx={{
             maxWidth: 1200,
@@ -43,7 +46,8 @@ export function NavBar() {
           }}
         >
           <Box
-            component={RouterLink} to="/"
+            component={RouterLink}
+            to="/"
             sx={{ display: "flex", alignItems: "center", gap: 1.5, flexGrow: 1 }}
           >
             <Box
@@ -54,12 +58,17 @@ export function NavBar() {
             />
           </Box>
 
-          <Stack direction="row" spacing={3} alignItems="center" sx={{ display: { xs: "none", md: "flex" } }}>
+          <Stack
+            direction="row"
+            spacing={3}
+            alignItems="center"
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
             {[
-              { href: "/#como", label: "Cómo trabajamos" },
-              { href: "/#filosofia", label: "Filosofía" },
-              { href: "/#equipo", label: "Equipo" },
-              { href: "/#historias", label: "Historias" },
+              { href: "/#como", label: t("navbar.how") },
+              { href: "/#filosofia", label: t("navbar.philosophy") },
+              { href: "/#equipo", label: t("navbar.team") },
+              { href: "/#historias", label: t("navbar.stories") },
             ].map((link) => (
               <MLink
                 key={link.href}
@@ -93,12 +102,19 @@ export function NavBar() {
               </MLink>
             ))}
 
-            <CTAButton />
+            <CTAButton label={t("navbar.cta")} />
           </Stack>
 
-          <IconButton label="Modo claro/oscuro" onClick={toggleColorMode} color="inherit" sx={{ ml: 2 }}>
+          <IconButton
+            label={t("navbar.labels.darkMode")}
+            onClick={toggleColorMode}
+            color="inherit"
+            sx={{ ml: 2 }}
+          >
             {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
           </IconButton>
+
+          <LanguageSwitcher />
         </Toolbar>
       </AppBar>
     </>

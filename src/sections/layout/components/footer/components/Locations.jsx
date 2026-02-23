@@ -1,40 +1,33 @@
 import React from "react";
 import {
-    Container,
     Box,
     Typography,
-    Stack,
-    Link as MLink,
-    IconButton,
+    Stack
 } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-
-import { useColorMode } from "../../../../../theme/ColorModeContext";
+import { useTranslation } from "react-i18next";
 
 export function FooterLocations() {
-    const { mode } = useColorMode();
+    const { t } = useTranslation();
 
+    const cities = ["sevilla", "malaga", "granada"];
     return (
-        <>
-            <Box sx={{ px: 3, py: 1 }}>
-                <Stack
-                    direction="column"
-                    spacing={2}
-                    sx={{ flexWrap: "wrap", fontSize: 13, alignItems: "left" }}
-                    aria-label="Contacto"
-                >
-                    <Typography>Ubicaciones</Typography>
-                    
-                    <Typography variant="body2">Sevilla</Typography>
-                    <Typography variant="body2">Málaga</Typography>
-                    <Typography variant="body2">Granada</Typography>
+        <Box sx={{ px: 3, py: 1 }}>
+            <Stack
+                direction="column"
+                spacing={2}
+                sx={{ flexWrap: "wrap", fontSize: 13, alignItems: "left" }}
+                aria-label={t("footer.locations.title")}
+            >
+                <Typography>
+                    {t("footer.locations.title")}
+                </Typography>
 
-                </Stack>
-            </Box>
-        </>
+                {cities.map((city) => (
+                    <Typography key={city} variant="body2">
+                        {t(`footer.locations.${city}`)}
+                    </Typography>
+                ))}
+            </Stack>
+        </Box>
     );
 }
