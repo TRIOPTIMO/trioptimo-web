@@ -31,16 +31,12 @@ export default function CookieBanner() {
             zIndex: 9999,
             borderRadius: 2,
             p: 2,
-
-            // Mobile: pegado a bordes, sin cálculos
-            left: { xs: 12, sm: "50%" },
-            right: { xs: 12, sm: "auto" },
+            left: 12,
+            right: 12,
             bottom: { xs: 12, sm: 20 },
             transform: { xs: "none", sm: "translateX(-50%)" },
-
-            // Mobile: no fuerces width, deja que left/right manden
-            width: { xs: "auto", sm: 900 },
-            maxWidth: { xs: "95%", sm: 900 },
+            width: { xs: "auto", sm: 500, md: 900 },
+            maxWidth: { xs: "95%", sm: 500, md: 900 },
 
             // Blindaje anti overflow
             boxSizing: "border-box",
