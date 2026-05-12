@@ -3,61 +3,218 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo-grey.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FAVICON & ICONOS -->
+  <link rel="icon" type="image/png" href="/logo-grey.png" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+
+  <!-- PRECONNECT / DNS-PREFETCH -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+  <!-- FUENTES -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
+
   <!-- TITLE -->
-  <title>TRIOPTIMO | Elaboración de proyectos de financiación</title>
+  <title>TriOptimo | Proyectos de Financiación para ONGs y Tercer Sector</title>
 
   <!-- SEO BÁSICO -->
   <meta name="description"
-    content="TriOptimo ayuda a organizaciones del tercer sector a convertir ideas de impacto en proyectos financiables y sostenibles. Combinamos ingeniería, optimización y digitalización para maximizar tu impacto social." />
+    content="TriOptimo ayuda a ONGs, fundaciones y organizaciones del tercer sector a obtener financiación y optimizar procesos. Elaboramos proyectos de subvenciones y fondos europeos en Sevilla, Málaga y Granada." />
   <meta name="keywords"
-    content="TriOptimo, impacto social, tercer sector, financiación, automatización, optimización de procesos, digitalización, ONGs, fundaciones, proyectos sostenibles" />
+    content="proyectos de financiación, tercer sector, ONGs, fundaciones, subvenciones, fondos europeos, impacto social, optimización de procesos, digitalización, Sevilla, Málaga, Granada, Andalucía, FSE, FEDER, ingeniería social" />
   <meta name="author" content="TriOptimo" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-  <!-- CANONICAL -->
+  <!-- CANONICAL & HREFLANG -->
   <link rel="canonical" href="https://trioptimo.com/" />
+  <link rel="alternate" hreflang="es" href="https://trioptimo.com/" />
+  <link rel="alternate" hreflang="en" href="https://trioptimo.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://trioptimo.com/" />
+
+  <!-- GEO (SEO LOCAL) -->
+  <meta name="geo.region" content="ES-AN" />
+  <meta name="geo.placename" content="Sevilla, Málaga, Granada" />
+  <meta name="geo.position" content="37.3891;-5.9845" />
+  <meta name="ICBM" content="37.3891, -5.9845" />
 
   <!-- OPEN GRAPH / SOCIAL -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:site_name" content="TriOptimo" />
-  <meta property="og:title" content="TriOptimo | Ingeniería para organizaciones de impacto" />
+  <meta property="og:title" content="TriOptimo | Proyectos de Financiación para el Tercer Sector" />
   <meta property="og:description"
-    content="Convertimos ideas de impacto en proyectos financiables y sostenibles. Menos burocracia, más impacto para tu organización." />
+    content="Convertimos ideas de impacto en proyectos financiables. Elaboración de proyectos de subvenciones, fondos europeos y optimización de procesos para ONGs y fundaciones." />
   <meta property="og:url" content="https://trioptimo.com/" />
-  <meta property="og:image" content="https://trioptimo.com/logo-grey.png" />
+  <meta property="og:image" content="https://trioptimo.com/trioptimo-black.png" />
+  <meta property="og:image:alt" content="TriOptimo - Ingeniería con propósito" />
 
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TriOptimo | Ingeniería con propósito" />
+  <meta name="twitter:title" content="TriOptimo | Proyectos de Financiación para el Tercer Sector" />
   <meta name="twitter:description"
-    content="Ingeniería y optimización para potenciar el impacto de tu organización social." />
-  <meta name="twitter:image" content="https://trioptimo.com/logo-grey.png" />
+    content="Ingeniería y optimización para potenciar el impacto de tu organización social. Subvenciones, fondos europeos y digitalización." />
+  <meta name="twitter:image" content="https://trioptimo.com/trioptimo-black.png" />
+  <meta name="twitter:image:alt" content="TriOptimo - Ingeniería con propósito" />
 
-  <!-- PWA / COLOR DEL NAVEGADOR (OPCIONAL, PERO LINDO) -->
+  <!-- PWA -->
   <meta name="theme-color" content="#5F215E" />
 
-  <!-- DATOS ESTRUCTURADOS (ORGANIZATION) -->
+  <!-- DATOS ESTRUCTURADOS: WebSite -->
   <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TriOptimo",
+      "url": "https://trioptimo.com/",
+      "description": "TriOptimo ayuda a organizaciones del tercer sector a transformar ideas de impacto en proyectos financiables y sostenibles.",
+      "inLanguage": ["es", "en"],
+      "publisher": {
         "@type": "Organization",
-        "name": "TriOptimo",
-        "url": "https://trioptimo.com/",
-        "logo": "https://trioptimo.com/logo-grey.png",
-        "sameAs": [
-          "https://www.linkedin.com/company/trioptimo"
-        ],
-        "description": "Trioptimo colabora con organizaciones del tercer sector para transformar ideas de alto impacto en proyectos financiables, eficientes y sostenibles mediante ingeniería, optimización y digitalización."
+        "name": "TriOptimo"
       }
-    </script>
+    }
+  </script>
+
+  <!-- DATOS ESTRUCTURADOS: Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TriOptimo",
+      "legalName": "TriOptimo",
+      "url": "https://trioptimo.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trioptimo.com/trioptimo-black.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://trioptimo.com/trioptimo-black.png",
+      "description": "TriOptimo colabora con organizaciones del tercer sector para transformar ideas de alto impacto en proyectos financiables, eficientes y sostenibles mediante ingeniería, optimización y digitalización.",
+      "slogan": "Ingeniería con propósito",
+      "email": "info@trioptimo.com",
+      "telephone": "+34663477089",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Sevilla",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Málaga",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Granada",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34663477089",
+        "email": "info@trioptimo.com",
+        "contactType": "customer support",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/trioptimo/",
+        "https://www.instagram.com/trioptimo"
+      ],
+      "knowsAbout": [
+        "Proyectos de financiación",
+        "Subvenciones públicas",
+        "Fondos europeos",
+        "Tercer sector",
+        "ONGs y fundaciones",
+        "Optimización de procesos",
+        "Digitalización",
+        "Impacto social",
+        "FSE+",
+        "FEDER",
+        "Horizonte Europa"
+      ]
+    }
+  </script>
+
+  <!-- DATOS ESTRUCTURADOS: ProfessionalService -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "TriOptimo",
+      "url": "https://trioptimo.com/",
+      "description": "Consultoría e ingeniería especializada en el tercer sector: elaboración de proyectos de financiación, optimización de procesos y digitalización para ONGs y fundaciones.",
+      "telephone": "+34663477089",
+      "email": "info@trioptimo.com",
+      "image": "https://trioptimo.com/trioptimo-black.png",
+      "priceRange": "€€",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sevilla",
+        "addressRegion": "Andalucía",
+        "addressCountry": "ES"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios TriOptimo",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Elaboración de proyectos de financiación",
+              "description": "Diseño y redacción de proyectos para convocatorias de subvenciones, fondos europeos FSE+, FEDER y Horizonte Europa"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optimización de procesos para ONGs",
+              "description": "Análisis y rediseño de flujos de trabajo para mejorar la eficiencia operativa de organizaciones del tercer sector"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digitalización del tercer sector",
+              "description": "Implementación de herramientas digitales adaptadas a las necesidades y presupuestos de organizaciones sin ánimo de lucro"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultoría de impacto social",
+              "description": "Acompañamiento estratégico en la definición de modelos de impacto y planificación de sostenibilidad"
+            }
+          }
+        ]
+      }
+    }
+  </script>
 </head>
 
 <body>

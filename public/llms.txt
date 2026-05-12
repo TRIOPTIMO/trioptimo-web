@@ -1,0 +1,158 @@
+# TriOptimo
+
+> Ingeniería con propósito: convertimos ideas de impacto en proyectos sostenibles para organizaciones del tercer sector.
+
+TriOptimo es una empresa de ingeniería especializada en el tercer sector (ONGs, fundaciones e instituciones de impacto social) con presencia en Sevilla, Málaga y Granada (Andalucía, España). Aplicamos ingeniería, optimización de procesos y digitalización para que las organizaciones sociales transformen la realidad sin perder energía en burocracia. Ayudamos a obtener financiación pública y privada, a profesionalizar la gestión interna y a medir el impacto de cada iniciativa.
+
+El sitio web es bilingüe (español e inglés) y está disponible en https://trioptimo.com.
+
+---
+
+## Propuesta de valor
+
+TriOptimo elimina la carga técnica y administrativa de las organizaciones sociales para que toda su energía se concentre en lo que realmente importa: su causa. Trabajamos como aliados, no como proveedores externos.
+
+Tres pilares centrales:
+
+- **Financiación e innovación al alcance**: Ayudamos a conseguir fondos (subvenciones, fondos europeos, convocatorias privadas) y los transformamos en mejoras operativas concretas mediante ingeniería y digitalización.
+- **Maximización de recursos**: Implementamos soluciones técnicas claras y a medida para profesionalizar la gestión, optimizando cada recurso disponible sin desperdiciar presupuesto.
+- **Acompañamiento de punta a punta**: Estamos presentes en todo el ciclo: desde la concepción de la idea hasta la ejecución, la captación de fondos y la medición de resultados con indicadores objetivos.
+
+---
+
+## Metodología de trabajo (4 fases)
+
+TriOptimo trabaja con una metodología integral estructurada en cuatro pasos:
+
+### Paso 01 — Análisis y planificación
+Entendemos la idea del cliente, evaluamos su viabilidad técnica y financiera, y diseñamos un plan de proyecto sólido y financiable. Esta fase incluye diagnóstico organizacional, mapeo de oportunidades de financiación y definición de indicadores de impacto.
+
+### Paso 02 — Optimización y digitalización
+Aplicamos ingeniería para mejorar los procesos internos de la organización, digitalizar tareas repetitivas y hacer la operación más eficiente. Identificamos cuellos de botella y proponemos soluciones prácticas adaptadas al presupuesto y capacidad del equipo.
+
+### Paso 03 — Captación de fondos
+Identificamos convocatorias activas (subvenciones públicas, fondos europeos FSE+, FEDER, FEADER, Horizonte Europa, y convocatorias de fundaciones privadas), preparamos propuestas ganadoras y conectamos a la organización con las oportunidades de financiación más adecuadas para su misión.
+
+### Paso 04 — Ejecución y evaluación
+Acompañamos en la implementación de los proyectos aprobados, hacemos seguimiento de los hitos y medimos el impacto real de cada iniciativa para garantizar resultados sostenibles y la rendición de cuentas ante financiadores.
+
+---
+
+## Servicios
+
+- **Elaboración de proyectos de financiación**: Diseño y redacción completa de proyectos para convocatorias de subvenciones públicas (ministerios, comunidades autónomas, ayuntamientos), fondos europeos y programas de responsabilidad social corporativa. El objetivo es maximizar la tasa de éxito en cada convocatoria.
+- **Optimización de procesos organizacionales**: Análisis exhaustivo de flujos de trabajo internos y rediseño orientado a la eficiencia. Se aplican metodologías de mejora continua adaptadas a la realidad del tercer sector.
+- **Digitalización para el tercer sector**: Selección, implementación y formación en herramientas digitales (gestión de proyectos, CRM, automatizaciones, dashboards de impacto) adaptadas a los presupuestos y capacidades técnicas de organizaciones sin ánimo de lucro.
+- **Consultoría de impacto social**: Definición de modelos de impacto, marcos de medición y evaluación, planificación estratégica orientada a la sostenibilidad y al crecimiento del ecosistema social.
+
+---
+
+## A quién ayuda TriOptimo
+
+- ONGs y asociaciones sin ánimo de lucro
+- Fundaciones privadas y públicas
+- Entidades de economía social y solidaria
+- Cooperativas de iniciativa social
+- Instituciones con programas de responsabilidad social (RSC/RSE)
+- Organizaciones en proceso de profesionalización o digitalización
+- Entidades que buscan acceder a subvenciones o fondos europeos por primera vez
+
+---
+
+## Filosofía
+
+"Sabemos lo que implica sostener un proyecto social: la pasión, la entrega, las horas sin fin, y también la sensación de que a veces faltan recursos o apoyo. Queremos acompañarte, liberar tu carga técnica y ayudarte a enfocarte en lo esencial: seguir generando impacto real."
+
+### Nuestro compromiso
+Nos sumamos a la causa del cliente como un aliado que entiende sus desafíos. Transformamos ideas en proyectos sostenibles y acompañamos en cada paso para que el equipo pueda concentrarse en lo que mejor sabe hacer: crear oportunidades y transformar vidas.
+
+### El cambio que soñamos
+Un ecosistema social más fuerte, donde cada organización tenga acceso a las herramientas, la financiación y el conocimiento que necesita para crecer sin perder su esencia. Un sector donde el trabajo colaborativo sea la norma y nadie quede atrás por falta de apoyo técnico.
+
+### Por qué elegir TriOptimo
+- Compromiso con el impacto social: la misión del cliente también es la nuestra.
+- Claridad y cercanía: comunicación simple, sin tecnicismos innecesarios, al ritmo de cada organización.
+- Transparencia y confianza: trabajo ético y comunicación honesta en todo momento.
+- Innovación práctica: procesos complejos convertidos en soluciones fáciles de usar.
+- Colaboración y empoderamiento: compartimos conocimientos para que las organizaciones ganen autonomía.
+
+---
+
+## Equipo fundador
+
+TriOptimo fue fundado por tres profesionales de la ingeniería y la gestión con vocación de impacto social:
+
+### Nahuel Deschuter — Cofundador | Operaciones y Proyecto
+"Mi foco es la ejecución. Traduzco la visión de nuestros proyectos en resultados concretos. Me apasiona la eficiencia operativa y la mejora continua, garantizando que cada iniciativa tenga un impacto medible y sostenible."
+Perfil: operaciones, gestión de proyectos, mejora continua, eficiencia organizacional.
+
+### Jano Centeno — Cofundador | Crecimiento y Alianzas
+"Mi trabajo es asegurar el crecimiento sostenible, forjando las alianzas clave y diseñando los modelos que nos permiten llevar nuestra ingeniería de impacto al mayor número de organizaciones posibles."
+Perfil: crecimiento, alianzas estratégicas, modelos de negocio de impacto, expansión.
+
+### Ignacio Davanzo — Cofundador | Tecnología y Sistemas
+"Soy la palanca tecnológica. Lidero la digitalización y automatización de procesos para que TriOptimo y nuestros aliados tomen decisiones inteligentes y basadas en datos. Menos burocracia, más impacto."
+Perfil: tecnología, digitalización, automatización, sistemas de información, toma de decisiones basada en datos.
+
+---
+
+## Testimonios de clientes
+
+> "Trioptimo nos acompañó con compromiso en el proceso de reconstruir y ordenar nuestra identidad institucional, brindándonos herramientas valiosas que hoy sostienen y fortalecen nuestro modo de organizarnos y trabajar."
+> — Directora General, El Andar escuela de equinoterapia
+
+> "Gracias a Trioptimo, he aprendido a diseñar y gestionar los diferentes proyectos de la organización, con una metodología estructurada y tomando decisiones a partir de datos precisos y objetivos estratégicos. Gracias por el acompañamiento."
+> — Directora, El Kiri
+
+> "Trioptimo nos acompañó en la reconstrucción de nuestra identidad institucional, aportando herramientas clave que hoy fortalecen nuestro funcionamiento y crecimiento."
+> — Coordinadora, El Andar
+
+---
+
+## Preguntas frecuentes
+
+**¿Qué es el tercer sector?**
+El tercer sector comprende las organizaciones sin ánimo de lucro que trabajan en el ámbito social, cultural, medioambiental o humanitario: ONGs, fundaciones, asociaciones, cooperativas de iniciativa social, etc. Se distingue del sector público (primero) y del sector privado con ánimo de lucro (segundo).
+
+**¿Con qué tipos de financiación trabaja TriOptimo?**
+Subvenciones públicas (ministerios, comunidades autónomas, diputaciones, ayuntamientos), fondos europeos estructurales e inversión (FSE+, FEDER, FEADER), programas marco europeos (Horizonte Europa), convocatorias de fundaciones privadas y programas de responsabilidad social corporativa de empresas.
+
+**¿Trabajan solo en Andalucía?**
+Aunque la sede y el equipo están ubicados en Sevilla, Málaga y Granada, trabajamos con organizaciones de toda España. La consultoría y elaboración de proyectos se puede realizar de forma remota.
+
+**¿Cuánto tiempo tarda en verse el impacto del trabajo con TriOptimo?**
+Depende del tipo de servicio: la optimización de procesos puede generar resultados visibles en semanas; los proyectos de captación de fondos dependen de los plazos de cada convocatoria, que pueden variar de meses a más de un año.
+
+**¿Con qué tamaño de organizaciones trabajáis?**
+Trabajamos tanto con organizaciones pequeñas en proceso de profesionalización como con fundaciones y ONGs de mayor tamaño que buscan escalar su impacto o acceder a financiación europea.
+
+---
+
+## Contacto y canales oficiales
+
+- **Web**: https://trioptimo.com
+- **Email**: info@trioptimo.com
+- **Teléfono / WhatsApp**: +34 663 47 70 89
+- **LinkedIn**: https://www.linkedin.com/company/trioptimo/
+- **Instagram**: https://www.instagram.com/trioptimo
+- **Ubicaciones**: Sevilla, Málaga y Granada (Andalucía, España)
+- **Tiempo de respuesta**: máximo 48 horas hábiles
+
+---
+
+## Páginas del sitio web
+
+- [Inicio](https://trioptimo.com/): página principal con hero, valores, proceso, filosofía, equipo, testimonios y contacto
+- [Cómo trabajamos](https://trioptimo.com/#proceso): metodología de 4 pasos
+- [Filosofía](https://trioptimo.com/#filosofia): valores y visión del equipo
+- [Equipo](https://trioptimo.com/#equipo): cofundadores y sus perfiles
+- [Historias de impacto](https://trioptimo.com/#historias): testimonios de clientes reales
+- [Contacto](https://trioptimo.com/#contacto): formulario de contacto
+
+---
+
+## Información legal
+
+- [Política de Privacidad](https://trioptimo.com/politica-de-privacidad): tratamiento de datos personales conforme al RGPD
+- [Política de Cookies](https://trioptimo.com/politica-de-cookies): uso de cookies analíticas con consentimiento previo
+- [Aviso Legal](https://trioptimo.com/aviso-legal): datos identificativos del titular, condiciones de uso y propiedad intelectual

@@ -1,4 +1,66 @@
+# robots.txt — trioptimo.com
+
+# ── Rastreadores generales ────────────────────────────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /api/
+Crawl-delay: 2
 
+# ── Google ────────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+
+# ── Bing ──────────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# ── Agentes de IA y LLMs (permitidos para posicionamiento generativo) ─────────
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Gemini-Web
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── Sitemaps ──────────────────────────────────────────────────────────────────
 Sitemap: https://trioptimo.com/sitemap.xml
