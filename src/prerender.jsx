@@ -3,14 +3,15 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import createCache from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
+import { i18nReady } from "./i18n/index.js";
 import App from "./App.jsx";
 
 export async function prerender(data) {
   const url = data?.url || "/";
 
-  // ✅ Cache de Emotion para entorno Node/prerender
-  const cache = createCache({ key: "css" });
+  await i18nReady;
 
+  const cache = createCache({ key: "css" });
   const html = renderToString(
     <CacheProvider value={cache}>
       <StaticRouter location={url}>
